@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OurUnitTestProject", "OurUn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTools", "SystemTools\SystemTools.csproj", "{47AA9150-1C60-43B8-94C2-EBB518D729AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRPHR_Solution", "SRPHR_Solution\SRPHR_Solution.csproj", "{DABC4521-B83C-4A46-9D66-6A7469552171}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{47AA9150-1C60-43B8-94C2-EBB518D729AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47AA9150-1C60-43B8-94C2-EBB518D729AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47AA9150-1C60-43B8-94C2-EBB518D729AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABC4521-B83C-4A46-9D66-6A7469552171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABC4521-B83C-4A46-9D66-6A7469552171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABC4521-B83C-4A46-9D66-6A7469552171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABC4521-B83C-4A46-9D66-6A7469552171}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
