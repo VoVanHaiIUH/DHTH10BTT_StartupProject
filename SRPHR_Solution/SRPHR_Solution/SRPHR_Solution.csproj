@@ -84,6 +84,14 @@
       <Name>BusinessLogic</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BanHang\" />
+    <Folder Include="BaoCao\" />
+    <Folder Include="CongNoPKH\" />
+    <Folder Include="KhachHang\" />
+    <Folder Include="Kho\" />
+    <Folder Include="NhanSu\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

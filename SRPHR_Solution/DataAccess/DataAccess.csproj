@@ -53,13 +53,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Banhang\Truy xuat CSDL nhom Ban Hang nam o day.txt" />
-    <Content Include="Baocao\Truy xuat CSDL nhom lapbaocao nam o day.txt" />
-    <Content Include="Khobai\Truy xuat CSDL nhom kho nam o day.txt" />
-    <Content Include="Nhansu\Truy xuat CSDL nhom NhanSu nam o day.txt" />
-    <Content Include="PKH\Truy xuat CSDL nhom Phong Ke Hoach nam o day.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
       <Project>{73a9eeb4-65d7-49bc-baa1-76ba2ca09306}</Project>
       <Name>BusinessEntities</Name>
@@ -84,6 +77,14 @@
     <None Include="SRPHR_DataClasses.dbml.layout">
       <DependentUpon>SRPHR_DataClasses.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BanHang\" />
+    <Folder Include="BaoCao\" />
+    <Folder Include="CongNoPKH\" />
+    <Folder Include="KhachHang\" />
+    <Folder Include="Kho\" />
+    <Folder Include="NhanSu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
