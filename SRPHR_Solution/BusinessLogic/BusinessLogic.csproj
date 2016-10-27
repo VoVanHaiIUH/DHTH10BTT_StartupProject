@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,6 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NhanSu\ChucVuBLL.cs" />
+    <Compile Include="NhanSu\CTKyLuatNVBLL.cs" />
+    <Compile Include="NhanSu\CTThamGiaDTNVBLL.cs" />
+    <Compile Include="NhanSu\DaoTaoBLL.cs" />
+    <Compile Include="NhanSu\KyLuatBLL.cs" />
+    <Compile Include="NhanSu\LichSuLamViecBLL.cs" />
+    <Compile Include="NhanSu\MyConvert.cs" />
+    <Compile Include="NhanSu\NhanVienBLL.cs" />
+    <Compile Include="NhanSu\PhongBanBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +60,10 @@
       <Project>{109f00dd-eb3f-4c69-a644-1eb837b71886}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{95ef3f10-9aee-4b64-b042-16183f8623b3}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BanHang\" />
@@ -57,7 +71,6 @@
     <Folder Include="CongNoPKH\" />
     <Folder Include="KhachHang\" />
     <Folder Include="Kho\" />
-    <Folder Include="NhanSu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
