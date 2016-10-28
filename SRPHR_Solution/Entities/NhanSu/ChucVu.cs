@@ -8,6 +8,7 @@ namespace Entities.NhanSu
 {
     public class ChucVu
     {
+        //error conflict
         #region property
         private string _maCV;
         private string _tenCV;
