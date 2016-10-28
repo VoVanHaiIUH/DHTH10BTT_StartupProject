@@ -8,6 +8,7 @@ namespace Entities.NhanSu
 {
     public class DaoTao
     {
+        //error
         #region property
         private string _maKhoaDT;
         private string _tenKhoaDT;
