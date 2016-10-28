@@ -39,6 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongNoPKH\eCongNoKH.cs" />
+    <Compile Include="CongNoPKH\eCongNoNCC.cs" />
+    <Compile Include="CongNoPKH\eCTCongNoKH.cs" />
+    <Compile Include="CongNoPKH\eCTCongNoNCC.cs" />
+    <Compile Include="CongNoPKH\eCTHDBanSi.cs" />
+    <Compile Include="CongNoPKH\eCTKhuyenMai.cs" />
+    <Compile Include="CongNoPKH\eCTMuaHangNCC.cs" />
+    <Compile Include="CongNoPKH\eCTPhieuDNNK.cs" />
+    <Compile Include="CongNoPKH\eCTPhieuDNXK.cs" />
+    <Compile Include="CongNoPKH\eHDBanSi.cs" />
+    <Compile Include="CongNoPKH\eHDMuaHangNCC.cs" />
+    <Compile Include="CongNoPKH\eKhuyenMai.cs" />
+    <Compile Include="CongNoPKH\eNhaCungCap.cs" />
+    <Compile Include="CongNoPKH\ePhieuDNNK.cs" />
+    <Compile Include="CongNoPKH\ePhieuDNXK.cs" />
     <Compile Include="NhanSu\ChucVu.cs" />
     <Compile Include="NhanSu\CTKyLuatNV.cs" />
     <Compile Include="NhanSu\CTThamGiaDTNV.cs" />
@@ -52,7 +67,6 @@
   <ItemGroup>
     <Folder Include="BanHang\" />
     <Folder Include="BaoCao\" />
-    <Folder Include="CongNoPKH\" />
     <Folder Include="KhachHang\" />
     <Folder Include="Kho\" />
   </ItemGroup>

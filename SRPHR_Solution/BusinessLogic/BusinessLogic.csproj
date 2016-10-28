@@ -40,6 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongNoPKH\CongNoKH_BLL.cs" />
+    <Compile Include="CongNoPKH\CongNoNCC_BLL.cs" />
+    <Compile Include="CongNoPKH\HDBanSi_BLL.cs" />
+    <Compile Include="CongNoPKH\HDMuaHangNCC_BLL.cs" />
+    <Compile Include="CongNoPKH\KhuyenMai_BLL.cs" />
+    <Compile Include="CongNoPKH\NhaCungCap_BLL.cs" />
+    <Compile Include="CongNoPKH\PhieuDNNK_BLL.cs" />
+    <Compile Include="CongNoPKH\PhieuDNXK_BLL.cs" />
     <Compile Include="NhanSu\ChucVuBLL.cs" />
     <Compile Include="NhanSu\CTKyLuatNVBLL.cs" />
     <Compile Include="NhanSu\CTThamGiaDTNVBLL.cs" />
@@ -68,7 +76,6 @@
   <ItemGroup>
     <Folder Include="BanHang\" />
     <Folder Include="BaoCao\" />
-    <Folder Include="CongNoPKH\" />
     <Folder Include="KhachHang\" />
     <Folder Include="Kho\" />
   </ItemGroup>
