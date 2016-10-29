@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongNoPKH\eCTHDMuahangNCC.cs" />
     <Compile Include="CongNoPKH\eCongNoKH.cs" />
     <Compile Include="CongNoPKH\eCongNoNCC.cs" />
     <Compile Include="CongNoPKH\eCTCongNoKH.cs" />
