@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace Entities.CongNoPKH
 {
-    public class eCTHDBanSi
+    class eCTHDMuahangNCC
     {
+
         public string maHD { get; set; }
-        public string maSP { get; set; }
+        public int maSP { get; set; }
         public float soluong { get; set; }
-        public string dongiaBan { get; set; }
+        public string dongiaMua { get; set; }
         public string ghiChu { get; set; }
-        public eCTHDBanSi(string maHD, string maSP, float soluong, string dongiaBan, string ghiChu)
+        public eCTHDMuahangNCC(string maHD, int maSP, float soluong, string dongiaMua, string ghiChu)
         {
             this.maHD = maHD;
             this.maSP = maSP;
             this.soluong = soluong;
-            this.dongiaBan = dongiaBan;
+            this.dongiaMua = dongiaMua;
             this.ghiChu = ghiChu;
         }
         public override int GetHashCode()
