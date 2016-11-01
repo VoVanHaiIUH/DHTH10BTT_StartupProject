@@ -8,6 +8,7 @@ namespace Entities.NhanSu
 {
     public class KyLuat
     {
+
         //#region property
         //private string _maKL;
         //private string _hinhThucKL;

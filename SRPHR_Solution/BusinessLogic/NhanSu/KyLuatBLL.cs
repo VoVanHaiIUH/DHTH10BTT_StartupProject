@@ -8,6 +8,7 @@ using Entities.NhanSu;
 
 namespace BusinessLogic.NhanSu
 {
+   
     //public class KyLuatBLL
     //{
     //    SRPHRDataContext DB = new SRPHRDataContext();
@@ -74,7 +75,7 @@ namespace BusinessLogic.NhanSu
     //            return false;
     //        }
     //    }
-    //}
+
 
     public class KyLuatBLL
     {
