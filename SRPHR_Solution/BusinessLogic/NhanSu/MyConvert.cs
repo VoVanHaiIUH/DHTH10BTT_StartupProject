@@ -26,13 +26,22 @@ namespace BusinessLogic.NhanSu
         {
             return new ChucVu(record.maChucVu, record.tenCV, record.heSo, record.ghiChu);
         }
+        //public static KyLuat ToKyLuat(Tbl_KyLuatNV record)
+        //{
+        //    return new KyLuat(record.maKyLuat, record.hinhThucKL, record.ghiChu);
+        //}
+        //public static DaoTao ToDaoTao(Tbl_DaoTaoNV record)
+        //{
+        //    return new DaoTao(record.maKhoaDT,record.tenKhoaDT,record.ngayBD,record.ngayKT,record.diaDiem,record.hinhthucDT,(decimal)record.chiPhi);
+        //}
+
         public static KyLuat ToKyLuat(Tbl_KyLuatNV record)
         {
             return new KyLuat(record.maKyLuat, record.hinhThucKL, record.ghiChu);
         }
         public static DaoTao ToDaoTao(Tbl_DaoTaoNV record)
         {
-            return new DaoTao(record.maKhoaDT,record.tenKhoaDT,record.ngayBD,record.ngayKT,record.diaDiem,record.hinhthucDT,(decimal)record.chiPhi);
+            return new DaoTao(record.maKhoaDT, record.tenKhoaDT, record.ngayBD, record.ngayKT, record.diaDiem, record.hinhthucDT, (decimal)record.chiPhi);
         }
 #endregion
 
