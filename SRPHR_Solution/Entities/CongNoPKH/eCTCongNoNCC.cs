@@ -15,6 +15,7 @@ namespace Entities.CongNoPKH
         public eCTCongNoNCC(string mancc, string sotien, string mahd, string ghichu)
        {
            this.maNCC = mancc;
+           this.maNCC = mancc;
            this.soTien = sotien;
             this.ghiChu = ghichu;
 
