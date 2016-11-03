@@ -17,6 +17,15 @@ namespace BusinessLogic.NhanSu
                 record.gioiTinh, record.email, record.soDT, record.diaChi, record.trangThai.Value);
         }
 
+        //public static PhongBan ToPhongBan(Tbl_PhongBan record)
+        //{
+        //    return new PhongBan(record.maPB, record.tenPB, record.diaDiem, record.soDT);
+        //}
+
+        //public static ChucVu ToChucVu(Tbl_ChucVu record)
+        //{
+        //    return new ChucVu(record.maChucVu, record.tenCV, record.heSo, record.ghiChu);
+        //}
         public static PhongBan ToPhongBan(Tbl_PhongBan record)
         {
             return new PhongBan(record.maPB, record.tenPB, record.diaDiem, record.soDT);
@@ -26,13 +35,23 @@ namespace BusinessLogic.NhanSu
         {
             return new ChucVu(record.maChucVu, record.tenCV, record.heSo, record.ghiChu);
         }
+
+        //public static KyLuat ToKyLuat(Tbl_KyLuatNV record)
+        //{
+        //    return new KyLuat(record.maKyLuat, record.hinhThucKL, record.ghiChu);
+        //}
+        //public static DaoTao ToDaoTao(Tbl_DaoTaoNV record)
+        //{
+        //    return new DaoTao(record.maKhoaDT, record.tenKhoaDT, record.ngayBD, record.ngayKT, record.diaDiem, record.hinhthucDT, (decimal)record.chiPhi);
+        //}
+
         public static KyLuat ToKyLuat(Tbl_KyLuatNV record)
         {
             return new KyLuat(record.maKyLuat, record.hinhThucKL, record.ghiChu);
         }
         public static DaoTao ToDaoTao(Tbl_DaoTaoNV record)
         {
-            return new DaoTao(record.maKhoaDT,record.tenKhoaDT,record.ngayBD,record.ngayKT,record.diaDiem,record.hinhthucDT,(decimal)record.chiPhi);
+            return new DaoTao(record.maKhoaDT, record.tenKhoaDT, record.ngayBD, record.ngayKT, record.diaDiem, record.hinhthucDT, (decimal)record.chiPhi);
         }
 #endregion
 
@@ -55,6 +74,28 @@ namespace BusinessLogic.NhanSu
 
             return record;
         }
+
+        //public static Tbl_PhongBan toTbl_PhongBan(PhongBan phongban)
+        //{
+        //    Tbl_PhongBan record = new Tbl_PhongBan();
+        //    record.maPB = phongban.MaPB;
+        //    record.tenPB = phongban.TenPB;
+        //    record.diaDiem = phongban.DiaDiem;
+        //    record.soDT = phongban.Sdt;
+
+        //    return record;
+        //}
+
+        //public static Tbl_ChucVu toTbl_ChucVu(ChucVu chucvu)
+        //{
+        //    Tbl_ChucVu record = new Tbl_ChucVu();
+        //    record.maChucVu = chucvu.MaCV;
+        //    record.tenCV = chucvu.TenCV;
+        //    record.heSo = chucvu.HeSo;
+        //    record.ghiChu = chucvu.GhiChu;
+
+        //    return record;
+        //}
 
         public static Tbl_PhongBan toTbl_PhongBan(PhongBan phongban)
         {
