@@ -31,6 +31,25 @@ namespace BusinessLogic.CongNoPKH
         {
             return new eCongNoNCC(p.soPhieu,p.maNCC,Convert.ToString( p.ngayLap),p.maNV);
         }
+        public List<eCTCongNoNCC> getAllCNNCCMbyma(string ma)
+        {
+            var ncc = db.Tbl_CTCongNoNCCs.Where(x => x.maHD == ma).ToList();
+            List<eCTCongNoNCC> kq = new List<eCTCongNoNCC>();
+            eCTCongNoNCC p;
+
+            foreach (Tbl_CTCongNoNCC tmp in ncc)
+            {
+                p = congnoCTkh(tmp);
+                kq.Add(p);
+
+            }
+
+            return kq;
+        }
+        public static eCTCongNoNCC congnoCTkh(Tbl_CTCongNoNCC p)
+        {
+            return new eCTCongNoNCC(p.soPhieu,p.maHD, Convert.ToString(p.sotien), p.ghiChu);
+        }
   
         public int tinhcongnoKH(int e)
         {

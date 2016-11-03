@@ -8,26 +8,27 @@ namespace Entities.CongNoPKH
 {
     public class eCTCongNoNCC
     {
-         public string maNCC { get; set; }
+         public string soPhieu { get; set; }
        public string soTien { get; set; }
        public string maHD { get; set; }
         public string ghiChu { get; set; }
-        public eCTCongNoNCC(string mancc, string sotien, string mahd, string ghichu)
+        public eCTCongNoNCC(string sophieu, string mahd, string sotien, string ghichu)
        {
-           this.maNCC = mancc;
-           this.maNCC = mancc;
+           this.soPhieu= soPhieu;
+        
            this.soTien = sotien;
+           this.maHD = maHD;
             this.ghiChu = ghichu;
 
         }
          public override bool Equals(object obj)
         {
            eCTCongNoNCC encc = (eCTCongNoNCC)obj;
-            return encc.Equals(encc.maNCC);
+            return encc.Equals(encc.soPhieu);
        }
         public override int GetHashCode()
        {
-             return maNCC.GetHashCode();
+             return soPhieu.GetHashCode();
         }
     }
 }
