@@ -66,6 +66,7 @@
     </None>
     <None Include="SRPHR.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SRPHR.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
