@@ -14,6 +14,10 @@ namespace Entities.Kho
         public string _soLuongQli { get; set; }
         public string _maSP { get; set; }
         public string _donVi { get; set; }
+
+
+
+
         public eCTPhieuNK(string maphieuqli, string stt, string tensp, string soluongqli, string masp, string donvi)
         {
             this._maPhieuQli = maphieuqli;

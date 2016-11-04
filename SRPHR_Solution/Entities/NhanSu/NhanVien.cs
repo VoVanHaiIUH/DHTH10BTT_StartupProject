@@ -104,6 +104,11 @@ namespace Entities.NhanSu
             DiaChi      = diaChi;
             TrangThai   = trangThai; 
         }
+
+        public NhanVien()
+        {
+            // TODO: Complete member initialization
+        }
 #endregion
 
 #region Methods

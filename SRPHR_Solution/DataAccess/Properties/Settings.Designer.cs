@@ -53,5 +53,16 @@ namespace DataAccess.Properties {
                 return ((string)(this["SHRPRConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=desktop-nr10111;Initial Catalog=SHRPR;Persist Security Info=True;User" +
+            " ID=sa;Password=sapassword")]
+        public string SHRPRConnectionString3 {
+            get {
+                return ((string)(this["SHRPRConnectionString3"]));
+            }
+        }
     }
 }

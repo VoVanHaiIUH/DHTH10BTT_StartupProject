@@ -13,6 +13,8 @@ namespace Entities.Kho
         public string _maNV { get; set; }
         public string _maKho { get; set; }
         public string _tinhTrang { get; set; }
+
+
         public ePhieuQLiKho(string maphieuqli, string ngaylapqli, string manv, string makho, string tinhtrang)
         {
             this._maPhieuQli = maphieuqli;

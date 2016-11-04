@@ -40,16 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CongNoPKH\SRPHR.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SRPHR.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="CongNoPKH\SRPHR1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SRPHR.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -70,18 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="CongNoPKH\SRPHR.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>SRPHR1.designer.cs</LastGenOutput>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="SRPHR.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>SRPHR.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -91,17 +75,13 @@
   <ItemGroup>
     <Folder Include="BanHang\" />
     <Folder Include="BaoCao\" />
+    <Folder Include="CongNoPKH\" />
     <Folder Include="KhachHang\" />
     <Folder Include="Kho\" />
     <Folder Include="NhanSu\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SRPHR.dbml.layout">
-      <DependentUpon>SRPHR.dbml</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="CongNoPKH\SRPHR.dbml.layout">
       <DependentUpon>SRPHR.dbml</DependentUpon>
     </None>
   </ItemGroup>
