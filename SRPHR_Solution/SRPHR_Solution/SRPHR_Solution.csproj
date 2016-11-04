@@ -130,36 +130,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Kho\PhieuNK.resx">
-      <DependentUpon>PhieuNK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ChuongTrinhDTNV.resx">
-      <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\CTKyluatNv.resx">
-      <DependentUpon>CTKyluatNv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\DaoTao.resx">
-      <DependentUpon>DaoTao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\KyLuat.resx">
-      <DependentUpon>KyLuat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\LichSuLamViec.resx">
-      <DependentUpon>LichSuLamViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ThemCV.resx">
-      <DependentUpon>ThemCV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ThemNV.resx">
-      <DependentUpon>ThemNV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ThemPB.resx">
-      <DependentUpon>ThemPB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
