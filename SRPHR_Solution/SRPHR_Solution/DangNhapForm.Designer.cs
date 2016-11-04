@@ -69,6 +69,7 @@
             this.btnlogin.TabIndex = 3;
             this.btnlogin.Text = "Đăng nhập";
             this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // label2
             // 
@@ -87,6 +88,7 @@
             this.btnexit.TabIndex = 5;
             this.btnexit.Text = "Thoát";
             this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // btndangki
             // 
@@ -96,6 +98,7 @@
             this.btndangki.TabIndex = 6;
             this.btndangki.Text = "Đăng Kí ";
             this.btndangki.UseVisualStyleBackColor = true;
+            this.btndangki.Click += new System.EventHandler(this.btndangki_Click);
             // 
             // FormDangnhap
             // 
@@ -111,6 +114,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "FormDangnhap";
             this.Text = "Đăng Nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDangnhap_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

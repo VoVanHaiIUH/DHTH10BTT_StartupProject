@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btndangxuat = new System.Windows.Forms.Button();
+            this.btnthoat = new System.Windows.Forms.Button();
+            this.btnQuanLi = new System.Windows.Forms.Button();
+            this.btnquaylai = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnquaylai = new System.Windows.Forms.Button();
-            this.btnQuanLi = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnthoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -52,11 +51,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nội dung";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(456, 242);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnthoat);
             this.groupBox2.Controls.Add(this.btnQuanLi);
-            this.groupBox2.Controls.Add(this.btndangxuat);
             this.groupBox2.Controls.Add(this.btnquaylai);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label1);
@@ -67,14 +73,35 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
             // 
-            // btndangxuat
+            // btnthoat
             // 
-            this.btndangxuat.Location = new System.Drawing.Point(9, 191);
-            this.btndangxuat.Name = "btndangxuat";
-            this.btndangxuat.Size = new System.Drawing.Size(128, 23);
-            this.btndangxuat.TabIndex = 6;
-            this.btndangxuat.Text = "Đăng xuất";
-            this.btndangxuat.UseVisualStyleBackColor = true;
+            this.btnthoat.Location = new System.Drawing.Point(9, 246);
+            this.btnthoat.Name = "btnthoat";
+            this.btnthoat.Size = new System.Drawing.Size(128, 23);
+            this.btnthoat.TabIndex = 8;
+            this.btnthoat.Text = "Thoát";
+            this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
+            // 
+            // btnQuanLi
+            // 
+            this.btnQuanLi.Location = new System.Drawing.Point(9, 191);
+            this.btnQuanLi.Name = "btnQuanLi";
+            this.btnQuanLi.Size = new System.Drawing.Size(128, 23);
+            this.btnQuanLi.TabIndex = 6;
+            this.btnQuanLi.Text = "Quản lí PQ";
+            this.btnQuanLi.UseVisualStyleBackColor = true;
+            this.btnQuanLi.Click += new System.EventHandler(this.btnQuanLi_Click);
+            // 
+            // btnquaylai
+            // 
+            this.btnquaylai.Location = new System.Drawing.Point(9, 220);
+            this.btnquaylai.Name = "btnquaylai";
+            this.btnquaylai.Size = new System.Drawing.Size(128, 23);
+            this.btnquaylai.TabIndex = 5;
+            this.btnquaylai.Text = "Quay lại";
+            this.btnquaylai.UseVisualStyleBackColor = true;
+            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
             // 
             // textBox1
             // 
@@ -93,41 +120,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Tài khoản :";
             // 
-            // btnquaylai
-            // 
-            this.btnquaylai.Location = new System.Drawing.Point(9, 220);
-            this.btnquaylai.Name = "btnquaylai";
-            this.btnquaylai.Size = new System.Drawing.Size(128, 23);
-            this.btnquaylai.TabIndex = 5;
-            this.btnquaylai.Text = "Quay lại";
-            this.btnquaylai.UseVisualStyleBackColor = true;
-            // 
-            // btnQuanLi
-            // 
-            this.btnQuanLi.Location = new System.Drawing.Point(9, 162);
-            this.btnQuanLi.Name = "btnQuanLi";
-            this.btnQuanLi.Size = new System.Drawing.Size(128, 23);
-            this.btnQuanLi.TabIndex = 6;
-            this.btnQuanLi.Text = "Quản lí PQ";
-            this.btnQuanLi.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(456, 242);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnthoat
-            // 
-            this.btnthoat.Location = new System.Drawing.Point(9, 246);
-            this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(128, 23);
-            this.btnthoat.TabIndex = 8;
-            this.btnthoat.Text = "Thoát";
-            this.btnthoat.UseVisualStyleBackColor = true;
-            // 
             // FormPhanQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,10 +129,11 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FormPhanQuyen";
             this.Text = "FormPhanQuyen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPhanQuyen_FormClosing);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,7 +143,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btndangxuat;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnquaylai;
