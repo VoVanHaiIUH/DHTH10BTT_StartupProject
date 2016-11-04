@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHRPR" Class="SRPHRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=KEN-PC;Initial Catalog=SHRPR;Persist Security Info=True;User ID=sa" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString4" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Tbl_ChucVu" Member="Tbl_ChucVus">
-    <Type Name="Tbl_ChucVu">
-      <Column Name="maChucVu" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="heSo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
-      <Column Name="tenCV" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="ghiChu" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
-      <Association Name="Tbl_ChucVu_Tbl_LichSuLamViec" Member="Tbl_LichSuLamViecs" ThisKey="maChucVu" OtherKey="maChucVu" Type="Tbl_LichSuLamViec" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=SHRPR;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_CongNoKH" Member="Tbl_CongNoKHs">
+    <Type Name="Tbl_CongNoKH">
+      <Column Name="soPhieu" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ngayLap" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="maKH" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="maNV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_CongNoKH_Tbl_CTCongNoKH" Member="Tbl_CTCongNoKHs" ThisKey="soPhieu" OtherKey="soPhieu" Type="Tbl_CTCongNoKH" />
+      <Association Name="Tbl_KhachHang_Tbl_CongNoKH" Member="Tbl_KhachHang" ThisKey="maKH" OtherKey="maKH" Type="Tbl_KhachHang" IsForeignKey="true" />
+      <Association Name="Tbl_NhanVien_Tbl_CongNoKH" Member="Tbl_NhanVien" ThisKey="maNV" OtherKey="maNV" Type="Tbl_NhanVien" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_TheThanhVien" Member="Tbl_TheThanhViens">
@@ -47,7 +49,7 @@
       <Column Name="soPhieu" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="sotien" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Association Name="Tbl_CongNoKH_Tbl_CTCongNoKH" Member="Tbl_CongNoKH" ThisKey="soPhieu" OtherKey="soPhieu" Type="Tbl_CongNoKH" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_CongNoKH_Tbl_CTCongNoKH" Member="Tbl_CongNoKH" ThisKey="soPhieu" OtherKey="soPhieu" Type="Tbl_CongNoKH" IsForeignKey="true" />
       <Association Name="Tbl_KhachHang_Tbl_CTCongNoKH" Member="Tbl_KhachHang" ThisKey="maKH" OtherKey="maKH" Type="Tbl_KhachHang" IsForeignKey="true" />
     </Type>
   </Table>
@@ -59,38 +61,6 @@
       <Column Name="ghiChu" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Association Name="Tbl_CongNoNCC_Tbl_CTCongNoNCC" Member="Tbl_CongNoNCC" ThisKey="soPhieu" OtherKey="soPhieu" Type="Tbl_CongNoNCC" IsForeignKey="true" />
       <Association Name="Tbl_HDMuaHangNCC_Tbl_CTCongNoNCC" Member="Tbl_HDMuaHangNCC" ThisKey="maHD" OtherKey="maHD" Type="Tbl_HDMuaHangNCC" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Tbl_CTHDBanLe" Member="Tbl_CTHDBanLes">
-    <Type Name="Tbl_CTHDBanLe">
-      <Column Name="soHoaDon" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="maSP" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="soLuong" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="donGia" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
-      <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Association Name="Tbl_HDBanLe_Tbl_CTHDBanLe" Member="Tbl_HDBanLe" ThisKey="soHoaDon" OtherKey="soHoaDon" Type="Tbl_HDBanLe" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="Tbl_SanPham_Tbl_CTHDBanLe" Member="Tbl_SanPham" ThisKey="maSP" OtherKey="maSP" Type="Tbl_SanPham" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Tbl_CTHDBanSi" Member="Tbl_CTHDBanSis">
-    <Type Name="Tbl_CTHDBanSi">
-      <Column Name="maHD" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="maSP" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="soluong" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="dongiaBan" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
-      <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Association Name="Tbl_HDBanSi_Tbl_CTHDBanSi" Member="Tbl_HDBanSi" ThisKey="maHD" OtherKey="maHD" Type="Tbl_HDBanSi" IsForeignKey="true" />
-      <Association Name="Tbl_SanPham_Tbl_CTHDBanSi" Member="Tbl_SanPham" ThisKey="maSP" OtherKey="maSP" Type="Tbl_SanPham" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Tbl_CTKhuyenMai" Member="Tbl_CTKhuyenMais">
-    <Type Name="Tbl_CTKhuyenMai">
-      <Column Name="msDotKM" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="maSP" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="phantramKM" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Association Name="Tbl_KhuyenMai_Tbl_CTKhuyenMai" Member="Tbl_KhuyenMai" ThisKey="msDotKM" OtherKey="msDotKM" Type="Tbl_KhuyenMai" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="Tbl_SanPham_Tbl_CTKhuyenMai" Member="Tbl_SanPham" ThisKey="maSP" OtherKey="maSP" Type="Tbl_SanPham" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_CTKyLuatNV" Member="Tbl_CTKyLuatNVs">
@@ -248,8 +218,8 @@
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="nghenghiep" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="trangthai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Tbl_KhachHang_Tbl_TheThanhVien" Member="Tbl_TheThanhVien" ThisKey="maKH" OtherKey="maKH" Type="Tbl_TheThanhVien" Cardinality="One" />
       <Association Name="Tbl_KhachHang_Tbl_CongNoKH" Member="Tbl_CongNoKHs" ThisKey="maKH" OtherKey="maKH" Type="Tbl_CongNoKH" />
+      <Association Name="Tbl_KhachHang_Tbl_TheThanhVien" Member="Tbl_TheThanhVien" ThisKey="maKH" OtherKey="maKH" Type="Tbl_TheThanhVien" Cardinality="One" />
       <Association Name="Tbl_KhachHang_Tbl_CTCongNoKH" Member="Tbl_CTCongNoKHs" ThisKey="maKH" OtherKey="maKH" Type="Tbl_CTCongNoKH" />
       <Association Name="Tbl_KhachHang_Tbl_HDBanLe" Member="Tbl_HDBanLes" ThisKey="maKH" OtherKey="maKH" Type="Tbl_HDBanLe" />
       <Association Name="Tbl_KhachHang_Tbl_HDBanSi" Member="Tbl_HDBanSis" ThisKey="maKH" OtherKey="maKH" Type="Tbl_HDBanSi" />
@@ -292,7 +262,7 @@
       <Column Name="ngayBD" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ngayKT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="Tbl_ChucVu_Tbl_LichSuLamViec" Member="Tbl_ChucVu" ThisKey="maChucVu" OtherKey="maChucVu" Type="Tbl_ChucVu" IsForeignKey="true" />
-      <Association Name="Tbl_NhanVien_Tbl_LichSuLamViec" Member="Tbl_NhanVien" ThisKey="maNV" OtherKey="maNV" Type="Tbl_NhanVien" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_NhanVien_Tbl_LichSuLamViec" Member="Tbl_NhanVien" ThisKey="maNV" OtherKey="maNV" Type="Tbl_NhanVien" IsForeignKey="true" />
       <Association Name="Tbl_PhongBan_Tbl_LichSuLamViec" Member="Tbl_PhongBan" ThisKey="maPB" OtherKey="maPB" Type="Tbl_PhongBan" IsForeignKey="true" />
     </Type>
   </Table>
@@ -377,7 +347,7 @@
       <Column Name="tinhTrang" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
       <Association Name="Tbl_Kho_Tbl_PhieuNK" Member="Tbl_Kho" ThisKey="msKho" OtherKey="msKho" Type="Tbl_Kho" IsForeignKey="true" />
       <Association Name="Tbl_NhanVien_Tbl_PhieuNK" Member="Tbl_NhanVien" ThisKey="maNV" OtherKey="maNV" Type="Tbl_NhanVien" IsForeignKey="true" />
-      <Association Name="Tbl_PhieuDNNK_Tbl_PhieuNK" Member="Tbl_PhieuDNNK" ThisKey="maPhieuNhap" OtherKey="soPDNNK" Type="Tbl_PhieuDNNK" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_PhieuDNNK_Tbl_PhieuNK" Member="Tbl_PhieuDNNK" ThisKey="maPhieuNhap" OtherKey="soPDNNK" Type="Tbl_PhieuDNNK" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_PhieuQLKho" Member="Tbl_PhieuQLKhos">
@@ -400,7 +370,7 @@
       <Column Name="tinhTrang" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
       <Association Name="Tbl_NhanVien_Tbl_PhieuXK" Member="Tbl_NhanVien" ThisKey="maNV" OtherKey="maNV" Type="Tbl_NhanVien" IsForeignKey="true" />
       <Association Name="Tbl_NhanVien_Tbl_PhieuXK1" Member="Tbl_NhanVien1" ThisKey="maNV" OtherKey="maNV" Type="Tbl_NhanVien" IsForeignKey="true" />
-      <Association Name="Tbl_PhieuDNXK_Tbl_PhieuXK" Member="Tbl_PhieuDNXK" ThisKey="maPhieuXuat" OtherKey="soPDNNK" Type="Tbl_PhieuDNXK" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_PhieuDNXK_Tbl_PhieuXK" Member="Tbl_PhieuDNXK" ThisKey="maPhieuXuat" OtherKey="soPDNNK" Type="Tbl_PhieuDNXK" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_PhongBan" Member="Tbl_PhongBans">

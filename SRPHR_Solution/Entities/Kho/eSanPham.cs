@@ -16,6 +16,9 @@ namespace Entities.Kho
         public string _tenNhaPP { get; set; }
         public string _tenNhaSX { get; set; }
         public int _trangthai { get; set; }
+
+
+
         public eSanPham(string masp, string tensp, string mota, string ngaysx, string hansd, string tennhapp, string tennhasx, int trangthai)
         {
             this._hanSD = hansd;

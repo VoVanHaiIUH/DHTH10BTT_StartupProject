@@ -13,6 +13,10 @@ namespace Entities.Kho
         public string _maNV { get; set; }
         public string _msKho { get; set; }
         public string _tinhTrang { get; set; }
+
+
+
+
         public ePhieuNK(string maphieunhap, string ngaylap, string manv, string mskho, string tinhtrang)
         {
             this._maNV = manv;

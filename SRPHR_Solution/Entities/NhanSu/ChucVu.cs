@@ -163,6 +163,11 @@ namespace Entities.NhanSu
             heSo = HeSo;
             ghiChu = GhiChu;
         }
+
+        public ChucVu()
+        {
+            // TODO: Complete member initialization
+        }
         #endregion
 
         #region methods
