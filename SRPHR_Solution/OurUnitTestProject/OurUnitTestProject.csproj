@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="NhanSu\TestNhanVienBLL.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,6 +59,10 @@
       <Project>{72ed5ea2-42ab-451e-bfa5-30a96ae029bd}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{95ef3f10-9aee-4b64-b042-16183f8623b3}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BanHang\" />
@@ -65,7 +70,6 @@
     <Folder Include="CongNoPKH\" />
     <Folder Include="KhachHang\" />
     <Folder Include="Kho\" />
-    <Folder Include="NhanSu\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

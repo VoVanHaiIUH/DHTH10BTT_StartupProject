@@ -24,14 +24,14 @@ namespace Entities.CongNoPKH
             this.noidung = noidung;
             this.tenHD = tenHD;
         }
-        public override int GetHashCode()
-        {
-            return maKH.GetHashCode();
-        }
-        public override bool Equals(object obj)
-        {
-            eNhaCungCap ncc = (eNhaCungCap)obj;
-            return maKH.ToLower().Equals(ncc.maNCC);
-        }
+        //public override int GetHashCode()
+        //{
+        //    return maKH.GetHashCode();
+        //}
+        //public override bool Equals(object obj)
+        //{
+        //    eNhaCungCap ncc = (eNhaCungCap)obj;
+        //    return maKH.ToLower().Equals(ncc.maNCC);
+        //}
     }
 }
