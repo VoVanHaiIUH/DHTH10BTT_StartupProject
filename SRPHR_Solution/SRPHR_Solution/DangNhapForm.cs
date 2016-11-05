@@ -44,6 +44,7 @@ namespace SRPHR_Solution
 
         private void btnexit_Click(object sender, EventArgs e)
         {
+            Application.Exit();
             this.Close();
         }
 
