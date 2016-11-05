@@ -54,7 +54,7 @@ namespace SRPHR_Solution
 
             {
                 MessageBox.Show("Thêm thành Công!", "Thông báo!");
-                dataGridNhânViên.DataSource = nvbll.GetAllNhanVien();
+                dataGridNhânViên.DataSource = nvbl.get;
             }
            
 
