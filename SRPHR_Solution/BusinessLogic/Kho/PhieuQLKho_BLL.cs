@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Entities.Kho;
+using DataAccess;
+
+namespace BusinessLogic.Kho
+{
+    class PhieuQLKho_BLL
+    {
+        SRPHRDataContext DB = new SRPHRDataContext();
+        public bool AddAllPhieuQLK(ePhieuQLiKho newpqlk)
+        {
+            try
+            {
+                Tbl_PhieuQLKho pqlk = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == newpqlk._maPhieuQli_);
+                pqlk.maPhieuQL = newpqlk._maPhieuQli;
+                pqlk.ngayLapQL = Convert.ToDateTime(newpqlk._ngayLapQLi);
+                pqlk.maNV = newpqlk._maNV;
+                pqlk.tinhTrang = newpqlk._tinhTrang;
+                DB.Tbl_PhieuQLKhos.InsertOnSubmit(pqlk);
+                DB.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool DeletePhieuQLK(string delid)
+        {
+            try
+            {
+                Tbl_PhieuQLKho deletema = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == delid);
+                DB.Tbl_PhieuQLKhos.DeleteOnSubmit(deletema);
+                DB.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool UpDatePhieuQLK(ePhieuQLiKho updatepqlk)
+        {
+            try
+            {
+                Tbl_PhieuQLKho pqlk = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == updatepqlk._maPhieuQli);
+                pqlk.maPhieuQL = updatepqlk._maPhieuQli;
+                pqlk.maNV = updatepqlk._maNV;
+                pqlk.ngayLapQL = Convert.ToDateTime(updatepqlk._ngayLapQLi);
+                pqlk.tinhTrang = updatepqlk._tinhTrang;
+                pqlk.msKho = updatepqlk._maKho;
+                DB.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        
+    }
+}
