@@ -65,7 +65,7 @@ namespace BusinessLogic.NhanSu
        //     }
        //}
         SRPHRDataContext DB = new SRPHRDataContext();
-        public bool Add(LichSuLamViec newLSLV)
+        public bool Add(LSLamViec newLSLV)
         {
             try
             {
@@ -99,7 +99,7 @@ namespace BusinessLogic.NhanSu
                 return false;
             }
         }
-        public bool UpDate(LichSuLamViec updateLSLV)
+        public bool UpDate(LSLamViec updateLSLV)
         {
             try
             {
@@ -117,6 +117,39 @@ namespace BusinessLogic.NhanSu
             {
                 return false;
             }
+        }
+        public List<LSLamViec> getAllLS()
+        {
+            List<LSLamViec> lstls = new List<LSLamViec>();
+            foreach (Tbl_LichSuLamViec item in DB.Tbl_LichSuLamViecs)
+            {
+                LSLamViec ls = new LSLamViec();
+                ls.MaNV = item.maNV;
+                ls.MaChucVu = item.maChucVu;
+                ls.MaPB = item.maPB;
+                ls.NgayBD = item.ngayBD;
+                ls.NgayKT = (DateTime)item.ngayKT;
+                lstls.Add(ls);
+            }
+            return lstls;
+        }
+        public List<LSLamViec> Search1NhanVienbyMaNV(string mals)
+        {
+            int i = mals.Length;
+            List<LSLamViec> lstcd = new List<LSLamViec>();
+            var rct = (from a in DB.Tbl_LichSuLamViecs
+                       where a.maNV.Substring(0, i) == mals
+                       select new LSLamViec
+                       {
+                           MaNV = a.maNV,
+                           MaChucVu = a.maChucVu,
+                           MaPB = a.maPB,
+                           NgayBD = a.ngayBD,
+                           NgayKT = (DateTime)a.ngayKT,
+
+                       });
+            lstcd = rct.ToList();
+            return lstcd;
         }
     }
 }

@@ -11,11 +11,28 @@ namespace BusinessLogic.Kho
     class PhieuQLKho_BLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
+        public List<ePhieuQLiKho> getAllPQLKho()
+        {
+            var dspqlk = DB.Tbl_PhieuQLKhos.ToList();
+            List<ePhieuQLiKho> ls = new List<ePhieuQLiKho>();
+            foreach (Tbl_PhieuQLKho temppqlk in dspqlk)
+            {
+                ePhieuQLiKho pqlk = new ePhieuQLiKho();
+                pqlk._maPhieuQli = temppqlk.maPhieuQL;
+                pqlk._ngayLapQLi = Convert.ToString(temppqlk.ngayLapQL);
+                pqlk._maNV = temppqlk.maNV;
+                pqlk._maKho = temppqlk.msKho;
+                pqlk._tinhTrang = temppqlk.tinhTrang;
+                ls.Add(pqlk);
+
+            }
+            return ls;
+        }
         public bool AddAllPhieuQLK(ePhieuQLiKho newpqlk)
         {
             try
             {
-                Tbl_PhieuQLKho pqlk = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == newpqlk._maPhieuQli_);
+                Tbl_PhieuQLKho pqlk = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == newpqlk._maPhieuQli);
                 pqlk.maPhieuQL = newpqlk._maPhieuQli;
                 pqlk.ngayLapQL = Convert.ToDateTime(newpqlk._ngayLapQLi);
                 pqlk.maNV = newpqlk._maNV;
