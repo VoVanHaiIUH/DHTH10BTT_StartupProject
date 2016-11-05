@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 namespace Entities.BanHang
 {
     public class ChiTietHDGTGT
-   {
+    {
         private int maHDGTGT, maSP, soLuong, maThue, thueGTGT;
+        private string tenSP, giamGia, khuyenMai, tenDVMua, diaChi;
+        private decimal donGia, thanhTien, tongTien;
 
         public int ThueGTGT
         {
@@ -39,8 +41,7 @@ namespace Entities.BanHang
             get { return maHDGTGT; }
             set { maHDGTGT = value; }
         }
-        private string tenSP, giamGia, khuyenMai, tenDVMua, diaChi;
-
+     
         public string DiaChi
         {
             get { return diaChi; }
@@ -70,7 +71,7 @@ namespace Entities.BanHang
             get { return tenSP; }
             set { tenSP = value; }
         }
-        private decimal donGia, thanhTien, tongTien;
+       
 
         public decimal TongTien
         {
@@ -90,7 +91,7 @@ namespace Entities.BanHang
             set { donGia = value; }
         }
 
-        public ChiTietHDGTGT (int maHDGTGT, int maSP, int soLuong, int maThue, int thueGTGT, string tenSP, string giamGia, string khuyenMai, string tenDVMua, string diaChi, decimal donGia, decimal tongTien)
+        public ChiTietHDGTGT(int maHDGTGT, int maSP, int soLuong, int maThue, int thueGTGT, string tenSP, string giamGia, string khuyenMai, string tenDVMua, string diaChi, decimal donGia, decimal tongTien)
         {
             maHDGTGT = MaHDGTGT;
             maSP = MaSP;
@@ -107,20 +108,20 @@ namespace Entities.BanHang
             tongTien = TongTien;
         }
 
-    //    public override bool Equals(object newCTHDGTGT)
-    //    {
-    //        ChiTietHDGTGT cthdgtgt = (ChiTietHDGTGT)newCTHDGTGT;
-    //        return cthdgtgt.Equals(cthdgtgt.maHDGTGT);
-    //    }
+        //    public override bool Equals(object newCTHDGTGT)
+        //    {
+        //        ChiTietHDGTGT cthdgtgt = (ChiTietHDGTGT)newCTHDGTGT;
+        //        return cthdgtgt.Equals(cthdgtgt.maHDGTGT);
+        //    }
 
-    //    public override int GetHashCode()
-    //    {
-    //        return base.GetHashCode();
-    //    }
+        //    public override int GetHashCode()
+        //    {
+        //        return base.GetHashCode();
+        //    }
 
-    //    public override string ToString()
-    //    {
-    //        return base.ToString();
-    //    }
+        //    public override string ToString()
+        //    {
+        //        return base.ToString();
+        //    }
     }
 }

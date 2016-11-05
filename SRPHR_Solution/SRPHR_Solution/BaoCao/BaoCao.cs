@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogic;
 
-namespace SRPHR_Solution.BanHang
+namespace SRPHR_Solution.BaoCao
 {
-    public partial class ChitietHDGTGT : Form
+    public partial class BaoCao : Form
     {
-        public ChitietHDGTGT()
+        public BaoCao()
         {
             InitializeComponent();
         }
@@ -22,21 +21,11 @@ namespace SRPHR_Solution.BanHang
         {
             this.Close();
         }
-        private void ChitietHDGTGT_FormClosing(object sender, FormClosingEventArgs e)
+        private void BaoCao_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult n = MessageBox.Show("Bạn muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (n == DialogResult.No)
                 e.Cancel = true;
-        }
-
-        private void ChitietHDGTGT_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

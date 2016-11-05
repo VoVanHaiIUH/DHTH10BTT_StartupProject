@@ -28,5 +28,10 @@ namespace SRPHR_Solution.BanHang
             if (n == DialogResult.No)
                 e.Cancel = true;
         }
+
+        private void ChitietHDBanle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

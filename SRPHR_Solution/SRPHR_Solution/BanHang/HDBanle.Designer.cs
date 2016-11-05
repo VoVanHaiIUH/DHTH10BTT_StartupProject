@@ -41,6 +41,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnxem = new System.Windows.Forms.Button();
+            this.txtthanhtien = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +88,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.txtthanhtien);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtmakh);
             this.groupBox1.Controls.Add(this.txtmanv);
             this.groupBox1.Controls.Add(this.txtmahdbanle);
@@ -99,14 +107,14 @@
             // 
             // txtmakh
             // 
-            this.txtmakh.Location = new System.Drawing.Point(120, 133);
+            this.txtmakh.Location = new System.Drawing.Point(120, 90);
             this.txtmakh.Name = "txtmakh";
             this.txtmakh.Size = new System.Drawing.Size(168, 20);
             this.txtmakh.TabIndex = 1;
             // 
             // txtmanv
             // 
-            this.txtmanv.Location = new System.Drawing.Point(120, 81);
+            this.txtmanv.Location = new System.Drawing.Point(120, 59);
             this.txtmanv.Name = "txtmanv";
             this.txtmanv.Size = new System.Drawing.Size(168, 20);
             this.txtmanv.TabIndex = 1;
@@ -121,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 140);
+            this.label3.Location = new System.Drawing.Point(9, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 0;
@@ -130,7 +138,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 88);
+            this.label2.Location = new System.Drawing.Point(9, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 0;
@@ -162,6 +170,38 @@
             this.btnxem.Text = "Xem Chi Tiết HD Bán Lẻ";
             this.btnxem.UseVisualStyleBackColor = true;
             this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
+            // 
+            // txtthanhtien
+            // 
+            this.txtthanhtien.Location = new System.Drawing.Point(120, 116);
+            this.txtthanhtien.Name = "txtthanhtien";
+            this.txtthanhtien.Size = new System.Drawing.Size(168, 20);
+            this.txtthanhtien.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 123);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Thành Tiền";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 13);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Ngày Bán Lẻ";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(120, 142);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
+            this.dateTimePicker1.TabIndex = 27;
             // 
             // HDBanle
             // 
@@ -199,5 +239,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnxem;
+        private System.Windows.Forms.TextBox txtthanhtien;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
