@@ -56,7 +56,7 @@
     <Compile Include="FormDangKi.Designer.cs">
       <DependentUpon>FormDangKi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs"> 
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
@@ -74,68 +74,13 @@
     <Compile Include="PhanQuyen\FormThem.Designer.cs">
       <DependentUpon>FormThem.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\ThemNV.Designer.cs">
-      <DependentUpon>ThemNV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-<Compile Include="NhanSu\ThemPB.Designer.cs">
-      <DependentUpon>ThemPB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemPB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  <Compile Include="NhanSu\ThemCV.Designer.cs">
-      <DependentUpon>ThemCV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemCV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  <Compile Include="NhanSu\LichSuLamViec.Designer.cs">
-      <DependentUpon>LichSuLamViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\LichSuLamViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  <Compile Include="NhanSu\KyLuat.Designer.cs">
-      <DependentUpon>KyLuat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\KyLuat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  <Compile Include="NhanSu\DaoTao.Designer.cs">
-      <DependentUpon>DaoTao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\DaoTao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  <Compile Include="NhanSu\CTKyluatNv.Designer.cs">
-      <DependentUpon>CTKyluatNv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\CTKyluatNv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  <Compile Include="NhanSu\ChuongTrinhDTNV.Designer.cs">
-      <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ChuongTrinhDTNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  
-
-
-
-
-
-
-
-
-    
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DangNhapForm.resx">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKi.resx">
+      <DependentUpon>FormDangKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -177,6 +122,10 @@
       <Project>{72ed5ea2-42ab-451e-bfa5-30a96ae029bd}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{95ef3f10-9aee-4b64-b042-16183f8623b3}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BanHang\" />
@@ -184,7 +133,6 @@
     <Folder Include="CongNoPKH\" />
     <Folder Include="KhachHang\" />
     <Folder Include="Kho\" />
-    <Folder Include="NhanSu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

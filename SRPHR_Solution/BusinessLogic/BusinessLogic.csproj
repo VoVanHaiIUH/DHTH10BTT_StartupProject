@@ -57,6 +57,8 @@
     <Compile Include="NhanSu\MyConvert.cs" />
     <Compile Include="NhanSu\NhanVienBLL.cs" />
     <Compile Include="NhanSu\PhongBanBLL.cs" />
+    <Compile Include="PhanQuyen\NhomTKBLL.cs" />
+    <Compile Include="PhanQuyen\TaiKhoanBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

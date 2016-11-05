@@ -21,38 +21,39 @@ namespace SRPHR_Solution.PhanQuyen
         private void btnQuanLi_Click(object sender, EventArgs e)
         {
             // thoát form PQ
-            Visible = false;
-            ShowInTaskbar = false;
+            //Visible = false;
+            //ShowInTaskbar = false;
 
             // show form QLPQ
             FormQL frmnew = new FormQL();
             frmnew.Activate();
-            frmnew.Show();
+            frmnew.ShowDialog();
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.Exit();
+            
         }
 
         private void btnquaylai_Click(object sender, EventArgs e)
         {
             // thoát form QLPQ
-            Visible = false;
-            ShowInTaskbar = false;
+           Visible = false;
+            //ShowInTaskbar = false;
 
             // show form PQ
             FormMain frmnew = new FormMain();
             frmnew.Activate();
-            frmnew.Show();
+            frmnew.ShowDialog();
         }
 
         private void FormPhanQuyen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult r = MessageBox.Show("Bạn muốn thoát khỏi chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if (r == DialogResult.No)
-                e.Cancel = true;
+            //DialogResult r = MessageBox.Show("Bạn muốn thoát khỏi chương trình ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            //if (r == DialogResult.No)
+            //    e.Cancel = true;
+            Application.Exit();
         }
     }
 }

@@ -182,6 +182,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "FormDangKi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangKi";
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
