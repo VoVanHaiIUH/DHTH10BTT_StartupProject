@@ -59,6 +59,8 @@
     <Compile Include="CongNoPKH\eNhaCungCap.cs" />
     <Compile Include="CongNoPKH\ePhieuDNNK.cs" />
     <Compile Include="CongNoPKH\ePhieuDNXK.cs" />
+    <Compile Include="KhachHang\KhachHang.cs" />
+    <Compile Include="KhachHang\Thethanhvien.cs" />
     <Compile Include="Kho\eCTPhieuNK.cs" />
     <Compile Include="Kho\eKho.cs" />
     <Compile Include="Kho\ePhieuNK.cs" />
@@ -77,7 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaoCao\" />
-    <Folder Include="KhachHang\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
