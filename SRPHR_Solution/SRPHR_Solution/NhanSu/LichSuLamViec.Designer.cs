@@ -44,6 +44,7 @@
             this.btnExit.TabIndex = 46;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // dataGridView1
             // 
@@ -77,6 +78,7 @@
             this.btnTim.TabIndex = 49;
             this.btnTim.Text = "Tìm ";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // LichSuLamViec
             // 

@@ -23,6 +23,14 @@ namespace Entities.Kho
             this._maKho = makho;
             this._tinhTrang = tinhtrang;
         }
+        public ePhieuQLiKho()
+        {
+            this._maPhieuQli = "";
+            this._ngayLapQLi = "";
+            this._tinhTrang = "";
+            this._maNV = "";
+            this._maKho = "";
+        }
         public override bool Equals(object newPQLK)
         {
             ePhieuQLiKho pqlk = (ePhieuQLiKho)newPQLK;

@@ -223,6 +223,7 @@
             this.btnsua.TabIndex = 48;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
@@ -232,6 +233,7 @@
             this.btnxoa.TabIndex = 47;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnthem
             // 
@@ -241,6 +243,7 @@
             this.btnthem.TabIndex = 46;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // CTKyluatNv
             // 

@@ -180,6 +180,10 @@ namespace Entities.NhanSu
             LyDo = lyDo;
             GhiChu = ghiChu;
         }
+        public CTKyLuatNV()
+        {
+
+        }
         #endregion
         #region Methods manhanvien
         public override bool Equals(Object newNV)

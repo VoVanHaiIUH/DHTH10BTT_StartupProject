@@ -83,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 31);
+            this.label1.Location = new System.Drawing.Point(44, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 2;
@@ -92,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 57);
+            this.label2.Location = new System.Drawing.Point(40, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 2;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 83);
+            this.label3.Location = new System.Drawing.Point(73, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -110,11 +110,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 109);
+            this.label4.Location = new System.Drawing.Point(65, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Ghi Chú";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnExit
             // 

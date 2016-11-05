@@ -80,11 +80,15 @@ namespace BusinessLogic.NhanSu
                 return false;
             }
         }
-        public bool Delete(string deleteID)
+        public bool Delete(CTThamGiaDTNV deleteID)
         {
             try
             {
-                Tbl_CTThamGiaDTNV deleteRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == deleteID && record.maKhoaDT == deleteID);
+                Tbl_CTThamGiaDTNV deleteRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == deleteID.MaNV && record.maKhoaDT == deleteID.MaKhoaDT);
+                deleteRecord.maNV = deleteID.MaNV;
+                deleteRecord.maKhoaDT = deleteID.MaKhoaDT;
+                deleteRecord.nhanXet = deleteID.NhanXet;
+                deleteRecord.ketQua = deleteID.KetQua;
                 DB.Tbl_CTThamGiaDTNVs.DeleteOnSubmit(deleteRecord);
                 DB.SubmitChanges();
                 return true;
@@ -111,6 +115,20 @@ namespace BusinessLogic.NhanSu
             {
                 return false;
             }
+        }
+        public List<CTThamGiaDTNV> GetAllDaoTao()
+        {
+            List<CTThamGiaDTNV> lst = new List<CTThamGiaDTNV>();
+            foreach (Tbl_CTThamGiaDTNV item in DB.Tbl_CTThamGiaDTNVs)
+            {
+                CTThamGiaDTNV cttg = new CTThamGiaDTNV();
+                cttg.MaNV = item.maNV;
+                cttg.MaKhoaDT = item.maKhoaDT;
+                cttg.KetQua = item.ketQua;
+                cttg.NhanXet = item.nhanXet;
+                lst.Add(cttg);
+            }
+            return lst;
         }
     }
 }
