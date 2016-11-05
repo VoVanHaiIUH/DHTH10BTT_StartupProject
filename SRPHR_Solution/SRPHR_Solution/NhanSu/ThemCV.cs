@@ -91,6 +91,9 @@ namespace SRPHR_Solution.NhanSu
             bool b = cvbll.UpDate(cv);
         }
 
-        
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

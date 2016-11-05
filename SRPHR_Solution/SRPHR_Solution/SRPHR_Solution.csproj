@@ -56,11 +56,17 @@
     <Compile Include="FormDangKi.Designer.cs">
       <DependentUpon>FormDangKi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs"> 
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ThemChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThemChucVu.Designer.cs">
+      <DependentUpon>ThemChucVu.cs</DependentUpon>
     </Compile>
     <Compile Include="PhanQuyen\FormPhanQuyen.cs">
       <SubType>Form</SubType>
@@ -80,58 +86,48 @@
     <Compile Include="NhanSu\ThemNV.cs">
       <SubType>Form</SubType>
     </Compile>
-<Compile Include="NhanSu\ThemPB.Designer.cs">
+    <Compile Include="NhanSu\ThemPB.Designer.cs">
       <DependentUpon>ThemPB.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\ThemPB.cs">
       <SubType>Form</SubType>
     </Compile>
-  <Compile Include="NhanSu\ThemCV.Designer.cs">
+    <Compile Include="NhanSu\ThemCV.Designer.cs">
       <DependentUpon>ThemCV.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\ThemCV.cs">
       <SubType>Form</SubType>
     </Compile>
-  <Compile Include="NhanSu\LichSuLamViec.Designer.cs">
+    <Compile Include="NhanSu\LichSuLamViec.Designer.cs">
       <DependentUpon>LichSuLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\LichSuLamViec.cs">
       <SubType>Form</SubType>
     </Compile>
-  <Compile Include="NhanSu\KyLuat.Designer.cs">
+    <Compile Include="NhanSu\KyLuat.Designer.cs">
       <DependentUpon>KyLuat.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\KyLuat.cs">
       <SubType>Form</SubType>
     </Compile>
-  <Compile Include="NhanSu\DaoTao.Designer.cs">
+    <Compile Include="NhanSu\DaoTao.Designer.cs">
       <DependentUpon>DaoTao.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\DaoTao.cs">
       <SubType>Form</SubType>
     </Compile>
-  <Compile Include="NhanSu\CTKyluatNv.Designer.cs">
+    <Compile Include="NhanSu\CTKyluatNv.Designer.cs">
       <DependentUpon>CTKyluatNv.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\CTKyluatNv.cs">
       <SubType>Form</SubType>
     </Compile>
-  <Compile Include="NhanSu\ChuongTrinhDTNV.Designer.cs">
+    <Compile Include="NhanSu\ChuongTrinhDTNV.Designer.cs">
       <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\ChuongTrinhDTNV.cs">
       <SubType>Form</SubType>
     </Compile>
-  
-
-
-
-
-
-
-
-
-    
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DangNhapForm.resx">
@@ -139,6 +135,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThemChucVu.resx">
+      <DependentUpon>ThemChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThemCV.resx">
+      <DependentUpon>ThemCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThemPB.resx">
+      <DependentUpon>ThemPB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhanQuyen\FormPhanQuyen.resx">
       <DependentUpon>FormPhanQuyen.cs</DependentUpon>
@@ -184,7 +189,6 @@
     <Folder Include="CongNoPKH\" />
     <Folder Include="KhachHang\" />
     <Folder Include="Kho\" />
-    <Folder Include="NhanSu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
