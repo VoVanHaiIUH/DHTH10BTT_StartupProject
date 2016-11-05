@@ -136,6 +136,15 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ChuongTrinhDTNV.resx">
+      <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\CTKyluatNv.resx">
+      <DependentUpon>CTKyluatNv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\LichSuLamViec.resx">
+      <DependentUpon>LichSuLamViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\ThemChucVu.resx">
       <DependentUpon>ThemChucVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +190,10 @@
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <Project>{72ed5ea2-42ab-451e-bfa5-30a96ae029bd}</Project>
       <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{95ef3f10-9aee-4b64-b042-16183f8623b3}</Project>
+      <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

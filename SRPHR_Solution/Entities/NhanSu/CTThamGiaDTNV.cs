@@ -105,6 +105,13 @@ namespace Entities.NhanSu
             KetQua = ketQua;
             NhanXet = nhanXet;
         }
+        public CTThamGiaDTNV()
+        {
+            MaNV = "";
+            MaKhoaDT = "";
+            KetQua = "";
+            NhanXet = "";
+        }
         #endregion
 
         #region Methods manhanvien

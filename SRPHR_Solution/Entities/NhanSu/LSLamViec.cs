@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.NhanSu
 {
-    public class LichSuLamViec
+    public class LSLamViec
     {
         //#region Property
         //    private string _maNV;
@@ -104,7 +104,7 @@ namespace Entities.NhanSu
         }
         #endregion
         #region Constructor
-        public LichSuLamViec(string maNV, string maPB, string maChucVu, DateTime ngayBD, DateTime ngayKT)
+        public LSLamViec(string maNV, string maPB, string maChucVu, DateTime ngayBD, DateTime ngayKT)
         {
             MaNV = maNV;
             MaPB = maPB;
@@ -112,11 +112,15 @@ namespace Entities.NhanSu
             NgayBD = ngayBD;
             NgayKT = ngayKT;
         }
+        public LSLamViec()
+        {
+
+        }
         #endregion
         #region Methods
         public override bool Equals(Object newNV)
         {
-            LichSuLamViec nv = (LichSuLamViec)newNV;
+            LSLamViec nv = (LSLamViec)newNV;
             return this.MaNV.ToLower().Equals(nv.MaNV.ToLower());
         }
         public override int GetHashCode()

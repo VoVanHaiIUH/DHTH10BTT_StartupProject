@@ -72,7 +72,7 @@
     <Compile Include="NhanSu\CTThamGiaDTNV.cs" />
     <Compile Include="NhanSu\DaoTao.cs" />
     <Compile Include="NhanSu\KyLuat.cs" />
-    <Compile Include="NhanSu\LichSuLamViec.cs" />
+    <Compile Include="NhanSu\LSLamViec.cs" />
     <Compile Include="NhanSu\NhanVien.cs" />
     <Compile Include="NhanSu\PhongBan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
