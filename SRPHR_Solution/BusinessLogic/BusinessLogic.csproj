@@ -50,6 +50,7 @@
     <Compile Include="CongNoPKH\PhieuDNXK_BLL.cs" />
     <Compile Include="KhachHang\Convert.cs" />
     <Compile Include="KhachHang\KhachHangBLL.cs" />
+    <Compile Include="Kho\CTPQLKho_BLL.cs" />
     <Compile Include="Kho\PhieuNK_BLL.cs" />
     <Compile Include="Kho\PhieuQLKho_BLL.cs" />
     <Compile Include="Kho\PhieuXK_BLL.cs" />
