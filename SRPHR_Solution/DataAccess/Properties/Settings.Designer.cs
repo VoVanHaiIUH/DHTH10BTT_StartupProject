@@ -57,8 +57,7 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KEN-PC;Initial Catalog=SHRPR;Persist Security Info=True;User ID=sa;Pa" +
-            "ssword=sapassword")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=SHRPR;Integrated Security=True")]
         public string SHRPRConnectionString3 {
             get {
                 return ((string)(this["SHRPRConnectionString3"]));
