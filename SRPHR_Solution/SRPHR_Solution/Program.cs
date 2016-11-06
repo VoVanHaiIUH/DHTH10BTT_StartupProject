@@ -17,7 +17,7 @@ namespace SRPHR_Solution
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPhanQuyen());
+            Application.Run(new FormDangnhap());
         }
     }
 }
