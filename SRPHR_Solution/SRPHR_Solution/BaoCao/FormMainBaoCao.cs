@@ -40,5 +40,10 @@ namespace SRPHR_Solution.BaoCao
             frmnew.Activate();
             frmnew.ShowDialog();
         }
+
+        private void FormMainBaoCao_Load(object sender, EventArgs e)
+        { 
+
+        }
     }
 }

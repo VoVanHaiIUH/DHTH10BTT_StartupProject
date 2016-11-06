@@ -31,7 +31,7 @@ namespace SRPHR_Solution.BanHang
             DialogResult n = MessageBox.Show("Bạn muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (n == DialogResult.No)
                 e.Cancel = true;
-        }
+        } 
 
         private void ChitietHDGTGT_Load(object sender, EventArgs e)
         {

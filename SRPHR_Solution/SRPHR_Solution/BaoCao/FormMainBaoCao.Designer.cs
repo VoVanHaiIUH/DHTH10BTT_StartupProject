@@ -73,6 +73,7 @@
             this.Controls.Add(this.btnbaocao);
             this.Name = "FormMainBaoCao";
             this.Text = "FormMainBaoCao";
+            this.Load += new System.EventHandler(this.FormMainBaoCao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

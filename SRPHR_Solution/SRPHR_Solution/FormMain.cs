@@ -188,6 +188,7 @@ namespace SRPHR_Solution.PhanQuyen
             frmnew.ShowDialog(); 
         }
 
+    
         private void btnformbaocao_Click(object sender, EventArgs e)
         {
             FormMainBaoCao frmnew = new FormMainBaoCao();

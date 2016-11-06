@@ -18,7 +18,7 @@ namespace SRPHR_Solution.BanHang
         }
 
         private void FormMainBH_Load(object sender, EventArgs e)
-        {
+        { 
 
         }
 

@@ -25,7 +25,7 @@ namespace SRPHR_Solution.BanHang
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); 
         }
         private void ChitietHDBanLe_FormClosing(object sender, FormClosingEventArgs e)
         {
