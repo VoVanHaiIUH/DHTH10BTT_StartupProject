@@ -104,6 +104,12 @@
     <Compile Include="NhanSu\ThemChucVu.Designer.cs">
       <DependentUpon>ThemChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu\ThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThemNV.Designer.cs">
+      <DependentUpon>ThemNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhanQuyen\FormPhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,12 +121,6 @@
     </Compile>
     <Compile Include="PhanQuyen\FormThem.Designer.cs">
       <DependentUpon>FormThem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemNV.Designer.cs">
-      <DependentUpon>ThemNV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemNV.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanSu\ThemPB.Designer.cs">
       <DependentUpon>ThemPB.cs</DependentUpon>
@@ -140,10 +140,10 @@
     <Compile Include="NhanSu\LichSuLamViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanSu\KyLuat.Designer.cs">
-      <DependentUpon>KyLuat.cs</DependentUpon>
+    <Compile Include="NhanSu\KyLuatForm.Designer.cs">
+      <DependentUpon>KyLuatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\KyLuat.cs">
+    <Compile Include="NhanSu\KyLuatForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanSu\DaoTao.Designer.cs">
@@ -193,11 +193,17 @@
     <EmbeddedResource Include="NhanSu\ChuongTrinhDTNV.resx">
       <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\KyLuatForm.resx">
+      <DependentUpon>KyLuatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\ThemChucVu.resx">
       <DependentUpon>ThemChucVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\ThemCV.resx">
       <DependentUpon>ThemCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThemNV.resx">
+      <DependentUpon>ThemNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\ThemPB.resx">
       <DependentUpon>ThemPB.cs</DependentUpon>

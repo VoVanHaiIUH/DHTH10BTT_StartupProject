@@ -90,6 +90,13 @@ namespace Entities.NhanSu
             _hinhThucKL = hinhThucKL;
             _ghiChu = ghichu;
         }
+
+        public KyLuat()
+        {
+            _maKL = "";
+            _hinhThucKL = "";
+            _ghiChu = "";
+        }
         #endregion
 
         #region methods

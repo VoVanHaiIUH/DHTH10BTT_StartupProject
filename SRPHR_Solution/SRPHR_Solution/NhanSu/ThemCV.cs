@@ -25,7 +25,7 @@ namespace SRPHR_Solution.NhanSu
 
         private void loadGrid()
         {
-            lcv = cvbll.GetAllChucVu();
+            //lcv = cvbll.GetAllChucVu();
             bd.DataSource = lcv;
             dataChucVu.DataSource = bd;
         }
@@ -88,7 +88,7 @@ namespace SRPHR_Solution.NhanSu
             cv.TenCV = txtTenCV.Text;
             cv.HeSo = Convert.ToDecimal(txtHeso.Text);
             cv.GhiChu = txtNote.Text;
-            bool b = cvbll.UpDate(cv);
+            bool b = cvbll.Update(cv);
         }
 
         private void label4_Click(object sender, EventArgs e)

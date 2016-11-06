@@ -1,6 +1,6 @@
 ﻿namespace SRPHR_Solution.NhanSu
 {
-    partial class KyLuat
+    partial class KyLuatForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,11 +35,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataKyLuat = new System.Windows.Forms.DataGridView();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.txtHTKL = new System.Windows.Forms.TextBox();
             this.txtMaKL = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataKyLuat)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -50,6 +50,7 @@
             this.btnExit.TabIndex = 61;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSửa
             // 
@@ -59,6 +60,7 @@
             this.btnSửa.TabIndex = 60;
             this.btnSửa.Text = "Sửa";
             this.btnSửa.UseVisualStyleBackColor = true;
+            this.btnSửa.Click += new System.EventHandler(this.btnSửa_Click);
             // 
             // btnXóa
             // 
@@ -68,6 +70,7 @@
             this.btnXóa.TabIndex = 59;
             this.btnXóa.Text = "Xóa";
             this.btnXóa.UseVisualStyleBackColor = true;
+            this.btnXóa.Click += new System.EventHandler(this.btnXóa_Click);
             // 
             // btnAdd
             // 
@@ -77,6 +80,7 @@
             this.btnAdd.TabIndex = 58;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label3
             // 
@@ -105,13 +109,14 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Mã Kỷ Luật ";
             // 
-            // dataGridView1
+            // dataKyLuat
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(457, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(366, 228);
-            this.dataGridView1.TabIndex = 52;
+            this.dataKyLuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataKyLuat.Location = new System.Drawing.Point(457, 47);
+            this.dataKyLuat.Name = "dataKyLuat";
+            this.dataKyLuat.Size = new System.Drawing.Size(366, 228);
+            this.dataKyLuat.TabIndex = 52;
+            this.dataKyLuat.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
             // 
             // txtNote
             // 
@@ -146,13 +151,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataKyLuat);
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.txtHTKL);
             this.Controls.Add(this.txtMaKL);
             this.Name = "KyLuat";
             this.Text = "KyLuat";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataKyLuat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +172,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataKyLuat;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.TextBox txtHTKL;
         private System.Windows.Forms.TextBox txtMaKL;
