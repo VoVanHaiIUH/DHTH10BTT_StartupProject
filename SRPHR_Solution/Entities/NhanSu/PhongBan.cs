@@ -158,11 +158,20 @@ namespace Entities.NhanSu
         #region constructor
         public PhongBan(string maPB, string tenPB, string diaDiem, string sdt)
         {
-            maPB = MaPB;
-            tenPB = TenPB;
-            diaDiem = DiaDiem;
-            sdt = Sdt;
+            _maPB = maPB;
+            _tenPB = tenPB;
+            _diaDiem = diaDiem;
+            _sdt = sdt;
         }
+
+        public PhongBan()
+        {
+            _maPB = "";
+            _tenPB = "";
+            _diaDiem = "";
+            _sdt = "";
+        }
+
         #endregion
 
         #region methods

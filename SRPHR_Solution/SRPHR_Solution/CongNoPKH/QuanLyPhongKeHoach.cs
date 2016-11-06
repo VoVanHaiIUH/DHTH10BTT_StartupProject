@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SRPHR_Solution.NhanSu
+namespace SRPHR_Solution.CongNoPKH
 {
-    public partial class KyLuat : Form
+    public partial class QuanLyPhongKeHoach : Form
     {
-        public KyLuat()
+        public QuanLyPhongKeHoach()
         {
             InitializeComponent();
         }

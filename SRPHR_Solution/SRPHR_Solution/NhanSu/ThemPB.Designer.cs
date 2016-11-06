@@ -87,6 +87,7 @@
             this.dataPhongban.Name = "dataPhongban";
             this.dataPhongban.Size = new System.Drawing.Size(333, 150);
             this.dataPhongban.TabIndex = 8;
+            this.dataPhongban.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataPhongban_RowStateChanged);
             // 
             // txtSdt
             // 
@@ -124,6 +125,7 @@
             this.btnExit.TabIndex = 23;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSửa
             // 
@@ -133,6 +135,7 @@
             this.btnSửa.TabIndex = 22;
             this.btnSửa.Text = "Sửa";
             this.btnSửa.UseVisualStyleBackColor = true;
+            this.btnSửa.Click += new System.EventHandler(this.btnSửa_Click);
             // 
             // btnXóa
             // 
@@ -142,6 +145,7 @@
             this.btnXóa.TabIndex = 21;
             this.btnXóa.Text = "Xóa";
             this.btnXóa.UseVisualStyleBackColor = true;
+            this.btnXóa.Click += new System.EventHandler(this.btnXóa_Click);
             // 
             // btnAdd
             // 
@@ -151,6 +155,7 @@
             this.btnAdd.TabIndex = 20;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // ThemPB
             // 

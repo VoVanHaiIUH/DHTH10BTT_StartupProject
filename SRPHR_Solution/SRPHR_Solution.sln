@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{73A9EEB4-65D7-49BC-BAA1-76BA2CA09306}"
 EndProject
@@ -32,6 +32,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{73A9EEB4-65D7-49BC-BAA1-76BA2CA09306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{73A9EEB4-65D7-49BC-BAA1-76BA2CA09306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A9EEB4-65D7-49BC-BAA1-76BA2CA09306}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{73A9EEB4-65D7-49BC-BAA1-76BA2CA09306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73A9EEB4-65D7-49BC-BAA1-76BA2CA09306}.Release|Any CPU.Build.0 = Release|Any CPU
 		{109F00DD-EB3F-4C69-A644-1EB837B71886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

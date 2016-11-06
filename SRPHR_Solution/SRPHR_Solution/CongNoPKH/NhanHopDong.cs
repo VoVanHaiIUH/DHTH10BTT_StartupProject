@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SRPHR_Solution.NhanSu
+namespace SRPHR_Solution.CongNoPKH
 {
-    public partial class ThemNV : Form
+    public partial class NhanHopDong : Form
     {
-        public ThemNV()
+        public NhanHopDong()
         {
             InitializeComponent();
         }
