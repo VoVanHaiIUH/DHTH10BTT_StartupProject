@@ -28,135 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSửa = new System.Windows.Forms.Button();
-            this.btnXóa = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataKyLuat = new System.Windows.Forms.DataGridView();
-            this.txtNote = new System.Windows.Forms.TextBox();
-            this.txtHTKL = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtMaKL = new System.Windows.Forms.TextBox();
+            this.txtHTKL = new System.Windows.Forms.TextBox();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.dataKyLuat = new System.Windows.Forms.DataGridView();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataKyLuat)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(364, 252);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 61;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnSửa
-            // 
-            this.btnSửa.Location = new System.Drawing.Point(261, 252);
-            this.btnSửa.Name = "btnSửa";
-            this.btnSửa.Size = new System.Drawing.Size(75, 23);
-            this.btnSửa.TabIndex = 60;
-            this.btnSửa.Text = "Sửa";
-            this.btnSửa.UseVisualStyleBackColor = true;
-            this.btnSửa.Click += new System.EventHandler(this.btnSửa_Click);
-            // 
-            // btnXóa
-            // 
-            this.btnXóa.Location = new System.Drawing.Point(157, 252);
-            this.btnXóa.Name = "btnXóa";
-            this.btnXóa.Size = new System.Drawing.Size(75, 23);
-            this.btnXóa.TabIndex = 59;
-            this.btnXóa.Text = "Xóa";
-            this.btnXóa.UseVisualStyleBackColor = true;
-            this.btnXóa.Click += new System.EventHandler(this.btnXóa_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(56, 252);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 58;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 99);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Ghi Chú ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Hình Thức Kỷ Luật";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 47);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Mã Kỷ Luật ";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MaKL";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "HinhThucKL";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "GhiChu";
+            // 
+            // txtMaKL
+            // 
+            this.txtMaKL.Location = new System.Drawing.Point(84, 12);
+            this.txtMaKL.Name = "txtMaKL";
+            this.txtMaKL.Size = new System.Drawing.Size(100, 20);
+            this.txtMaKL.TabIndex = 3;
+            // 
+            // txtHTKL
+            // 
+            this.txtHTKL.Location = new System.Drawing.Point(84, 41);
+            this.txtHTKL.Name = "txtHTKL";
+            this.txtHTKL.Size = new System.Drawing.Size(100, 20);
+            this.txtHTKL.TabIndex = 4;
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Location = new System.Drawing.Point(84, 76);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(100, 20);
+            this.txtGhiChu.TabIndex = 5;
             // 
             // dataKyLuat
             // 
             this.dataKyLuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataKyLuat.Location = new System.Drawing.Point(457, 47);
+            this.dataKyLuat.Location = new System.Drawing.Point(202, 12);
             this.dataKyLuat.Name = "dataKyLuat";
-            this.dataKyLuat.Size = new System.Drawing.Size(366, 228);
-            this.dataKyLuat.TabIndex = 52;
-            this.dataKyLuat.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
+            this.dataKyLuat.Size = new System.Drawing.Size(171, 137);
+            this.dataKyLuat.TabIndex = 6;
+            this.dataKyLuat.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataKyLuat_RowStateChanged);
             // 
-            // txtNote
+            // btnThem
             // 
-            this.txtNote.Location = new System.Drawing.Point(188, 99);
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(222, 20);
-            this.txtNote.TabIndex = 48;
+            this.btnThem.Location = new System.Drawing.Point(15, 192);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtHTKL
+            // btnXoa
             // 
-            this.txtHTKL.Location = new System.Drawing.Point(188, 73);
-            this.txtHTKL.Name = "txtHTKL";
-            this.txtHTKL.Size = new System.Drawing.Size(222, 20);
-            this.txtHTKL.TabIndex = 51;
+            this.btnXoa.Location = new System.Drawing.Point(109, 192);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 8;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // txtMaKL
+            // btnSua
             // 
-            this.txtMaKL.Location = new System.Drawing.Point(188, 47);
-            this.txtMaKL.Name = "txtMaKL";
-            this.txtMaKL.Size = new System.Drawing.Size(222, 20);
-            this.txtMaKL.TabIndex = 47;
+            this.btnSua.Location = new System.Drawing.Point(202, 192);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 9;
+            this.btnSua.Text = "Sua";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // KyLuat
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(298, 192);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 10;
+            this.btnThoat.Text = "Thoat";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // KyLuatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 335);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnSửa);
-            this.Controls.Add(this.btnXóa);
-            this.Controls.Add(this.btnAdd);
+            this.ClientSize = new System.Drawing.Size(385, 262);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.dataKyLuat);
+            this.Controls.Add(this.txtGhiChu);
+            this.Controls.Add(this.txtHTKL);
+            this.Controls.Add(this.txtMaKL);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataKyLuat);
-            this.Controls.Add(this.txtNote);
-            this.Controls.Add(this.txtHTKL);
-            this.Controls.Add(this.txtMaKL);
-            this.Name = "KyLuat";
-            this.Text = "KyLuat";
+            this.Name = "KyLuatForm";
+            this.Text = "KyLuatForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataKyLuat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,16 +165,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnSửa;
-        private System.Windows.Forms.Button btnXóa;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataKyLuat;
-        private System.Windows.Forms.TextBox txtNote;
-        private System.Windows.Forms.TextBox txtHTKL;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMaKL;
+        private System.Windows.Forms.TextBox txtHTKL;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.DataGridView dataKyLuat;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
