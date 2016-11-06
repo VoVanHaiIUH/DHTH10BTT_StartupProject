@@ -122,6 +122,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu\KyLuatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\KyLuatForm.Designer.cs">
+      <DependentUpon>KyLuatForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanSu\ThemChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,12 +168,6 @@
       <DependentUpon>LichSuLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\LichSuLamViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanSu\KyLuatForm.Designer.cs">
-      <DependentUpon>KyLuatForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\KyLuatForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanSu\DaoTao.Designer.cs">
