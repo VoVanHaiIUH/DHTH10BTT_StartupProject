@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities.PhanQuyen;
 using BusinessLogic.PhanQuyen;
+using SRPHR_Solution.CongNoPKH;
 
 namespace SRPHR_Solution.PhanQuyen
 {
@@ -171,6 +172,12 @@ namespace SRPHR_Solution.PhanQuyen
             {
                 MessageBox.Show("Lỗi!");
             }
+        }
+
+        private void btnfromcongno_Click(object sender, EventArgs e)
+        {
+            QuanLyPhongKeHoach frmnew = new QuanLyPhongKeHoach();
+            frmnew.ShowDialog();
         }
     }
 }

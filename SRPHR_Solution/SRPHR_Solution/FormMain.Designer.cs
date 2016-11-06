@@ -41,17 +41,17 @@
             this.btndangxuat = new System.Windows.Forms.Button();
             this.txttaikhoan = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnhuy = new System.Windows.Forms.Button();
+            this.btnluu = new System.Windows.Forms.Button();
+            this.txtmk = new System.Windows.Forms.TextBox();
+            this.lbmk = new System.Windows.Forms.Label();
+            this.txtnhaplaimk = new System.Windows.Forms.TextBox();
+            this.lbnhaplaimk = new System.Windows.Forms.Label();
+            this.txtmanv = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnsua = new System.Windows.Forms.Button();
             this.txtnhomtk = new System.Windows.Forms.TextBox();
             this.lbnhomtk = new System.Windows.Forms.Label();
-            this.txtmanv = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtnhaplaimk = new System.Windows.Forms.TextBox();
-            this.lbnhaplaimk = new System.Windows.Forms.Label();
-            this.txtmk = new System.Windows.Forms.TextBox();
-            this.lbmk = new System.Windows.Forms.Label();
-            this.btnluu = new System.Windows.Forms.Button();
-            this.btnhuy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +117,7 @@
             this.btnfromcongno.TabIndex = 7;
             this.btnfromcongno.Text = "      Công Nợ        Phòng Kế Hoạch";
             this.btnfromcongno.UseVisualStyleBackColor = true;
+            this.btnfromcongno.Click += new System.EventHandler(this.btnfromcongno_Click);
             // 
             // btnformbaocao
             // 
@@ -197,6 +198,83 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
             // 
+            // btnhuy
+            // 
+            this.btnhuy.Location = new System.Drawing.Point(12, 224);
+            this.btnhuy.Name = "btnhuy";
+            this.btnhuy.Size = new System.Drawing.Size(117, 23);
+            this.btnhuy.TabIndex = 22;
+            this.btnhuy.Text = "Hủy";
+            this.btnhuy.UseVisualStyleBackColor = true;
+            this.btnhuy.Visible = false;
+            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
+            // 
+            // btnluu
+            // 
+            this.btnluu.Location = new System.Drawing.Point(12, 184);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(117, 23);
+            this.btnluu.TabIndex = 21;
+            this.btnluu.Text = "Lưu";
+            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Visible = false;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            // 
+            // txtmk
+            // 
+            this.txtmk.Location = new System.Drawing.Point(91, 38);
+            this.txtmk.Name = "txtmk";
+            this.txtmk.PasswordChar = '*';
+            this.txtmk.Size = new System.Drawing.Size(132, 20);
+            this.txtmk.TabIndex = 20;
+            this.txtmk.Visible = false;
+            // 
+            // lbmk
+            // 
+            this.lbmk.AutoSize = true;
+            this.lbmk.Location = new System.Drawing.Point(12, 45);
+            this.lbmk.Name = "lbmk";
+            this.lbmk.Size = new System.Drawing.Size(58, 13);
+            this.lbmk.TabIndex = 19;
+            this.lbmk.Text = "Mật khẩu :";
+            this.lbmk.Visible = false;
+            // 
+            // txtnhaplaimk
+            // 
+            this.txtnhaplaimk.Location = new System.Drawing.Point(91, 70);
+            this.txtnhaplaimk.Name = "txtnhaplaimk";
+            this.txtnhaplaimk.PasswordChar = '*';
+            this.txtnhaplaimk.Size = new System.Drawing.Size(132, 20);
+            this.txtnhaplaimk.TabIndex = 18;
+            this.txtnhaplaimk.Visible = false;
+            // 
+            // lbnhaplaimk
+            // 
+            this.lbnhaplaimk.AutoSize = true;
+            this.lbnhaplaimk.Location = new System.Drawing.Point(6, 77);
+            this.lbnhaplaimk.Name = "lbnhaplaimk";
+            this.lbnhaplaimk.Size = new System.Drawing.Size(71, 13);
+            this.lbnhaplaimk.TabIndex = 17;
+            this.lbnhaplaimk.Text = "Nhập lại MK :";
+            this.lbnhaplaimk.Visible = false;
+            // 
+            // txtmanv
+            // 
+            this.txtmanv.Location = new System.Drawing.Point(91, 96);
+            this.txtmanv.Name = "txtmanv";
+            this.txtmanv.ReadOnly = true;
+            this.txtmanv.Size = new System.Drawing.Size(132, 20);
+            this.txtmanv.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Mã NV :";
+            // 
             // btnsua
             // 
             this.btnsua.Location = new System.Drawing.Point(12, 155);
@@ -223,83 +301,6 @@
             this.lbnhomtk.Size = new System.Drawing.Size(58, 13);
             this.lbnhomtk.TabIndex = 10;
             this.lbnhomtk.Text = "Nhóm TK :";
-            // 
-            // txtmanv
-            // 
-            this.txtmanv.Location = new System.Drawing.Point(91, 96);
-            this.txtmanv.Name = "txtmanv";
-            this.txtmanv.ReadOnly = true;
-            this.txtmanv.Size = new System.Drawing.Size(132, 20);
-            this.txtmanv.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Mã NV :";
-            // 
-            // txtnhaplaimk
-            // 
-            this.txtnhaplaimk.Location = new System.Drawing.Point(91, 70);
-            this.txtnhaplaimk.Name = "txtnhaplaimk";
-            this.txtnhaplaimk.PasswordChar = '*';
-            this.txtnhaplaimk.Size = new System.Drawing.Size(132, 20);
-            this.txtnhaplaimk.TabIndex = 18;
-            this.txtnhaplaimk.Visible = false;
-            // 
-            // lbnhaplaimk
-            // 
-            this.lbnhaplaimk.AutoSize = true;
-            this.lbnhaplaimk.Location = new System.Drawing.Point(6, 77);
-            this.lbnhaplaimk.Name = "lbnhaplaimk";
-            this.lbnhaplaimk.Size = new System.Drawing.Size(71, 13);
-            this.lbnhaplaimk.TabIndex = 17;
-            this.lbnhaplaimk.Text = "Nhập lại MK :";
-            this.lbnhaplaimk.Visible = false;
-            // 
-            // txtmk
-            // 
-            this.txtmk.Location = new System.Drawing.Point(91, 38);
-            this.txtmk.Name = "txtmk";
-            this.txtmk.PasswordChar = '*';
-            this.txtmk.Size = new System.Drawing.Size(132, 20);
-            this.txtmk.TabIndex = 20;
-            this.txtmk.Visible = false;
-            // 
-            // lbmk
-            // 
-            this.lbmk.AutoSize = true;
-            this.lbmk.Location = new System.Drawing.Point(12, 45);
-            this.lbmk.Name = "lbmk";
-            this.lbmk.Size = new System.Drawing.Size(58, 13);
-            this.lbmk.TabIndex = 19;
-            this.lbmk.Text = "Mật khẩu :";
-            this.lbmk.Visible = false;
-            // 
-            // btnluu
-            // 
-            this.btnluu.Location = new System.Drawing.Point(12, 184);
-            this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(117, 23);
-            this.btnluu.TabIndex = 21;
-            this.btnluu.Text = "Lưu";
-            this.btnluu.UseVisualStyleBackColor = true;
-            this.btnluu.Visible = false;
-            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
-            // 
-            // btnhuy
-            // 
-            this.btnhuy.Location = new System.Drawing.Point(12, 224);
-            this.btnhuy.Name = "btnhuy";
-            this.btnhuy.Size = new System.Drawing.Size(117, 23);
-            this.btnhuy.TabIndex = 22;
-            this.btnhuy.Text = "Hủy";
-            this.btnhuy.UseVisualStyleBackColor = true;
-            this.btnhuy.Visible = false;
-            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
             // 
             // FormMain
             // 
