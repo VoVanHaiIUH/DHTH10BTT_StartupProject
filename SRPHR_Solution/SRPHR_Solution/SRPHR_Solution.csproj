@@ -92,6 +92,12 @@
     <Compile Include="BaoCao\LoaiBaoCao.Designer.cs">
       <DependentUpon>LoaiBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="CongNoPKH\KhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoPKH\KhuyenMai.Designer.cs">
+      <DependentUpon>KhuyenMai.cs</DependentUpon>
+    </Compile>
     <Compile Include="CongNoPKH\NhanHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +152,9 @@
     <Compile Include="Kho\PQLKho.Designer.cs">
       <DependentUpon>PQLKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\KyLuatForm.cs" />
+    <Compile Include="NhanSu\KyLuatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NhanSu\KyLuatForm.Designer.cs">
       <DependentUpon>KyLuatForm.cs</DependentUpon>
     </Compile>
@@ -235,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\LoaiBaoCao.resx">
       <DependentUpon>LoaiBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoPKH\KhuyenMai.resx">
+      <DependentUpon>KhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CongNoPKH\NhanHopDong.resx">
       <DependentUpon>NhanHopDong.cs</DependentUpon>
