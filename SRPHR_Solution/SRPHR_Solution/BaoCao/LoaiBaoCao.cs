@@ -27,5 +27,14 @@ namespace SRPHR_Solution.BaoCao
             if (n == DialogResult.No)
                 e.Cancel = true;
         }
+
+        private void btnquaylai_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+
+            FormMainBaoCao frmnew = new FormMainBaoCao();
+            frmnew.Activate();
+            frmnew.ShowDialog();
+        }
     }
 }

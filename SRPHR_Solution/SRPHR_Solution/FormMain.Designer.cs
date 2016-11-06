@@ -127,6 +127,7 @@
             this.btnformbaocao.TabIndex = 6;
             this.btnformbaocao.Text = "Báo Cáo";
             this.btnformbaocao.UseVisualStyleBackColor = true;
+            this.btnformbaocao.Click += new System.EventHandler(this.btnformbaocao_Click);
             // 
             // btnFormBanHang
             // 
@@ -136,6 +137,7 @@
             this.btnFormBanHang.TabIndex = 5;
             this.btnFormBanHang.Text = "Bán Hàng";
             this.btnFormBanHang.UseVisualStyleBackColor = true;
+            this.btnFormBanHang.Click += new System.EventHandler(this.btnFormBanHang_Click);
             // 
             // label1
             // 

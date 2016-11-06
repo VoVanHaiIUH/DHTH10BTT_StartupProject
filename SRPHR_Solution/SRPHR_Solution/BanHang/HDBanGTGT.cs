@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogic;
+using Entities.BanHang;
+//Nhóm chưa update BusinessLogic BanHang
 
 namespace SRPHR_Solution.BanHang
 {
-    public partial class HDBanGTGT : Form
+    public partial class FormHDBanGTGT : Form
     {
-        public HDBanGTGT()
+        List<HoaDonBanGTGT> ls = new List<HoaDonBanGTGT>();
+        BindingSource bd = new BindingSource();
+        public FormHDBanGTGT()
         {
             InitializeComponent();
         }
@@ -25,10 +29,10 @@ namespace SRPHR_Solution.BanHang
 
         private void btnxem_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            ShowInTaskbar = false;
+            //Visible = false;
+            //ShowInTaskbar = false;
 
-            ChitietHDGTGT frmctgtgt = new ChitietHDGTGT();
+            FormChitietHDGTGT frmctgtgt = new FormChitietHDGTGT();
             frmctgtgt.Activate();
             frmctgtgt.Show();
         }
@@ -47,6 +51,52 @@ namespace SRPHR_Solution.BanHang
         private void HDBanGTGT_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnquaylai_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+
+            FormMainBH frmnew = new FormMainBH();
+            frmnew.Activate();
+            frmnew.ShowDialog();
+        }
+
+        private void btnthem_Click(object sender, EventArgs e)
+        {
+            HoaDonBanGTGT n = new HoaDonBanGTGT();
+            n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
+            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+         // n.NgayBan = dtngayban.Text;
+            n.TenDVBan = txttendvban.Text;
+            n.TenDVMua = txttendvmua.Text;
+            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+
+        }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            HoaDonBanGTGT n = new HoaDonBanGTGT();
+            n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
+            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+            // n.NgayBan = dtngayban.Text;
+            n.TenDVBan = txttendvban.Text;
+            n.TenDVMua = txttendvmua.Text;
+            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+        }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
+            HoaDonBanGTGT n = new HoaDonBanGTGT();
+            n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
+            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+            // n.NgayBan = dtngayban.Text;
+            n.TenDVBan = txttendvban.Text;
+            n.TenDVMua = txttendvmua.Text;
+            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
     }
 }

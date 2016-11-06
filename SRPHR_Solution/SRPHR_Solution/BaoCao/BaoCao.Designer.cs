@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnquaylai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +80,7 @@
             this.btnthem.TabIndex = 28;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnxoa
             // 
@@ -232,11 +234,22 @@
             this.dataGridView1.Size = new System.Drawing.Size(463, 223);
             this.dataGridView1.TabIndex = 23;
             // 
+            // btnquaylai
+            // 
+            this.btnquaylai.Location = new System.Drawing.Point(665, 275);
+            this.btnquaylai.Name = "btnquaylai";
+            this.btnquaylai.Size = new System.Drawing.Size(79, 33);
+            this.btnquaylai.TabIndex = 34;
+            this.btnquaylai.Text = "Quay Lại ";
+            this.btnquaylai.UseVisualStyleBackColor = true;
+            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
+            // 
             // BaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 346);
+            this.Controls.Add(this.btnquaylai);
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btnthem);
@@ -274,5 +287,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnquaylai;
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Entities.PhanQuyen;
 using BusinessLogic.PhanQuyen;
 using SRPHR_Solution.CongNoPKH;
+using SRPHR_Solution.BanHang;
+using SRPHR_Solution.BaoCao;
 
 namespace SRPHR_Solution.PhanQuyen
 {
@@ -177,6 +179,18 @@ namespace SRPHR_Solution.PhanQuyen
         private void btnfromcongno_Click(object sender, EventArgs e)
         {
             QuanLyPhongKeHoach frmnew = new QuanLyPhongKeHoach();
+            frmnew.ShowDialog();
+        }
+
+        private void btnFormBanHang_Click(object sender, EventArgs e)
+        {
+            FormMainBH frmnew = new FormMainBH();
+            frmnew.ShowDialog();
+        }
+
+        private void btnformbaocao_Click(object sender, EventArgs e)
+        {
+            FormMainBaoCao frmnew = new FormMainBaoCao();
             frmnew.ShowDialog();
         }
     }

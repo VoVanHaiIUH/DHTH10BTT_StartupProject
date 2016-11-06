@@ -37,6 +37,7 @@
             this.btnthoat = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
+            this.btnquaylai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             // 
             // btnsua
             // 
-            this.btnsua.Location = new System.Drawing.Point(437, 100);
+            this.btnsua.Location = new System.Drawing.Point(437, 94);
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(77, 33);
             this.btnsua.TabIndex = 31;
@@ -91,7 +92,7 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(437, 221);
+            this.btnthoat.Location = new System.Drawing.Point(437, 202);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(78, 33);
             this.btnthoat.TabIndex = 29;
@@ -110,18 +111,29 @@
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(437, 160);
+            this.btnxoa.Location = new System.Drawing.Point(437, 150);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(77, 33);
             this.btnxoa.TabIndex = 30;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
             // 
+            // btnquaylai
+            // 
+            this.btnquaylai.Location = new System.Drawing.Point(437, 258);
+            this.btnquaylai.Name = "btnquaylai";
+            this.btnquaylai.Size = new System.Drawing.Size(78, 35);
+            this.btnquaylai.TabIndex = 33;
+            this.btnquaylai.Text = "Quay Lại ";
+            this.btnquaylai.UseVisualStyleBackColor = true;
+            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
+            // 
             // LoaiBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 318);
+            this.Controls.Add(this.btnquaylai);
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btnthem);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Button btnthoat;
         private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.Button btnxoa;
+        private System.Windows.Forms.Button btnquaylai;
     }
 }

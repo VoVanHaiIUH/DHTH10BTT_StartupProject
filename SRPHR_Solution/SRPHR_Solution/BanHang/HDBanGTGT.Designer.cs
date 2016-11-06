@@ -1,6 +1,6 @@
 ﻿namespace SRPHR_Solution.BanHang
 {
-    partial class HDBanGTGT
+    partial class FormHDBanGTGT
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.btnxoa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtngayban = new System.Windows.Forms.DateTimePicker();
             this.txtthanhtien = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txttendvban = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnxem = new System.Windows.Forms.Button();
+            this.btnquaylai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.btnsua.TabIndex = 14;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnthoat
             // 
@@ -80,6 +82,7 @@
             this.btnthem.TabIndex = 15;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnxoa
             // 
@@ -89,11 +92,12 @@
             this.btnxoa.TabIndex = 13;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtngayban);
             this.groupBox1.Controls.Add(this.txtthanhtien);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txttendvban);
@@ -122,12 +126,12 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Ngày Bán";
             // 
-            // dateTimePicker1
+            // dtngayban
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 185);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
-            this.dateTimePicker1.TabIndex = 25;
+            this.dtngayban.Location = new System.Drawing.Point(120, 185);
+            this.dtngayban.Name = "dtngayban";
+            this.dtngayban.Size = new System.Drawing.Size(168, 20);
+            this.dtngayban.TabIndex = 25;
             // 
             // txtthanhtien
             // 
@@ -236,7 +240,7 @@
             // 
             // btnxem
             // 
-            this.btnxem.Location = new System.Drawing.Point(86, 301);
+            this.btnxem.Location = new System.Drawing.Point(21, 301);
             this.btnxem.Name = "btnxem";
             this.btnxem.Size = new System.Drawing.Size(157, 23);
             this.btnxem.TabIndex = 22;
@@ -244,11 +248,22 @@
             this.btnxem.UseVisualStyleBackColor = true;
             this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
-            // HDBanGTGT
+            // btnquaylai
+            // 
+            this.btnquaylai.Location = new System.Drawing.Point(212, 301);
+            this.btnquaylai.Name = "btnquaylai";
+            this.btnquaylai.Size = new System.Drawing.Size(88, 23);
+            this.btnquaylai.TabIndex = 35;
+            this.btnquaylai.Text = "Quay Lại ";
+            this.btnquaylai.UseVisualStyleBackColor = true;
+            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
+            // 
+            // FormHDBanGTGT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 348);
+            this.Controls.Add(this.btnquaylai);
             this.Controls.Add(this.btnxem);
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnthoat);
@@ -256,7 +271,7 @@
             this.Controls.Add(this.btnxoa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "HDBanGTGT";
+            this.Name = "FormHDBanGTGT";
             this.Text = "HDBanGTGT";
             this.Load += new System.EventHandler(this.HDBanGTGT_Load);
             this.groupBox1.ResumeLayout(false);
@@ -288,6 +303,7 @@
         private System.Windows.Forms.TextBox txttendvban;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtngayban;
+        private System.Windows.Forms.Button btnquaylai;
     }
 }

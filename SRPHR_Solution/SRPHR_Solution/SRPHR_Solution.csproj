@@ -56,6 +56,12 @@
     <Compile Include="BanHang\ChitietHDGTGT.Designer.cs">
       <DependentUpon>ChitietHDGTGT.cs</DependentUpon>
     </Compile>
+    <Compile Include="BanHang\FormMainBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanHang\FormMainBH.Designer.cs">
+      <DependentUpon>FormMainBH.cs</DependentUpon>
+    </Compile>
     <Compile Include="BanHang\HDBanGTGT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="BaoCao\BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\FormMainBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\FormMainBaoCao.Designer.cs">
+      <DependentUpon>FormMainBaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="BaoCao\LoaiBaoCao.cs">
       <SubType>Form</SubType>
@@ -134,9 +146,7 @@
     <Compile Include="Kho\PQLKho.Designer.cs">
       <DependentUpon>PQLKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\KyLuatForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="NhanSu\KyLuatForm.cs" />
     <Compile Include="NhanSu\KyLuatForm.Designer.cs">
       <DependentUpon>KyLuatForm.cs</DependentUpon>
     </Compile>
@@ -208,6 +218,9 @@
     <EmbeddedResource Include="BanHang\ChitietHDGTGT.resx">
       <DependentUpon>ChitietHDGTGT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BanHang\FormMainBH.resx">
+      <DependentUpon>FormMainBH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BanHang\HDBanGTGT.resx">
       <DependentUpon>HDBanGTGT.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,8 +230,14 @@
     <EmbeddedResource Include="BaoCao\BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\FormMainBaoCao.resx">
+      <DependentUpon>FormMainBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\LoaiBaoCao.resx">
       <DependentUpon>LoaiBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoPKH\NhanHopDong.resx">
+      <DependentUpon>NhanHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhapForm.resx">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
