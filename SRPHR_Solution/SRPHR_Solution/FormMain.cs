@@ -85,29 +85,38 @@ namespace SRPHR_Solution.PhanQuyen
             string[] s = new string[6];
             s = taikhoanbll.ChuyenChuoithanhmang(pq);
             if (s[0] == "1")
-                btnFormBanHang.Enabled = true;
-            else
-                btnFormBanHang.Enabled = false;
+                btnFormBanHang.Enabled = true;          
             if (s[1] == "1")
                 btnformbaocao.Enabled = true;
-            else
-                btnformbaocao.Enabled = false;
+          
             if (s[2] == "1")
                 btnfromcongno.Enabled = true;
-            else
-                btnfromcongno.Enabled = false;
+            
             if (s[3] == "1")
                 btnformkhachhang.Enabled = true;
-            else
-                btnformkhachhang.Enabled = false;
+            
             if (s[4] == "1")
                 btnfromkho.Enabled = true;
-            else
-                btnfromkho.Enabled = false;
+            
             if (s[5] == "1")
                 btnformNhansu.Enabled = true;
-            else
-                btnformNhansu.Enabled = false;
+            if (s[6] == "0" && s[7] == "0" && s[8] == "0" && s[9] == "0" && s[0] == "0")
+                btnFormBanHang.Enabled = false;
+
+            if (s[10] == "0" && s[11] == "0" && s[12] == "0" && s[13] == "0" && s[1] == "0")
+                btnFormBanHang.Enabled = false;
+
+            if (s[14] == "0" && s[15] == "0" && s[16] == "0" && s[17] == "0" && s[2] == "0")
+                btnFormBanHang.Enabled = false;
+
+            if (s[18] == "0" && s[19] == "0" && s[20] == "0" && s[21] == "0" && s[3] == "0")
+                btnFormBanHang.Enabled = false;
+
+            if (s[22] == "0" && s[23] == "0" && s[24] == "0" && s[25] == "0" && s[4] == "0")
+                btnFormBanHang.Enabled = false;
+
+            if (s[26] == "0" && s[27] == "0" && s[28] == "0" && s[29] == "0" && s[5] == "0")
+                btnFormBanHang.Enabled = false;
         }
 
         private void btnsua_Click(object sender, EventArgs e)
