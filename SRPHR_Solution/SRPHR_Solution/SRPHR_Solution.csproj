@@ -122,6 +122,18 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kho\CTPhieuQLKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\CTPhieuQLKho.Designer.cs">
+      <DependentUpon>CTPhieuQLKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\PQLKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\PQLKho.Designer.cs">
+      <DependentUpon>PQLKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanSu\KyLuatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +226,12 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kho\CTPhieuQLKho.resx">
+      <DependentUpon>CTPhieuQLKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\PQLKho.resx">
+      <DependentUpon>PQLKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\ChuongTrinhDTNV.resx">
       <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,7 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="KhachHang\" />
-    <Folder Include="Kho\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
