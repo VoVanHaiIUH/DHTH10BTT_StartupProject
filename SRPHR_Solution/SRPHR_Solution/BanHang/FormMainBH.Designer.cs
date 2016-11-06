@@ -41,6 +41,7 @@
             this.btnhdgtgt.TabIndex = 0;
             this.btnhdgtgt.Text = "Thông tin Hóa Đơn Bán GTGT";
             this.btnhdgtgt.UseVisualStyleBackColor = true;
+            this.btnhdgtgt.Click += new System.EventHandler(this.btnhdgtgt_Click);
             // 
             // btnhdbanle
             // 
@@ -50,6 +51,7 @@
             this.btnhdbanle.TabIndex = 1;
             this.btnhdbanle.Text = "Thông Tin Hóa Đơn Bán Lẻ";
             this.btnhdbanle.UseVisualStyleBackColor = true;
+            this.btnhdbanle.Click += new System.EventHandler(this.btnhdbanle_Click);
             // 
             // label1
             // 
@@ -71,6 +73,7 @@
             this.Controls.Add(this.btnhdgtgt);
             this.Name = "FormMainBH";
             this.Text = "FormMainBH";
+            this.Load += new System.EventHandler(this.FormMainBH_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

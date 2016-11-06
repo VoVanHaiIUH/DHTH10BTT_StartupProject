@@ -1,6 +1,6 @@
 ﻿namespace SRPHR_Solution.BaoCao
 {
-    partial class BaoCao
+    partial class FormBaoCao
     {
         /// <summary>
         /// Required designer variable.
@@ -244,7 +244,7 @@
             this.btnquaylai.UseVisualStyleBackColor = true;
             this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
             // 
-            // BaoCao
+            // FormBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +256,7 @@
             this.Controls.Add(this.btnxoa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "BaoCao";
+            this.Name = "FormBaoCao";
             this.Text = "BaoCao";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

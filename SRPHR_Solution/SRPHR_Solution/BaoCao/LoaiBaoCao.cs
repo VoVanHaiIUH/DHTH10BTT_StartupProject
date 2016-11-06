@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SRPHR_Solution.BaoCao
 {
-    public partial class LoaiBaoCao : Form
+    public partial class FormLoaiBaoCao : Form
     {
-        public LoaiBaoCao()
+        public FormLoaiBaoCao()
         {
             InitializeComponent();
         }

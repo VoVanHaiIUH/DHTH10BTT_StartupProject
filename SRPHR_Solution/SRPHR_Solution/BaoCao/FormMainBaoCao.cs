@@ -24,7 +24,19 @@ namespace SRPHR_Solution.BaoCao
             ShowInTaskbar = false;
             
             //show form báo cáo
-            BaoCao frmnew = new BaoCao();
+            FormBaoCao frmnew = new FormBaoCao();
+            frmnew.Activate();
+            frmnew.ShowDialog();
+        }
+
+        private void btnloaibaocao_Click(object sender, EventArgs e)
+        {
+            //thoát form main
+            Visible = false;
+            ShowInTaskbar = false;
+
+            //show form báo cáo
+             FormLoaiBaoCao frmnew = new FormLoaiBaoCao();
             frmnew.Activate();
             frmnew.ShowDialog();
         }

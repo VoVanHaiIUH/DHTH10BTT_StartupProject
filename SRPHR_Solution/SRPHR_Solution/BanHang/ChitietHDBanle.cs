@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entities.BanHang;
 using BusinessLogic;
 //Nhóm chưa update BusinessLogic BanHang
+
 namespace SRPHR_Solution.BanHang
 {
     public partial class FormChitietHDBanle : Form
@@ -35,7 +36,7 @@ namespace SRPHR_Solution.BanHang
 
         private void ChitietHDBanle_Load(object sender, EventArgs e)
         {
-
+        
         }
 
         private void btnthem_Click(object sender, EventArgs e)

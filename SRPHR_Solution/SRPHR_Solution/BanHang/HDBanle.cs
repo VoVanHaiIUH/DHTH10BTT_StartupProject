@@ -25,9 +25,7 @@ namespace SRPHR_Solution.BanHang
 
         private void btnxem_Click(object sender, EventArgs e)
         {
-            //Visible = false;
-            //ShowInTaskbar = false;
-
+           
             FormChitietHDBanle frmctbanle = new FormChitietHDBanle();
             frmctbanle.Activate();
             frmctbanle.Show();

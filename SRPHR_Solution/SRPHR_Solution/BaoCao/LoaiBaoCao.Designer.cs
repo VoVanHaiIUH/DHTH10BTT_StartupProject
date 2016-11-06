@@ -1,6 +1,6 @@
 ﻿namespace SRPHR_Solution.BaoCao
 {
-    partial class LoaiBaoCao
+    partial class FormLoaiBaoCao
     {
         /// <summary>
         /// Required designer variable.
@@ -128,7 +128,7 @@
             this.btnquaylai.UseVisualStyleBackColor = true;
             this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
             // 
-            // LoaiBaoCao
+            // FormLoaiBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +143,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtmaloai);
             this.Controls.Add(this.label1);
-            this.Name = "LoaiBaoCao";
+            this.Name = "FormLoaiBaoCao";
             this.Text = "LoaiBaoCao";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

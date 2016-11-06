@@ -41,6 +41,7 @@
             this.btnloaibaocao.TabIndex = 3;
             this.btnloaibaocao.Text = "Loại Báo Cáo";
             this.btnloaibaocao.UseVisualStyleBackColor = true;
+            this.btnloaibaocao.Click += new System.EventHandler(this.btnloaibaocao_Click);
             // 
             // btnbaocao
             // 

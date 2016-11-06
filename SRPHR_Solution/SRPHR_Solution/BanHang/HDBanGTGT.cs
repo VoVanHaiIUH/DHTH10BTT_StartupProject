@@ -30,7 +30,6 @@ namespace SRPHR_Solution.BanHang
         private void btnxem_Click(object sender, EventArgs e)
         {
             //Visible = false;
-            //ShowInTaskbar = false;
 
             FormChitietHDGTGT frmctgtgt = new FormChitietHDGTGT();
             frmctgtgt.Activate();

@@ -185,7 +185,7 @@ namespace SRPHR_Solution.PhanQuyen
         private void btnFormBanHang_Click(object sender, EventArgs e)
         {
             FormMainBH frmnew = new FormMainBH();
-            frmnew.ShowDialog();
+            frmnew.ShowDialog(); 
         }
 
         private void btnformbaocao_Click(object sender, EventArgs e)
