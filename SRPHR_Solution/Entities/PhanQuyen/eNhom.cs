@@ -39,14 +39,7 @@ namespace Entities.PhanQuyen
             this.TenNhom = tennhom;
             this.PhanQuyen = phanquyen;
         }
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+
 
     }
 }

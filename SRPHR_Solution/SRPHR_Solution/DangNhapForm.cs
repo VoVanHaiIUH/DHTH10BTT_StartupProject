@@ -25,7 +25,7 @@ namespace SRPHR_Solution
             ShowInTaskbar = false;
             // show form đăng kí
             FormDangKi frmdangki = new FormDangKi();
-            frmdangki.ShowDialog(); ;
+            frmdangki.ShowDialog(); 
         }
 
         private void btnlogin_Click(object sender, EventArgs e)

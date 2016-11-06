@@ -78,6 +78,7 @@
     <Compile Include="NhanSu\PhongBan.cs" />
     <Compile Include="PhanQuyen\eNhom.cs" />
     <Compile Include="PhanQuyen\eTaiKhoan.cs" />
+    <Compile Include="PhanQuyen\eThongTinTaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

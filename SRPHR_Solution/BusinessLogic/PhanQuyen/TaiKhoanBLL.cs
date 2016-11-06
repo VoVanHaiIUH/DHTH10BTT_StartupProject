@@ -93,5 +93,75 @@ namespace BusinessLogic.PhanQuyen
             return pq;
 
         }
+        public int them1taikhoan(eTaiKhoan tk)
+        {
+            try
+            {
+                var tmp = db.Tbl_Users.Where(x => x.ID == tk.ID1).FirstOrDefault();
+                if (tmp != null)
+                    return 0;
+                Tbl_User user = new Tbl_User();
+                user.ID = tk.ID1;
+                user.MaNV = tk.Manv1;
+                user.Nhom = tk.Nhom1;
+                user.Password = tk.Password1;
+                user.Phanquyen = tk.PhanQuyen1;
+                db.Tbl_Users.InsertOnSubmit(user);
+                db.SubmitChanges();
+
+
+                return 1;
+
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+        public eThongTinTaiKhoan laythongtin1taikhoan(string matk)
+        {
+            eThongTinTaiKhoan info = new eThongTinTaiKhoan();
+            var tmp = db.Tbl_Users.Where(x => x.ID == matk).Single();
+            info.ID1 = tmp.ID;
+            info.Manv1 = tmp.MaNV;
+            info.Nhom1 = tmp.Nhom;
+            return info;
+        }
+        public List<eThongTinTaiKhoan> laythongtintatcataikhoan()
+        {
+            List<eThongTinTaiKhoan> ls = new List<eThongTinTaiKhoan>();
+            var tmp = db.Tbl_Users.ToList();
+            foreach (Tbl_User user in tmp)
+            {
+                if (user.ID != "admin")
+                {
+                    eThongTinTaiKhoan tk = new eThongTinTaiKhoan();
+                    tk.ID1 = user.ID;
+                    tk.Manv1 = user.MaNV;
+                    tk.Nhom1 = user.Nhom;
+
+                    ls.Add(tk);
+                }
+            }
+            return ls;
+        }
+        public int chinhsuathongtintk(string mk,string manv,string id)
+        {
+            try
+            {
+                var tmp = db.Tbl_Users.Where(x => x.ID ==id).Single();
+                tmp.MaNV =manv ;
+                tmp.Password = mk;
+                db.SubmitChanges();
+
+
+                return 1;
+
+            }
+            catch
+            {
+                return 0;
+            }
+        }
     }
 }

@@ -42,8 +42,16 @@
             this.txttaikhoan = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnsua = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtnhomtk = new System.Windows.Forms.TextBox();
+            this.lbnhomtk = new System.Windows.Forms.Label();
+            this.txtmanv = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtnhaplaimk = new System.Windows.Forms.TextBox();
+            this.lbnhaplaimk = new System.Windows.Forms.Label();
+            this.txtmk = new System.Windows.Forms.TextBox();
+            this.lbmk = new System.Windows.Forms.Label();
+            this.btnluu = new System.Windows.Forms.Button();
+            this.btnhuy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +167,7 @@
             // 
             // txttaikhoan
             // 
-            this.txttaikhoan.Location = new System.Drawing.Point(76, 19);
+            this.txttaikhoan.Location = new System.Drawing.Point(91, 15);
             this.txttaikhoan.Name = "txttaikhoan";
             this.txttaikhoan.ReadOnly = true;
             this.txttaikhoan.Size = new System.Drawing.Size(132, 20);
@@ -167,9 +175,17 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnhuy);
+            this.groupBox2.Controls.Add(this.btnluu);
+            this.groupBox2.Controls.Add(this.txtmk);
+            this.groupBox2.Controls.Add(this.lbmk);
+            this.groupBox2.Controls.Add(this.txtnhaplaimk);
+            this.groupBox2.Controls.Add(this.lbnhaplaimk);
+            this.groupBox2.Controls.Add(this.txtmanv);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnsua);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtnhomtk);
+            this.groupBox2.Controls.Add(this.lbnhomtk);
             this.groupBox2.Controls.Add(this.btndangxuat);
             this.groupBox2.Controls.Add(this.txttaikhoan);
             this.groupBox2.Controls.Add(this.label1);
@@ -189,23 +205,101 @@
             this.btnsua.TabIndex = 14;
             this.btnsua.Text = "Cập nhật thông tin";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
-            // textBox2
+            // txtnhomtk
             // 
-            this.textBox2.Location = new System.Drawing.Point(76, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtnhomtk.Location = new System.Drawing.Point(91, 56);
+            this.txtnhomtk.Name = "txtnhomtk";
+            this.txtnhomtk.ReadOnly = true;
+            this.txtnhomtk.Size = new System.Drawing.Size(132, 20);
+            this.txtnhomtk.TabIndex = 11;
             // 
-            // label3
+            // lbnhomtk
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Nhóm TK :";
+            this.lbnhomtk.AutoSize = true;
+            this.lbnhomtk.Location = new System.Drawing.Point(12, 63);
+            this.lbnhomtk.Name = "lbnhomtk";
+            this.lbnhomtk.Size = new System.Drawing.Size(58, 13);
+            this.lbnhomtk.TabIndex = 10;
+            this.lbnhomtk.Text = "Nhóm TK :";
+            // 
+            // txtmanv
+            // 
+            this.txtmanv.Location = new System.Drawing.Point(91, 96);
+            this.txtmanv.Name = "txtmanv";
+            this.txtmanv.ReadOnly = true;
+            this.txtmanv.Size = new System.Drawing.Size(132, 20);
+            this.txtmanv.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Mã NV :";
+            // 
+            // txtnhaplaimk
+            // 
+            this.txtnhaplaimk.Location = new System.Drawing.Point(91, 70);
+            this.txtnhaplaimk.Name = "txtnhaplaimk";
+            this.txtnhaplaimk.PasswordChar = '*';
+            this.txtnhaplaimk.Size = new System.Drawing.Size(132, 20);
+            this.txtnhaplaimk.TabIndex = 18;
+            this.txtnhaplaimk.Visible = false;
+            // 
+            // lbnhaplaimk
+            // 
+            this.lbnhaplaimk.AutoSize = true;
+            this.lbnhaplaimk.Location = new System.Drawing.Point(6, 77);
+            this.lbnhaplaimk.Name = "lbnhaplaimk";
+            this.lbnhaplaimk.Size = new System.Drawing.Size(71, 13);
+            this.lbnhaplaimk.TabIndex = 17;
+            this.lbnhaplaimk.Text = "Nhập lại MK :";
+            this.lbnhaplaimk.Visible = false;
+            // 
+            // txtmk
+            // 
+            this.txtmk.Location = new System.Drawing.Point(91, 38);
+            this.txtmk.Name = "txtmk";
+            this.txtmk.PasswordChar = '*';
+            this.txtmk.Size = new System.Drawing.Size(132, 20);
+            this.txtmk.TabIndex = 20;
+            this.txtmk.Visible = false;
+            // 
+            // lbmk
+            // 
+            this.lbmk.AutoSize = true;
+            this.lbmk.Location = new System.Drawing.Point(12, 45);
+            this.lbmk.Name = "lbmk";
+            this.lbmk.Size = new System.Drawing.Size(58, 13);
+            this.lbmk.TabIndex = 19;
+            this.lbmk.Text = "Mật khẩu :";
+            this.lbmk.Visible = false;
+            // 
+            // btnluu
+            // 
+            this.btnluu.Location = new System.Drawing.Point(12, 184);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(117, 23);
+            this.btnluu.TabIndex = 21;
+            this.btnluu.Text = "Lưu";
+            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Visible = false;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            // 
+            // btnhuy
+            // 
+            this.btnhuy.Location = new System.Drawing.Point(12, 224);
+            this.btnhuy.Name = "btnhuy";
+            this.btnhuy.Size = new System.Drawing.Size(117, 23);
+            this.btnhuy.TabIndex = 22;
+            this.btnhuy.Text = "Hủy";
+            this.btnhuy.UseVisualStyleBackColor = true;
+            this.btnhuy.Visible = false;
+            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
             // 
             // FormMain
             // 
@@ -242,7 +336,15 @@
         private System.Windows.Forms.Button btnFormBanHang;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnsua;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtnhomtk;
+        private System.Windows.Forms.Label lbnhomtk;
+        private System.Windows.Forms.TextBox txtmanv;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnhuy;
+        private System.Windows.Forms.Button btnluu;
+        private System.Windows.Forms.TextBox txtmk;
+        private System.Windows.Forms.Label lbmk;
+        private System.Windows.Forms.TextBox txtnhaplaimk;
+        private System.Windows.Forms.Label lbnhaplaimk;
     }
 }

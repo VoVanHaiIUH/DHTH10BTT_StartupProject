@@ -74,6 +74,10 @@ namespace SRPHR_Solution.PhanQuyen
                 string pq = "";
                 pq = taikhoanbll.GetPQbyID(txttaikhoan.Text);
                 EnableChucNang(pq);
+                eThongTinTaiKhoan info= taikhoanbll.laythongtin1taikhoan(txttaikhoan.Text);
+                txtmanv.Text = info.Manv1;
+                txtnhomtk.Text = info.Nhom1;
+
             }
         }
         private void EnableChucNang(string pq)
@@ -104,6 +108,60 @@ namespace SRPHR_Solution.PhanQuyen
                 btnformNhansu.Enabled = true;
             else
                 btnformNhansu.Enabled = false;
+        }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            showchinhsua();
+        }
+        private void showchinhsua()
+        {
+            lbmk.Visible = true;
+            txtnhomtk.Visible = false;
+            lbnhomtk.Visible = false;
+            lbnhaplaimk.Visible = true;
+            txtnhaplaimk.Visible = true;
+            txtmk.Visible = true;
+            btndangxuat.Visible = false;
+            btnsua.Visible = false;
+            btnthoat.Visible = false;
+            btnluu.Visible = true;
+            btnhuy.Visible = true;
+            txtmanv.ReadOnly = false;
+        }
+        private void thoatshow()
+        {
+            lbmk.Visible = false;
+            txtnhomtk.Visible = true;
+            lbnhomtk.Visible = true;
+            lbnhaplaimk.Visible = false;
+            txtnhaplaimk.Visible = false;
+            txtmk.Visible = false;
+            btndangxuat.Visible = true;
+            btnsua.Visible = true;
+            btnthoat.Visible = true;
+            btnluu.Visible = false;
+            btnhuy.Visible = false;
+            txtmanv.ReadOnly = true;
+        }
+
+        private void btnhuy_Click(object sender, EventArgs e)
+        {
+            thoatshow();
+        }
+
+        private void btnluu_Click(object sender, EventArgs e)
+        {
+            int kq = taikhoanbll.chinhsuathongtintk(txtmk.Text, txtmanv.Text, txttaikhoan.Text);
+            if(kq==1)
+            {
+                MessageBox.Show("Sửa thành công!");
+                thoatshow();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi!");
+            }
         }
     }
 }

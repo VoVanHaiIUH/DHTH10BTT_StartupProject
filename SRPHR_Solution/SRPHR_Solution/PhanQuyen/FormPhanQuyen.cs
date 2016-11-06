@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SRPHR_Solution.PhanQuyen;
+using Entities.PhanQuyen;
+using BusinessLogic.PhanQuyen;
 
 namespace SRPHR_Solution.PhanQuyen
 {
@@ -17,6 +19,7 @@ namespace SRPHR_Solution.PhanQuyen
         {
             InitializeComponent();
         }
+        TaiKhoanBLL taikhoanbll = new TaiKhoanBLL();
 
         private void btnQuanLi_Click(object sender, EventArgs e)
         {
@@ -54,6 +57,11 @@ namespace SRPHR_Solution.PhanQuyen
             //if (r == DialogResult.No)
             //    e.Cancel = true;
             Application.Exit();
+        }
+
+        private void FormPhanQuyen_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = taikhoanbll.laythongtintatcataikhoan();
         }
     }
 }

@@ -34,14 +34,13 @@
             this.txtmatkhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtxacnhanmk = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtemail = new System.Windows.Forms.TextBox();
             this.btndangki = new System.Windows.Forms.Button();
             this.btntrolai = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtmanv = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +73,7 @@
             // 
             this.txtmatkhau.Location = new System.Drawing.Point(123, 52);
             this.txtmatkhau.Name = "txtmatkhau";
+            this.txtmatkhau.PasswordChar = '*';
             this.txtmatkhau.Size = new System.Drawing.Size(100, 20);
             this.txtmatkhau.TabIndex = 2;
             // 
@@ -90,24 +90,9 @@
             // 
             this.txtxacnhanmk.Location = new System.Drawing.Point(123, 87);
             this.txtxacnhanmk.Name = "txtxacnhanmk";
+            this.txtxacnhanmk.PasswordChar = '*';
             this.txtxacnhanmk.Size = new System.Drawing.Size(100, 20);
             this.txtxacnhanmk.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Email :";
-            // 
-            // txtemail
-            // 
-            this.txtemail.Location = new System.Drawing.Point(123, 127);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(100, 20);
-            this.txtemail.TabIndex = 6;
             // 
             // btndangki
             // 
@@ -132,7 +117,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 161);
+            this.label5.Location = new System.Drawing.Point(12, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 11;
@@ -140,13 +125,15 @@
             // 
             // txtmanv
             // 
-            this.txtmanv.Location = new System.Drawing.Point(123, 161);
+            this.txtmanv.Location = new System.Drawing.Point(122, 121);
             this.txtmanv.Name = "txtmanv";
             this.txtmanv.Size = new System.Drawing.Size(100, 20);
             this.txtmanv.TabIndex = 10;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtmanv);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(1, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(232, 186);
@@ -169,10 +156,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(242, 245);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtmanv);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtemail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtxacnhanmk);
             this.Controls.Add(this.label2);
@@ -184,6 +167,8 @@
             this.Name = "FormDangKi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangKi";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,8 +183,6 @@
         private System.Windows.Forms.TextBox txtmatkhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtxacnhanmk;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Button btndangki;
         private System.Windows.Forms.Button btntrolai;
         private System.Windows.Forms.Label label5;
