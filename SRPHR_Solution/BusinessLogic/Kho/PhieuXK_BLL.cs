@@ -8,7 +8,7 @@ using DataAccess;
 
 namespace BusinessLogic.Kho
 {
-    class PhieuXK_BLL
+    public class PhieuXK_BLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
         public bool AddAllPhieuNK(ePhieuXK newpxk)
