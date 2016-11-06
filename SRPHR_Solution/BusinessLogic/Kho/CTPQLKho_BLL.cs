@@ -51,11 +51,11 @@ namespace BusinessLogic.Kho
                 return false;
             }
         }
-        public bool DeleteCTPhieuQLK(string delid)
+        public bool DeleteCTPhieuQLK(eCTQLKho delid)
         {
             try
             {
-                Tbl_CTPhieuQLKho deletema = DB.Tbl_CTPhieuQLKhos.Single(x => x.maPhieuql == delid && x.maSP == delid);
+                Tbl_CTPhieuQLKho deletema = DB.Tbl_CTPhieuQLKhos.Single(x => x.maPhieuql == delid._maPhieuQL && x.maSP == delid._masp);
                 DB.Tbl_CTPhieuQLKhos.DeleteOnSubmit(deletema);
                 DB.SubmitChanges();
                 return true;

@@ -8,7 +8,7 @@ using DataAccess;
 
 namespace BusinessLogic.Kho
 {
-    class PhieuQLKho_BLL
+    public class PhieuQLKho_BLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
         public List<ePhieuQLiKho> getAllPQLKho()
@@ -46,11 +46,11 @@ namespace BusinessLogic.Kho
                 return false;
             }
         }
-        public bool DeletePhieuQLK(string delid)
+        public bool DeletePhieuQLK(ePhieuQLiKho delid)
         {
             try
             {
-                Tbl_PhieuQLKho deletema = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == delid);
+                Tbl_PhieuQLKho deletema = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == delid._maPhieuQli);
                 DB.Tbl_PhieuQLKhos.DeleteOnSubmit(deletema);
                 DB.SubmitChanges();
                 return true;
