@@ -16,5 +16,10 @@ namespace SRPHR_Solution.CongNoPKH
         {
             InitializeComponent();
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
