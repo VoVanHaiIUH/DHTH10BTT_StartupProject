@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SRPHR_Solution.NhanSu
+namespace WindowsFormsApplication1
 {
-    public partial class ThemChucVu : Form
+    public partial class FrmCTThamGiaDaoTaoNV : Form
     {
-        public ThemChucVu()
+        public FrmCTThamGiaDaoTaoNV()
         {
             InitializeComponent();
         }

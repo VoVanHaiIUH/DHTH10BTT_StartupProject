@@ -128,23 +128,53 @@
     <Compile Include="Kho\PQLKho.Designer.cs">
       <DependentUpon>PQLKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\KyLuatForm.cs">
+    <Compile Include="NhanSu\FrmChiTietKyLuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanSu\KyLuatForm.Designer.cs">
-      <DependentUpon>KyLuatForm.cs</DependentUpon>
+    <Compile Include="NhanSu\FrmChiTietKyLuat.designer.cs">
+      <DependentUpon>FrmChiTietKyLuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\ThemChucVu.cs">
+    <Compile Include="NhanSu\FrmCTThamGiaDaoTaoNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanSu\ThemChucVu.Designer.cs">
-      <DependentUpon>ThemChucVu.cs</DependentUpon>
+    <Compile Include="NhanSu\FrmCTThamGiaDaoTaoNV.designer.cs">
+      <DependentUpon>FrmCTThamGiaDaoTaoNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\ThemNV.cs">
+    <Compile Include="NhanSu\FrmDaoTao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanSu\ThemNV.Designer.cs">
-      <DependentUpon>ThemNV.cs</DependentUpon>
+    <Compile Include="NhanSu\FrmDaoTao.designer.cs">
+      <DependentUpon>FrmDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\FrmKyLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\FrmKyLuat.designer.cs">
+      <DependentUpon>FrmKyLuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\FrmLichSuLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\FrmLichSuLamViec.designer.cs">
+      <DependentUpon>FrmLichSuLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\FrmNhanVien.designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\frmQLChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\frmQLChucVu.designer.cs">
+      <DependentUpon>frmQLChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\FrmQLDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\FrmQLDaoTao.designer.cs">
+      <DependentUpon>FrmQLDaoTao.cs</DependentUpon>
     </Compile>
     <Compile Include="PhanQuyen\FormPhanQuyen.cs">
       <SubType>Form</SubType>
@@ -157,42 +187,6 @@
     </Compile>
     <Compile Include="PhanQuyen\FormThem.Designer.cs">
       <DependentUpon>FormThem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemPB.Designer.cs">
-      <DependentUpon>ThemPB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemPB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanSu\ThemCV.Designer.cs">
-      <DependentUpon>ThemCV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ThemCV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanSu\LichSuLamViec.Designer.cs">
-      <DependentUpon>LichSuLamViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\LichSuLamViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanSu\DaoTao.Designer.cs">
-      <DependentUpon>DaoTao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\DaoTao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanSu\CTKyluatNv.Designer.cs">
-      <DependentUpon>CTKyluatNv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\CTKyluatNv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhanSu\ChuongTrinhDTNV.Designer.cs">
-      <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanSu\ChuongTrinhDTNV.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -238,23 +232,29 @@
     <EmbeddedResource Include="Kho\PQLKho.resx">
       <DependentUpon>PQLKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ChuongTrinhDTNV.resx">
-      <DependentUpon>ChuongTrinhDTNV.cs</DependentUpon>
+    <EmbeddedResource Include="NhanSu\FrmChiTietKyLuat.resx">
+      <DependentUpon>FrmChiTietKyLuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\KyLuatForm.resx">
-      <DependentUpon>KyLuatForm.cs</DependentUpon>
+    <EmbeddedResource Include="NhanSu\FrmCTThamGiaDaoTaoNV.resx">
+      <DependentUpon>FrmCTThamGiaDaoTaoNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ThemChucVu.resx">
-      <DependentUpon>ThemChucVu.cs</DependentUpon>
+    <EmbeddedResource Include="NhanSu\FrmDaoTao.resx">
+      <DependentUpon>FrmDaoTao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ThemCV.resx">
-      <DependentUpon>ThemCV.cs</DependentUpon>
+    <EmbeddedResource Include="NhanSu\FrmKyLuat.resx">
+      <DependentUpon>FrmKyLuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ThemNV.resx">
-      <DependentUpon>ThemNV.cs</DependentUpon>
+    <EmbeddedResource Include="NhanSu\FrmLichSuLamViec.resx">
+      <DependentUpon>FrmLichSuLamViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\ThemPB.resx">
-      <DependentUpon>ThemPB.cs</DependentUpon>
+    <EmbeddedResource Include="NhanSu\FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\frmQLChucVu.resx">
+      <DependentUpon>frmQLChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\FrmQLDaoTao.resx">
+      <DependentUpon>FrmQLDaoTao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhanQuyen\FormPhanQuyen.resx">
       <DependentUpon>FormPhanQuyen.cs</DependentUpon>

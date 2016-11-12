@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SRPHR_Solution.NhanSu
+namespace WindowsFormsApplication1
 {
-    public partial class DaoTao : Form
+    public partial class FrmQLDaoTao : Form
     {
-        public DaoTao()
+        public FrmQLDaoTao()
         {
             InitializeComponent();
         }

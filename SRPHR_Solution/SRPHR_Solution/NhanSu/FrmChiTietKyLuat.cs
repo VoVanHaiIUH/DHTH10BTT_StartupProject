@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SRPHR_Solution.NhanSu
+namespace WindowsFormsApplication1
 {
-    public partial class ThemNV : Form
+    public partial class FrmChiTietKyLuat : Form
     {
-        public ThemNV()
+        public FrmChiTietKyLuat()
         {
             InitializeComponent();
         }
