@@ -76,6 +76,7 @@ namespace Entities.KhachHang
                 tongtien = value;
             }
         }
+        public Thethanhvien() { }
         public Thethanhvien(string makh, string mathe, int diemtichluy, float tongtien, string ngaylap)
         {
             Makh = makh;
