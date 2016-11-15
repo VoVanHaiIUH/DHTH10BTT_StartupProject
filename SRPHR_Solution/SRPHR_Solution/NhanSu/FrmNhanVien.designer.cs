@@ -137,7 +137,7 @@
             // 
             this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.Location = new System.Drawing.Point(118, 19);
+            this.txtMaNV.Location = new System.Drawing.Point(121, 19);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(1);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(228, 25);
@@ -159,7 +159,7 @@
             this.lbTrangThai.Location = new System.Drawing.Point(720, 78);
             this.lbTrangThai.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(68, 15);
+            this.lbTrangThai.Size = new System.Drawing.Size(69, 15);
             this.lbTrangThai.TabIndex = 8;
             this.lbTrangThai.Text = "Trạng thái :";
             // 
@@ -202,7 +202,6 @@
             this.lblSoDT.Size = new System.Drawing.Size(86, 15);
             this.lblSoDT.TabIndex = 8;
             this.lblSoDT.Text = "Số điện thoại :";
-            this.lblSoDT.Click += new System.EventHandler(this.label6_Click);
             // 
             // lblGioiTinh
             // 
@@ -329,7 +328,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -474,6 +473,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1354, 497);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmNhanVien";

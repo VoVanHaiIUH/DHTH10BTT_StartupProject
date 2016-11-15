@@ -59,7 +59,7 @@
             this.lblTenPB.Location = new System.Drawing.Point(6, 51);
             this.lblTenPB.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTenPB.Name = "lblTenPB";
-            this.lblTenPB.Size = new System.Drawing.Size(94, 15);
+            this.lblTenPB.Size = new System.Drawing.Size(95, 15);
             this.lblTenPB.TabIndex = 8;
             this.lblTenPB.Text = "Tên phòng ban :";
             // 
@@ -162,7 +162,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -307,6 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1093, 434);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmQLDaoTao";
