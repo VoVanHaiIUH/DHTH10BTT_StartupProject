@@ -35,7 +35,7 @@ namespace SRPHR_Solution.BanHang
 
         private void btnxem_Click(object sender, EventArgs e)
         {
-           
+
             FormChitietHDBanle frmctbanle = new FormChitietHDBanle();
             frmctbanle.Activate();
             frmctbanle.Show();
@@ -48,7 +48,7 @@ namespace SRPHR_Solution.BanHang
             txtmanv.Enabled = status;
             DTNgayBanHDBL.Enabled = status;
             txttongtien.Enabled = status;
-         
+
             btnluu.Enabled = status;
             btnxoa.Enabled = status;
 
@@ -64,7 +64,7 @@ namespace SRPHR_Solution.BanHang
             txtmanv.Clear();
             DTNgayBanHDBL.Text = "";
             txttongtien.Clear();
-            
+
         }
 
         HoaDonBanLe tempHDBanLe;
@@ -76,7 +76,7 @@ namespace SRPHR_Solution.BanHang
             tempHDBanLe.MaNV = txtmanv.Text;
             tempHDBanLe.TongTien = Convert.ToDecimal(txttongtien.Text);
             tempHDBanLe.NgayBan = DTNgayBanHDBL.Value;
-            
+
         }
 
         int flag = 0;
@@ -94,7 +94,7 @@ namespace SRPHR_Solution.BanHang
 
         private void btnquaylai_Click(object sender, EventArgs e)
         {
-         
+
             Visible = false;
 
             FormMainBH frmnew = new FormMainBH();
@@ -108,7 +108,7 @@ namespace SRPHR_Solution.BanHang
         {
             flag = 1;
             EnabledControls(true);
-            txtmahdbanle.Enabled     = false;
+            txtmahdbanle.Enabled = false;
         }
 
         private void FormHDBanle_Load(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace SRPHR_Solution.BanHang
             {
                 EnabledControls(true);
                 btnluu.Enabled = true;
-            
+
                 btnthem.Text = "Hủy";
             }
             else
@@ -132,13 +132,13 @@ namespace SRPHR_Solution.BanHang
                 ClearTextBox();
                 EnabledControls(false);
             }
-            
-          
+
+
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnluu_Click(object sender, EventArgs e)

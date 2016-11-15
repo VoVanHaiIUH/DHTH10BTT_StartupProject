@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNhanVien));
             this.lblHoTen = new System.Windows.Forms.Label();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.grpBoxNhanVien = new System.Windows.Forms.GroupBox();
             this.txtSoCMND = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSoDT = new System.Windows.Forms.TextBox();
             this.txtGioitinh = new System.Windows.Forms.TextBox();
-            this.txtNgayVaoLam = new System.Windows.Forms.TextBox();
             this.txtNgayCapCMND = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -61,6 +59,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DGViewNhanVien = new System.Windows.Forms.DataGridView();
+            this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerNgayVaoLam = new System.Windows.Forms.DateTimePicker();
             this.grpBoxNhanVien.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -77,18 +77,10 @@
             this.lblHoTen.TabIndex = 8;
             this.lblHoTen.Text = "Họ tên :";
             // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Enabled = false;
-            this.txtNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.Location = new System.Drawing.Point(118, 73);
-            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(1);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(228, 25);
-            this.txtNgaySinh.TabIndex = 1;
-            // 
             // grpBoxNhanVien
             // 
+            this.grpBoxNhanVien.Controls.Add(this.dateTimePickerNgayVaoLam);
+            this.grpBoxNhanVien.Controls.Add(this.dateTimePickerNgaySinh);
             this.grpBoxNhanVien.Controls.Add(this.txtSoCMND);
             this.grpBoxNhanVien.Controls.Add(this.txtMaNV);
             this.grpBoxNhanVien.Controls.Add(this.lblSoCMND);
@@ -107,9 +99,7 @@
             this.grpBoxNhanVien.Controls.Add(this.txtSoDT);
             this.grpBoxNhanVien.Controls.Add(this.lblHoTen);
             this.grpBoxNhanVien.Controls.Add(this.txtGioitinh);
-            this.grpBoxNhanVien.Controls.Add(this.txtNgayVaoLam);
             this.grpBoxNhanVien.Controls.Add(this.txtNgayCapCMND);
-            this.grpBoxNhanVien.Controls.Add(this.txtNgaySinh);
             this.grpBoxNhanVien.Controls.Add(this.txtHoTen);
             this.grpBoxNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpBoxNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -293,16 +283,6 @@
             this.txtGioitinh.Size = new System.Drawing.Size(234, 25);
             this.txtGioitinh.TabIndex = 1;
             // 
-            // txtNgayVaoLam
-            // 
-            this.txtNgayVaoLam.Enabled = false;
-            this.txtNgayVaoLam.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayVaoLam.Location = new System.Drawing.Point(118, 100);
-            this.txtNgayVaoLam.Margin = new System.Windows.Forms.Padding(1);
-            this.txtNgayVaoLam.Name = "txtNgayVaoLam";
-            this.txtNgayVaoLam.Size = new System.Drawing.Size(228, 25);
-            this.txtNgayVaoLam.TabIndex = 1;
-            // 
             // txtNgayCapCMND
             // 
             this.txtNgayCapCMND.Enabled = false;
@@ -317,11 +297,12 @@
             // 
             this.txtHoTen.Enabled = false;
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(118, 46);
+            this.txtHoTen.Location = new System.Drawing.Point(121, 46);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(1);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(228, 25);
             this.txtHoTen.TabIndex = 1;
+            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -469,6 +450,20 @@
             this.DGViewNhanVien.Size = new System.Drawing.Size(1350, 360);
             this.DGViewNhanVien.TabIndex = 0;
             // 
+            // dateTimePickerNgaySinh
+            // 
+            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(121, 75);
+            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
+            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(228, 23);
+            this.dateTimePickerNgaySinh.TabIndex = 9;
+            // 
+            // dateTimePickerNgayVaoLam
+            // 
+            this.dateTimePickerNgayVaoLam.Location = new System.Drawing.Point(121, 103);
+            this.dateTimePickerNgayVaoLam.Name = "dateTimePickerNgayVaoLam";
+            this.dateTimePickerNgayVaoLam.Size = new System.Drawing.Size(228, 23);
+            this.dateTimePickerNgayVaoLam.TabIndex = 9;
+            // 
             // FrmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,7 +486,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblHoTen;
-        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.GroupBox grpBoxNhanVien;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblMaNV;
@@ -513,7 +507,6 @@
         private System.Windows.Forms.Label lblNgayCapCMND;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtGioitinh;
-        private System.Windows.Forms.TextBox txtNgayVaoLam;
         private System.Windows.Forms.TextBox txtNgayCapCMND;
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.Label lblĐiaChi;
@@ -522,5 +515,7 @@
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtSoDT;
         private System.Windows.Forms.DataGridView DGViewNhanVien;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayVaoLam;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
     }
 }

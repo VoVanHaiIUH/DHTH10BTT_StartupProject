@@ -8,37 +8,37 @@ using Entities.NhanSu;
 using DataAccess;
 namespace BusinessLogic.NhanSu
 {
-    public class myconvert
+    public class MyConvert
     {
         #region convert to entities
-        public static NhanVien tonhanvien(Tbl_NhanVien record)
+        public static NhanVien ToNhanVien(Tbl_NhanVien record)
         {
             return new NhanVien(record.maNV, record.hoTen, record.ngaySinh, record.ngayVaoLam, record.soCMND, record.ngayCapCMND,
                 record.gioiTinh, record.email, record.soDT, record.diaChi, record.trangThai.Value);
         }
 
-        public static PhongBan tophongban(Tbl_PhongBan record)
+        public static PhongBan ToPhongBan(Tbl_PhongBan record)
         {
             return new PhongBan(record.maPB, record.tenPB, record.diaDiem, record.soDT);
         }
 
-        public static ChucVu tochucvu(Tbl_ChucVu record)
+        public static ChucVu ToChucVu(Tbl_ChucVu record)
         {
             return new ChucVu(record.maChucVu, record.tenCV, record.heSo, record.ghiChu);
         }
 
-        public static KyLuat tokyluat(Tbl_KyLuatNV record)
+        public static KyLuat ToKyLuat(Tbl_KyLuatNV record)
         {
             return new KyLuat(record.maKyLuat, record.hinhThucKL, record.ghiChu);
         }
-        public static DaoTao todaotao(Tbl_DaoTaoNV record)
+        public static DaoTao ToDaoTao(Tbl_DaoTaoNV record)
         {
             return new DaoTao(record.maKhoaDT, record.tenKhoaDT, record.ngayBD, record.ngayKT, record.diaDiem, record.hinhthucDT, (decimal)record.chiPhi);
         }
         #endregion
 
         #region convert to objects of database
-        public static Tbl_NhanVien totbl_nhanvien(NhanVien nhanvien)
+        public static Tbl_NhanVien ToTblNhanVien(NhanVien nhanvien)
         {
             Tbl_NhanVien record = new Tbl_NhanVien();
 
@@ -57,7 +57,7 @@ namespace BusinessLogic.NhanSu
             return record;
         }
 
-        public static Tbl_PhongBan totbl_phongban(PhongBan phongban)
+        public static Tbl_PhongBan ToTbl_PhongBan(PhongBan phongban)
         {
             Tbl_PhongBan record = new Tbl_PhongBan();
             record.maPB = phongban.MaPB;
@@ -68,7 +68,7 @@ namespace BusinessLogic.NhanSu
             return record;
         }
 
-        public static Tbl_ChucVu totbl_chucvu(ChucVu chucvu)
+        public static Tbl_ChucVu ToTbl_ChucVu(ChucVu chucvu)
         {
             Tbl_ChucVu record = new Tbl_ChucVu();
             record.maChucVu = chucvu.MaCV;
@@ -79,7 +79,7 @@ namespace BusinessLogic.NhanSu
             return record;
         }
 
-        public static Tbl_KyLuatNV totbl_kyluat(KyLuat kyluat)
+        public static Tbl_KyLuatNV toTbl_KyLuat(KyLuat kyluat)
         {
             Tbl_KyLuatNV record = new Tbl_KyLuatNV();
             record.maKyLuat = kyluat.MaKL;
@@ -88,7 +88,7 @@ namespace BusinessLogic.NhanSu
             return record;
         }
 
-        public static Tbl_DaoTaoNV totbl_daotao(DaoTao daotao)
+        public static Tbl_DaoTaoNV ToTbl_DaoTao(DaoTao daotao)
         {
             Tbl_DaoTaoNV record = new Tbl_DaoTaoNV();
             record.maKhoaDT = daotao.MaKhoaDT;

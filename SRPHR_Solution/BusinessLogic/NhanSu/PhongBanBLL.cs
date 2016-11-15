@@ -17,7 +17,7 @@ namespace BusinessLogic.NhanSu
                 PhongBan tempPB;
                 foreach (Tbl_PhongBan record in DB.Tbl_PhongBans)
                 {
-                    tempPB = myconvert.tophongban(record);
+                    tempPB = MyConvert.tophongban(record);
                     phongBans.Add(tempPB);
                 }
 
@@ -28,7 +28,7 @@ namespace BusinessLogic.NhanSu
             { 
                 try
                 {
-                    Tbl_PhongBan newRecord = myconvert.totbl_phongban(newPB);
+                    Tbl_PhongBan newRecord = MyConvert.totbl_phongban(newPB);
                     DB.Tbl_PhongBans.InsertOnSubmit(newRecord);
                     DB.SubmitChanges();
 
@@ -82,7 +82,7 @@ namespace BusinessLogic.NhanSu
                 PhongBan tempPB;
                 foreach (Tbl_PhongBan record in DB.Tbl_PhongBans)
                 {
-                    tempPB = myconvert.tophongban(record);
+                    tempPB = MyConvert.ToPhongBan(record);
                     phongBans.Add(tempPB);
                 }
 
@@ -93,7 +93,7 @@ namespace BusinessLogic.NhanSu
             { 
                 try
                 {
-                    Tbl_PhongBan newRecord = myconvert.totbl_phongban(newPB);
+                    Tbl_PhongBan newRecord = MyConvert.ToTbl_PhongBan(newPB);
                     DB.Tbl_PhongBans.InsertOnSubmit(newRecord);
                     DB.SubmitChanges();
 

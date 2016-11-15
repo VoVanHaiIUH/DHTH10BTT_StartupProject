@@ -173,7 +173,10 @@ namespace Entities.NhanSu
             _chiphi = chiphi;
         }
         #endregion
+        public DaoTao()
+        {
 
+        }
         #region methods
         public override bool Equals(Object newDT)
         {
