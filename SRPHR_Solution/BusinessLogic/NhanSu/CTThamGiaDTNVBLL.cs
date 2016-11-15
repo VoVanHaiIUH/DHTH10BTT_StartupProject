@@ -67,7 +67,7 @@ namespace BusinessLogic.NhanSu
                 return false;
             }
         }
-        public List<CTThamGiaDTNV> GetAllDaoTao()
+        public List<CTThamGiaDTNV> GetAllCTDaoTao()
         {
             List<CTThamGiaDTNV> lst = new List<CTThamGiaDTNV>();
             foreach (Tbl_CTThamGiaDTNV item in DB.Tbl_CTThamGiaDTNVs)
@@ -80,6 +80,22 @@ namespace BusinessLogic.NhanSu
                 lst.Add(cttg);
             }
             return lst;
+        }
+        public List<CTThamGiaDTNV> GetCTDaoTaoByMaDaoTao(string madt)
+        {
+            var dsct = DB.Tbl_CTThamGiaDTNVs.Where(x => x.maKhoaDT == madt).ToList();
+            List<CTThamGiaDTNV> ls = new List<CTThamGiaDTNV>();
+
+            foreach (Tbl_CTThamGiaDTNV cttemp in dsct)
+            {
+                CTThamGiaDTNV ct = new CTThamGiaDTNV();
+                ct.MaKhoaDT = cttemp.maKhoaDT;
+                ct.MaNV = cttemp.maNV;
+                ct.KetQua = cttemp.ketQua;
+                ct.NhanXet = cttemp.nhanXet;
+                ls.Add(ct);
+            }
+            return ls;
         }
     }
 }

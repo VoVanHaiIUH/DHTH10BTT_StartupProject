@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCTThamGiaDaoTaoNV));
-            this.dataGridViewLichSuLamViec = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCTDaoTao = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -39,28 +39,28 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.grpBoxCTTGDaoTaoNV = new System.Windows.Forms.GroupBox();
+            this.txtMaKhoaDT = new System.Windows.Forms.TextBox();
+            this.cbbMaNV = new System.Windows.Forms.ComboBox();
             this.txtNhanXet = new System.Windows.Forms.TextBox();
-            this.cbbMaKhoaDT = new System.Windows.Forms.ComboBox();
             this.txtKetQua = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblNhanXet = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblKetQua = new System.Windows.Forms.Label();
             this.lblMaKhoaDT = new System.Windows.Forms.Label();
             this.treeViewDaoTao = new System.Windows.Forms.TreeView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLichSuLamViec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTDaoTao)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.grpBoxCTTGDaoTaoNV.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridViewLichSuLamViec
+            // dataGridViewCTDaoTao
             // 
-            this.dataGridViewLichSuLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLichSuLamViec.Location = new System.Drawing.Point(215, 137);
-            this.dataGridViewLichSuLamViec.Name = "dataGridViewLichSuLamViec";
-            this.dataGridViewLichSuLamViec.Size = new System.Drawing.Size(692, 288);
-            this.dataGridViewLichSuLamViec.TabIndex = 30;
+            this.dataGridViewCTDaoTao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCTDaoTao.Location = new System.Drawing.Point(215, 137);
+            this.dataGridViewCTDaoTao.Name = "dataGridViewCTDaoTao";
+            this.dataGridViewCTDaoTao.Size = new System.Drawing.Size(692, 288);
+            this.dataGridViewCTDaoTao.TabIndex = 30;
             // 
             // tableLayoutPanel1
             // 
@@ -71,7 +71,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.grpBoxCTTGDaoTaoNV, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.treeViewDaoTao, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridViewLichSuLamViec, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridViewCTDaoTao, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
@@ -87,7 +87,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -119,6 +119,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -134,6 +135,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -149,6 +151,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -165,6 +168,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -181,6 +185,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -198,10 +203,10 @@
             // 
             // grpBoxCTTGDaoTaoNV
             // 
+            this.grpBoxCTTGDaoTaoNV.Controls.Add(this.txtMaKhoaDT);
+            this.grpBoxCTTGDaoTaoNV.Controls.Add(this.cbbMaNV);
             this.grpBoxCTTGDaoTaoNV.Controls.Add(this.txtNhanXet);
-            this.grpBoxCTTGDaoTaoNV.Controls.Add(this.cbbMaKhoaDT);
             this.grpBoxCTTGDaoTaoNV.Controls.Add(this.txtKetQua);
-            this.grpBoxCTTGDaoTaoNV.Controls.Add(this.txtMaNV);
             this.grpBoxCTTGDaoTaoNV.Controls.Add(this.lblNhanXet);
             this.grpBoxCTTGDaoTaoNV.Controls.Add(this.lblMaNV);
             this.grpBoxCTTGDaoTaoNV.Controls.Add(this.lblKetQua);
@@ -219,6 +224,21 @@
             this.grpBoxCTTGDaoTaoNV.Text = "Chi Tiết Tham Gia Đào Tạo Nhân Viên";
             this.grpBoxCTTGDaoTaoNV.Enter += new System.EventHandler(this.grpBoxCTTGDaoTaoNV_Enter);
             // 
+            // txtMaKhoaDT
+            // 
+            this.txtMaKhoaDT.Location = new System.Drawing.Point(118, 48);
+            this.txtMaKhoaDT.Name = "txtMaKhoaDT";
+            this.txtMaKhoaDT.Size = new System.Drawing.Size(260, 23);
+            this.txtMaKhoaDT.TabIndex = 16;
+            // 
+            // cbbMaNV
+            // 
+            this.cbbMaNV.FormattingEnabled = true;
+            this.cbbMaNV.Location = new System.Drawing.Point(118, 21);
+            this.cbbMaNV.Name = "cbbMaNV";
+            this.cbbMaNV.Size = new System.Drawing.Size(260, 23);
+            this.cbbMaNV.TabIndex = 15;
+            // 
             // txtNhanXet
             // 
             this.txtNhanXet.Location = new System.Drawing.Point(479, 19);
@@ -226,14 +246,6 @@
             this.txtNhanXet.Name = "txtNhanXet";
             this.txtNhanXet.Size = new System.Drawing.Size(207, 79);
             this.txtNhanXet.TabIndex = 14;
-            // 
-            // cbbMaKhoaDT
-            // 
-            this.cbbMaKhoaDT.FormattingEnabled = true;
-            this.cbbMaKhoaDT.Location = new System.Drawing.Point(118, 48);
-            this.cbbMaKhoaDT.Name = "cbbMaKhoaDT";
-            this.cbbMaKhoaDT.Size = new System.Drawing.Size(260, 23);
-            this.cbbMaKhoaDT.TabIndex = 13;
             // 
             // txtKetQua
             // 
@@ -244,16 +256,6 @@
             this.txtKetQua.Name = "txtKetQua";
             this.txtKetQua.Size = new System.Drawing.Size(260, 25);
             this.txtKetQua.TabIndex = 0;
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Enabled = false;
-            this.txtMaNV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.Location = new System.Drawing.Point(118, 19);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(1);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(260, 25);
-            this.txtMaNV.TabIndex = 0;
             // 
             // lblNhanXet
             // 
@@ -303,6 +305,7 @@
             this.treeViewDaoTao.Name = "treeViewDaoTao";
             this.treeViewDaoTao.Size = new System.Drawing.Size(204, 288);
             this.treeViewDaoTao.TabIndex = 29;
+            this.treeViewDaoTao.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewDaoTao_AfterSelect);
             // 
             // FrmCTThamGiaDaoTaoNV
             // 
@@ -312,7 +315,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmCTThamGiaDaoTaoNV";
             this.Text = "FrmChiTietThamGiaDaoTaoNhanVien";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLichSuLamViec)).EndInit();
+            this.Load += new System.EventHandler(this.FrmCTThamGiaDaoTaoNV_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCTDaoTao)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.grpBoxCTTGDaoTaoNV.ResumeLayout(false);
@@ -322,7 +326,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridViewLichSuLamViec;
+        private System.Windows.Forms.DataGridView dataGridViewCTDaoTao;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnAdd;
@@ -334,12 +338,12 @@
         private System.Windows.Forms.GroupBox grpBoxCTTGDaoTaoNV;
         private System.Windows.Forms.TextBox txtNhanXet;
         private System.Windows.Forms.TextBox txtKetQua;
-        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.Label lblNhanXet;
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Label lblKetQua;
         private System.Windows.Forms.Label lblMaKhoaDT;
         private System.Windows.Forms.TreeView treeViewDaoTao;
-        private System.Windows.Forms.ComboBox cbbMaKhoaDT;
+        private System.Windows.Forms.ComboBox cbbMaNV;
+        private System.Windows.Forms.TextBox txtMaKhoaDT;
     }
 }

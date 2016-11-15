@@ -35,14 +35,11 @@ namespace SRPHR_Solution.NhanSu
             frmPhongBan.Show();
         }
 
-        
-
-        
-        
-
-
-
-
-
+        private void chiTiếtĐàoTạoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCTThamGiaDaoTaoNV frmCT = new FrmCTThamGiaDaoTaoNV();
+            frmCT.MdiParent = this;
+            frmCT.Show();
+        }
     }
 }
