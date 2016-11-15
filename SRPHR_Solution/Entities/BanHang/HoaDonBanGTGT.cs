@@ -142,7 +142,10 @@ namespace Entities.BanHang
             ngaylapHoaDon = NgaylapHoaDon;
             thanhTien = ThanhTien;
         }
+        public HoaDonBanGTGT()
+        {
 
+        }
         public override bool Equals(object obj)
         {
             HoaDonBanGTGT hdgtgt = (HoaDonBanGTGT)obj;

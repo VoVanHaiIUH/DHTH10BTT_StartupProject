@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BanHang\CTHoaDonBanLe.cs" />
     <Compile Include="BanHang\HoaDonBanLeBLL.cs" />
+    <Compile Include="BanHang\HoaDonGTGTBLL.cs" />
     <Compile Include="CongNoPKH\CongNoKH_BLL.cs" />
     <Compile Include="CongNoPKH\CongNoNCC_BLL.cs" />
     <Compile Include="CongNoPKH\HDBanSi_BLL.cs" />
