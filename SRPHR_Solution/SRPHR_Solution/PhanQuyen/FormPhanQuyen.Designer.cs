@@ -34,7 +34,7 @@
             this.btnthoat = new System.Windows.Forms.Button();
             this.btnQuanLi = new System.Windows.Forms.Button();
             this.btnquaylai = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txttaikhoan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,7 +64,7 @@
             this.groupBox2.Controls.Add(this.btnthoat);
             this.groupBox2.Controls.Add(this.btnQuanLi);
             this.groupBox2.Controls.Add(this.btnquaylai);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txttaikhoan);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
@@ -103,13 +103,13 @@
             this.btnquaylai.UseVisualStyleBackColor = true;
             this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
             // 
-            // textBox1
+            // txttaikhoan
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 7;
+            this.txttaikhoan.Location = new System.Drawing.Point(73, 20);
+            this.txttaikhoan.Name = "txttaikhoan";
+            this.txttaikhoan.ReadOnly = true;
+            this.txttaikhoan.Size = new System.Drawing.Size(132, 20);
+            this.txttaikhoan.TabIndex = 7;
             // 
             // label1
             // 
@@ -145,7 +145,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txttaikhoan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnquaylai;
         private System.Windows.Forms.Button btnQuanLi;

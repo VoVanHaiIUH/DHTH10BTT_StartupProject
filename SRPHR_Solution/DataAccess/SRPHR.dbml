@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHRPR" Class="SRPHRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-B3J8LOS\DIENSQLSERVER;Initial Catalog=SHRPR;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString6" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=KEN-PC;Initial Catalog=SHRPR;Persist Security Info=True;User ID=sa" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString7" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Tbl_ChucVu" Member="Tbl_ChucVus">
     <Type Name="Tbl_ChucVu">
       <Column Name="maChucVu" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -433,6 +433,22 @@
       <Column Name="ngayLap" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="ngayHetHan" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_User" Member="Tbl_User1s">
+    <Type Name="Tbl_User1">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Nhom" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phanquyen" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNV" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Nhom" Member="Tbl_Nhom1s">
+    <Type Name="Tbl_Nhom1">
+      <Column Name="IDNhom" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNhom" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phanquyen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>
