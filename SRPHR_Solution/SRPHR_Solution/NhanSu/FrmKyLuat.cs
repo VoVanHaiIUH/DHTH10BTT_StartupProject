@@ -134,7 +134,7 @@ namespace SRPHR_Solution.NhanSu
             if (DialogResult.OK == r)
                 this.Close();
         }
-
+        //jsdn
         #endregion
 
         private void DGViewKyLuat_CellContentClick(object sender, DataGridViewCellEventArgs e)
