@@ -8,63 +8,106 @@ namespace Entities.BanHang
 {
    public class HoaDonBanLe
     {
-        private int maHDBanLe, maNV, maKH;
-
-        public int MaKH
-        {
-            get { return maKH; }
-            set { maKH = value; }
-        }
-
-        public int MaNV
-        {
-            get { return maNV; }
-            set { maNV = value; }
-        }
-
-        public int MaHDBanLe
-        {
-            get { return maHDBanLe; }
-            set { maHDBanLe = value; }
-        }
-        private DateTime ngayBanLe;
-
-        public DateTime NgayBanLe
-        {
-            get { return ngayBanLe; }
-            set { ngayBanLe = value; }
-        }
+        private string soHoaDon, maNV, maKH, ghiChu;
+        private DateTime ngayBan;
         private decimal tongTien;
+
+        public string SoHoaDon
+        {
+            get
+            {
+                return soHoaDon;
+            }
+
+            set
+            {
+                soHoaDon = value;
+            }
+        }
+
+        public string MaNV
+        {
+            get
+            {
+                return maNV;
+            }
+
+            set
+            {
+                maNV = value;
+            }
+        }
+
+        public string MaKH
+        {
+            get
+            {
+                return maKH;
+            }
+
+            set
+            {
+                maKH = value;
+            }
+        }
+
+        public string GhiChu
+        {
+            get
+            {
+                return ghiChu;
+            }
+
+            set
+            {
+                ghiChu = value;
+            }
+        }
 
         public decimal TongTien
         {
-            get { return tongTien; }
-            set { tongTien = value; }
+            get
+            {
+                return tongTien;
+            }
+
+            set
+            {
+                tongTien = value;
+            }
         }
 
-        public HoaDonBanLe(int maHDBanLe, int maNV, int maKH, DateTime ngayBanLe, decimal tongTien)
+        public DateTime NgayBan
         {
-            MaHDBanLe = maHDBanLe;
-            MaNV = maNV;
-            MaKH = maKH;
-            NgayBanLe = ngayBanLe;
-            TongTien = tongTien;
+            get
+            {
+                return ngayBan;
+            }
+
+            set
+            {
+                ngayBan = value;
+            }
         }
 
-        public override bool Equals(object newHDBL)
+        public HoaDonBanLe(string soHoaDon, string maNV, string maKH, string ghiChu, DateTime ngayBan, decimal tongTien)
         {
-            HoaDonBanLe hdbl = (HoaDonBanLe)newHDBL;
-            return hdbl.Equals(hdbl.maHDBanLe);
+            soHoaDon = SoHoaDon;
+            maKH = MaKH;
+            maNV = MaNV;
+            ngayBan = NgayBan;
+            ghiChu = GhiChu;
+            tongTien = TongTien;
         }
 
+        public override bool Equals(object obj)
+        {
+            HoaDonBanLe hdbl = (HoaDonBanLe)obj;
+            return hdbl.Equals(hdbl.soHoaDon);
+        }
         public override int GetHashCode()
         {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
+            return soHoaDon.GetHashCode();
         }
     }
 }
