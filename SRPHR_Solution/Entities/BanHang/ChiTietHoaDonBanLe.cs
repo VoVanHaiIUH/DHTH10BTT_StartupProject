@@ -8,84 +8,92 @@ namespace Entities.BanHang
 {
     public class ChiTietHoaDonBanLe
     {
-        private int maHDBanLe, maSP, soLuong;
+        private string soHoaDon, maSP, ghiChu;
+        private double soLuong;
+        private decimal donGia;
 
-        public int MaSP
+        public string SoHoaDon
         {
-            get { return maSP; }
-            set { maSP = value; }
+            get
+            {
+                return soHoaDon;
+            }
+
+            set
+            {
+                soHoaDon = value;
+            }
         }
 
-        public int SoLuong
+        public string MaSP
         {
-            get { return soLuong; }
-            set { soLuong = value; }
+            get
+            {
+                return maSP;
+            }
+
+            set
+            {
+                maSP = value;
+            }
         }
 
-        public int MaHDBanLe
+        public string GhiChu
         {
-            get { return maHDBanLe; }
-            set { maHDBanLe = value; }
-        }
-        private string tenSP, giamGia, khuyenMai;
+            get
+            {
+                return ghiChu;
+            }
 
-        public string KhuyenMai
-        {
-            get { return khuyenMai; }
-            set { khuyenMai = value; }
-        }
-
-        public string GiamGia
-        {
-            get { return giamGia; }
-            set { giamGia = value; }
+            set
+            {
+                ghiChu = value;
+            }
         }
 
-        public string TenSP
+        public double SoLuong
         {
-            get { return tenSP; }
-            set { tenSP = value; }
-        }
-        private decimal donGia, thanhTien;
+            get
+            {
+                return soLuong;
+            }
 
-        public decimal ThanhTien
-        {
-            get { return thanhTien; }
-            set { thanhTien = value; }
+            set
+            {
+                soLuong = value;
+            }
         }
 
         public decimal DonGia
         {
-            get { return donGia; }
-            set { donGia = value; }
+            get
+            {
+                return donGia;
+            }
+
+            set
+            {
+                donGia = value;
+            }
         }
 
-        public ChiTietHoaDonBanLe(int maHDBanle, int maSP, int soLuong, string tenSP, string giamGia, string khuyenMai, decimal donGia, decimal thanhTien)
+        public ChiTietHoaDonBanLe(string soHoaDon, string maSP, string ghiChu, double soLuong, decimal donGia)
         {
-            maHDBanLe = MaHDBanLe;
+            soHoaDon = SoHoaDon;
             maSP = MaSP;
-            tenSP = TenSP;
+            ghiChu = GhiChu;
             soLuong = SoLuong;
             donGia = DonGia;
-            giamGia = GiamGia;
-            khuyenMai = KhuyenMai;
-            thanhTien = ThanhTien;
         }
 
-        public override bool Equals(object newCTHDBL)
+        public override bool Equals(object obj)
         {
-            ChiTietHoaDonBanLe cthdbl = (ChiTietHoaDonBanLe)newCTHDBL;
-            return cthdbl.Equals(cthdbl.maHDBanLe);
+            ChiTietHoaDonBanLe cthdbl = (ChiTietHoaDonBanLe)obj;
+            return cthdbl.Equals(cthdbl.soHoaDon);
         }
-
         public override int GetHashCode()
         {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
+            return soHoaDon.GetHashCode();
         }
     }
 }
