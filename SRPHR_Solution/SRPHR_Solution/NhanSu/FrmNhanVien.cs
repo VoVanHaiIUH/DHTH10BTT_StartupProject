@@ -17,6 +17,9 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        
+        private void FrmNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

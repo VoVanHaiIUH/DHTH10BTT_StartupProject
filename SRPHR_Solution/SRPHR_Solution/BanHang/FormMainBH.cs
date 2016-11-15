@@ -29,7 +29,7 @@ namespace SRPHR_Solution.BanHang
             ShowInTaskbar = false;
 
             //show form báo cáo
-            FormHDBanGTGT frmnew = new FormHDBanGTGT();
+            FormHDGTGT frmnew = new FormHDGTGT();
             frmnew.Activate();
             frmnew.ShowDialog();
         }

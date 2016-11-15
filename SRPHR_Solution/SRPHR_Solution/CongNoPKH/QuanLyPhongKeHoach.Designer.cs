@@ -140,37 +140,37 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.lblMaKH = new System.Windows.Forms.Label();
-            this.lblTenKH = new System.Windows.Forms.Label();
-            this.lblDiaChi = new System.Windows.Forms.Label();
-            this.lblSoCMND = new System.Windows.Forms.Label();
-            this.lblNgayCap = new System.Windows.Forms.Label();
-            this.lblGioitinh = new System.Windows.Forms.Label();
-            this.lblNgaySinh = new System.Windows.Forms.Label();
-            this.lblSDT = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.txtTenKH = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtSoCMND = new System.Windows.Forms.TextBox();
-            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.cmbGioitinh = new System.Windows.Forms.ComboBox();
+            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.dtpNgayCapCMND = new System.Windows.Forms.DateTimePicker();
-            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblMaNCC = new System.Windows.Forms.Label();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtSoCMND = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblSDT = new System.Windows.Forms.Label();
+            this.lblNgaySinh = new System.Windows.Forms.Label();
+            this.lblGioitinh = new System.Windows.Forms.Label();
+            this.lblNgayCap = new System.Windows.Forms.Label();
+            this.lblSoCMND = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.lblTenKH = new System.Windows.Forms.Label();
+            this.lblMaKH = new System.Windows.Forms.Label();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.dgvNCC = new System.Windows.Forms.DataGridView();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtTenNCC = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
             this.lblTenNCC = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblMail = new System.Windows.Forms.Label();
-            this.txtMaNCC = new System.Windows.Forms.TextBox();
-            this.txtTenNCC = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtMail = new System.Windows.Forms.TextBox();
-            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.dgvNCC = new System.Windows.Forms.DataGridView();
-            this.cmbGioitinh = new System.Windows.Forms.ComboBox();
+            this.lblMaNCC = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -187,8 +187,8 @@
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
+            this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1257,6 +1257,159 @@
             this.tabPage8.Text = "Khách Hàng";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // cmbGioitinh
+            // 
+            this.cmbGioitinh.FormattingEnabled = true;
+            this.cmbGioitinh.Location = new System.Drawing.Point(116, 179);
+            this.cmbGioitinh.Name = "cmbGioitinh";
+            this.cmbGioitinh.Size = new System.Drawing.Size(154, 24);
+            this.cmbGioitinh.TabIndex = 4;
+            // 
+            // dgvKhachHang
+            // 
+            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhachHang.Location = new System.Drawing.Point(440, 7);
+            this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.Size = new System.Drawing.Size(407, 323);
+            this.dgvKhachHang.TabIndex = 3;
+            // 
+            // dtpNgayCapCMND
+            // 
+            this.dtpNgayCapCMND.Location = new System.Drawing.Point(140, 146);
+            this.dtpNgayCapCMND.Name = "dtpNgayCapCMND";
+            this.dtpNgayCapCMND.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgayCapCMND.TabIndex = 2;
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Location = new System.Drawing.Point(95, 219);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgaySinh.TabIndex = 2;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(82, 273);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(269, 22);
+            this.txtEmail.TabIndex = 1;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(82, 247);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(269, 22);
+            this.txtSDT.TabIndex = 1;
+            // 
+            // txtSoCMND
+            // 
+            this.txtSoCMND.Location = new System.Drawing.Point(116, 106);
+            this.txtSoCMND.Name = "txtSoCMND";
+            this.txtSoCMND.Size = new System.Drawing.Size(235, 22);
+            this.txtSoCMND.TabIndex = 1;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(90, 75);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(261, 22);
+            this.txtDiaChi.TabIndex = 1;
+            // 
+            // txtTenKH
+            // 
+            this.txtTenKH.Location = new System.Drawing.Point(140, 38);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(211, 22);
+            this.txtTenKH.TabIndex = 1;
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Location = new System.Drawing.Point(140, 7);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(211, 22);
+            this.txtMaKH.TabIndex = 1;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(18, 276);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(45, 16);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "Email:";
+            // 
+            // lblSDT
+            // 
+            this.lblSDT.AutoSize = true;
+            this.lblSDT.Location = new System.Drawing.Point(18, 247);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(39, 16);
+            this.lblSDT.TabIndex = 0;
+            this.lblSDT.Text = "SDT:";
+            // 
+            // lblNgaySinh
+            // 
+            this.lblNgaySinh.AutoSize = true;
+            this.lblNgaySinh.Location = new System.Drawing.Point(18, 219);
+            this.lblNgaySinh.Name = "lblNgaySinh";
+            this.lblNgaySinh.Size = new System.Drawing.Size(71, 16);
+            this.lblNgaySinh.TabIndex = 0;
+            this.lblNgaySinh.Text = "Ngày sinh:";
+            // 
+            // lblGioitinh
+            // 
+            this.lblGioitinh.AutoSize = true;
+            this.lblGioitinh.Location = new System.Drawing.Point(18, 185);
+            this.lblGioitinh.Name = "lblGioitinh";
+            this.lblGioitinh.Size = new System.Drawing.Size(58, 16);
+            this.lblGioitinh.TabIndex = 0;
+            this.lblGioitinh.Text = "Giới tính:";
+            // 
+            // lblNgayCap
+            // 
+            this.lblNgayCap.AutoSize = true;
+            this.lblNgayCap.Location = new System.Drawing.Point(18, 152);
+            this.lblNgayCap.Name = "lblNgayCap";
+            this.lblNgayCap.Size = new System.Drawing.Size(113, 16);
+            this.lblNgayCap.TabIndex = 0;
+            this.lblNgayCap.Text = "Ngày cấp CMND:";
+            // 
+            // lblSoCMND
+            // 
+            this.lblSoCMND.AutoSize = true;
+            this.lblSoCMND.Location = new System.Drawing.Point(18, 112);
+            this.lblSoCMND.Name = "lblSoCMND";
+            this.lblSoCMND.Size = new System.Drawing.Size(71, 16);
+            this.lblSoCMND.TabIndex = 0;
+            this.lblSoCMND.Text = "Số CMND:";
+            // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.Location = new System.Drawing.Point(18, 75);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(51, 16);
+            this.lblDiaChi.TabIndex = 0;
+            this.lblDiaChi.Text = "Địa chỉ:";
+            // 
+            // lblTenKH
+            // 
+            this.lblTenKH.AutoSize = true;
+            this.lblTenKH.Location = new System.Drawing.Point(18, 41);
+            this.lblTenKH.Name = "lblTenKH";
+            this.lblTenKH.Size = new System.Drawing.Size(107, 16);
+            this.lblTenKH.TabIndex = 0;
+            this.lblTenKH.Text = "Tên khách hàng:";
+            // 
+            // lblMaKH
+            // 
+            this.lblMaKH.AutoSize = true;
+            this.lblMaKH.Location = new System.Drawing.Point(18, 7);
+            this.lblMaKH.Name = "lblMaKH";
+            this.lblMaKH.Size = new System.Drawing.Size(102, 16);
+            this.lblMaKH.TabIndex = 0;
+            this.lblMaKH.Text = "Mã khách hàng:";
+            // 
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.dgvNCC);
@@ -1278,151 +1431,66 @@
             this.tabPage9.Text = "Nhà cung cấp";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
-            // lblMaKH
+            // dgvNCC
             // 
-            this.lblMaKH.AutoSize = true;
-            this.lblMaKH.Location = new System.Drawing.Point(18, 7);
-            this.lblMaKH.Name = "lblMaKH";
-            this.lblMaKH.Size = new System.Drawing.Size(102, 16);
-            this.lblMaKH.TabIndex = 0;
-            this.lblMaKH.Text = "Mã khách hàng:";
+            this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNCC.Location = new System.Drawing.Point(473, 6);
+            this.dgvNCC.Name = "dgvNCC";
+            this.dgvNCC.Size = new System.Drawing.Size(360, 318);
+            this.dgvNCC.TabIndex = 2;
             // 
-            // lblTenKH
+            // txtMail
             // 
-            this.lblTenKH.AutoSize = true;
-            this.lblTenKH.Location = new System.Drawing.Point(18, 41);
-            this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(107, 16);
-            this.lblTenKH.TabIndex = 0;
-            this.lblTenKH.Text = "Tên khách hàng:";
+            this.txtMail.Location = new System.Drawing.Point(79, 154);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(348, 22);
+            this.txtMail.TabIndex = 1;
             // 
-            // lblDiaChi
+            // txtAddress
             // 
-            this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Location = new System.Drawing.Point(18, 75);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(51, 16);
-            this.lblDiaChi.TabIndex = 0;
-            this.lblDiaChi.Text = "Địa chỉ:";
+            this.txtAddress.Location = new System.Drawing.Point(100, 108);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(327, 22);
+            this.txtAddress.TabIndex = 1;
             // 
-            // lblSoCMND
+            // textBox8
             // 
-            this.lblSoCMND.AutoSize = true;
-            this.lblSoCMND.Location = new System.Drawing.Point(18, 112);
-            this.lblSoCMND.Name = "lblSoCMND";
-            this.lblSoCMND.Size = new System.Drawing.Size(71, 16);
-            this.lblSoCMND.TabIndex = 0;
-            this.lblSoCMND.Text = "Số CMND:";
+            this.textBox8.Location = new System.Drawing.Point(89, 79);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(338, 22);
+            this.textBox8.TabIndex = 1;
             // 
-            // lblNgayCap
+            // txtTenNCC
             // 
-            this.lblNgayCap.AutoSize = true;
-            this.lblNgayCap.Location = new System.Drawing.Point(18, 152);
-            this.lblNgayCap.Name = "lblNgayCap";
-            this.lblNgayCap.Size = new System.Drawing.Size(113, 16);
-            this.lblNgayCap.TabIndex = 0;
-            this.lblNgayCap.Text = "Ngày cấp CMND:";
+            this.txtTenNCC.Location = new System.Drawing.Point(133, 42);
+            this.txtTenNCC.Name = "txtTenNCC";
+            this.txtTenNCC.Size = new System.Drawing.Size(294, 22);
+            this.txtTenNCC.TabIndex = 1;
             // 
-            // lblGioitinh
+            // txtMaNCC
             // 
-            this.lblGioitinh.AutoSize = true;
-            this.lblGioitinh.Location = new System.Drawing.Point(18, 185);
-            this.lblGioitinh.Name = "lblGioitinh";
-            this.lblGioitinh.Size = new System.Drawing.Size(58, 16);
-            this.lblGioitinh.TabIndex = 0;
-            this.lblGioitinh.Text = "Giới tính:";
+            this.txtMaNCC.Location = new System.Drawing.Point(142, 7);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(285, 22);
+            this.txtMaNCC.TabIndex = 1;
             // 
-            // lblNgaySinh
+            // lblMail
             // 
-            this.lblNgaySinh.AutoSize = true;
-            this.lblNgaySinh.Location = new System.Drawing.Point(18, 219);
-            this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(71, 16);
-            this.lblNgaySinh.TabIndex = 0;
-            this.lblNgaySinh.Text = "Ngày sinh:";
+            this.lblMail.AutoSize = true;
+            this.lblMail.Location = new System.Drawing.Point(7, 157);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(45, 16);
+            this.lblMail.TabIndex = 0;
+            this.lblMail.Text = "Email:";
             // 
-            // lblSDT
+            // lblPhone
             // 
-            this.lblSDT.AutoSize = true;
-            this.lblSDT.Location = new System.Drawing.Point(18, 247);
-            this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(39, 16);
-            this.lblSDT.TabIndex = 0;
-            this.lblSDT.Text = "SDT:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(18, 276);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(45, 16);
-            this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "Email:";
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(140, 7);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(211, 22);
-            this.txtMaKH.TabIndex = 1;
-            // 
-            // txtTenKH
-            // 
-            this.txtTenKH.Location = new System.Drawing.Point(140, 38);
-            this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(211, 22);
-            this.txtTenKH.TabIndex = 1;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(90, 75);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(261, 22);
-            this.txtDiaChi.TabIndex = 1;
-            // 
-            // txtSoCMND
-            // 
-            this.txtSoCMND.Location = new System.Drawing.Point(116, 106);
-            this.txtSoCMND.Name = "txtSoCMND";
-            this.txtSoCMND.Size = new System.Drawing.Size(235, 22);
-            this.txtSoCMND.TabIndex = 1;
-            // 
-            // dtpNgaySinh
-            // 
-            this.dtpNgaySinh.Location = new System.Drawing.Point(95, 219);
-            this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
-            this.dtpNgaySinh.TabIndex = 2;
-            // 
-            // dtpNgayCapCMND
-            // 
-            this.dtpNgayCapCMND.Location = new System.Drawing.Point(140, 146);
-            this.dtpNgayCapCMND.Name = "dtpNgayCapCMND";
-            this.dtpNgayCapCMND.Size = new System.Drawing.Size(200, 22);
-            this.dtpNgayCapCMND.TabIndex = 2;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(82, 247);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(269, 22);
-            this.txtSDT.TabIndex = 1;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(82, 273);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(269, 22);
-            this.txtEmail.TabIndex = 1;
-            // 
-            // lblMaNCC
-            // 
-            this.lblMaNCC.AutoSize = true;
-            this.lblMaNCC.Location = new System.Drawing.Point(7, 7);
-            this.lblMaNCC.Name = "lblMaNCC";
-            this.lblMaNCC.Size = new System.Drawing.Size(116, 16);
-            this.lblMaNCC.TabIndex = 0;
-            this.lblMaNCC.Text = "Mã Nhà cung cấp:";
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(5, 114);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(89, 16);
+            this.lblPhone.TabIndex = 0;
+            this.lblPhone.Text = "Số điện thoại:";
             // 
             // lblTenNCC
             // 
@@ -1442,82 +1510,14 @@
             this.lblAddress.TabIndex = 0;
             this.lblAddress.Text = "Địa chỉ:";
             // 
-            // lblPhone
+            // lblMaNCC
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(5, 114);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(89, 16);
-            this.lblPhone.TabIndex = 0;
-            this.lblPhone.Text = "Số điện thoại:";
-            // 
-            // lblMail
-            // 
-            this.lblMail.AutoSize = true;
-            this.lblMail.Location = new System.Drawing.Point(7, 157);
-            this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(45, 16);
-            this.lblMail.TabIndex = 0;
-            this.lblMail.Text = "Email:";
-            // 
-            // txtMaNCC
-            // 
-            this.txtMaNCC.Location = new System.Drawing.Point(142, 7);
-            this.txtMaNCC.Name = "txtMaNCC";
-            this.txtMaNCC.Size = new System.Drawing.Size(285, 22);
-            this.txtMaNCC.TabIndex = 1;
-            // 
-            // txtTenNCC
-            // 
-            this.txtTenNCC.Location = new System.Drawing.Point(133, 42);
-            this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(294, 22);
-            this.txtTenNCC.TabIndex = 1;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(89, 79);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(338, 22);
-            this.textBox8.TabIndex = 1;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(100, 108);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(327, 22);
-            this.txtAddress.TabIndex = 1;
-            // 
-            // txtMail
-            // 
-            this.txtMail.Location = new System.Drawing.Point(79, 154);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(348, 22);
-            this.txtMail.TabIndex = 1;
-            // 
-            // dgvKhachHang
-            // 
-            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Location = new System.Drawing.Point(440, 7);
-            this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.Size = new System.Drawing.Size(407, 323);
-            this.dgvKhachHang.TabIndex = 3;
-            // 
-            // dgvNCC
-            // 
-            this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNCC.Location = new System.Drawing.Point(473, 6);
-            this.dgvNCC.Name = "dgvNCC";
-            this.dgvNCC.Size = new System.Drawing.Size(360, 318);
-            this.dgvNCC.TabIndex = 2;
-            // 
-            // cmbGioitinh
-            // 
-            this.cmbGioitinh.FormattingEnabled = true;
-            this.cmbGioitinh.Location = new System.Drawing.Point(116, 179);
-            this.cmbGioitinh.Name = "cmbGioitinh";
-            this.cmbGioitinh.Size = new System.Drawing.Size(154, 24);
-            this.cmbGioitinh.TabIndex = 4;
+            this.lblMaNCC.AutoSize = true;
+            this.lblMaNCC.Location = new System.Drawing.Point(7, 7);
+            this.lblMaNCC.Name = "lblMaNCC";
+            this.lblMaNCC.Size = new System.Drawing.Size(116, 16);
+            this.lblMaNCC.TabIndex = 0;
+            this.lblMaNCC.Text = "Mã Nhà cung cấp:";
             // 
             // QuanLyPhongKeHoach
             // 
@@ -1527,6 +1527,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "QuanLyPhongKeHoach";
             this.Text = "Phòng Kế Hoạch và Công Nợ";
+            this.Load += new System.EventHandler(this.QuanLyPhongKeHoach_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -1549,9 +1550,9 @@
             this.tabControl3.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).EndInit();
             this.ResumeLayout(false);
 

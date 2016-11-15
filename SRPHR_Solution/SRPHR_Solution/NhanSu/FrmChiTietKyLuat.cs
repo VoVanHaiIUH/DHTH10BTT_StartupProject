@@ -16,5 +16,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void FrmChiTietKyLuat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

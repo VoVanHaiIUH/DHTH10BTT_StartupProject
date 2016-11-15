@@ -21,5 +21,10 @@ namespace SRPHR_Solution.CongNoPKH
         {
 
         }
+
+        private void QuanLyPhongKeHoach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

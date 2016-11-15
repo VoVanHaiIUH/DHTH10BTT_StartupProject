@@ -159,7 +159,7 @@
             this.lbTrangThai.Location = new System.Drawing.Point(720, 78);
             this.lbTrangThai.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(69, 15);
+            this.lbTrangThai.Size = new System.Drawing.Size(68, 15);
             this.lbTrangThai.TabIndex = 8;
             this.lbTrangThai.Text = "Trạng thái :";
             // 
@@ -328,7 +328,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -478,6 +478,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmNhanVien";
             this.Text = "FrmNhanVien";
+            this.Load += new System.EventHandler(this.FrmNhanVien_Load);
             this.grpBoxNhanVien.ResumeLayout(false);
             this.grpBoxNhanVien.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

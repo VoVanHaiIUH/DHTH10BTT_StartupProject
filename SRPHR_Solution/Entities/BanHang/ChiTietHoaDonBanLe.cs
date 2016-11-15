@@ -77,13 +77,13 @@ namespace Entities.BanHang
             }
         }
 
-        public ChiTietHoaDonBanLe(string soHoaDon, string maSP, string ghiChu, double soLuong, decimal donGia)
+        public ChiTietHoaDonBanLe(string soHoaDon, double soLuong, string maSP, string ghiChu, decimal donGia)
         {
-            soHoaDon = SoHoaDon;
-            maSP = MaSP;
-            ghiChu = GhiChu;
-            soLuong = SoLuong;
-            donGia = DonGia;
+            this.soHoaDon = soHoaDon;
+            this.soLuong = soLuong;
+            this.maSP = maSP;
+            this.ghiChu = ghiChu;
+            this.donGia = donGia;
         }
 
         public override bool Equals(object obj)

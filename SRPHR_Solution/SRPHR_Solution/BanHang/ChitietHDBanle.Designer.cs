@@ -62,7 +62,7 @@
             this.btnsua.TabIndex = 8;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
-            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
+          
             // 
             // btnthoat
             // 
@@ -92,7 +92,7 @@
             this.btnxoa.TabIndex = 7;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
-            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
+       
             // 
             // groupBox1
             // 

@@ -50,23 +50,17 @@
     <Compile Include="BanHang\ChitietHDBanle.Designer.cs">
       <DependentUpon>ChitietHDBanle.cs</DependentUpon>
     </Compile>
-    <Compile Include="BanHang\ChitietHDGTGT.cs">
+    <Compile Include="BanHang\HDGTGT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BanHang\ChitietHDGTGT.Designer.cs">
-      <DependentUpon>ChitietHDGTGT.cs</DependentUpon>
+    <Compile Include="BanHang\HDGTGT.Designer.cs">
+      <DependentUpon>HDGTGT.cs</DependentUpon>
     </Compile>
     <Compile Include="BanHang\FormMainBH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BanHang\FormMainBH.Designer.cs">
       <DependentUpon>FormMainBH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BanHang\HDBanGTGT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BanHang\HDBanGTGT.Designer.cs">
-      <DependentUpon>HDBanGTGT.cs</DependentUpon>
     </Compile>
     <Compile Include="BanHang\HDBanle.cs">
       <SubType>Form</SubType>
@@ -193,14 +187,11 @@
     <EmbeddedResource Include="BanHang\ChitietHDBanle.resx">
       <DependentUpon>ChitietHDBanle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BanHang\ChitietHDGTGT.resx">
-      <DependentUpon>ChitietHDGTGT.cs</DependentUpon>
+    <EmbeddedResource Include="BanHang\HDGTGT.resx">
+      <DependentUpon>HDGTGT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BanHang\FormMainBH.resx">
       <DependentUpon>FormMainBH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BanHang\HDBanGTGT.resx">
-      <DependentUpon>HDBanGTGT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BanHang\HDBanle.resx">
       <DependentUpon>HDBanle.cs</DependentUpon>

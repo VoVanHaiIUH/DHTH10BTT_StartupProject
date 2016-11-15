@@ -100,6 +100,19 @@ namespace Entities.BanHang
             tongTien = TongTien;
         }
 
+        public HoaDonBanLe(string soHoaDon, string maKH, string maNV, string ghiChu, DateTime ngayBan)
+        {
+            this.soHoaDon = soHoaDon;
+            this.maKH = maKH;
+            this.maNV = maNV;
+            this.ghiChu = ghiChu;
+            this.ngayBan = ngayBan;
+        }
+
+        public HoaDonBanLe()
+        {
+        }
+
         public override bool Equals(object obj)
         {
             HoaDonBanLe hdbl = (HoaDonBanLe)obj;
