@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess;
+using DataAccess.NhanSu;
 using Entities.NhanSu;
 
 namespace BusinessLogic.NhanSu
@@ -12,7 +12,8 @@ namespace BusinessLogic.NhanSu
 
     public class DaoTaoBLL
     {
-        SRPHRDataContext DB = new SRPHRDataContext();
+        //SRPHRDataContext DB = new SRPHRDataContext();
+        DataClasses1DataContext DB = new DataClasses1DataContext();
         public List<DaoTao> GetAllDaoTao()
         {
             List<DaoTao> daoTaos = new List<DaoTao>();

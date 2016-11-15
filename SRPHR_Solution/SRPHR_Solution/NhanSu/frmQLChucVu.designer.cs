@@ -1,4 +1,4 @@
-﻿namespace GUI
+﻿namespace SRPHR_Solution.NhanSu
 {
     partial class frmQuanLyChucVu
     {

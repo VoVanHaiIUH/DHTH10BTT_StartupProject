@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic.NhanSu;
 using Entities.NhanSu;
-using DataAccess;
+using DataAccess.NhanSu;
 namespace BusinessLogic.NhanSu
 {
     public class MyConvert

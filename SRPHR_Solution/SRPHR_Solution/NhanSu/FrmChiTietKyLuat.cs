@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace SRPHR_Solution.NhanSu
 {
     public partial class FrmChiTietKyLuat : Form
     {

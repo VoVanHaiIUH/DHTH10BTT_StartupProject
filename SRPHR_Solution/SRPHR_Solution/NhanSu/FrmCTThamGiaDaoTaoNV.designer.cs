@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SRPHR_Solution.NhanSu
 {
     partial class FrmCTThamGiaDaoTaoNV
     {

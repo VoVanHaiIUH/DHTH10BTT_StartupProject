@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities.NhanSu;
 using BusinessLogic.NhanSu;
-namespace GUI
+namespace SRPHR_Solution.NhanSu
 {
     public partial class frmQuanLyChucVu : Form
     {

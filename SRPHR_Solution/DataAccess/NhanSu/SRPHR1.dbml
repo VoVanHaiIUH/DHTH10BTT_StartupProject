@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHRPR" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=SHRPR;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString1" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHRPR1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-B3J8LOS\DIENSQLSERVER;Initial Catalog=SHRPR1;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString6" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Tbl_CTKyLuatNV" Member="Tbl_CTKyLuatNVs">
     <Type Name="Tbl_CTKyLuatNV">
       <Column Name="maNV" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -91,6 +91,15 @@
       <Association Name="Tbl_ChucVu_Tbl_LichSuLamViec" Member="Tbl_ChucVu" ThisKey="maChucVu" OtherKey="maChucVu" Type="Tbl_ChucVu" IsForeignKey="true" />
       <Association Name="Tbl_NhanVien_Tbl_LichSuLamViec" Member="Tbl_NhanVien" ThisKey="maNV" OtherKey="maNV" Type="Tbl_NhanVien" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Tbl_PhongBan_Tbl_LichSuLamViec" Member="Tbl_PhongBan" ThisKey="maPB" OtherKey="maPB" Type="Tbl_PhongBan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_User" Member="Tbl_Users">
+    <Type Name="Tbl_User">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Nhom" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phanquyen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNV" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

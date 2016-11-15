@@ -90,6 +90,7 @@
             this.btnformNhansu.TabIndex = 10;
             this.btnformNhansu.Text = "Nhân Sự";
             this.btnformNhansu.UseVisualStyleBackColor = true;
+            this.btnformNhansu.Click += new System.EventHandler(this.btnformNhansu_Click);
             // 
             // btnformkhachhang
             // 

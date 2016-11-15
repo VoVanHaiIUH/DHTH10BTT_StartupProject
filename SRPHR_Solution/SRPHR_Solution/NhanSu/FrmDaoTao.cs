@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Entities.NhanSu;
 using BusinessLogic.NhanSu;
 
-namespace WindowsFormsApplication1
+namespace SRPHR_Solution.NhanSu
 {
     public partial class FrmDaoTao : Form
     {

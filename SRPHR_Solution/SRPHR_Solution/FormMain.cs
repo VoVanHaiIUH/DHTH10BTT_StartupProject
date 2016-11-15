@@ -12,6 +12,7 @@ using BusinessLogic.PhanQuyen;
 using SRPHR_Solution.CongNoPKH;
 using SRPHR_Solution.BanHang;
 using SRPHR_Solution.BaoCao;
+using SRPHR_Solution.NhanSu;
 
 namespace SRPHR_Solution.PhanQuyen
 {
@@ -193,6 +194,12 @@ namespace SRPHR_Solution.PhanQuyen
         {
             FormMainBaoCao frmnew = new FormMainBaoCao();
             frmnew.ShowDialog();
+        }
+
+        private void btnformNhansu_Click(object sender, EventArgs e)
+        {
+            frmMenu frmMENU = new frmMenu();
+            frmMENU.ShowDialog();
         }
     }
 }

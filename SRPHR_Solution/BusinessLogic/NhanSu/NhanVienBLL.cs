@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess;
+using DataAccess.NhanSu;
 using Entities.NhanSu;
 
 namespace BusinessLogic.NhanSu
 {
     public class NhanVienBLL
     {
-        SRPHRDataContext DB = new SRPHRDataContext();
+        //SRPHRDataContext DB = new SRPHRDataContext();
+        DataClasses1DataContext DB = new DataClasses1DataContext();
         public List<NhanVien> GetAllNhanVien()
         {
             List<NhanVien> nhanViens = new List<NhanVien>();

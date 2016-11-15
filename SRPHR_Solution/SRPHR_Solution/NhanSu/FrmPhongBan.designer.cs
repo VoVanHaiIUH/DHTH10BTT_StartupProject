@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace SRPHR_Solution.NhanSu
 {
     partial class FrmPhongBan
     {
@@ -162,7 +162,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -210,6 +210,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -225,6 +226,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -241,6 +243,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -257,6 +260,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -271,6 +275,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Ẩn trạng thái";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -303,16 +308,18 @@
             this.DGViewPhongBan.Name = "DGViewPhongBan";
             this.DGViewPhongBan.Size = new System.Drawing.Size(1089, 297);
             this.DGViewPhongBan.TabIndex = 0;
+            this.DGViewPhongBan.Click += new System.EventHandler(this.DGViewPhongBan_SelectionChanged);
             // 
-            // FrmQLDaoTao
+            // FrmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1093, 434);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "FrmQLDaoTao";
+            this.Name = "FrmPhongBan";
             this.Text = "FrmQLPhongBan";
+            this.Load += new System.EventHandler(this.frmPhongBan_Load);
             this.grpBoxPhongBan.ResumeLayout(false);
             this.grpBoxPhongBan.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

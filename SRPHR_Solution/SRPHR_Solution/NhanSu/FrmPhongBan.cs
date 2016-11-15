@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Entities.NhanSu;
 using BusinessLogic.NhanSu;
 
-namespace WindowsFormsApplication1
+namespace SRPHR_Solution.NhanSu
 {
     public partial class FrmPhongBan : Form
     {
@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
             tempPhongBan = new PhongBan();
             tempPhongBan.MaPB = txtMaPB.Text;
             tempPhongBan.TenPB = txtTenPB.Text;
-            tempPhongBan.DiaDiem =txtDiadiem.Text;
+            tempPhongBan.DiaDiem = txtDiadiem.Text;
             tempPhongBan.Sdt = txtSoDT.Text;
         }
 
@@ -76,7 +76,7 @@ namespace WindowsFormsApplication1
             //DTPickerBirthDay.Text = DGViewPhongBan.CurrentRow.Cells[2].Value.ToString();
             txtDiadiem.Text = DGViewPhongBan.CurrentRow.Cells[2].Value.ToString();
 
-            txtSoDT.Text = DGViewPhongBan.CurrentRow.Cells[4].Value.ToString();
+            txtSoDT.Text = DGViewPhongBan.CurrentRow.Cells[3].Value.ToString();
         }
         int flag = 0;
         #region Button Click Events
@@ -120,16 +120,35 @@ namespace WindowsFormsApplication1
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hoàng hoá " + txtTenPB.Text + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DialogResult.Yes == r)
+            //DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hoàng hoá " + txtTenPB.Text + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (DialogResult.Yes == r)
+            //{
+            //    passingData();
+            //    if (PhongBanBLL.Delete(tempPhongBan.MaPB))
+            //        MessageBox.Show("Xoá thành công");
+            //    else
+            //        MessageBox.Show("Xoá thất bại");
+            //}
+            //frmPhongBan_Load(sender, e);
+            int hideIndex = -1;
+            foreach (DataGridViewRow dr in DGViewPhongBan.Rows)
             {
-                passingData();
-                if (PhongBanBLL.Delete(tempPhongBan.MaPB))
-                    MessageBox.Show("Xoá thành công");
-                else
-                    MessageBox.Show("Xoá thất bại");
+                if (dr.Cells[0].Value.ToString() == txtMaPB.Text)
+                {
+                    hideIndex = dr.Index;
+                }
             }
-            frmPhongBan_Load(sender, e);
+
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[DGViewPhongBan.DataSource];
+            currencyManager1.SuspendBinding();
+
+            DGViewPhongBan.Rows[hideIndex].Visible = false;
+
+            currencyManager1.ResumeBinding();
+
+
+
+            //frmPhongBan_Load(sender, e);
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -140,11 +159,20 @@ namespace WindowsFormsApplication1
 
         #endregion
 
-        private void label7_Click(object sender, EventArgs e)
+        private void DGViewPhongBan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[DGViewPhongBan.DataSource];
+            currencyManager1.SuspendBinding();
 
+            DGViewPhongBan.Rows[e.RowIndex].Visible = false;
+
+            currencyManager1.ResumeBinding();
         }
 
-       
+
+
+
+
+
     }
 }
