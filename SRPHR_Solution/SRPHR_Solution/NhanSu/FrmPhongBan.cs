@@ -169,10 +169,9 @@ namespace SRPHR_Solution.NhanSu
             currencyManager1.ResumeBinding();
         }
 
+        private void grpBoxPhongBan_Enter(object sender, EventArgs e)
+        {
 
-
-
-
-
+        }
     }
 }

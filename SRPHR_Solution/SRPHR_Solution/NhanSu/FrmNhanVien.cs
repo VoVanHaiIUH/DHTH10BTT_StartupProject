@@ -21,5 +21,10 @@ namespace SRPHR_Solution.NhanSu
         {
 
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -80,6 +80,7 @@
             this.grpBoxKyLuat.TabIndex = 20;
             this.grpBoxKyLuat.TabStop = false;
             this.grpBoxKyLuat.Text = "Thông tin kỷ luật";
+            this.grpBoxKyLuat.Enter += new System.EventHandler(this.grpBoxKyLuat_Enter);
             // 
             // txtMaKL
             // 
@@ -139,7 +140,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -279,6 +280,7 @@
             this.DGViewKyLuat.Name = "DGViewKyLuat";
             this.DGViewKyLuat.Size = new System.Drawing.Size(1038, 333);
             this.DGViewKyLuat.TabIndex = 0;
+            this.DGViewKyLuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGViewKyLuat_CellContentClick);
             // 
             // FrmKyLuat
             // 

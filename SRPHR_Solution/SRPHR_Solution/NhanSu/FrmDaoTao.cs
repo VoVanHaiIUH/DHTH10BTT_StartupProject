@@ -153,5 +153,14 @@ namespace SRPHR_Solution.NhanSu
 
         }
 
+        private void grpBoxStudentInfo_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DGViewDaoTao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

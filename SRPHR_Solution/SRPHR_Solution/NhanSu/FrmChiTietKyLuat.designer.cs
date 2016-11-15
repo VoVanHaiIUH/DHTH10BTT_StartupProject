@@ -106,6 +106,7 @@
             this.dataGridViewChiTietKyLuat.Name = "dataGridViewChiTietKyLuat";
             this.dataGridViewChiTietKyLuat.Size = new System.Drawing.Size(936, 306);
             this.dataGridViewChiTietKyLuat.TabIndex = 30;
+            this.dataGridViewChiTietKyLuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChiTietKyLuat_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
@@ -132,7 +133,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -419,6 +420,7 @@
             this.treeViewNhanVien.Name = "treeViewNhanVien";
             this.treeViewNhanVien.Size = new System.Drawing.Size(204, 306);
             this.treeViewNhanVien.TabIndex = 29;
+            this.treeViewNhanVien.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewNhanVien_AfterSelect);
             // 
             // FrmChiTietKyLuat
             // 

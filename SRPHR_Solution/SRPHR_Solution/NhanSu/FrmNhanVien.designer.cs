@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNhanVien));
             this.lblHoTen = new System.Windows.Forms.Label();
             this.grpBoxNhanVien = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerNgayVaoLam = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtSoCMND = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblSoCMND = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DGViewNhanVien = new System.Windows.Forms.DataGridView();
-            this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerNgayVaoLam = new System.Windows.Forms.DateTimePicker();
             this.grpBoxNhanVien.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -112,6 +112,20 @@
             this.grpBoxNhanVien.TabIndex = 20;
             this.grpBoxNhanVien.TabStop = false;
             this.grpBoxNhanVien.Text = "Thông tin nhân viên";
+            // 
+            // dateTimePickerNgayVaoLam
+            // 
+            this.dateTimePickerNgayVaoLam.Location = new System.Drawing.Point(121, 103);
+            this.dateTimePickerNgayVaoLam.Name = "dateTimePickerNgayVaoLam";
+            this.dateTimePickerNgayVaoLam.Size = new System.Drawing.Size(228, 23);
+            this.dateTimePickerNgayVaoLam.TabIndex = 9;
+            // 
+            // dateTimePickerNgaySinh
+            // 
+            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(121, 75);
+            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
+            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(228, 23);
+            this.dateTimePickerNgaySinh.TabIndex = 9;
             // 
             // txtSoCMND
             // 
@@ -308,7 +322,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -340,6 +354,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -448,20 +463,6 @@
             this.DGViewNhanVien.Name = "DGViewNhanVien";
             this.DGViewNhanVien.Size = new System.Drawing.Size(1350, 360);
             this.DGViewNhanVien.TabIndex = 0;
-            // 
-            // dateTimePickerNgaySinh
-            // 
-            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(121, 75);
-            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
-            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(228, 23);
-            this.dateTimePickerNgaySinh.TabIndex = 9;
-            // 
-            // dateTimePickerNgayVaoLam
-            // 
-            this.dateTimePickerNgayVaoLam.Location = new System.Drawing.Point(121, 103);
-            this.dateTimePickerNgayVaoLam.Name = "dateTimePickerNgayVaoLam";
-            this.dateTimePickerNgayVaoLam.Size = new System.Drawing.Size(228, 23);
-            this.dateTimePickerNgayVaoLam.TabIndex = 9;
             // 
             // FrmNhanVien
             // 
