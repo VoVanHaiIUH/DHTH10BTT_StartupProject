@@ -61,5 +61,27 @@ namespace SRPHR_Solution
         {
             Application.Exit();
         }
+
+        private void txtpass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                TaiKhoanBLL taikhoanbll = new TaiKhoanBLL();
+                int kq = taikhoanbll.KiemTraDangNhap(txtid.Text, txtpass.Text);
+                if (kq == 0)
+                    MessageBox.Show("Sai ID hoặc Password !", "Thông báo");
+                else
+                {
+
+                    Visible = false;
+                    ShowInTaskbar = false;
+                    // show form Main
+                    FormMain frmnew = new FormMain();
+                    frmnew.Message = txtid.Text;
+                    frmnew.ShowDialog();
+
+                }
+            }
+        }
     }
 }

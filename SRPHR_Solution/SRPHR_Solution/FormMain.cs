@@ -29,6 +29,7 @@ namespace SRPHR_Solution.PhanQuyen
         public FormMain()
         {
             InitializeComponent();
+            unenablechucnang();
            
         }
 
@@ -94,13 +95,13 @@ namespace SRPHR_Solution.PhanQuyen
                 btnformbaocao.Enabled = true;
           
             if (s[2] == "1")
-                btnfromcongno.Enabled = true;
+                btnformcongno.Enabled = true;
             
             if (s[3] == "1")
                 btnformkhachhang.Enabled = true;
             
             if (s[4] == "1")
-                btnfromkho.Enabled = true;
+                btnformkho.Enabled = true;
             
             if (s[5] == "1")
                 btnformNhansu.Enabled = true;
@@ -200,6 +201,15 @@ namespace SRPHR_Solution.PhanQuyen
         {
             frmMenu frmMENU = new frmMenu();
             frmMENU.ShowDialog();
+        }
+        private void unenablechucnang()
+        {
+            btnFormBanHang.Enabled = false;
+            btnformbaocao.Enabled = false;
+            btnformkhachhang.Enabled = false;
+            btnformcongno.Enabled = false;
+            btnformNhansu.Enabled = false;
+            btnformkho.Enabled = false;
         }
     }
 }

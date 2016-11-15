@@ -30,7 +30,7 @@ namespace BusinessLogic.PhanQuyen
         }
         public int  KiemTraDangNhap(string id,string pass)
         {
-            var tmp = db.Tbl_Users.Where(x => x.ID == id && x.Password == pass).FirstOrDefault();
+             var tmp = db.Tbl_Users.Where(x => x.ID == id && x.Password == pass).FirstOrDefault();
             if (tmp == null)
                 return 0;
             else

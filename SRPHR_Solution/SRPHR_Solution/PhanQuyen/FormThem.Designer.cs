@@ -585,9 +585,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(361, 1);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 9;
-            this.label8.Text = "Xem";
+            this.label8.Text = "Xem + In";
             // 
             // label7
             // 
@@ -742,6 +742,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(593, 366);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
