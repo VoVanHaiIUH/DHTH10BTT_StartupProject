@@ -112,6 +112,7 @@
             this.grpBoxNhanVien.TabIndex = 20;
             this.grpBoxNhanVien.TabStop = false;
             this.grpBoxNhanVien.Text = "Thông tin nhân viên";
+            this.grpBoxNhanVien.Enter += new System.EventHandler(this.grpBoxNhanVien_Enter);
             // 
             // dateTimePickerNgayVaoLam
             // 
@@ -370,6 +371,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -385,6 +387,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -401,6 +404,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -417,6 +421,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -431,6 +436,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Ẩn trạng thái";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tableLayoutPanel1
             // 

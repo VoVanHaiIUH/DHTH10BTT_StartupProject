@@ -47,7 +47,7 @@
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblKetQua = new System.Windows.Forms.Label();
             this.lblMaKhoaDT = new System.Windows.Forms.Label();
-            this.treeViewNhanVien = new System.Windows.Forms.TreeView();
+            this.treeViewDaoTao = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLichSuLamViec)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.grpBoxCTTGDaoTaoNV, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.treeViewNhanVien, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.treeViewDaoTao, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewLichSuLamViec, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -87,7 +87,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -217,6 +217,7 @@
             this.grpBoxCTTGDaoTaoNV.TabIndex = 20;
             this.grpBoxCTTGDaoTaoNV.TabStop = false;
             this.grpBoxCTTGDaoTaoNV.Text = "Chi Tiết Tham Gia Đào Tạo Nhân Viên";
+            this.grpBoxCTTGDaoTaoNV.Enter += new System.EventHandler(this.grpBoxCTTGDaoTaoNV_Enter);
             // 
             // txtNhanXet
             // 
@@ -296,12 +297,12 @@
             this.lblMaKhoaDT.TabIndex = 8;
             this.lblMaKhoaDT.Text = "Mã Khoa đào tạo :";
             // 
-            // treeViewNhanVien
+            // treeViewDaoTao
             // 
-            this.treeViewNhanVien.Location = new System.Drawing.Point(4, 137);
-            this.treeViewNhanVien.Name = "treeViewNhanVien";
-            this.treeViewNhanVien.Size = new System.Drawing.Size(204, 288);
-            this.treeViewNhanVien.TabIndex = 29;
+            this.treeViewDaoTao.Location = new System.Drawing.Point(4, 137);
+            this.treeViewDaoTao.Name = "treeViewDaoTao";
+            this.treeViewDaoTao.Size = new System.Drawing.Size(204, 288);
+            this.treeViewDaoTao.TabIndex = 29;
             // 
             // FrmCTThamGiaDaoTaoNV
             // 
@@ -338,7 +339,7 @@
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Label lblKetQua;
         private System.Windows.Forms.Label lblMaKhoaDT;
-        private System.Windows.Forms.TreeView treeViewNhanVien;
+        private System.Windows.Forms.TreeView treeViewDaoTao;
         private System.Windows.Forms.ComboBox cbbMaKhoaDT;
     }
 }
