@@ -65,7 +65,7 @@
             this.lblTenKhoa.Location = new System.Drawing.Point(6, 51);
             this.lblTenKhoa.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTenKhoa.Name = "lblTenKhoa";
-            this.lblTenKhoa.Size = new System.Drawing.Size(64, 15);
+            this.lblTenKhoa.Size = new System.Drawing.Size(63, 15);
             this.lblTenKhoa.TabIndex = 8;
             this.lblTenKhoa.Text = "Tên khoa :";
             // 
@@ -226,7 +226,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -376,6 +376,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmDaoTao";
             this.Text = "FrmDaoTao";
+            this.Load += new System.EventHandler(this.FrmDaoTao_Load);
             this.grpBoxStudentInfo.ResumeLayout(false);
             this.grpBoxStudentInfo.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -170,11 +170,11 @@
     <Compile Include="NhanSu\frmQLChucVu.designer.cs">
       <DependentUpon>frmQLChucVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu\FrmQLDaoTao.cs">
+    <Compile Include="NhanSu\FrmPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanSu\FrmQLDaoTao.designer.cs">
-      <DependentUpon>FrmQLDaoTao.cs</DependentUpon>
+    <Compile Include="NhanSu\FrmPhongBan.designer.cs">
+      <DependentUpon>FrmPhongBan.cs</DependentUpon>
     </Compile>
     <Compile Include="PhanQuyen\FormPhanQuyen.cs">
       <SubType>Form</SubType>
@@ -253,8 +253,8 @@
     <EmbeddedResource Include="NhanSu\frmQLChucVu.resx">
       <DependentUpon>frmQLChucVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu\FrmQLDaoTao.resx">
-      <DependentUpon>FrmQLDaoTao.cs</DependentUpon>
+    <EmbeddedResource Include="NhanSu\FrmPhongBan.resx">
+      <DependentUpon>FrmPhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhanQuyen\FormPhanQuyen.resx">
       <DependentUpon>FormPhanQuyen.cs</DependentUpon>

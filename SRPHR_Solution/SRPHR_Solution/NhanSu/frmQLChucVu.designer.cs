@@ -65,7 +65,6 @@
             this.DGViewChucVu.Name = "DGViewChucVu";
             this.DGViewChucVu.Size = new System.Drawing.Size(1033, 454);
             this.DGViewChucVu.TabIndex = 0;
-            this.DGViewChucVu.SelectionChanged += new System.EventHandler(this.DGViewStudent_SelectionChanged);
             // 
             // txtMaCV
             // 
@@ -145,7 +144,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -324,7 +323,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "frmQuanLyChucVu";
             this.Text = "FORM QUẢN LÝ CHỨC VỤ";
-            this.Load += new System.EventHandler(this.frmStudent_Load);
+            this.Load += new System.EventHandler(this.frmQLChucVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGViewChucVu)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

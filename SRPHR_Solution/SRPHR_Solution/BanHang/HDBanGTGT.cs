@@ -63,39 +63,39 @@ namespace SRPHR_Solution.BanHang
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            HoaDonBanGTGT n = new HoaDonBanGTGT();
-            n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-         // n.NgayBan = dtngayban.Text;
-            n.TenDVBan = txttendvban.Text;
-            n.TenDVMua = txttendvmua.Text;
-            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+         //   HoaDonBanGTGT n = new HoaDonBanGTGT();
+         //   n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
+         //   n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+         //   n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+         //// n.NgayBan = dtngayban.Text;
+         //   n.TenDVBan = txttendvban.Text;
+         //   n.TenDVMua = txttendvmua.Text;
+         //   n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
 
         }
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            HoaDonBanGTGT n = new HoaDonBanGTGT();
-            n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            // n.NgayBan = dtngayban.Text;
-            n.TenDVBan = txttendvban.Text;
-            n.TenDVMua = txttendvmua.Text;
-            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //HoaDonBanGTGT n = new HoaDonBanGTGT();
+            //n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
+            //n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            //n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+            //// n.NgayBan = dtngayban.Text;
+            //n.TenDVBan = txttendvban.Text;
+            //n.TenDVMua = txttendvmua.Text;
+            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            HoaDonBanGTGT n = new HoaDonBanGTGT();
-            n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            // n.NgayBan = dtngayban.Text;
-            n.TenDVBan = txttendvban.Text;
-            n.TenDVMua = txttendvmua.Text;
-            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //HoaDonBanGTGT n = new HoaDonBanGTGT();
+            //n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
+            //n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            //n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+            //// n.NgayBan = dtngayban.Text;
+            //n.TenDVBan = txttendvban.Text;
+            //n.TenDVMua = txttendvmua.Text;
+            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
     }
 }

@@ -56,12 +56,12 @@ namespace SRPHR_Solution.BanHang
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            HoaDonBanLe n = new HoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            //n.NgayBanLe = dateTimePicker1.Text;
-            n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //HoaDonBanLe n = new HoaDonBanLe();
+            //n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
+            //n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+            //n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            ////n.NgayBanLe = dateTimePicker1.Text;
+            //n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
 
         private void FormHDBanle_Load(object sender, EventArgs e)
@@ -71,22 +71,22 @@ namespace SRPHR_Solution.BanHang
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            HoaDonBanLe n = new HoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            //n.NgayBanLe = dateTimePicker1.Text;
-            n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //HoaDonBanLe n = new HoaDonBanLe();
+            //n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
+            //n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+            //n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            ////n.NgayBanLe = dateTimePicker1.Text;
+            //n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            HoaDonBanLe n = new HoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            //n.NgayBanLe = dateTimePicker1.Text;
-            n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //HoaDonBanLe n = new HoaDonBanLe();
+            //n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
+            //n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
+            //n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
+            ////n.NgayBanLe = dateTimePicker1.Text;
+            //n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

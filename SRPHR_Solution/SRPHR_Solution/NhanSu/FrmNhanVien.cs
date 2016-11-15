@@ -17,6 +17,11 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }

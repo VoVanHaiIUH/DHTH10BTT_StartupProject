@@ -80,13 +80,13 @@ namespace BusinessLogic.NhanSu
     public class KyLuatBLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
-        public List<KyLuat> GetAllNhanVien()
+        public List<KyLuat> GetAllKyLuat()
         {
             List<KyLuat> kyLuats = new List<KyLuat>();
             KyLuat tempKL;
             foreach (Tbl_KyLuatNV record in DB.Tbl_KyLuatNVs)
             {
-                tempKL = myconvert.tokyluat(record);
+                tempKL = MyConvert.ToKyLuat(record);
                 kyLuats.Add(tempKL);
             }
             return kyLuats;
@@ -96,7 +96,7 @@ namespace BusinessLogic.NhanSu
         {
             try
             {
-                Tbl_KyLuatNV newRecord = myconvert.totbl_kyluat(newKL);
+                Tbl_KyLuatNV newRecord = MyConvert.toTbl_KyLuat(newKL);
                 DB.Tbl_KyLuatNVs.InsertOnSubmit(newRecord);
                 DB.SubmitChanges();
 
