@@ -41,15 +41,15 @@ namespace SRPHR_Solution.BanHang
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
-            n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
-            n.TenSP = txttensp.Text;
-            n.GiamGia = txtgiamgia.Text;
-            n.KhuyenMai = txtkhuyenmai.Text;
-            n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
-            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
+            //n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
+            //n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
+            //n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
+            //n.TenSP = txttensp.Text;
+            //n.GiamGia = txtgiamgia.Text;
+            //n.KhuyenMai = txtkhuyenmai.Text;
+            //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
+            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
 
         private void btnxoa_Click(object sender, EventArgs e)

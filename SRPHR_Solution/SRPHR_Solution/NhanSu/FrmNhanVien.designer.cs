@@ -302,7 +302,6 @@
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(228, 25);
             this.txtHoTen.TabIndex = 1;
-            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // tableLayoutPanel2
             // 

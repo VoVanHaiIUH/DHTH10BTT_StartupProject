@@ -153,9 +153,5 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void FrmDaoTao_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
