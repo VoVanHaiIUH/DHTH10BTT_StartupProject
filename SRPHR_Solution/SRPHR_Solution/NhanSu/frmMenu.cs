@@ -41,5 +41,12 @@ namespace SRPHR_Solution.NhanSu
             frmCT.MdiParent = this;
             frmCT.Show();
         }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmNhanVien frmNV = new FrmNhanVien();
+            frmNV.MdiParent = this;
+            frmNV.Show();
+        }
     }
 }

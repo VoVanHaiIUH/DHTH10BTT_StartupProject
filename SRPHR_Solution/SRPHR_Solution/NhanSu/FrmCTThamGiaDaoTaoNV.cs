@@ -15,36 +15,29 @@ namespace SRPHR_Solution.NhanSu
     public partial class FrmCTThamGiaDaoTaoNV : Form
     {
         CTThamGiaDTNVBLL CTDaoTaoBLL;
-        //SubjectBLL subjectBLL;
         DaoTaoBLL DaoTaoBLL;
         NhanVienBLL nhanVienBLL;
-        //DBDataContext DB = new DBDataContext();
         public FrmCTThamGiaDaoTaoNV()
         {
             InitializeComponent();
             CTDaoTaoBLL = new CTThamGiaDTNVBLL();
             //subjectBLL = new SubjectBLL();
             DaoTaoBLL = new DaoTaoBLL();
+            nhanVienBLL = new NhanVienBLL();
         }
 
         private void FrmCTThamGiaDaoTaoNV_Load(object sender, EventArgs e)
         {
             btnUpdate.Enabled = false;
             frmMenu f = (frmMenu)MdiParent;
-            if (f.quyen < 1)
-            {
-                txtMaKhoaDT.Enabled = false;
-            }
-
-
             cboMaNV_Load();
             TViewDaoTao_Load();
-            DGViewCTDaoTao_Load("CNDT-DT00");
+            DGViewCTDaoTao_Load("BC1");
             EnabledControls(false);
         }
         void cboMaNV_Load()
         {
-            cbbMaNV.DataSource =nhanVienBLL.GetAllNhanVien();
+            cbbMaNV.DataSource = nhanVienBLL.GetAllNhanVien();
             cbbMaNV.ValueMember = "maNV";
             cbbMaNV.DisplayMember = "hoTen";
         }
@@ -108,6 +101,8 @@ namespace SRPHR_Solution.NhanSu
                 tempCTDaoTao = new CTThamGiaDTNV();
                 tempCTDaoTao.MaKhoaDT = treeViewDaoTao.SelectedNode.Tag.ToString();
                 tempCTDaoTao.MaKhoaDT = txtMaKhoaDT.Text;
+                tempCTDaoTao.KetQua = txtKetQua.Text;
+                tempCTDaoTao.NhanXet = txtNhanXet.Text;
             }
             catch { }
 
