@@ -146,5 +146,25 @@ namespace SRPHR_Solution.NhanSu
         {
 
         }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            int hideIndex = -1;
+            foreach (DataGridViewRow dr in DGViewKyLuat.Rows)
+            {
+                if (dr.Cells[0].Value.ToString() == txtMaKL.Text)
+                {
+                    hideIndex = dr.Index;
+                }
+            }
+
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[DGViewKyLuat.DataSource];
+            currencyManager1.SuspendBinding();
+
+            DGViewKyLuat.Rows[hideIndex].Visible = false;
+
+            currencyManager1.ResumeBinding();
+
+        }
     }
 }
