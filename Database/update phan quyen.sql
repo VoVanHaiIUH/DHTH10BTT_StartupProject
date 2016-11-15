@@ -41,3 +41,5 @@ CREATE TABLE [dbo].[Tbl_Nhom](
 GO
 SET ANSI_PADDING OFF
 GO
+
+INSERT [dbo].[Tbl_User] ([ID], [Password], [Nhom], [Phanquyen], [MaNV]) VALUES (N'admin', N'admin', N'', N'000000000000000000000000000000', N'')

@@ -62,6 +62,7 @@ namespace SRPHR_Solution.PhanQuyen
         private void FormPhanQuyen_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = taikhoanbll.laythongtintatcataikhoan();
+            txttaikhoan.Text = "Admin";
         }
     }
 }
