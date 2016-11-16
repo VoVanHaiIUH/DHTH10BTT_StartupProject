@@ -388,5 +388,44 @@ namespace SRPHR_Solution.CongNoPKH
             }
             else { MessageBox.Show("bạn chưa chọn vào sản phẩm cần sửa thông tin!"); }
         }
+
+        private void btnthemctkm_Click(object sender, EventArgs e)
+        {
+            eCTKhuyenMai m = new eCTKhuyenMai();
+            m.msDotKM = cmbmsDotKm.Text;
+            m.ghiChu = txtghiChukmct.Text;
+            m.maSP = txtmasanpham.Text;
+            m.phantramKM = Convert.ToDouble(txtphanTramKM.Text);
+            int k = kmbll.themCTKM(m);
+            MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            dgvkhuyenmai.DataSource = kmbll.getAllKM();
+            dgvctkhuyenmai.DataSource = kmbll.getAllCTKM();
+        }
+
+        private void btnsuaCTKM_Click(object sender, EventArgs e)
+        {
+            string msdkm = txtMaSoDotKhuyenMai.Text;
+            if (msdkm != null)
+            {
+                kmbll.UpDateCTKhuyenMai(txtMaSoDotKhuyenMai.Text, txtmasanpham.Text, Convert.ToDouble(txtphanTramKM.Text), txtghiChukmct.Text);
+                MessageBox.Show("Sửa xong !!");
+                dgvctkhuyenmai.DataSource = kmbll.getAllCTKM();
+
+            }
+            else { MessageBox.Show("bạn chưa chọn vào sản phẩm cần sửa thông tin!"); }
+        }
+
+        private void dgvctkhuyenmai_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dgvctkhuyenmai.SelectedRows.Count > 0)
+            {
+
+                eCTKhuyenMai ectkm = (eCTKhuyenMai)bds.Current;
+                txtMaSoDotKhuyenMai.Text = e.Row.Cells["msDotKM"].Value.ToString();
+                txtmasanpham.Text = e.Row.Cells["maSP"].Value.ToString();
+                txtphanTramKM.Text = e.Row.Cells["phantramKM"].Value.ToString();
+                txtghiChukmct.Text = e.Row.Cells["ghiChu"].Value.ToString();
+            }
+        }
     }
 }

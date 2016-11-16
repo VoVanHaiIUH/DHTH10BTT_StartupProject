@@ -1813,6 +1813,7 @@
             this.dgvctkhuyenmai.Name = "dgvctkhuyenmai";
             this.dgvctkhuyenmai.Size = new System.Drawing.Size(325, 182);
             this.dgvctkhuyenmai.TabIndex = 97;
+            this.dgvctkhuyenmai.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvctkhuyenmai_RowStateChanged);
             // 
             // btnsuaCTKM
             // 
@@ -1822,6 +1823,7 @@
             this.btnsuaCTKM.TabIndex = 96;
             this.btnsuaCTKM.Text = "Sửa";
             this.btnsuaCTKM.UseVisualStyleBackColor = true;
+            this.btnsuaCTKM.Click += new System.EventHandler(this.btnsuaCTKM_Click);
             // 
             // btnthemctkm
             // 
@@ -1831,6 +1833,7 @@
             this.btnthemctkm.TabIndex = 95;
             this.btnthemctkm.Text = "Thêm";
             this.btnthemctkm.UseVisualStyleBackColor = true;
+            this.btnthemctkm.Click += new System.EventHandler(this.btnthemctkm_Click);
             // 
             // txtghiChukmct
             // 
@@ -1865,7 +1868,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(520, 83);
+            this.label46.Location = new System.Drawing.Point(520, 87);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(97, 16);
             this.label46.TabIndex = 90;
