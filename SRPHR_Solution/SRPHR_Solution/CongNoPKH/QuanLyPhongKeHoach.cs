@@ -823,19 +823,7 @@ namespace SRPHR_Solution.CongNoPKH
             dgvCTPDNXK.DataSource = pdnxkbll.getallctpdnxk();
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            string masp = (string)((TreeView)sender).SelectedNode.Tag;
-            if (spbll.getbymasanpham(masp).Count() == 0)
-            {
-                MessageBox.Show("Trong nhà cung cấp không có sản phẩm", "Thông báo!");
-                loaddatagridviewsp(sp, dgvSanPham);
-            }
-            else
-            {
-                loadvaogrid(masp);
-            }
-        }
+       
 
         private void dgvPDNXK_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
@@ -962,6 +950,11 @@ namespace SRPHR_Solution.CongNoPKH
 
                 MessageBox.Show("Thêm thành công");
             dgvCTPDNNK.DataSource = pdnnkbll.getallctpnnk();
+        }
+
+        private void tabPage7_Click(object sender, EventArgs e)
+        {
+
         }
         }
     }

@@ -50,7 +50,6 @@ namespace BusinessLogic.CongNoPKH
         {
             var r = db.Tbl_PhieuDNNKs.ToList();
             List<ePhieuDNNK> pdnnk = new List<ePhieuDNNK>();
-            ePhieuDNNK p;
             foreach (Tbl_PhieuDNNK c in r)
             {
 
