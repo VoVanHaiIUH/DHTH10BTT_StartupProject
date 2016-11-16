@@ -56,5 +56,5 @@ namespace Entities.CongNoPKH
         }
         #endregion
     }
-    }
+    
 }
