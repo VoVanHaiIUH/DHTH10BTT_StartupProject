@@ -153,10 +153,8 @@ namespace BussinessLogic
         public int capnhat1(string hd, string sp, string sl, string dg, string ghichu)
         {
             IQueryable<Tbl_CTHDBanSi> hd1 = db.Tbl_CTHDBanSis.Where(x => x.maHD.Equals(hd) && x.maSP.Equals(sp));
-            //hd1.First().maNV = hd;
             hd1.First().soluong = Convert.ToInt16(sl);
             hd1.First().dongiaBan = Convert.ToInt32(dg);
-            //hd1.First().maNV=m
             hd1.First().ghiChu = ghichu;
             return 1;
 
