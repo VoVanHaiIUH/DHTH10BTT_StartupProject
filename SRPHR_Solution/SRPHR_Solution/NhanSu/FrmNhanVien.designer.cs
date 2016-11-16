@@ -164,7 +164,7 @@
             this.lbTrangThai.Location = new System.Drawing.Point(720, 78);
             this.lbTrangThai.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(68, 15);
+            this.lbTrangThai.Size = new System.Drawing.Size(69, 15);
             this.lbTrangThai.TabIndex = 8;
             this.lbTrangThai.Text = "Trạng thái :";
             // 
@@ -323,7 +323,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -469,6 +469,7 @@
             this.DGViewNhanVien.Name = "DGViewNhanVien";
             this.DGViewNhanVien.Size = new System.Drawing.Size(1350, 360);
             this.DGViewNhanVien.TabIndex = 0;
+            this.DGViewNhanVien.SelectionChanged += new System.EventHandler(this.DGViewNhanVien_SelectionChanged);
             // 
             // FrmNhanVien
             // 

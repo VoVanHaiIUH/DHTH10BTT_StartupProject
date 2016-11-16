@@ -12,7 +12,7 @@ namespace BusinessLogic.NhanSu
     public class NhanVienBLL
     {
         //SRPHRDataContext DB = new SRPHRDataContext();
-        DataClasses1DataContext DB = new DataClasses1DataContext();
+        SRPHR1DataContext DB = new SRPHR1DataContext();
         public List<NhanVien> GetAllNhanVien()
         {
             List<NhanVien> nhanViens = new List<NhanVien>();

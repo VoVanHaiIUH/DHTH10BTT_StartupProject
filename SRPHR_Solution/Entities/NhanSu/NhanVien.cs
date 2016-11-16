@@ -100,7 +100,7 @@ namespace Entities.NhanSu
             NgayCapCMND = ngayCapCMND;
             GioiTinh    = gioiTinh;
             Email       = email;
-            this.SDT    = SDT;
+            this.SDT    = sdt;
             DiaChi      = diaChi;
             TrangThai   = trangThai; 
         }

@@ -115,19 +115,19 @@ namespace SRPHR_Solution.NhanSu
             frmKyLuat_Load(sender, e);
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hoàng hoá " + txtTenKL.Text + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DialogResult.Yes == r)
-            {
-                passingData();
-                if (KyLuatBLL.Delete(tempKyLuat.MaKL))
-                    MessageBox.Show("Xoá thành công");
-                else
-                    MessageBox.Show("Xoá thất bại");
-            }
-            frmKyLuat_Load(sender, e);
-        }
+        //private void btnDelete_Click(object sender, EventArgs e)
+        //{
+        //    DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hoàng hoá " + txtTenKL.Text + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //    if (DialogResult.Yes == r)
+        //    {
+        //        passingData();
+        //        if (KyLuatBLL.Delete(tempKyLuat.MaKL))
+        //            MessageBox.Show("Xoá thành công");
+        //        else
+        //            MessageBox.Show("Xoá thất bại");
+        //    }
+        //    frmKyLuat_Load(sender, e);
+        //}
         private void btnExit_Click(object sender, EventArgs e)
         {
             DialogResult r = MessageBox.Show("Do you want to exit?", "Noti", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -137,10 +137,7 @@ namespace SRPHR_Solution.NhanSu
         //jsdn
         #endregion
 
-        private void DGViewKyLuat_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+    
 
         private void grpBoxKyLuat_Enter(object sender, EventArgs e)
         {

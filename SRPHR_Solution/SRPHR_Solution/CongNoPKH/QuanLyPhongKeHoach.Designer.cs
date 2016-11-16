@@ -78,6 +78,17 @@
             this.btnthemmuahangncc = new System.Windows.Forms.Button();
             this.dgvhdmuahangncc = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.cmbmsDotKm = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dgvctkhuyenmai = new System.Windows.Forms.DataGridView();
+            this.btnsuaCTKM = new System.Windows.Forms.Button();
+            this.btnthemctkm = new System.Windows.Forms.Button();
+            this.txtghiChukmct = new System.Windows.Forms.TextBox();
+            this.txtphanTramKM = new System.Windows.Forms.TextBox();
+            this.txtmaSpkm = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.btnsuakm = new System.Windows.Forms.Button();
             this.btnthemkm = new System.Windows.Forms.Button();
             this.dtpngayketthuckm = new System.Windows.Forms.DateTimePicker();
@@ -193,17 +204,6 @@
             this.lblTenNCC = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblMaNCC = new System.Windows.Forms.Label();
-            this.cmbmsDotKm = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dgvctkhuyenmai = new System.Windows.Forms.DataGridView();
-            this.btnsuaCTKM = new System.Windows.Forms.Button();
-            this.btnthemctkm = new System.Windows.Forms.Button();
-            this.txtghiChukmct = new System.Windows.Forms.TextBox();
-            this.txtphanTramKM = new System.Windows.Forms.TextBox();
-            this.txtmaSpkm = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -212,6 +212,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhdmuahangncc)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvctkhuyenmai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvkhuyenmai)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPDNNK)).BeginInit();
@@ -225,7 +226,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvctkhuyenmai)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -726,6 +726,100 @@
             this.tabPage5.Text = "Khuyến mãi";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // cmbmsDotKm
+            // 
+            this.cmbmsDotKm.FormattingEnabled = true;
+            this.cmbmsDotKm.Location = new System.Drawing.Point(665, 18);
+            this.cmbmsDotKm.Name = "cmbmsDotKm";
+            this.cmbmsDotKm.Size = new System.Drawing.Size(121, 24);
+            this.cmbmsDotKm.TabIndex = 99;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(519, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 16);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "MS đợt khuyến mãi :";
+            // 
+            // dgvctkhuyenmai
+            // 
+            this.dgvctkhuyenmai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvctkhuyenmai.Location = new System.Drawing.Point(461, 198);
+            this.dgvctkhuyenmai.Name = "dgvctkhuyenmai";
+            this.dgvctkhuyenmai.Size = new System.Drawing.Size(325, 182);
+            this.dgvctkhuyenmai.TabIndex = 97;
+            this.dgvctkhuyenmai.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvctkhuyenmai_RowStateChanged);
+            // 
+            // btnsuaCTKM
+            // 
+            this.btnsuaCTKM.Location = new System.Drawing.Point(710, 386);
+            this.btnsuaCTKM.Name = "btnsuaCTKM";
+            this.btnsuaCTKM.Size = new System.Drawing.Size(75, 23);
+            this.btnsuaCTKM.TabIndex = 96;
+            this.btnsuaCTKM.Text = "Sửa";
+            this.btnsuaCTKM.UseVisualStyleBackColor = true;
+            this.btnsuaCTKM.Click += new System.EventHandler(this.btnsuaCTKM_Click);
+            // 
+            // btnthemctkm
+            // 
+            this.btnthemctkm.Location = new System.Drawing.Point(621, 386);
+            this.btnthemctkm.Name = "btnthemctkm";
+            this.btnthemctkm.Size = new System.Drawing.Size(75, 23);
+            this.btnthemctkm.TabIndex = 95;
+            this.btnthemctkm.Text = "Thêm";
+            this.btnthemctkm.UseVisualStyleBackColor = true;
+            this.btnthemctkm.Click += new System.EventHandler(this.btnthemctkm_Click);
+            // 
+            // txtghiChukmct
+            // 
+            this.txtghiChukmct.Location = new System.Drawing.Point(621, 124);
+            this.txtghiChukmct.Name = "txtghiChukmct";
+            this.txtghiChukmct.Size = new System.Drawing.Size(165, 22);
+            this.txtghiChukmct.TabIndex = 92;
+            // 
+            // txtphanTramKM
+            // 
+            this.txtphanTramKM.Location = new System.Drawing.Point(621, 86);
+            this.txtphanTramKM.Name = "txtphanTramKM";
+            this.txtphanTramKM.Size = new System.Drawing.Size(165, 22);
+            this.txtphanTramKM.TabIndex = 93;
+            // 
+            // txtmaSpkm
+            // 
+            this.txtmaSpkm.Location = new System.Drawing.Point(621, 52);
+            this.txtmaSpkm.Name = "txtmaSpkm";
+            this.txtmaSpkm.Size = new System.Drawing.Size(165, 22);
+            this.txtmaSpkm.TabIndex = 94;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(557, 124);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(58, 16);
+            this.label47.TabIndex = 89;
+            this.label47.Text = "Ghi chú :";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(520, 87);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(97, 16);
+            this.label46.TabIndex = 90;
+            this.label46.Text = "% khuyến mãi :";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(520, 55);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(95, 16);
+            this.label45.TabIndex = 91;
+            this.label45.Text = "Mã sản phẩm :";
+            // 
             // btnsuakm
             // 
             this.btnsuakm.Location = new System.Drawing.Point(315, 386);
@@ -834,6 +928,7 @@
             this.dgvkhuyenmai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect;
             this.dgvkhuyenmai.Size = new System.Drawing.Size(356, 182);
             this.dgvkhuyenmai.TabIndex = 17;
+            this.dgvkhuyenmai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvkhuyenmai_CellContentClick);
             // 
             // tabPage6
             // 
@@ -860,7 +955,7 @@
             this.tabPage6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage6.Location = new System.Drawing.Point(4, 33);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(880, 359);
+            this.tabPage6.Size = new System.Drawing.Size(868, 432);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Phiếu đề nghị nhập kho";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1053,7 +1148,7 @@
             this.tabPage7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage7.Location = new System.Drawing.Point(4, 33);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(880, 359);
+            this.tabPage7.Size = new System.Drawing.Size(868, 432);
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Phiếu đề nghị xuất kho";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1252,7 +1347,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 33);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(880, 359);
+            this.tabPage10.Size = new System.Drawing.Size(868, 432);
             this.tabPage10.TabIndex = 5;
             this.tabPage10.Text = "Sản Phẩm";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -1482,7 +1577,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(890, 402);
+            this.tabPage2.Size = new System.Drawing.Size(897, 481);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Công nợ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1789,100 +1884,6 @@
             this.lblMaNCC.TabIndex = 0;
             this.lblMaNCC.Text = "Mã Nhà cung cấp:";
             // 
-            // cmbmsDotKm
-            // 
-            this.cmbmsDotKm.FormattingEnabled = true;
-            this.cmbmsDotKm.Location = new System.Drawing.Point(665, 18);
-            this.cmbmsDotKm.Name = "cmbmsDotKm";
-            this.cmbmsDotKm.Size = new System.Drawing.Size(121, 24);
-            this.cmbmsDotKm.TabIndex = 99;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(519, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 16);
-            this.label6.TabIndex = 98;
-            this.label6.Text = "MS đợt khuyến mãi :";
-            // 
-            // dgvctkhuyenmai
-            // 
-            this.dgvctkhuyenmai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvctkhuyenmai.Location = new System.Drawing.Point(461, 198);
-            this.dgvctkhuyenmai.Name = "dgvctkhuyenmai";
-            this.dgvctkhuyenmai.Size = new System.Drawing.Size(325, 182);
-            this.dgvctkhuyenmai.TabIndex = 97;
-            this.dgvctkhuyenmai.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvctkhuyenmai_RowStateChanged);
-            // 
-            // btnsuaCTKM
-            // 
-            this.btnsuaCTKM.Location = new System.Drawing.Point(710, 386);
-            this.btnsuaCTKM.Name = "btnsuaCTKM";
-            this.btnsuaCTKM.Size = new System.Drawing.Size(75, 23);
-            this.btnsuaCTKM.TabIndex = 96;
-            this.btnsuaCTKM.Text = "Sửa";
-            this.btnsuaCTKM.UseVisualStyleBackColor = true;
-            this.btnsuaCTKM.Click += new System.EventHandler(this.btnsuaCTKM_Click);
-            // 
-            // btnthemctkm
-            // 
-            this.btnthemctkm.Location = new System.Drawing.Point(621, 386);
-            this.btnthemctkm.Name = "btnthemctkm";
-            this.btnthemctkm.Size = new System.Drawing.Size(75, 23);
-            this.btnthemctkm.TabIndex = 95;
-            this.btnthemctkm.Text = "Thêm";
-            this.btnthemctkm.UseVisualStyleBackColor = true;
-            this.btnthemctkm.Click += new System.EventHandler(this.btnthemctkm_Click);
-            // 
-            // txtghiChukmct
-            // 
-            this.txtghiChukmct.Location = new System.Drawing.Point(621, 124);
-            this.txtghiChukmct.Name = "txtghiChukmct";
-            this.txtghiChukmct.Size = new System.Drawing.Size(165, 22);
-            this.txtghiChukmct.TabIndex = 92;
-            // 
-            // txtphanTramKM
-            // 
-            this.txtphanTramKM.Location = new System.Drawing.Point(621, 86);
-            this.txtphanTramKM.Name = "txtphanTramKM";
-            this.txtphanTramKM.Size = new System.Drawing.Size(165, 22);
-            this.txtphanTramKM.TabIndex = 93;
-            // 
-            // txtmaSpkm
-            // 
-            this.txtmaSpkm.Location = new System.Drawing.Point(621, 52);
-            this.txtmaSpkm.Name = "txtmaSpkm";
-            this.txtmaSpkm.Size = new System.Drawing.Size(165, 22);
-            this.txtmaSpkm.TabIndex = 94;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(557, 124);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(58, 16);
-            this.label47.TabIndex = 89;
-            this.label47.Text = "Ghi chú :";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(520, 87);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(97, 16);
-            this.label46.TabIndex = 90;
-            this.label46.Text = "% khuyến mãi :";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(520, 55);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(95, 16);
-            this.label45.TabIndex = 91;
-            this.label45.Text = "Mã sản phẩm :";
-            // 
             // QuanLyPhongKeHoach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1904,6 +1905,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvhdmuahangncc)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvctkhuyenmai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvkhuyenmai)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
@@ -1922,7 +1924,6 @@
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvctkhuyenmai)).EndInit();
             this.ResumeLayout(false);
 
         }

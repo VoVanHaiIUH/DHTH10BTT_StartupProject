@@ -13,7 +13,7 @@ namespace BusinessLogic.NhanSu
     {
 
         //SRPHRDataContext DB = new SRPHRDataContext();
-        DataAccess.NhanSu.DataClasses1DataContext DB = new DataClasses1DataContext();
+        SRPHR1DataContext DB = new SRPHR1DataContext();
         public List<PhongBan> GetAllPhongBan()
         {
             List<PhongBan> phongBans = new List<PhongBan>();

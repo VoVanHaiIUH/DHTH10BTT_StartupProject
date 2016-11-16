@@ -14,7 +14,7 @@ namespace BusinessLogic.NhanSu
     public class KyLuatBLL
     {
         //SRPHRDataContext DB = new SRPHRDataContext();
-        DataClasses1DataContext DB = new DataClasses1DataContext();
+        SRPHR1DataContext DB = new SRPHR1DataContext();
         public List<KyLuat> GetAllKyLuat()
         {
             List<KyLuat> kyLuats = new List<KyLuat>();

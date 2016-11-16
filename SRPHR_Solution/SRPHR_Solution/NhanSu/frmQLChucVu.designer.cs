@@ -65,6 +65,7 @@
             this.DGViewChucVu.Name = "DGViewChucVu";
             this.DGViewChucVu.Size = new System.Drawing.Size(1033, 454);
             this.DGViewChucVu.TabIndex = 0;
+            this.DGViewChucVu.SelectionChanged += new System.EventHandler(this.DGViewChucVu_SelectionChanged);
             // 
             // txtMaCV
             // 
@@ -144,7 +145,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -287,7 +288,7 @@
             this.lblTenCV.Location = new System.Drawing.Point(6, 51);
             this.lblTenCV.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTenCV.Name = "lblTenCV";
-            this.lblTenCV.Size = new System.Drawing.Size(80, 15);
+            this.lblTenCV.Size = new System.Drawing.Size(81, 15);
             this.lblTenCV.TabIndex = 8;
             this.lblTenCV.Text = "Tên chức vụ :";
             // 
