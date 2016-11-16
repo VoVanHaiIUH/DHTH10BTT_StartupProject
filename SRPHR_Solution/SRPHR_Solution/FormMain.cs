@@ -13,6 +13,8 @@ using SRPHR_Solution.CongNoPKH;
 using SRPHR_Solution.BanHang;
 using SRPHR_Solution.BaoCao;
 using SRPHR_Solution.NhanSu;
+using SRPHR_Solution.CongNoPKH;
+
 
 namespace SRPHR_Solution.PhanQuyen
 {
@@ -102,19 +104,19 @@ namespace SRPHR_Solution.PhanQuyen
                 btnFormBanHang.Enabled = true;
             
             if (s[10] == "1" || s[11] == "1" || s[12] == "1" || s[13] == "1" || s[1] == "1")
-                btnFormBanHang.Enabled = true;
+                btnformbaocao.Enabled = true;
 
             if (s[14] == "1" || s[15] == "1" || s[16] == "1" || s[17] == "1" || s[2] == "1")
-                btnFormBanHang.Enabled = true;
+                btnformcongno.Enabled = true;
 
             if (s[18] == "1" || s[19] == "1" || s[20] == "1" || s[21] == "1" || s[3] == "1")
-                btnFormBanHang.Enabled = true;
+                btnformkhachhang.Enabled = true;
 
             if (s[22] == "1" || s[23] == "1" || s[24] == "1" || s[25] == "1" || s[4] == "1")
-                btnFormBanHang.Enabled = true;
+                btnformkho.Enabled = true;
 
             if (s[26] == "1" || s[27] == "1" || s[28] == "1" || s[29] == "1" || s[5] == "1")
-                btnFormBanHang.Enabled = true;
+                btnformNhansu.Enabled = true;
         }
 
         private void btnsua_Click(object sender, EventArgs e)
@@ -179,7 +181,9 @@ namespace SRPHR_Solution.PhanQuyen
 
         private void btnFormBanHang_Click(object sender, EventArgs e)
         {
+            
             string s=taikhoanbll.GetPQbyID(_message).Substring(6,4);
+           
             FormMainBH frmnew = new FormMainBH();
             frmnew.PQMainBH = s;
             frmnew.ShowDialog();
@@ -190,7 +194,10 @@ namespace SRPHR_Solution.PhanQuyen
     
         private void btnformbaocao_Click(object sender, EventArgs e)
         {
+            string s = taikhoanbll.GetPQbyID(_message).Substring(10, 4);
+
             FormMainBaoCao frmnew = new FormMainBaoCao();
+            frmnew.PQMainBC = s;
             frmnew.ShowDialog();
         }
 

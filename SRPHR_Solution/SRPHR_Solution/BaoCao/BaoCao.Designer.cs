@@ -259,6 +259,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormBaoCao";
             this.Text = "BaoCao";
+            this.Load += new System.EventHandler(this.FormBaoCao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
