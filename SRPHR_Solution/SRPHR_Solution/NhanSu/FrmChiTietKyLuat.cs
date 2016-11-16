@@ -259,5 +259,10 @@ namespace SRPHR_Solution.NhanSu
 
             //currencyManager1.ResumeBinding();
         }
+
+        private void dateTimePickerNgayThiHanh_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
