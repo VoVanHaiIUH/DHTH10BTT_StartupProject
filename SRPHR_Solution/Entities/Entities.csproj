@@ -67,7 +67,6 @@
     <Compile Include="Kho\ePhieuNK.cs" />
     <Compile Include="Kho\ePhieuQLiKho.cs" />
     <Compile Include="Kho\ePhieuXK.cs" />
-    <Compile Include="Kho\eSanPham.cs" />
     <Compile Include="NhanSu\ChucVu.cs" />
     <Compile Include="NhanSu\CTKyLuatNV.cs" />
     <Compile Include="NhanSu\CTThamGiaDTNV.cs" />
