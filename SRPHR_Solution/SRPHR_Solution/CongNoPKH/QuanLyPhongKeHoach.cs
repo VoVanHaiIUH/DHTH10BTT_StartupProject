@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities.CongNoPKH;
 using BusinessLogic.CongNoPKH;
+using BussinessLogic.CongNoPKH;
 
 namespace SRPHR_Solution.CongNoPKH
 {
@@ -105,6 +106,12 @@ namespace SRPHR_Solution.CongNoPKH
             dtgv.DataSource = dnnk;
         }
         public void loaddatagridviewPDNXK(List<ePhieuDNXK> pdnxk, DataGridView dtgvpdnxk)
+        {
+
+            dtgvpdnxk.DataSource = pdnxk;
+
+        }
+        public void loaddatagridviewPDNXK1(List<eCTPhieuDNXK> pdnxk, DataGridView dtgvpdnxk)
         {
 
             dtgvpdnxk.DataSource = pdnxk;
@@ -759,5 +766,99 @@ namespace SRPHR_Solution.CongNoPKH
             MessageBox.Show("So tien chua thanh toan voi nha cung cap" + kq.ToString());
         }
 
+        private void btnthemdnxk_Click(object sender, EventArgs e)
+        {
+            ePhieuDNXK p = new ePhieuDNXK();
+            p.soPDNXK = txtsophieudnxk.Text;
+            p.ngayLap = Convert.ToString(dtpngaylapphieudnxk.Text);
+            p.maNV = txtMaNV.Text;
+            p.maKho = Convert.ToString(cmbMKho.Text);
+
+            int m = pdnxkbll.themPDNXK(p);
+            if (m == 1)
+                MessageBox.Show("Thêm thành công");
+            else
+                MessageBox.Show("Thêm thất bại");
+
+            dgvPDNXK.DataSource = pdnxkbll.getAllPDNXK();
+            btnSua.Enabled = true;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string ma = txtsophieudnxk.Text;
+            int kq = pdnxkbll.Update(ma, dtpngaylapphieudnxk.Text, txtMaNV.Text, cmbMKho.Text);
+
+            if (kq == 1)
+            {
+                dgvPDNXK.DataSource = pdnxkbll.getAllPDNXK();
+                MessageBox.Show("Sửa xong!!!");
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+        }
+
+        private void btnThemChitietXK_Click(object sender, EventArgs e)
+        {
+            eCTPhieuDNXK n = new eCTPhieuDNXK()
+            {
+                soPDNXK = txtsophieu.Text,
+                maSP = txtMSP.Text,
+                soluong = Convert.ToInt32(txtsoluong.Text),
+                Ghichu = txtghichudnxk.Text
+
+            };
+            int kq1 = pdnxkbll.themctpdnxk(n);
+            if (kq1 == 1 || kq1 != 1)
+
+                MessageBox.Show("Thêm thành công");
+            dgvCTPDNXK.DataSource = pdnxkbll.getallctpdnxk();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string masp = (string)((TreeView)sender).SelectedNode.Tag;
+            if (spbll.getbymasanpham(masp).Count() == 0)
+            {
+                MessageBox.Show("Trong nhà cung cấp không có sản phẩm", "Thông báo!");
+                loaddatagridviewsp(sp, dgvSanPham);
+            }
+            else
+            {
+                loadvaogrid(masp);
+            }
+        }
+
+        private void dgvPDNXK_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dgvPDNXK.SelectedRows != null && dgvPDNXK.SelectedRows.Count > 0)
+            {
+                if (e.Row.Cells["soPDNXK"].Value != null)
+                {
+
+                    txtsophieudnxk.Text = e.Row.Cells["soPDNXK"].Value.ToString();
+                    string ma = e.Row.Cells["soPDNXK"].Value.ToString();
+                    ctpdnxk = pdnxkbll.getallctpdnxk();
+                    loaddatagridviewPDNXK1(ctpdnxk, dgvCTPDNXK);
+
+                }
+
+                if (e.Row.Cells["maNV"].Value != null)
+                {
+                    txtmanhanviendnxk.Text = e.Row.Cells["maNV"].Value.ToString();
+                }
+
+
+
+                if (e.Row.Cells["maKho"].Value != null)
+                {
+                    cmbMKho.Text = e.Row.Cells["maKho"].Value.ToString();
+                }
+
+
+            }
+        }
     }
 }
