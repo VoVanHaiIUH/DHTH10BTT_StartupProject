@@ -42,7 +42,6 @@
     <Compile Include="BanHang\ChiTietHoaDonBanLe.cs" />
     <Compile Include="BanHang\HoaDonBanGTGT.cs" />
     <Compile Include="BanHang\HoaDonBanLe.cs" />
-    <Compile Include="CongNoPKH\eCTHDMuahangNCC.cs" />
     <Compile Include="CongNoPKH\eCongNoKH.cs" />
     <Compile Include="CongNoPKH\eCongNoNCC.cs" />
     <Compile Include="CongNoPKH\eCTCongNoKH.cs" />
