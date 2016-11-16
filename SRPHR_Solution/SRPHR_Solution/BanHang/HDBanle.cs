@@ -100,8 +100,6 @@ namespace SRPHR_Solution.BanHang
             FormMainBH frmnew = new FormMainBH();
             frmnew.Activate();
             frmnew.ShowDialog();
-
-
         }
 
         private void btnsua_Click(object sender, EventArgs e)
@@ -114,6 +112,7 @@ namespace SRPHR_Solution.BanHang
         private void FormHDBanle_Load(object sender, EventArgs e)
         {
             DGViewHDBL_Load();
+            EnabledControls(false);
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -133,33 +132,46 @@ namespace SRPHR_Solution.BanHang
                 EnabledControls(false);
             }
 
-
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
+            int hideIndex = -1;
+            foreach (DataGridViewRow dr in DGViewHDBL.Rows)
+            {
+                if (dr.Cells[0].Value.ToString() == txtmahdbanle.Text)
+                {
+                    hideIndex = dr.Index;
+                }
+            }
 
+            CurrencyManager currencyManager = (CurrencyManager)BindingContext[DGViewHDBL.DataSource];
+            currencyManager.SuspendBinding();
+
+            DGViewHDBL.Rows[hideIndex].Visible = false;
+
+            currencyManager.ResumeBinding();
         }
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            //passingData();
-            //if (flag == 0)//thêm
-            //{
-            //    if (hdblbll.ThemHDBanLe(tempHDBanLe))
-            //        MessageBox.Show("Thêm thành công");
-            //    else
-            //        MessageBox.Show("Thêm thất bại");
-            //}
-            //else //sửa 
-            //{
-            //    if (studentBLL.Update(tempStudent))
-            //        MessageBox.Show("Sửa thành công");
-            //    else
-            //        MessageBox.Show("Sửa thất bại");
-            //}
-            //frmStudent_Load(sender, e);
+            passingData();
+            HoaDonBanLe hdbl = new HoaDonBanLe();
+
+            hdbl.SoHoaDon = txtmahdbanle.Text;
+            hdbl.MaKH = txtmakh.Text;
+            hdbl.MaNV = txtmanv.Text;
+            hdbl.NgayBan = DTNgayBanHDBL.Value;
+            hdbl.TongTien = Convert.ToDecimal(txttongtien.Text);
+
+            int kq = hdblbll.ThemHDBanLe(hdbl);
+            if (kq == 0)
+            {
+                MessageBox.Show("Trùng mã hóa đơn !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+            else if (kq == 1) MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
         }
+       
         public string PQHDBL;
         private void FormHDBanle_Load_1(object sender, EventArgs e)
         {
@@ -196,5 +208,19 @@ namespace SRPHR_Solution.BanHang
             frmnew.PQCTHD = PQHDBL;
             frmnew.ShowDialog();
         }
+
+        private void DGViewHDBL_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CurrencyManager currencyManager = (CurrencyManager)BindingContext[DGViewHDBL.DataSource];
+            currencyManager.SuspendBinding();
+
+            DGViewHDBL.Rows[e.RowIndex].Visible = false;
+
+            currencyManager.ResumeBinding();
+        }
+
+       
+
+      
     }
 }
