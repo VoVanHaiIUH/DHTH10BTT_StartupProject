@@ -29,7 +29,7 @@ namespace BusinessLogic.CongNoPKH
         }
         public static eCongNoNCC congnoNCC(Tbl_CongNoNCC p)
         {
-            return new eCongNoNCC(p.soPhieu,p.maNCC,Convert.ToString( p.ngayLap),p.maNV);
+            return new eCongNoNCC(p.soPhieu, p.maNCC, Convert.ToString(p.ngayLap), p.maNV);
         }
         public List<eCTCongNoNCC> getAllCNNCCMbyma(string ma)
         {
@@ -48,20 +48,32 @@ namespace BusinessLogic.CongNoPKH
         }
         public static eCTCongNoNCC congnoCTkh(Tbl_CTCongNoNCC p)
         {
-            return new eCTCongNoNCC(p.soPhieu,p.maHD, Convert.ToString(p.sotien), p.ghiChu);
+            return new eCTCongNoNCC(p.soPhieu, p.maHD, Convert.ToString(p.sotien), p.ghiChu);
         }
-  
-        public int tinhcongnoKH(int e)
+
+        public int tinhcongnoncc(string ma)
         {
-            int tong = 0;
+            int kq = 0;
 
+            var r = from c in db.Tbl_CTMuaHangNCCs
+                    join d in db.Tbl_HDMuaHangNCCs
+                    on c.maHD equals d.maHD
+                    where d.maNCC == ma
+                    select new
+                    {
+                        c.soluong,
+                        c.dongiaMua,
 
-            foreach (Tbl_CTCongNoNCC n in db.Tbl_CTCongNoNCCs.ToList())
+                    };
+            foreach (var k in r)
             {
-                n.sotien = tong;
+                kq += Convert.ToInt32(k.soluong) * Convert.ToInt32(k.dongiaMua);
+
+
             }
 
-            return tong - e;// e so tien Cong ti tra cho nha cung cap
+            return kq;
+
 
         }
     }

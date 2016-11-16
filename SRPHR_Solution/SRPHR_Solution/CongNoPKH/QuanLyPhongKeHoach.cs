@@ -15,6 +15,15 @@ namespace SRPHR_Solution.CongNoPKH
     public partial class QuanLyPhongKeHoach : Form
     {
         public string PQPKH;
+        HDBanSi_BLL blbs;
+        HDMuaHangNCC_BLL mhbll;
+        List<eCTHDBanSi> cthdbs;
+        List<eCTMuaHangNCC> ctmh;
+        List<eHDMuaHangNCC> hdmd;
+        List<eHDBanSi> hdbs;
+        List<eCTCongNoKH> ct;
+        CongNoKH_BLL cnkh;
+        CongNoNCC_BLL cc;
         public QuanLyPhongKeHoach()
         {
             InitializeComponent();
@@ -45,6 +54,26 @@ namespace SRPHR_Solution.CongNoPKH
             sp = spbll.getallsanpham();
             loaddatagridviewsp(sp, dgvSanPham);
             EnableButton(true);
+            hdbs = new List<eHDBanSi>();
+            cthdbs = new List<eCTHDBanSi>();
+            blbs = new HDBanSi_BLL();
+
+            mhbll = new HDMuaHangNCC_BLL();
+            ctmh = new List<eCTMuaHangNCC>();
+            hdbs = new List<eHDBanSi>();
+            hdmd = new List<eHDMuaHangNCC>();
+            ct = new List<eCTCongNoKH>();
+            cnkh = new CongNoKH_BLL();
+            //ct = cnkh.Getallcn();
+
+
+
+            hdbs = blbs.getallhd();
+            laydulieuvaogridview(dgvhdbansikh, hdbs);
+            laydulieuvaogridview1234(dgvKhachHang, hdbs);
+            hdmd = mhbll.getallHDMH();
+            laydulieuvaogridview12(dgvhdmuahangncc, hdmd);
+            laydulieuvaogridview33(dgvNCC, hdmd);
         }
 
         PhieuDNNK_BLL pdnnkbll;
@@ -85,6 +114,37 @@ namespace SRPHR_Solution.CongNoPKH
         public void loaddatagridviewkm(List<eKhuyenMai> km, DataGridView dtgv) //km
         {
             dtgv.DataSource = km;
+        }
+        public void laydulieuvaogridview(DataGridView tv, List<eHDBanSi> ls)
+        {
+
+
+
+            tv.DataSource = ls;
+        }
+
+        public void laydulieuvaogridview1234(DataGridView tv, List<eHDBanSi> ls)
+        {
+
+
+
+            tv.DataSource = ls;
+        }
+        public void laydulieuvaogridview33(DataGridView tv, List<eHDMuaHangNCC> ls)
+        {
+
+
+
+            tv.DataSource = ls;
+        }
+       
+
+        public void laydulieuvaogridview1(DataGridView tv, List<eCTHDBanSi> ls)
+        {
+
+
+
+            tv.DataSource = ls;
         }
 
         public void loaddatagridviewctkm(List<eCTKhuyenMai> ctkm, DataGridView dtgvctkm) // ctkm
@@ -367,17 +427,17 @@ namespace SRPHR_Solution.CongNoPKH
 
              if (pq.Substring(3, 1) == "1")
              {
-                 btninbansikh.Enabled = true;
+                 //btninbansikh.Enabled = true;
                  //btnindnnk.Enabled = true;
                  //btnindnxk.Enabled = true;
                  //btninmuahangncc.Enabled = true;
              }
              else
              {
-                 btninbansikh.Enabled = false;
-                 //btnindnnk.Enabled = false;
-                // btnindnxk.Enabled = false;
-                 btninmuahangncc.Enabled = false;
+                // btninbansikh.Enabled = false;
+                // //btnindnnk.Enabled = false;
+                //// btnindnxk.Enabled = false;
+                // btninmuahangncc.Enabled = false;
              }
 
 
@@ -464,5 +524,240 @@ namespace SRPHR_Solution.CongNoPKH
         {
 
         }
+
+        private void btnthembansikh_Click(object sender, EventArgs e)
+        {
+            string nv = txtmanhanvienbansikh.Text;
+            string kh = txtmakhachhang.Text;
+
+            eHDBanSi y = new eHDBanSi()
+            {
+                maHD = txtmahopdongbansikh.Text,
+                ngayLap = dtpngaylaphdbansikh.Text,
+                maKH = kh,
+                maNV = nv,
+                ghiChu = txtghichubansikh.Text
+
+            };
+
+            int kq = blbs.themhoadon(y);
+
+            if (kq == 1)
+
+                MessageBox.Show("them thanh cong");
+
+
+            else
+
+                MessageBox.Show("Thêm Thất Bại!Kiểm Tra Chùng Mã.");
+            dgvhdbansikh.DataSource = blbs.getallhd();
+        }
+
+        private void dgvhdbansikh_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dgvhdbansikh.SelectedRows != null && dgvhdbansikh.SelectedRows.Count > 0)
+            {
+                if (e.Row.Cells["maHD"].Value != null)
+                {
+                    txtmahopdongbansikh.Text = e.Row.Cells["maHD"].Value.ToString();
+                    string ma = e.Row.Cells["maHD"].Value.ToString();
+                    cthdbs = blbs.GetallctHDbansi(ma);
+                    laydulieuvaogridview1(dataGridView1, cthdbs);
+
+                }
+
+                if (e.Row.Cells["maNV"].Value != null)
+                {
+                    txtmanhanvienbansikh.Text = e.Row.Cells["maNV"].Value.ToString();
+                }
+                if (e.Row.Cells["ghiChu"].Value != null)
+                {
+                    txtghichubansikh.Text = e.Row.Cells["ghiChu"].Value.ToString();
+                }
+
+
+
+                if (e.Row.Cells["maKH"].Value != null)
+                {
+                    txtmakhachhang.Text = e.Row.Cells["maKH"].Value.ToString();
+                }
+
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            eCTHDBanSi n = new eCTHDBanSi()
+            {
+                maHD = txtmahopdongbansikh.Text,
+                maSP = txtmasanphambansikh.Text,
+                soluong = Convert.ToInt16(txtsoluongbansikh.Text),
+                dongiaBan = txtdongiaban.Text,
+                ghiChu = txtghichubansikh.Text
+            };
+            int kq1 = blbs.themcthoadon(n);
+            if (kq1 == 1 || kq1 != 1)
+
+                MessageBox.Show("them thanh cong");
+            dataGridView1.DataSource = blbs.GetallctHDbansi1();
+
+        }
+
+        private void btnsuabansikh_Click(object sender, EventArgs e)
+        {
+
+            int kq = blbs.capnhat(txtmahopdongbansikh.Text, dtpngaylaphdbansikh.Text, txtmakhachhang.Text, txtmanhanvienbansikh.Text, txtghichubansikh.Text);
+
+            if (kq == 1)
+            {
+
+                dgvhdbansikh.DataSource = blbs.getallhd();
+                MessageBox.Show("Sua xong!!!");
+            }
+            else
+            {
+                MessageBox.Show("sửa thât bại.Không được sửa mã dv!");
+            }
+        }
+
+        private void btntimbansikh_Click(object sender, EventArgs e)
+        {
+
+            string hd = txttimmahdbansikh.Text;
+            string nv = txttimmahdbansikh.Text;
+            string kh = txttimmahdbansikh.Text;
+            hdbs = blbs.Getall(hd, nv, kh);
+            dgvhdbansikh.DataSource = hdbs;
+
+        }
+
+        private void btnthemmuahangncc_Click_1(object sender, EventArgs e)
+        {
+
+            eHDMuaHangNCC y = new eHDMuaHangNCC()
+            {
+                maHD = txtmahdmuahangncc.Text,
+                ngayLap = dtpngaylaphdmuahangncc.Text,
+                maNCC = txtmanhacungcap.Text,
+                maNV = txtmanhanvienmuahangncc.Text,
+
+                noidung = txtghichumuahangncc.Text,
+                tenHD = textBox1.Text
+            };
+
+            int kq = mhbll.themhd(y);
+
+            if (kq == 1)
+
+                MessageBox.Show("them thanh cong");
+
+
+            else
+                MessageBox.Show("Thêm Thất Bại!Kiểm Tra Chùng Mã.");
+            dgvhdmuahangncc.DataSource = mhbll.getallHDMH();
+        }
+        public void laydulieuvaogridview12(DataGridView tv, List<eHDMuaHangNCC> ls)
+        {
+
+
+
+            tv.DataSource = ls;
+        }
+        public void laydulieuvaogridview121(DataGridView tv, List<eCTMuaHangNCC> ls)
+        {
+
+
+
+            tv.DataSource = ls;
+        }
+
+        private void dgvhdmuahangncc_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dgvhdmuahangncc.SelectedRows != null && dgvhdmuahangncc.SelectedRows.Count > 0)
+            {
+                if (e.Row.Cells["maHD"].Value != null)
+                {
+                    txtmahdmuahangncc.Text = e.Row.Cells["maHD"].Value.ToString();
+                    string ma = e.Row.Cells["maHD"].Value.ToString();
+                    ctmh = mhbll.getallctMuahangNCC(ma);
+                    laydulieuvaogridview121(dataGridView2, ctmh);
+
+                }
+
+                if (e.Row.Cells["maNV"].Value != null)
+                {
+                    txtmanhanvienmuahangncc.Text = e.Row.Cells["maNV"].Value.ToString();
+                }
+                if (e.Row.Cells["noidung"].Value != null)
+                {
+                    txtghichumuahangncc.Text = e.Row.Cells["noidung"].Value.ToString();
+                }
+
+                if (e.Row.Cells["tenHD"].Value != null)
+                {
+                    textBox1.Text = e.Row.Cells["tenHD"].Value.ToString();
+                }
+
+                if (e.Row.Cells["maNCC"].Value != null)
+                {
+                    txtmanhacungcap.Text = e.Row.Cells["maNCC"].Value.ToString();
+                }
+
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            eCTMuaHangNCC d1 = new eCTMuaHangNCC()
+            {
+                maSP = Convert.ToInt32(txtmasanphammuahangncc.Text),
+                maHD = txtmahdmuahangncc.Text,
+                soluong = Convert.ToInt32(txtsoluongmuahangncc.Text),
+                dongiaMua = Convert.ToString(txtdongiamua.Text),
+                ghiChu = textBox1.Text,
+
+
+            };
+            int kq1 = mhbll.themcthoadon(d1);
+            if (kq1 == 1 || kq1 != 1)
+
+                MessageBox.Show("them thanh cong");
+            dataGridView2.DataSource = mhbll.getallctMuahangNCC();
+            // dgvhdbansikh.DataSource = blbs.getallhd();
+            //dgvhdbansikh.DataSource = laydulieuvaogridview(dgvhdbansikh, cthdbs, hdbs);
+            //   }
+        }
+
+        private void btntimmahdmuahangncc_Click(object sender, EventArgs e)
+        {
+            string hd = txttimmahdmuahangncc.Text;
+            string nv = txttimmahdmuahangncc.Text;
+            string ncc = txttimmahdmuahangncc.Text;
+            hdmd = mhbll.Getall1(hd, nv, ncc);
+            dgvhdmuahangncc.DataSource = hdmd;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string a = txtMaKH.Text;
+            double kq = cnkh.tinhcongnoKH(a);
+            MessageBox.Show("So tien khach hang con thieu" + kq.ToString());
+        }
+
+        private void tabPage9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnxuatcnncc_Click(object sender, EventArgs e)
+        {
+            string ab = txtMaNCC.Text;
+            double kq = cc.tinhcongnoncc(ab);
+            MessageBox.Show("So tien chua thanh toan voi nha cung cap" + kq.ToString());
+        }
+
     }
 }

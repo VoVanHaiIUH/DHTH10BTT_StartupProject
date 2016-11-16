@@ -21,6 +21,11 @@ namespace Entities.CongNoPKH
             this.dongiaMua = dongiaMua;
             this.ghiChu = ghiChu;
         }
+
+        public eCTMuaHangNCC()
+        {
+            // TODO: Complete member initialization
+        }
         public override int GetHashCode()
         {
             return maHD.GetHashCode();

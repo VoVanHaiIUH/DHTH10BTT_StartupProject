@@ -21,6 +21,11 @@ namespace Entities.CongNoPKH
             this.dongiaBan = dongiaBan;
             this.ghiChu = ghiChu;
         }
+
+        public eCTHDBanSi()
+        {
+            // TODO: Complete member initialization
+        }
         public override int GetHashCode()
         {
             return maHD.GetHashCode();
