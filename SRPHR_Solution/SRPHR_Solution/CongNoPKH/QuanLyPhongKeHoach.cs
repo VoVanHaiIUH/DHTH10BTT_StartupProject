@@ -117,6 +117,12 @@ namespace SRPHR_Solution.CongNoPKH
             dtgvpdnxk.DataSource = pdnxk;
 
         }
+        public void loaddatagridviewq(List<eCTPhieuDNNK> ctpdnnk, DataGridView dtgv)
+        {
+            dtgv.DataSource = ctpdnnk;
+        }
+
+
 
         public void loaddatagridviewkm(List<eKhuyenMai> km, DataGridView dtgv) //km
         {
@@ -860,5 +866,103 @@ namespace SRPHR_Solution.CongNoPKH
 
             }
         }
+
+        private void dgvCTPDNNK_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPDNNK_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPDNXK_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPDNNK_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dgvPDNNK.SelectedRows != null && dgvPDNNK.SelectedRows.Count > 0)
+            {
+                if (e.Row.Cells["soPDNNK"].Value != null)
+                {
+                    txtsophieu.Text = e.Row.Cells["soPDNNK"].Value.ToString();
+                    string ma = e.Row.Cells["soPDNNK"].Value.ToString();
+                    ctpdnnk = pdnnkbll.getallctpnnk();
+                    loaddatagridviewq(ctpdnnk, dgvCTPDNNK);
+
+                }
+
+                if (e.Row.Cells["maNV"].Value != null)
+                {
+                    txtMaNV.Text = e.Row.Cells["maNV"].Value.ToString();
+                }
+
+
+
+                if (e.Row.Cells["maKho"].Value != null)
+                {
+                    cmbMakho.Text = e.Row.Cells["maKho"].Value.ToString();
+                }
+
+
+            }
+        }
+
+        private void btnthemdnnk_Click(object sender, EventArgs e)
+        {
+            ePhieuDNNK p = new ePhieuDNNK();
+            p.soPDNNK = txtsophieu.Text;
+            p.ngayLapphieu = Convert.ToString(dtpngaylapphieudnnk.Text);
+            p.maNV = txtMaNV.Text;
+
+            p.maKho = cmbMakho.Text;
+
+            int m = pdnnkbll.themPDNNK(p);
+            if (m == 1)
+                MessageBox.Show("Thêm thành công");
+            else
+                MessageBox.Show("Thêm thất bại");
+
+            dgvPDNNK.DataSource = pdnnkbll.getAllPDNNK();
+            btnsuadnnk.Enabled = true;
+        }
+
+        private void btnsuadnnk_Click(object sender, EventArgs e)
+        {
+            string ma = txtsophieu.Text;
+            int kq = pdnnkbll.Update(ma, dtpngaylapphieudnnk.Text, txtMaNV.Text, cmbMakho.Text);
+
+            if (kq == 1)
+            {
+                dgvPDNNK.DataSource = pdnnkbll.getAllPDNNK();
+                MessageBox.Show("Sửa xong!!!");
+            }
+            else
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+
+        }
+
+        private void btnThemCT_Click(object sender, EventArgs e)
+        {
+            eCTPhieuDNNK n = new eCTPhieuDNNK()
+            {
+                soPDNXK = txtsophieu.Text,
+                maSP = txtMSP.Text,
+                soluong = Convert.ToInt32(txtsoluong.Text),
+                Ghichu = txtghichuphieudnnk.Text
+
+            };
+            int kq1 = pdnnkbll.themctpdnnk(n);
+            if (kq1 == 1 || kq1 != 1)
+
+                MessageBox.Show("Thêm thành công");
+            dgvCTPDNNK.DataSource = pdnnkbll.getallctpnnk();
+        }
+        }
     }
-}
+

@@ -1060,10 +1060,11 @@
             // dgvCTPDNNK
             // 
             this.dgvCTPDNNK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCTPDNNK.Location = new System.Drawing.Point(313, 93);
+            this.dgvCTPDNNK.Location = new System.Drawing.Point(659, 89);
             this.dgvCTPDNNK.Name = "dgvCTPDNNK";
             this.dgvCTPDNNK.Size = new System.Drawing.Size(319, 248);
             this.dgvCTPDNNK.TabIndex = 67;
+            this.dgvCTPDNNK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTPDNNK_CellContentClick);
             // 
             // txtMSP
             // 
@@ -1186,6 +1187,7 @@
             this.btnThemCT.TabIndex = 52;
             this.btnThemCT.Text = "Thêm chi tiết";
             this.btnThemCT.UseVisualStyleBackColor = true;
+            this.btnThemCT.Click += new System.EventHandler(this.btnThemCT_Click);
             // 
             // btnsuadnnk
             // 
@@ -1195,6 +1197,7 @@
             this.btnsuadnnk.TabIndex = 51;
             this.btnsuadnnk.Text = "Sửa";
             this.btnsuadnnk.UseVisualStyleBackColor = true;
+            this.btnsuadnnk.Click += new System.EventHandler(this.btnsuadnnk_Click);
             // 
             // btnthemdnnk
             // 
@@ -1204,14 +1207,17 @@
             this.btnthemdnnk.TabIndex = 50;
             this.btnthemdnnk.Text = "Thêm";
             this.btnthemdnnk.UseVisualStyleBackColor = true;
+            this.btnthemdnnk.Click += new System.EventHandler(this.btnthemdnnk_Click);
             // 
             // dgvPDNNK
             // 
             this.dgvPDNNK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPDNNK.Location = new System.Drawing.Point(638, 93);
+            this.dgvPDNNK.Location = new System.Drawing.Point(334, 89);
             this.dgvPDNNK.Name = "dgvPDNNK";
             this.dgvPDNNK.Size = new System.Drawing.Size(319, 248);
             this.dgvPDNNK.TabIndex = 49;
+            this.dgvPDNNK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPDNNK_CellContentClick);
+            this.dgvPDNNK.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvPDNNK_RowStateChanged);
             // 
             // tabPage7
             // 
@@ -1420,6 +1426,7 @@
             this.dgvPDNXK.Name = "dgvPDNXK";
             this.dgvPDNXK.Size = new System.Drawing.Size(296, 272);
             this.dgvPDNXK.TabIndex = 68;
+            this.dgvPDNXK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPDNXK_CellContentClick);
             this.dgvPDNXK.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvPDNXK_RowStateChanged);
             // 
             // tabPage10
