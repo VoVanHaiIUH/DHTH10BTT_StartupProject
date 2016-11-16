@@ -1249,6 +1249,7 @@
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Phiếu đề nghị xuất kho";
             this.tabPage7.UseVisualStyleBackColor = true;
+            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
             // 
             // cmbMKho
             // 

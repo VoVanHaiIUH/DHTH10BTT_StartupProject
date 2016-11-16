@@ -963,6 +963,11 @@ namespace SRPHR_Solution.CongNoPKH
                 MessageBox.Show("Thêm thành công");
             dgvCTPDNNK.DataSource = pdnnkbll.getallctpnnk();
         }
+
+        private void tabPage7_Click(object sender, EventArgs e)
+        {
+
+        }
         }
     }
 
