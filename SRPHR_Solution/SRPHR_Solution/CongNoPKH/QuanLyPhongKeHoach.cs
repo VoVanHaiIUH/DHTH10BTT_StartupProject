@@ -18,6 +18,18 @@ namespace SRPHR_Solution.CongNoPKH
         public QuanLyPhongKeHoach()
         {
             InitializeComponent();
+            pdnnkbll = new PhieuDNNK_BLL();
+            pdnnk = new List<ePhieuDNNK>();
+            ctpdnnk = new List<eCTPhieuDNNK>();
+            pdnnk = pdnnkbll.getAllPDNNK();
+            loaddatagridview(pdnnk, dgvPDNNK);
+            pdnxkbll = new PhieuDNXK_BLL();
+            pdnxk = new List<ePhieuDNXK>();
+            ctpdnxk = new List<eCTPhieuDNXK>();
+
+            pdnxk = pdnxkbll.getAllPDNXK();
+            loaddatagridviewPDNXK(pdnxk, dgvPDNXK);
+
             kmbll = new KhuyenMai_BLL();
             ctkm = new List<eCTKhuyenMai>();
             ctkm = kmbll.getAllCTKM();
@@ -34,6 +46,13 @@ namespace SRPHR_Solution.CongNoPKH
             loaddatagridviewsp(sp, dgvSanPham);
             EnableButton(true);
         }
+
+        PhieuDNNK_BLL pdnnkbll;
+        List<eCTPhieuDNNK> ctpdnnk;
+        PhieuDNXK_BLL pdnxkbll;
+        List<eCTPhieuDNXK> ctpdnxk;
+        List<ePhieuDNNK> pdnnk;
+        List<ePhieuDNXK> pdnxk;
         KhuyenMai_BLL kmbll;
         List<eCTKhuyenMai> ctkm;
         List<eKhuyenMai> km;
@@ -52,6 +71,17 @@ namespace SRPHR_Solution.CongNoPKH
         {
 
         }
+        public void loaddatagridview(List<ePhieuDNNK> dnnk, DataGridView dtgv)
+        {
+            dtgv.DataSource = dnnk;
+        }
+        public void loaddatagridviewPDNXK(List<ePhieuDNXK> pdnxk, DataGridView dtgvpdnxk)
+        {
+
+            dtgvpdnxk.DataSource = pdnxk;
+
+        }
+
         public void loaddatagridviewkm(List<eKhuyenMai> km, DataGridView dtgv) //km
         {
             dtgv.DataSource = km;
@@ -338,15 +368,15 @@ namespace SRPHR_Solution.CongNoPKH
              if (pq.Substring(3, 1) == "1")
              {
                  btninbansikh.Enabled = true;
-                 btnindnnk.Enabled = true;
-                 btnindnxk.Enabled = true;
-                 btninmuahangncc.Enabled = true;
+                 //btnindnnk.Enabled = true;
+                 //btnindnxk.Enabled = true;
+                 //btninmuahangncc.Enabled = true;
              }
              else
              {
                  btninbansikh.Enabled = false;
-                 btnindnnk.Enabled = false;
-                 btnindnxk.Enabled = false;
+                 //btnindnnk.Enabled = false;
+                // btnindnxk.Enabled = false;
                  btninmuahangncc.Enabled = false;
              }
 
@@ -423,6 +453,11 @@ namespace SRPHR_Solution.CongNoPKH
                 txtphanTramKM.Text = e.Row.Cells["phantramKM"].Value.ToString();
                 txtghiChukmct.Text = e.Row.Cells["ghiChu"].Value.ToString();
             }
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

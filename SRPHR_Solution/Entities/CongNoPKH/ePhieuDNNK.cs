@@ -12,6 +12,14 @@ namespace Entities.CongNoPKH
         public string maNV { get; set; }
         public string ngayLapphieu { get; set; }
         public string maKho { get; set; }
+        public ePhieuDNNK()
+        {
+            this.soPDNNK = "";
+            this.maNV = "";
+            this.ngayLapphieu = "";
+            this.maKho = "";
+
+        }
         public ePhieuDNNK(string soPDNNK, string maNV, string ngayLapphieu, string maKho)
         {
             this.soPDNNK = soPDNNK;
@@ -30,5 +38,3 @@ namespace Entities.CongNoPKH
         }
     }
 }
-
-

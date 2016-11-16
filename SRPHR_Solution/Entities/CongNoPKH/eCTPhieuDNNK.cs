@@ -12,6 +12,13 @@ namespace Entities.CongNoPKH
         public string maSP { get; set; }
         public int soluong { get; set; }
         public string Ghichu { get; set; }
+        public eCTPhieuDNNK()
+        {
+            this.soPDNXK = "";
+            this.maSP = "";
+            this.soluong = 0;
+            this.Ghichu = "";
+        }
         public eCTPhieuDNNK(string soPDNXK, string maSP, int soluong, string Ghichu)
         {
             this.soPDNXK = soPDNXK;
@@ -30,6 +37,3 @@ namespace Entities.CongNoPKH
         }
     }
 }
-
-
- 
