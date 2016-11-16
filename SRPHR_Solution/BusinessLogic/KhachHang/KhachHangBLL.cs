@@ -46,7 +46,7 @@ namespace BusinessLogic.KhachHang
             {
                 Tbl_KhachHang newKHRecord =DB.Tbl_KhachHangs.Where(x=>x.maKH==kh.Makh).FirstOrDefault() ;
                 if (newKHRecord != null)
-                    return 0;///trường hợp trùng
+                    //return 0;///trường hợp trùng
 
                 newKHRecord = new Tbl_KhachHang();
                 newKHRecord.maKH = kh.Makh;

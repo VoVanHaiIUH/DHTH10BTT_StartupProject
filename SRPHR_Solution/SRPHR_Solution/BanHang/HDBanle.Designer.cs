@@ -71,6 +71,7 @@
             this.btnsua.TabIndex = 18;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnthem
             // 
@@ -80,6 +81,7 @@
             this.btnthem.TabIndex = 21;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnxoa
             // 
@@ -89,6 +91,7 @@
             this.btnxoa.TabIndex = 19;
             this.btnxoa.Text = "Ẩn Trạng Thái";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // groupBox1
             // 
@@ -206,6 +209,7 @@
             this.btnxem.TabIndex = 21;
             this.btnxem.Text = "Xem Chi Tiết HD Bán Lẻ";
             this.btnxem.UseVisualStyleBackColor = true;
+            this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
             // btnquaylai
             // 
@@ -215,6 +219,7 @@
             this.btnquaylai.TabIndex = 22;
             this.btnquaylai.Text = "Quay Lại ";
             this.btnquaylai.UseVisualStyleBackColor = true;
+            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
             // 
             // btnthoat
             // 
@@ -224,6 +229,7 @@
             this.btnthoat.TabIndex = 18;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // groupBox2
             // 
@@ -251,7 +257,6 @@
             this.Controls.Add(this.DGViewHDBL);
             this.Name = "FormHDBanle";
             this.Text = "HDBanle";
-         
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewHDBL)).EndInit();

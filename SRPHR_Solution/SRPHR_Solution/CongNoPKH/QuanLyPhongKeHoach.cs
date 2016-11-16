@@ -418,7 +418,7 @@ namespace SRPHR_Solution.CongNoPKH
 
         private void btnthemctkm_Click(object sender, EventArgs e)
         {
-            eCTKhuyenMai m = new eCTKhuyenMai();
+           /* eCTKhuyenMai m = new eCTKhuyenMai();
             m.msDotKM = cmbmsDotKm.Text;
             m.ghiChu = txtghiChukmct.Text;
             m.maSP = txtmasanpham.Text;
@@ -426,12 +426,12 @@ namespace SRPHR_Solution.CongNoPKH
             int k = kmbll.themCTKM(m);
             MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             dgvkhuyenmai.DataSource = kmbll.getAllKM();
-            dgvctkhuyenmai.DataSource = kmbll.getAllCTKM();
+            dgvctkhuyenmai.DataSource = kmbll.getAllCTKM();*/
         }
 
         private void btnsuaCTKM_Click(object sender, EventArgs e)
         {
-            string msdkm = txtMaSoDotKhuyenMai.Text;
+           /* string msdkm = txtMaSoDotKhuyenMai.Text;
             if (msdkm != null)
             {
                 kmbll.UpDateCTKhuyenMai(txtMaSoDotKhuyenMai.Text, txtmasanpham.Text, Convert.ToDouble(txtphanTramKM.Text), txtghiChukmct.Text);
@@ -439,12 +439,12 @@ namespace SRPHR_Solution.CongNoPKH
                 dgvctkhuyenmai.DataSource = kmbll.getAllCTKM();
 
             }
-            else { MessageBox.Show("bạn chưa chọn vào sản phẩm cần sửa thông tin!"); }
+            else { MessageBox.Show("bạn chưa chọn vào sản phẩm cần sửa thông tin!"); }*/
         }
 
         private void dgvctkhuyenmai_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
-            if (dgvctkhuyenmai.SelectedRows.Count > 0)
+           /* if (dgvctkhuyenmai.SelectedRows.Count > 0)
             {
 
                 eCTKhuyenMai ectkm = (eCTKhuyenMai)bds.Current;
@@ -452,7 +452,7 @@ namespace SRPHR_Solution.CongNoPKH
                 txtmasanpham.Text = e.Row.Cells["maSP"].Value.ToString();
                 txtphanTramKM.Text = e.Row.Cells["phantramKM"].Value.ToString();
                 txtghiChukmct.Text = e.Row.Cells["ghiChu"].Value.ToString();
-            }
+            }*/
         }
 
         private void tabPage6_Click(object sender, EventArgs e)
