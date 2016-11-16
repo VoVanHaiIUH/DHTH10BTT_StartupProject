@@ -98,15 +98,5 @@ namespace SRPHR_Solution.KhachHang
 
         }
 
-        /* private void btntimbansikh_Click(object sender, EventArgs e)
-         {
-             string hd = txttimmahdbansikh.Text;
-             string nv = txttimmahdbansikh.Text;
-             string kh = txttimmahdbansikh.Text;
-             hdbs = blbs.Getall(hd, nv, kh);
-             dgvhdbansikh.DataSource = hdbs;
-
-
-         }*/
     }
 }
