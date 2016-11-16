@@ -158,10 +158,10 @@ namespace Entities.NhanSu
         #region constructor
         public ChucVu(string maCV, string tenCV, decimal heSo, string ghiChu)
         {
-            maCV = MaCV;
-            tenCV = TenCV;
-            heSo = HeSo;
-            ghiChu = GhiChu;
+            MaCV = maCV;
+            TenCV = tenCV;
+            HeSo = heSo;
+            GhiChu = ghiChu;
         }
 
         public ChucVu()

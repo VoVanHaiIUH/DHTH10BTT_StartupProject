@@ -38,6 +38,10 @@ namespace SRPHR_Solution.NhanSu
             txtNgayCapCMND.Enabled = status;
             txtEmail.Enabled = status;
             txtGioitinh.Enabled = status;
+            txtSoDT.Enabled = status;
+            txtDiaChi.Enabled = status;
+            txtTrangThai.Enabled = status;
+
             dateTimePickerNgaySinh.Enabled = status;
             dateTimePickerNgayVaoLam.Enabled = status;
             btnSave.Enabled = status;
@@ -55,6 +59,9 @@ namespace SRPHR_Solution.NhanSu
             txtNgayCapCMND.Clear();
             txtEmail.Clear();
             txtGioitinh.Clear();
+            txtSoDT.Clear();
+            txtDiaChi.Clear();
+            txtTrangThai.Clear();
         }
 
 
@@ -68,8 +75,12 @@ namespace SRPHR_Solution.NhanSu
             tempNhanVien.NgayCapCMND = Convert.ToDateTime(txtNgayCapCMND.Text);
             tempNhanVien.GioiTinh = txtGioitinh.Text;
             tempNhanVien.Email = txtEmail.Text;
-            tempNhanVien.NgaySinh = Convert.ToDateTime(dateTimePickerNgaySinh);
-            tempNhanVien.NgayVaoLam = Convert.ToDateTime(dateTimePickerNgayVaoLam);
+            tempNhanVien.NgaySinh = Convert.ToDateTime(dateTimePickerNgaySinh.Value);
+            tempNhanVien.NgayVaoLam = Convert.ToDateTime(dateTimePickerNgayVaoLam.Value);
+
+            tempNhanVien.SDT = txtSoDT.Text;
+            tempNhanVien.DiaChi = txtDiaChi.Text;
+            tempNhanVien.TrangThai = Int16.Parse(txtTrangThai.Text);
         }
 
         #endregion        int flag = 0; // thêm=0 sửa=1
@@ -79,11 +90,16 @@ namespace SRPHR_Solution.NhanSu
         {
             txtMaNV.Text = DGViewNhanVien.CurrentRow.Cells[0].Value.ToString();
             txtHoTen.Text = DGViewNhanVien.CurrentRow.Cells[1].Value.ToString();
-            //DTPickerBirthDay.Text = DGViewNhanVien.CurrentRow.Cells[2].Value.ToString();
-            txtSoCMND.Text = DGViewNhanVien.CurrentRow.Cells[2].Value.ToString();
-
-            txtGioitinh.Text = DGViewNhanVien.CurrentRow.Cells[3].Value.ToString();
-            dateTimePickerNgaySinh.Text = DGViewNhanVien.CurrentRow.Cells[4].Value.ToString();
+            dateTimePickerNgaySinh.Text = DGViewNhanVien.CurrentRow.Cells[2].Value.ToString();
+            dateTimePickerNgayVaoLam.Text = DGViewNhanVien.CurrentRow.Cells[3].Value.ToString();
+            txtSoCMND.Text = DGViewNhanVien.CurrentRow.Cells[4].Value.ToString();
+            txtNgayCapCMND.Text = DGViewNhanVien.CurrentRow.Cells[5].Value.ToString();
+            txtGioitinh.Text = DGViewNhanVien.CurrentRow.Cells[6].Value.ToString();
+            txtEmail.Text = DGViewNhanVien.CurrentRow.Cells[7].Value.ToString();
+            //txtSoDT.Text = DGViewNhanVien.CurrentRow.Cells[8].Value.ToString();
+            txtDiaChi.Text = DGViewNhanVien.CurrentRow.Cells[9].Value.ToString();
+            txtTrangThai.Text = DGViewNhanVien.CurrentRow.Cells[10].Value.ToString();
+            
         }
         int flag = 0;
         #region Button Click Events

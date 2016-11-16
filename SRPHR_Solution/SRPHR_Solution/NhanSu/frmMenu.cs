@@ -62,5 +62,26 @@ namespace SRPHR_Solution.NhanSu
             frmLS.MdiParent = this;
             frmLS.Show();
         }
+
+        private void chứcVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyChucVu frmCV = new frmQuanLyChucVu();
+            frmCV.MdiParent = this;
+            frmCV.Show();
+        }
+
+        private void kỷLuậtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmKyLuat frmKL = new FrmKyLuat();
+            frmKL.MdiParent = this;
+            frmKL.Show();
+        }
+
+        private void đàoTạoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDaoTao frmDT = new FrmDaoTao();
+            frmDT.MdiParent = this;
+            frmDT.Show();
+        }
     }
 }

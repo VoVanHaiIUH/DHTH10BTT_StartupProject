@@ -62,7 +62,7 @@ namespace SRPHR_Solution.NhanSu
             tempChucVu = new ChucVu();
             tempChucVu.MaCV = txtMaCV.Text;
             tempChucVu.TenCV = txtTenCV.Text;
-            tempChucVu.HeSo =Convert.ToDecimal( txtHeSo.Text);
+            tempChucVu.HeSo =Convert.ToDecimal(txtHeSo.Text);
             tempChucVu.GhiChu = txtGhiChu.Text;
         }
         
@@ -73,10 +73,9 @@ namespace SRPHR_Solution.NhanSu
         {
             txtMaCV.Text = DGViewChucVu.CurrentRow.Cells[0].Value.ToString();
             txtTenCV.Text = DGViewChucVu.CurrentRow.Cells[1].Value.ToString();
-            //DTPickerBirthDay.Text = DGViewChucVu.CurrentRow.Cells[2].Value.ToString();
             txtHeSo.Text = DGViewChucVu.CurrentRow.Cells[2].Value.ToString();
 
-            txtGhiChu.Text = DGViewChucVu.CurrentRow.Cells[4].Value.ToString();
+            txtGhiChu.Text = DGViewChucVu.CurrentRow.Cells[3].Value.ToString();
         }
         int flag = 0;
         #region Button Click Events
@@ -120,16 +119,22 @@ namespace SRPHR_Solution.NhanSu
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hoàng hoá " + txtTenCV.Text + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DialogResult.Yes == r)
+            int hideIndex = -1;
+            foreach (DataGridViewRow dr in DGViewChucVu.Rows)
             {
-                passingData();
-                if (ChucVuBLL.Delete(tempChucVu.MaCV))
-                    MessageBox.Show("Xoá thành công");
-                else
-                    MessageBox.Show("Xoá thất bại");
+                if (dr.Cells[0].Value.ToString() == txtMaCV.Text)
+                {
+                    hideIndex = dr.Index;
+                }
             }
-            frmQLChucVu_Load(sender, e);
+
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[DGViewChucVu.DataSource];
+            currencyManager1.SuspendBinding();
+
+            DGViewChucVu.Rows[hideIndex].Visible = false;
+
+            currencyManager1.ResumeBinding();
+            //frmQLChucVu_Load(sender, e);
         }
         private void btnExit_Click(object sender, EventArgs e)
         {

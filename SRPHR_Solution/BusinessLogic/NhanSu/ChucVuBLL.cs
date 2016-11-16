@@ -11,7 +11,7 @@ namespace BusinessLogic.NhanSu
     public class ChucVuBLL
     {
         //SRPHRDataContext DB = new SRPHRDataContext();
-        DataClasses1DataContext DB = new DataClasses1DataContext();
+        SRPHR1DataContext DB = new SRPHR1DataContext();
         public List<ChucVu> GetAllChucVu()
         {
             List<ChucVu> chucVus = new List<ChucVu>();

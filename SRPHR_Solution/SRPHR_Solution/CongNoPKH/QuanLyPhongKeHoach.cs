@@ -85,10 +85,7 @@ namespace SRPHR_Solution.CongNoPKH
 
         }
 
-        private void dgvkhuyenmai_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void btntimsp_Click(object sender, EventArgs e)
         {

@@ -12,7 +12,7 @@ namespace BusinessLogic.NhanSu
     {
         
         //SRPHRDataContext DB = new SRPHRDataContext();
-        DataClasses1DataContext DB = new DataClasses1DataContext();
+        SRPHR1DataContext DB = new SRPHR1DataContext();
         public bool Add(CTThamGiaDTNV newCTTGDT)
         {
             try

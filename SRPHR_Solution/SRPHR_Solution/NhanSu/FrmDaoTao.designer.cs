@@ -65,7 +65,7 @@
             this.lblTenKhoa.Location = new System.Drawing.Point(6, 51);
             this.lblTenKhoa.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTenKhoa.Name = "lblTenKhoa";
-            this.lblTenKhoa.Size = new System.Drawing.Size(63, 15);
+            this.lblTenKhoa.Size = new System.Drawing.Size(64, 15);
             this.lblTenKhoa.TabIndex = 8;
             this.lblTenKhoa.Text = "Tên khoa :";
             // 
@@ -227,7 +227,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -259,6 +259,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -274,6 +275,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -289,6 +291,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -305,6 +308,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -321,6 +325,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -335,6 +340,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Ẩn trạng thái";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -368,6 +374,7 @@
             this.DGViewDaoTao.Size = new System.Drawing.Size(1055, 335);
             this.DGViewDaoTao.TabIndex = 0;
             this.DGViewDaoTao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGViewDaoTao_CellContentClick);
+            this.DGViewDaoTao.SelectionChanged += new System.EventHandler(this.DGViewDaoTao_SelectionChanged);
             // 
             // FrmDaoTao
             // 
@@ -378,7 +385,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmDaoTao";
             this.Text = "FrmDaoTao";
-            this.Load += new System.EventHandler(this.FrmDaoTao_Load);
+            this.Load += new System.EventHandler(this.frmDaoTao_Load);
             this.grpBoxStudentInfo.ResumeLayout(false);
             this.grpBoxStudentInfo.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

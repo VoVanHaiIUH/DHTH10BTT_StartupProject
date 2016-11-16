@@ -13,7 +13,7 @@ namespace BusinessLogic.NhanSu
     public class DaoTaoBLL
     {
         //SRPHRDataContext DB = new SRPHRDataContext();
-        DataClasses1DataContext DB = new DataClasses1DataContext();
+        SRPHR1DataContext DB = new SRPHR1DataContext();
         public List<DaoTao> GetAllDaoTao()
         {
             List<DaoTao> daoTaos = new List<DaoTao>();

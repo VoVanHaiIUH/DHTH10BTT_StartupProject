@@ -69,8 +69,8 @@ namespace SRPHR_Solution.NhanSu
             tempDaoTao.Diadiem =txtDiaDiem.Text;
             tempDaoTao.HinhThucDT = txtHinhthucdaotao.Text;
             tempDaoTao.Chiphi = Convert.ToDecimal(txtChiphi.Text);
-            tempDaoTao.NgayBD = Convert.ToDateTime(dateTimePickerNgaybatdau);
-            tempDaoTao.NgayKT = Convert.ToDateTime(dateTimePickerNgayketthuc);
+            tempDaoTao.NgayBD = Convert.ToDateTime(dateTimePickerNgaybatdau.Value);
+            tempDaoTao.NgayKT = Convert.ToDateTime(dateTimePickerNgayketthuc.Value);
 
         }
 
@@ -128,16 +128,33 @@ namespace SRPHR_Solution.NhanSu
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hoàng hoá " + txtTenKhoa.Text + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DialogResult.Yes == r)
+            //DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hoàng hoá " + txtTenKhoa.Text + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (DialogResult.Yes == r)
+            //{
+            //    passingData();
+            //    if (DaoTaoBLL.Delete(tempDaoTao.MaKhoaDT))
+            //        MessageBox.Show("Xoá thành công");
+            //    else
+            //        MessageBox.Show("Xoá thất bại");
+            //}
+            //frmDaoTao_Load(sender, e);
+
+
+            int hideIndex = 0;
+            foreach (DataGridViewRow dr in DGViewDaoTao.Rows)
             {
-                passingData();
-                if (DaoTaoBLL.Delete(tempDaoTao.MaKhoaDT))
-                    MessageBox.Show("Xoá thành công");
-                else
-                    MessageBox.Show("Xoá thất bại");
+                if (dr.Cells[0].Value.ToString() == txtMakhoa.Text)
+                {
+                    hideIndex = dr.Index;
+                }
             }
-            frmDaoTao_Load(sender, e);
+
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[DGViewDaoTao.DataSource];
+            currencyManager1.SuspendBinding();
+
+            DGViewDaoTao.Rows[hideIndex].Visible = false;
+
+            currencyManager1.ResumeBinding();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -148,11 +165,7 @@ namespace SRPHR_Solution.NhanSu
 
         #endregion
 
-        private void FrmDaoTao_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void grpBoxStudentInfo_Enter(object sender, EventArgs e)
         {
 

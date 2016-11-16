@@ -182,6 +182,7 @@ namespace SRPHR_Solution.NhanSu
             cbbHinhThucKyLuat.Enabled = false;
             cbbMaKL.Enabled = false;
             cbbMucDo.Enabled = false;
+            txtMaNV.Enabled = false;          
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
