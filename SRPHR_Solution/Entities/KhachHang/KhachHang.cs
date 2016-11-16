@@ -11,12 +11,10 @@ namespace Entities.KhachHang
 
         //record.maKH, record.tenKH, record.diachi,record.email, record.gioitinh, record.ngaycapCMND, 
         //           record.ngaysinh, record.nghenghiep, record.sodienthoai, record.soCMND, record.trangthai
-        private string makh, tenkh, diachi, email, socmnn, sodienthoai, nghenghiep, gioitinh;
+        private string makh, tenkh, diachi, email, socmnd, sodienthoai, nghenghiep, gioitinh;
         private int trangthai;
-        private DateTime ngaycap, ngaysinh;
-        private DateTime? ngaysinh1;
-        private string soCMND;
-        private DateTime? ngaycapCMND;
+        private DateTime ngaycapcmnd, ngaysinh;
+       
 
         public string Makh
         {
@@ -83,16 +81,16 @@ namespace Entities.KhachHang
             }
         }
 
-        public string Socmnn
+        public string Socmnd
         {
             get
             {
-                return socmnn;
+                return socmnd;
             }
 
             set
             {
-                socmnn = value;
+                socmnd = value;
             }
         }
 
@@ -136,16 +134,16 @@ namespace Entities.KhachHang
             }
         }
 
-        public DateTime Ngaycap
+        public DateTime Ngaycapcmnd
         {
             get
             {
-                return ngaycap;
+                return ngaycapcmnd;
             }
 
             set
             {
-                ngaycap = value;
+                ngaycapcmnd = value;
             }
         }
 
@@ -162,47 +160,40 @@ namespace Entities.KhachHang
             }
         }
 
+      
+   
+        public KhachHang(string maKH, string tenKH, string diachi, DateTime ngaysinh, string email, string soCMND, string sodienthoai, int trangthai, DateTime ngaycapcmnd, string gioitinh, string nghenghiep)
+        {
+            this.Makh = makh;
+            this.Tenkh = tenkh;
+            this.Diachi = diachi;
+            this.Ngaysinh = ngaysinh;
+            this.Ngaycapcmnd = ngaycapcmnd;
+            this.Trangthai = trangthai;
+            this.Nghenghiep = nghenghiep;
+            this.Email = email;
+            this.Sodienthoai = sodienthoai;
+            this.Socmnd = socmnd;
+            this.Gioitinh = gioitinh;
+
+        }
+
         public KhachHang()
         {
-            Makh = "";
-            Tenkh = "";
-            Diachi = "";
-            Email = "";
-            Socmnn = "";
-            Sodienthoai = "";
-            trangthai = 0;
-            nghenghiep = "";
-            gioitinh = "";
+            // TODO: Complete member initialization
         }
-        public KhachHang(string makh, string tenkh, string diachi, DateTime ngaysinh, string email, string socmnn, string dienthoai, int trangthai, DateTime ngaycap, string gioitinh, string nghenghiep)
+        public override bool Equals(Object newKH)
         {
-
-            Makh = makh;
-            Tenkh = tenkh;
-            Diachi = diachi;
-            Ngaysinh = ngaysinh;
-            Email = email;
-            Socmnn = socmnn;
-            Sodienthoai = sodienthoai;
-            trangthai = Trangthai;
-            ngaycap = Ngaycap;
-            gioitinh = Gioitinh;
-            nghenghiep = Nghenghiep;
+            KhachHang nv = (KhachHang)newKH;
+            return this.makh.ToLower().Equals(nv.makh.ToLower());
         }
-
-        public KhachHang(string maKH, string tenKH, string diachi, DateTime? ngaysinh1, string email, string soCMND, string sodienthoai, int trangthai, DateTime? ngaycapCMND, string gioitinh, string nghenghiep)
+        public override int GetHashCode()
         {
-            makh = maKH;
-            tenkh = tenKH;
-            this.diachi = diachi;
-            this.ngaysinh1 = ngaysinh1;
-            this.email = email;
-            this.soCMND = soCMND;
-            this.sodienthoai = sodienthoai;
-            this.trangthai = trangthai;
-            this.ngaycapCMND = ngaycapCMND;
-            this.gioitinh = gioitinh;
-            this.nghenghiep = nghenghiep;
+            return base.GetHashCode();
+        }
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }

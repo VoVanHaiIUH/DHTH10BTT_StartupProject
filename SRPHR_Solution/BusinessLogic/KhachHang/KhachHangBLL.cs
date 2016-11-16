@@ -11,29 +11,55 @@ namespace BusinessLogic.KhachHang
     public class KhachHangBLL
     {
 
-        SRPHRDataContext DB = new SRPHRDataContext();
+       SRPHRDataContext DB = new SRPHRDataContext();
+        
         public List<Entities.KhachHang.KhachHang> GetAllKhachHang()
         {
-            List<Entities.KhachHang.KhachHang> nhanViens = new List<Entities.KhachHang.KhachHang>();
-            Entities.KhachHang.KhachHang tempNV;
-            foreach (Tbl_KhachHang record in DB.Tbl_KhachHangs)
-            {
-                tempNV = Convert.tokhachhang(record);
-                nhanViens.Add(tempNV);
-            }
+            var dsKH = DB.Tbl_KhachHangs.ToList();
+            List<Entities.KhachHang.KhachHang> listKh = new List<Entities.KhachHang.KhachHang>();
 
-            return nhanViens;
+            foreach (Tbl_KhachHang kh_DAL in dsKH)
+            {
+                Entities.KhachHang.KhachHang ekh = new Entities.KhachHang.KhachHang();
+                ekh.Makh = kh_DAL.maKH;
+                ekh.Tenkh = kh_DAL.tenKH;
+                ekh.Diachi = kh_DAL.diachi;
+                ekh.Sodienthoai =kh_DAL.sodienthoai;
+                ekh.Email = kh_DAL.email;
+                ekh.Ngaycapcmnd = Convert.ToDateTime(kh_DAL.ngaycapCMND);
+                ekh.Ngaysinh = Convert.ToDateTime(kh_DAL.ngaysinh);
+                ekh.Trangthai = kh_DAL.trangthai;
+                ekh.Gioitinh = kh_DAL.gioitinh;
+                ekh.Nghenghiep = kh_DAL.nghenghiep;
+                ekh.Socmnd = kh_DAL.soCMND;
+
+                listKh.Add(ekh);
+            }
+            return listKh;
         }
 
 
 
-        public bool Add(Entities.KhachHang.KhachHang newNV)
+        public bool AddKH(Entities.KhachHang.KhachHang kh)
         {
             try
             {
-                Tbl_KhachHang newRecord = Convert.totbl_khachhang(newNV);
+                Tbl_KhachHang newKHRecord =DB.Tbl_KhachHangs.Where(x=>x.maKH==kh.Makh).FirstOrDefault() ;
+                if (newKHRecord != null)
+                    return 0;///trường hợp trùng
 
-                DB.Tbl_KhachHangs.InsertOnSubmit(newRecord);
+                newKHRecord = new Tbl_KhachHang();
+                newKHRecord.maKH = kh.Makh;
+                newKHRecord.tenKH = kh.Tenkh;
+                newKHRecord.diachi = kh.Diachi;
+                newKHRecord.soCMND = kh.Socmnd;
+                newKHRecord.sodienthoai = kh.Sodienthoai;
+                newKHRecord.gioitinh = kh.Gioitinh;
+                newKHRecord.ngaycapCMND = kh.Ngaycapcmnd;
+                newKHRecord.nghenghiep = kh.Nghenghiep;
+                newKHRecord.ngaysinh = kh.Ngaysinh;
+                newKHRecord.trangthai = kh.Trangthai;
+                newKHRecord.email = kh.Email;
                 DB.SubmitChanges();
 
                 return true;
@@ -55,23 +81,23 @@ namespace BusinessLogic.KhachHang
             catch { return false; }
         }*/
 
-        public bool Update(Entities.KhachHang.KhachHang updateNV)
+        public bool Update(Entities.KhachHang.KhachHang updateKH)
         {
             try
             {
-                Tbl_KhachHang updateRecord = DB.Tbl_KhachHangs.Single(record => record.maKH == updateNV.Makh);
+                Tbl_KhachHang updateRecord = DB.Tbl_KhachHangs.Single(record => record.maKH == updateKH.Makh);
 
-                updateRecord.maKH = updateNV.Makh;
-                updateRecord.tenKH = updateNV.Tenkh;
-                updateRecord.diachi = updateNV.Diachi;
-                updateRecord.email = updateNV.Email;
-                updateRecord.gioitinh = updateNV.Gioitinh;
-                updateRecord.ngaycapCMND = updateNV.Ngaycap;
-                updateRecord.ngaysinh = updateNV.Ngaysinh;
-                updateRecord.nghenghiep = updateNV.Nghenghiep;
-                updateRecord.soCMND = updateNV.Socmnn;
-                updateRecord.sodienthoai = updateNV.Sodienthoai;
-                updateRecord.trangthai = updateNV.Trangthai;
+                updateRecord.maKH = updateKH.Makh;
+                updateRecord.tenKH = updateKH.Tenkh;
+                updateRecord.diachi = updateKH.Diachi;
+                updateRecord.email = updateKH.Email;
+                updateRecord.gioitinh = updateKH.Gioitinh;
+                updateRecord.ngaycapCMND = updateKH.Ngaycapcmnd;
+                updateRecord.ngaysinh = updateKH.Ngaysinh;
+                updateRecord.nghenghiep = updateKH.Nghenghiep;
+                updateRecord.soCMND = updateKH.Socmnd;
+                updateRecord.sodienthoai = updateKH.Sodienthoai;
+                updateRecord.trangthai = updateKH.Trangthai;
 
                 DB.SubmitChanges();
 
@@ -127,6 +153,8 @@ namespace BusinessLogic.KhachHang
             throw new NotImplementedException();
         }
 
-        
+
+
+        public Entities.KhachHang.KhachHang tempKH { get; set; }
     }
 }

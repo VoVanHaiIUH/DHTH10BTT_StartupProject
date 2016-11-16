@@ -8,10 +8,30 @@ namespace Entities.KhachHang
 {
     public class Thethanhvien
     {
-        private string mathe, makh, ngaylap;
+        private string mathe, makh;
+        private DateTime ngaylap, ngayhethan;
         private int diemtichluy;
         private float tongtien;
+        private string ghichu;
 
+        public DateTime Ngayhethan
+        {
+            get { return ngayhethan; }
+            set { ngayhethan = value; }
+        }
+
+        public DateTime Ngaylap
+        {
+            get { return ngaylap; }
+            set { ngaylap = value; }
+        }
+       
+
+        public string Ghichu
+        {
+            get { return ghichu; }
+            set { ghichu = value; }
+        }
         public string Mathe
         {
             get
@@ -35,19 +55,6 @@ namespace Entities.KhachHang
             set
             {
                 makh = value;
-            }
-        }
-
-        public string Ngaylap
-        {
-            get
-            {
-                return ngaylap;
-            }
-
-            set
-            {
-                ngaylap = value;
             }
         }
 
@@ -77,13 +84,16 @@ namespace Entities.KhachHang
             }
         }
         public Thethanhvien() { }
-        public Thethanhvien(string makh, string mathe, int diemtichluy, float tongtien, string ngaylap)
+        public Thethanhvien(string makh, string mathe, int diemtichluy, float tongtien, DateTime ngaylap,DateTime ngayhethan,string ghichu)
         {
             Makh = makh;
             Mathe = mathe;
             Diemtichluy = diemtichluy;
             Tongtien = tongtien;
             Ngaylap = ngaylap;
+            Ngayhethan = ngayhethan;
+            Ghichu = ghichu;
+                        
         }
     }
 }

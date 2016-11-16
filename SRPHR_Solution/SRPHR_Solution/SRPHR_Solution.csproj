@@ -116,6 +116,24 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\FrmDoiDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\FrmDoiDiem.Designer.cs">
+      <DependentUpon>FrmDoiDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\FrmTheThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\FrmTheThanhVien.Designer.cs">
+      <DependentUpon>FrmTheThanhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kho\CTPhieuQLKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +250,15 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\FrmDoiDiem.resx">
+      <DependentUpon>FrmDoiDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\FrmTheThanhVien.resx">
+      <DependentUpon>FrmTheThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kho\CTPhieuQLKho.resx">
       <DependentUpon>CTPhieuQLKho.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,7 +336,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="KhachHang\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
