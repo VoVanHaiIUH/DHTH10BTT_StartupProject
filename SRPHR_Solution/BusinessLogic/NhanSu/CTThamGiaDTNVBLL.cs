@@ -17,7 +17,9 @@ namespace BusinessLogic.NhanSu
         {
             try
             {
-                Tbl_CTThamGiaDTNV newRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == newCTTGDT.MaNV && record.maKhoaDT == newCTTGDT.MaKhoaDT);
+                //Tbl_CTThamGiaDTNV newRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == newCTTGDT.MaNV && record.maKhoaDT == newCTTGDT.MaKhoaDT);
+                Tbl_NhanVien tempnhanvien = DB.Tbl_NhanViens.Single(record => record.maNV == newCTTGDT.MaNV);
+                Tbl_CTThamGiaDTNV newRecord = new Tbl_CTThamGiaDTNV();
                 newRecord.maNV = newCTTGDT.MaNV;
                 newRecord.maKhoaDT = newCTTGDT.MaKhoaDT;
                 newRecord.nhanXet = newCTTGDT.NhanXet;
@@ -53,11 +55,14 @@ namespace BusinessLogic.NhanSu
         {
             try
             {
-                Tbl_CTThamGiaDTNV updateRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == updateCTDTNV.MaNV && record.maKhoaDT == updateCTDTNV.MaKhoaDT);
+                //Tbl_CTThamGiaDTNV updateRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == updateCTDTNV.MaNV && record.maKhoaDT == updateCTDTNV.MaKhoaDT);
+                Tbl_NhanVien tempnhanvien = DB.Tbl_NhanViens.Single(record => record.maNV == updateCTDTNV.MaNV);
+                Tbl_CTThamGiaDTNV updateRecord = new Tbl_CTThamGiaDTNV();
                 updateRecord.maNV = updateCTDTNV.MaNV;
                 updateRecord.maKhoaDT = updateCTDTNV.MaKhoaDT;
                 updateRecord.nhanXet = updateCTDTNV.NhanXet;
                 updateRecord.ketQua = updateCTDTNV.KetQua;
+
                 DB.SubmitChanges();
                 return true;
 

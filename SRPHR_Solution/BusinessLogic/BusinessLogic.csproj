@@ -51,13 +51,13 @@
     <Compile Include="CongNoPKH\NhaCungCap_BLL.cs" />
     <Compile Include="CongNoPKH\PhieuDNNK_BLL.cs" />
     <Compile Include="CongNoPKH\PhieuDNXK_BLL.cs" />
+    <Compile Include="CongNoPKH\SanPham_BLL.cs" />
     <Compile Include="KhachHang\Convert.cs" />
     <Compile Include="KhachHang\KhachHangBLL.cs" />
     <Compile Include="Kho\CTPQLKho_BLL.cs" />
     <Compile Include="Kho\PhieuNK_BLL.cs" />
     <Compile Include="Kho\PhieuQLKho_BLL.cs" />
     <Compile Include="Kho\PhieuXK_BLL.cs" />
-    <Compile Include="Kho\SanPham_BLL.cs" />
     <Compile Include="NhanSu\ChucVuBLL.cs" />
     <Compile Include="NhanSu\CTKyLuatNVBLL.cs" />
     <Compile Include="NhanSu\CTThamGiaDTNVBLL.cs" />

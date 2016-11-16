@@ -58,6 +58,7 @@
     <Compile Include="CongNoPKH\eNhaCungCap.cs" />
     <Compile Include="CongNoPKH\ePhieuDNNK.cs" />
     <Compile Include="CongNoPKH\ePhieuDNXK.cs" />
+    <Compile Include="CongNoPKH\eSanPham.cs" />
     <Compile Include="eCTPQLKho.cs" />
     <Compile Include="KhachHang\KhachHang.cs" />
     <Compile Include="KhachHang\Thethanhvien.cs" />
@@ -66,7 +67,6 @@
     <Compile Include="Kho\ePhieuNK.cs" />
     <Compile Include="Kho\ePhieuQLiKho.cs" />
     <Compile Include="Kho\ePhieuXK.cs" />
-    <Compile Include="Kho\eSanPham.cs" />
     <Compile Include="NhanSu\ChucVu.cs" />
     <Compile Include="NhanSu\CTKyLuatNV.cs" />
     <Compile Include="NhanSu\CTThamGiaDTNV.cs" />

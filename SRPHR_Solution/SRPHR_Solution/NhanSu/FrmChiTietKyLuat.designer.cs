@@ -43,6 +43,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.grpBoxStudentInfo = new System.Windows.Forms.GroupBox();
+            this.dateTimeNgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.cbbMucDo = new System.Windows.Forms.ComboBox();
@@ -56,8 +58,6 @@
             this.lblHinhThucKL = new System.Windows.Forms.Label();
             this.lblMaKL = new System.Windows.Forms.Label();
             this.treeViewKyLuat = new System.Windows.Forms.TreeView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimeNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietKyLuat)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -106,7 +106,7 @@
             this.dataGridViewChiTietKyLuat.Name = "dataGridViewChiTietKyLuat";
             this.dataGridViewChiTietKyLuat.Size = new System.Drawing.Size(936, 306);
             this.dataGridViewChiTietKyLuat.TabIndex = 30;
-            this.dataGridViewChiTietKyLuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChiTietKyLuat_CellContentClick);
+            this.dataGridViewChiTietKyLuat.SelectionChanged += new System.EventHandler(this.dataGridViewChiTietKyLuat_SelectionChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -133,7 +133,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -165,6 +165,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -180,6 +181,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -195,6 +197,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -211,6 +214,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -227,6 +231,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -241,6 +246,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Ẩn trạng thái";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // grpBoxStudentInfo
             // 
@@ -273,6 +279,25 @@
             this.grpBoxStudentInfo.TabIndex = 20;
             this.grpBoxStudentInfo.TabStop = false;
             this.grpBoxStudentInfo.Text = "Chi tiết kỷ luật";
+            // 
+            // dateTimeNgayKetThuc
+            // 
+            this.dateTimeNgayKetThuc.Location = new System.Drawing.Point(435, 72);
+            this.dateTimeNgayKetThuc.Name = "dateTimeNgayKetThuc";
+            this.dateTimeNgayKetThuc.Size = new System.Drawing.Size(200, 23);
+            this.dateTimeNgayKetThuc.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(341, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Ngày kết thúc :";
             // 
             // txtGhiChu
             // 
@@ -403,25 +428,6 @@
             this.treeViewKyLuat.Size = new System.Drawing.Size(204, 306);
             this.treeViewKyLuat.TabIndex = 29;
             this.treeViewKyLuat.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewNhanVien_AfterSelect);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(341, 75);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 15);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Ngày kết thúc :";
-            // 
-            // dateTimeNgayKetThuc
-            // 
-            this.dateTimeNgayKetThuc.Location = new System.Drawing.Point(435, 72);
-            this.dateTimeNgayKetThuc.Name = "dateTimeNgayKetThuc";
-            this.dateTimeNgayKetThuc.Size = new System.Drawing.Size(200, 23);
-            this.dateTimeNgayKetThuc.TabIndex = 17;
             // 
             // FrmChiTietKyLuat
             // 

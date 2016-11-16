@@ -212,7 +212,7 @@ namespace SRPHR_Solution.PhanQuyen
             btnformbaocao.Enabled = false;
             btnformkhachhang.Enabled = false;
             btnformcongno.Enabled = false;
-            btnformNhansu.Enabled = false;
+            btnformNhansu.Enabled = true;
             btnformkho.Enabled = false;
         }
     }
