@@ -14,13 +14,18 @@ namespace Entities.CongNoPKH
         public DateTime ngayKT { get; set; }
         public string ghiChu { get; set; }
 
-        public eKhuyenMai(string msDotKM, string tenDotKM, DateTime ngayBD,DateTime ngayKT, string ghiChu)
+        public eKhuyenMai(string msDotKM, string tenDotKM, DateTime ngayBD, DateTime ngayKT, string ghiChu)
         {
             this.msDotKM = msDotKM;
             this.tenDotKM = tenDotKM;
             this.ngayBD = ngayBD;
             this.ngayKT = ngayKT;
             this.ghiChu = ghiChu;
+        }
+
+        public eKhuyenMai()
+        {
+
         }
         public override int GetHashCode()
         {
@@ -30,10 +35,6 @@ namespace Entities.CongNoPKH
         {
             eKhuyenMai km = (eKhuyenMai)obj;
             return km.Equals(km.msDotKM);
-        }
-        public eKhuyenMai()
-        {
-
         }
     }
 }

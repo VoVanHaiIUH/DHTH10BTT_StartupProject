@@ -47,6 +47,7 @@ namespace SRPHR_Solution.CongNoPKH
             km = new List<eKhuyenMai>();
             km = kmbll.getAllKM();
             loaddatagridviewkm(km, dgvkhuyenmai);
+
             nccbll = new NhaCungCap_BLL();
             ncc = new List<eNhaCungCap>();
             loaddataintreeview(ncc, treeView1);
@@ -83,14 +84,17 @@ namespace SRPHR_Solution.CongNoPKH
         List<eCTPhieuDNXK> ctpdnxk;
         List<ePhieuDNNK> pdnnk;
         List<ePhieuDNXK> pdnxk;
+
         KhuyenMai_BLL kmbll;
         List<eCTKhuyenMai> ctkm;
         List<eKhuyenMai> km;
+
         NhaCungCap_BLL nccbll;
         List<eNhaCungCap> ncc;
         SanPham_BLL spbll;
         List<eSanPham> sp;
         BindingSource bds = new BindingSource();
+        BindingSource bds2 = new BindingSource();
         public void loadvaogrid(string masp)
         {
             sp = spbll.getbymasanpham(masp);
