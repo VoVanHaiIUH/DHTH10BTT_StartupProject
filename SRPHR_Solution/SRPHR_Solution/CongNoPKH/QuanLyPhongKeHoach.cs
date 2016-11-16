@@ -439,7 +439,7 @@ namespace SRPHR_Solution.CongNoPKH
                 dgvctkhuyenmai.DataSource = kmbll.getAllCTKM();
 
             }
-            else { MessageBox.Show("bạn chưa chọn vào sản phẩm cần sửa thông tin!")}; 
+            else { MessageBox.Show("bạn chưa chọn vào sản phẩm cần sửa thông tin!"); }
         }
 
         private void dgvctkhuyenmai_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
