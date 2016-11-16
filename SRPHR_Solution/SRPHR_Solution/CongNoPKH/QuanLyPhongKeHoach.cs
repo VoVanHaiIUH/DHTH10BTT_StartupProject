@@ -18,6 +18,13 @@ namespace SRPHR_Solution.CongNoPKH
         public QuanLyPhongKeHoach()
         {
             InitializeComponent();
+            kmbll = new KhuyenMai_BLL();
+            ctkm = new List<eCTKhuyenMai>();
+            ctkm = kmbll.getAllCTKM();
+            loaddatagridviewctkm(ctkm, dgvctkhuyenmai);
+            km = new List<eKhuyenMai>();
+            km = kmbll.getAllKM();
+            loaddatagridviewkm(km, dgvkhuyenmai);
             nccbll = new NhaCungCap_BLL();
             ncc = new List<eNhaCungCap>();
             loaddataintreeview(ncc, treeView1);
@@ -27,7 +34,9 @@ namespace SRPHR_Solution.CongNoPKH
             loaddatagridviewsp(sp, dgvSanPham);
             EnableButton(true);
         }
-       
+        KhuyenMai_BLL kmbll;
+        List<eCTKhuyenMai> ctkm;
+        List<eKhuyenMai> km;
         NhaCungCap_BLL nccbll;
         List<eNhaCungCap> ncc;
         SanPham_BLL spbll;
@@ -38,6 +47,20 @@ namespace SRPHR_Solution.CongNoPKH
             sp = spbll.getbymasanpham(masp);
             bds.DataSource = sp;
             dgvSanPham.DataSource = bds;
+        }
+        private void dgvkhuyenmai_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        public void loaddatagridviewkm(List<eKhuyenMai> km, DataGridView dtgv) //km
+        {
+            dtgv.DataSource = km;
+        }
+
+        public void loaddatagridviewctkm(List<eCTKhuyenMai> ctkm, DataGridView dtgvctkm) // ctkm
+        {
+            dtgvctkm.DataSource = ctkm;
+            dtgvctkm.Columns["msDotKM"].Visible = false;
         }
         public void loaddataintreeview(List<eNhaCungCap> ncc, TreeView tv)
         {
@@ -332,6 +355,38 @@ namespace SRPHR_Solution.CongNoPKH
 
 
 
+        }
+
+        private void btnthemkm_Click(object sender, EventArgs e)
+        {
+            eKhuyenMai k = new eKhuyenMai();
+            k.ghiChu = txtghiChukm.Text;
+            k.msDotKM = txtMaSoDotKhuyenMai.Text;
+            k.ngayBD = Convert.ToDateTime(dtpngaybatdaukm.Text);
+            k.ngayKT = Convert.ToDateTime(dtpngayketthuckm.Text);
+            k.tenDotKM = txtghiChukm.Text;
+            int m = kmbll.themKM(k);
+            if (m == 0) MessageBox.Show("Trùng mã !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            else
+            {
+                if (m == 1) MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                dgvkhuyenmai.DataSource = kmbll.getAllKM();
+                dgvctkhuyenmai.DataSource = kmbll.getAllCTKM();
+            }
+            btnthemkm.Enabled = true;
+        }
+
+        private void btnsuakm_Click(object sender, EventArgs e)
+        {
+            string msdkm = txtMaSoDotKhuyenMai.Text;
+            if (msdkm != null)
+            {
+                kmbll.UpDateKhuyenMai(txtMaSoDotKhuyenMai.Text, txtTenDotKhuyenMai.Text, Convert.ToDateTime(dtpngaybatdaukm.Text), Convert.ToDateTime(dtpngayketthuckm.Text), txtghiChukm.Text);
+                MessageBox.Show("Sửa xong !!");
+                dgvkhuyenmai.DataSource = kmbll.getAllKM();
+
+            }
+            else { MessageBox.Show("bạn chưa chọn vào sản phẩm cần sửa thông tin!"); }
         }
     }
 }
