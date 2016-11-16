@@ -101,6 +101,7 @@
             this.cbbMaCV.Name = "cbbMaCV";
             this.cbbMaCV.Size = new System.Drawing.Size(260, 23);
             this.cbbMaCV.TabIndex = 13;
+            this.cbbMaCV.SelectedIndexChanged += new System.EventHandler(this.cbbMaCV_SelectedIndexChanged);
             // 
             // cbbMaPB
             // 
@@ -109,6 +110,7 @@
             this.cbbMaPB.Name = "cbbMaPB";
             this.cbbMaPB.Size = new System.Drawing.Size(260, 23);
             this.cbbMaPB.TabIndex = 13;
+            this.cbbMaPB.SelectedIndexChanged += new System.EventHandler(this.cboLSLV_SelectedIndexChanged);
             // 
             // txtMaNV
             // 
@@ -179,7 +181,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -211,6 +213,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -226,6 +229,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -241,6 +245,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -257,6 +262,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -273,6 +279,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
@@ -287,6 +294,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Ẩn trạng thái";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -314,6 +322,7 @@
             this.treeViewNhanVien.Name = "treeViewNhanVien";
             this.treeViewNhanVien.Size = new System.Drawing.Size(204, 306);
             this.treeViewNhanVien.TabIndex = 29;
+            this.treeViewNhanVien.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TViewSubject_AfterSelect);
             // 
             // dataGridViewLichSuLamViec
             // 
@@ -322,6 +331,7 @@
             this.dataGridViewLichSuLamViec.Name = "dataGridViewLichSuLamViec";
             this.dataGridViewLichSuLamViec.Size = new System.Drawing.Size(778, 306);
             this.dataGridViewLichSuLamViec.TabIndex = 30;
+            this.dataGridViewLichSuLamViec.SelectionChanged += new System.EventHandler(this.dataGridViewLichSuLamViec_SelectionChanged_1);
             // 
             // FrmLichSuLamViec
             // 
@@ -332,6 +342,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmLichSuLamViec";
             this.Text = "FrmLichSuLamViec";
+            this.Load += new System.EventHandler(this.FrmLichSuLamViec_Load);
             this.grpBoxStudentInfo.ResumeLayout(false);
             this.grpBoxStudentInfo.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

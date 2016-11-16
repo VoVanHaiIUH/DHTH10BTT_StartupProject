@@ -55,5 +55,12 @@ namespace SRPHR_Solution.NhanSu
             frmKL.MdiParent = this;
             frmKL.Show();
         }
+
+        private void lịchSửLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLichSuLamViec frmLS = new FrmLichSuLamViec();
+            frmLS.MdiParent = this;
+            frmLS.Show();
+        }
     }
 }

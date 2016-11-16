@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHRPR1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-DCFH0CO\SQLEXPRESS;Initial Catalog=SHRPR1;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString6" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-B3J8LOS\DIENSQLSERVER;Initial Catalog=SHRPR1;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString6" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Tbl_CTKyLuatNV" Member="Tbl_CTKyLuatNVs">
     <Type Name="Tbl_CTKyLuatNV">
       <Column Name="maNV" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

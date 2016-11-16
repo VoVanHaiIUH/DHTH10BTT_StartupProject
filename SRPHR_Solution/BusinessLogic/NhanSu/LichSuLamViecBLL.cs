@@ -51,6 +51,7 @@ namespace BusinessLogic.NhanSu
         {
             try
             {
+                Tbl_NhanVien tempNV = DB.Tbl_NhanViens.Single(record => record.maNV == updateLSLV.MaNV);
                 Tbl_LichSuLamViec updateRecord = DB.Tbl_LichSuLamViecs.Single(record => record.maNV == updateLSLV.MaNV && record.maChucVu == updateLSLV.MaChucVu && record.maPB == updateLSLV.MaPB);
                 updateRecord.maNV = updateLSLV.MaNV;
                 updateRecord.maPB = updateLSLV.MaPB;
@@ -81,6 +82,23 @@ namespace BusinessLogic.NhanSu
             }
             return lstls;
         }
+        public List<LSLamViec> GetNhanVien(string mals)
+        {
+            int i = mals.Length;
+            List<LSLamViec> lstcd = new List<LSLamViec>();
+            var rct = (from a in DB.Tbl_LichSuLamViecs
+                       where a.maNV.Substring(0, i) == mals
+                       select new LSLamViec
+                       {
+                           MaNV = a.maNV,
+                           MaChucVu = a.maChucVu,
+                           MaPB = a.maPB,
+                           NgayBD = a.ngayBD,
+                           NgayKT = (DateTime)a.ngayKT,
+                       });
+            lstcd = rct.ToList();
+            return lstcd;
+        }
         public List<LSLamViec> Search1NhanVienbyMaNV(string mals)
         {
             int i = mals.Length;
@@ -99,5 +117,19 @@ namespace BusinessLogic.NhanSu
             lstcd = rct.ToList();
             return lstcd;
         }
+        public IEnumerable<string> getMaPB()
+        {
+            var ma = (from cv in DB.Tbl_PhongBans
+                      select cv.maPB);
+            return ma;
+        }
+
+        public IEnumerable<string> getMaCV()
+        {
+            var ma = (from cv in DB.Tbl_ChucVus
+                      select cv.maChucVu);
+            return ma;
+        }
+       
     }
 }
