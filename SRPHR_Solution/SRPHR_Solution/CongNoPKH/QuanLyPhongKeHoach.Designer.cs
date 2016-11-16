@@ -1813,6 +1813,7 @@
             this.Name = "QuanLyPhongKeHoach";
             this.Text = "Phòng Kế Hoạch và Công Nợ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuanLyPhongKeHoach_FormClosing);
+            this.Load += new System.EventHandler(this.QuanLyPhongKeHoach_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);

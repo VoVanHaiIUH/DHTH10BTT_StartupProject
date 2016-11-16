@@ -14,6 +14,7 @@ namespace SRPHR_Solution.CongNoPKH
 {
     public partial class QuanLyPhongKeHoach : Form
     {
+        public string PQPKH;
         public QuanLyPhongKeHoach()
         {
             InitializeComponent();
@@ -269,6 +270,67 @@ namespace SRPHR_Solution.CongNoPKH
 
         private void dgvhdbansikh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void QuanLyPhongKeHoach_Load(object sender, EventArgs e)
+        {
+            trangthaiPQ(PQPKH);
+        }
+        private void trangthaiPQ(string pq)
+        {
+            if (pq.Substring(0, 1) == "1")
+            {
+                btnthembansikh.Enabled = true;
+                btnthemdnnk.Enabled = true;
+                btnthemdnxk.Enabled = true;
+                btnthemkm.Enabled = true;
+                btnthemmuahangncc.Enabled = true;
+                btnThemsp.Enabled = true;
+            }
+            else
+            {
+                btnthembansikh.Enabled = false;
+                btnthemdnnk.Enabled = false;
+                btnthemdnxk.Enabled = false;
+                btnthemkm.Enabled = false;
+                btnthemmuahangncc.Enabled = false;
+                btnThemsp.Enabled = false;
+            }
+            if (pq.Substring(2, 1) == "1")
+            {
+                btnsuabansikh.Enabled = true;
+                btnsuadnnk.Enabled = true;
+                btnsuakm.Enabled = true;
+                btnsuamuahangncc.Enabled = true;
+                btnSuasp.Enabled = true;
+
+            }
+            else
+            {
+                btnsuabansikh.Enabled = false;
+                btnsuadnnk.Enabled = false;
+                btnsuakm.Enabled = false;
+                btnsuamuahangncc.Enabled = false;
+                btnSuasp.Enabled = false;
+            }
+
+             if (pq.Substring(3, 1) == "1")
+             {
+                 btninbansikh.Enabled = true;
+                 btnindnnk.Enabled = true;
+                 btnindnxk.Enabled = true;
+                 btninmuahangncc.Enabled = true;
+             }
+             else
+             {
+                 btninbansikh.Enabled = false;
+                 btnindnnk.Enabled = false;
+                 btnindnxk.Enabled = false;
+                 btninmuahangncc.Enabled = false;
+             }
+
+
 
         }
     }

@@ -175,8 +175,11 @@ namespace SRPHR_Solution.PhanQuyen
 
         private void btnfromcongno_Click(object sender, EventArgs e)
         {
+            string s = taikhoanbll.GetPQbyID(_message).Substring(14, 4);
             QuanLyPhongKeHoach frmnew = new QuanLyPhongKeHoach();
+            frmnew.PQPKH = s;
             frmnew.ShowDialog();
+
         }
 
         private void btnFormBanHang_Click(object sender, EventArgs e)
