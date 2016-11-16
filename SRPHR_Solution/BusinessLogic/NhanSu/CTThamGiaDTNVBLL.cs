@@ -97,5 +97,12 @@ namespace BusinessLogic.NhanSu
             }
             return ls;
         }
+        public IEnumerable<string> getMaNV()
+        {
+
+            var ma = (from cv in DB.Tbl_NhanViens
+                      select cv.maNV);
+            return ma;
+        }
     }
 }
