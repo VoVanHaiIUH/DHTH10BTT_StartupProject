@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogic;
 using Entities.BanHang;
+using SRPHR_Solution.BanHang;
 //Nhóm chưa update BusinessLogic BanHang
 
 namespace SRPHR_Solution.BanHang
 {
     public partial class FormHDGTGT : Form
     {
+        public string PQHDGTGT;
+        
         //List<ChiTietHDGTGT> ls = new List<ChiTietHDGTGT>();
         BindingSource bd = new BindingSource();
         public FormHDGTGT()
@@ -35,7 +38,8 @@ namespace SRPHR_Solution.BanHang
 
         private void ChitietHDGTGT_Load(object sender, EventArgs e)
         {
-
+            
+            trangthaiPQ(PQHDGTGT);
 
         }
 
@@ -96,6 +100,25 @@ namespace SRPHR_Solution.BanHang
             //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
             //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
             //n.TongTien = Convert.ToDecimal(txttongtien.Text.Trim());
+        }
+        private void trangthaiPQ(string pq)
+        {
+            if (pq.Substring(0, 1) == "1")
+                btnthem.Enabled = true;
+            else
+                btnthem.Enabled = false;
+
+            if (pq.Substring(1, 1) == "1")
+                btnxoa.Enabled = true;
+            else
+                btnxoa.Enabled = false;
+
+            if (pq.Substring(2, 1) == "1")
+                btnsua.Enabled = true;
+            else
+                btnsua.Enabled = false;
+
+            
         }
     }
 }

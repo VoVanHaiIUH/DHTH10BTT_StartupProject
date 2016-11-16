@@ -21,7 +21,6 @@ namespace SRPHR_Solution.NhanSu
         {
             InitializeComponent();
             CTDaoTaoBLL = new CTThamGiaDTNVBLL();
-            //subjectBLL = new SubjectBLL();
             DaoTaoBLL = new DaoTaoBLL();
             nhanVienBLL = new NhanVienBLL();
         }
@@ -30,9 +29,10 @@ namespace SRPHR_Solution.NhanSu
         {
             btnUpdate.Enabled = false;
             frmMenu f = (frmMenu)MdiParent;
-            cboMaNV_Load();
+            //cboMaNV_Load();
+            cbbMaNV.DataSource = CTDaoTaoBLL.getMaNV();
             TViewDaoTao_Load();
-            DGViewCTDaoTao_Load("BC1");
+            DGViewCTDaoTao_Load("DT1");
             EnabledControls(false);
         }
         void cboMaNV_Load()
@@ -68,18 +68,16 @@ namespace SRPHR_Solution.NhanSu
         {
             txtMaKhoaDT.Enabled = status;
             cbbMaNV.Enabled = status;
+            txtKetQua.Enabled = status;
 
             frmMenu f = (frmMenu)MdiParent;
-            if (f.quyen >= 1)
-            {
-                txtMaKhoaDT.Enabled = status;
-            }
+            
 
             btnSave.Enabled = status;
             btnCancel.Enabled = status;
 
             btnAdd.Enabled = !status;
-            //btnUpdate.Enabled = !status;
+            btnUpdate.Enabled = !status;
             btnDelete.Enabled = !status;
 
             treeViewDaoTao.Enabled = !status;
@@ -103,6 +101,7 @@ namespace SRPHR_Solution.NhanSu
                 tempCTDaoTao.MaKhoaDT = txtMaKhoaDT.Text;
                 tempCTDaoTao.KetQua = txtKetQua.Text;
                 tempCTDaoTao.NhanXet = txtNhanXet.Text;
+                tempCTDaoTao.MaNV = cbbMaNV.SelectedValue.ToString();
             }
             catch { }
 
@@ -112,6 +111,9 @@ namespace SRPHR_Solution.NhanSu
             tempCTDaoTao = new CTThamGiaDTNV();
             tempCTDaoTao.MaKhoaDT = treeViewDaoTao.SelectedNode.Tag.ToString();
             tempCTDaoTao.MaKhoaDT = treeViewDaoTao.Text;
+            tempCTDaoTao.KetQua = txtKetQua.Text;
+            tempCTDaoTao.NhanXet = txtNhanXet.Text;
+            tempCTDaoTao.MaNV = cbbMaNV.SelectedValue.ToString();
             try
             {
                 tempCTDaoTao.KetQua = txtKetQua.Text;
@@ -126,8 +128,10 @@ namespace SRPHR_Solution.NhanSu
 
         private void DGViewCTDaoTao_SelectionChanged(object sender, EventArgs e)
         {
-            txtMaKhoaDT.Text = dataGridViewCTDaoTao.CurrentRow.Cells[0].Value.ToString();
-            cbbMaNV.Text = dataGridViewCTDaoTao.CurrentRow.Cells[1].Value.ToString();
+            txtMaKhoaDT.Text = dataGridViewCTDaoTao.CurrentRow.Cells[2].Value.ToString();
+            cbbMaNV.Text = dataGridViewCTDaoTao.CurrentRow.Cells[3].Value.ToString();
+            txtKetQua.Text= dataGridViewCTDaoTao.CurrentRow.Cells[0].Value.ToString();
+            txtNhanXet.Text= dataGridViewCTDaoTao.CurrentRow.Cells[1].Value.ToString();
         }
         int flag = 0;
         #region Button Click Events
@@ -135,7 +139,8 @@ namespace SRPHR_Solution.NhanSu
         {
             flag = 0;
             EnabledControls(true);
-            ClearTextBox();
+            //ClearTextBox();
+            txtMaKhoaDT.Enabled = false;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -186,6 +191,21 @@ namespace SRPHR_Solution.NhanSu
             //        MessageBox.Show("Xoá thất bại");
             //}
             //frmGuide_Load(sender, e);
+            int hideIndex = -1;
+            foreach (DataGridViewRow dr in dataGridViewCTDaoTao.Rows)
+            {
+                if (dr.Cells[2].Value.ToString() == txtMaKhoaDT.Text)
+                {
+                    hideIndex = dr.Index;
+                }
+            }
+
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dataGridViewCTDaoTao.DataSource];
+            currencyManager1.SuspendBinding();
+
+            dataGridViewCTDaoTao.Rows[hideIndex].Visible = false;
+
+            currencyManager1.ResumeBinding();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {

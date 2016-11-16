@@ -21,6 +21,11 @@ namespace Entities.CongNoPKH
             this.sDT = sdt;
             this.email = email;
         }
+
+        public eNhaCungCap()
+        {
+            // TODO: Complete member initialization
+        }
         public override int GetHashCode()
         {
             return maNCC.GetHashCode();

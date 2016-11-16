@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHRPR" Class="SRPHRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=SHRPR;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=KEN-PC;Initial Catalog=SHRPR;Persist Security Info=True;User ID=sa" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="SHRPRConnectionString9" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_KhuyenMai" Member="Tbl_KhuyenMais">
+    <Type Name="Tbl_KhuyenMai">
+      <Column Name="msDotKM" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenDotKM" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ngayBD" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ngayKT" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_KhuyenMai_Tbl_CTKhuyenMai" Member="Tbl_CTKhuyenMais" ThisKey="msDotKM" OtherKey="msDotKM" Type="Tbl_CTKhuyenMai" />
+    </Type>
+  </Table>
   <Table Name="dbo.Tbl_ChucVu" Member="Tbl_ChucVus">
     <Type Name="Tbl_ChucVu">
       <Column Name="maChucVu" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -87,6 +97,7 @@
       <Column Name="phantramKM" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Association Name="Tbl_KhuyenMai_Tbl_CTKhuyenMai" Member="Tbl_KhuyenMai" ThisKey="msDotKM" OtherKey="msDotKM" Type="Tbl_KhuyenMai" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Tbl_KhuyenMai1_Tbl_CTKhuyenMai" Member="Tbl_KhuyenMai1" ThisKey="msDotKM" OtherKey="msDotKM" Type="Tbl_KhuyenMai1" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Tbl_SanPham_Tbl_CTKhuyenMai" Member="Tbl_SanPham" ThisKey="maSP" OtherKey="maSP" Type="Tbl_SanPham" IsForeignKey="true" />
     </Type>
   </Table>
@@ -263,14 +274,14 @@
       <Association Name="Tbl_PhongBan_Tbl_Kho" Member="Tbl_PhongBan" ThisKey="msKho" OtherKey="maPB" Type="Tbl_PhongBan" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Tbl_KhuyenMai" Member="Tbl_KhuyenMais">
-    <Type Name="Tbl_KhuyenMai">
+  <Table Name="dbo.Tbl_KhuyenMai" Member="Tbl_KhuyenMai1s">
+    <Type Name="Tbl_KhuyenMai1">
       <Column Name="msDotKM" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="tenDotKM" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
       <Column Name="ngayBD" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="ngayKT" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="ghiChu" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
-      <Association Name="Tbl_KhuyenMai_Tbl_CTKhuyenMai" Member="Tbl_CTKhuyenMais" ThisKey="msDotKM" OtherKey="msDotKM" Type="Tbl_CTKhuyenMai" />
+      <Association Name="Tbl_KhuyenMai1_Tbl_CTKhuyenMai" Member="Tbl_CTKhuyenMais" ThisKey="msDotKM" OtherKey="msDotKM" Type="Tbl_CTKhuyenMai" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_KyLuatNV" Member="Tbl_KyLuatNVs">

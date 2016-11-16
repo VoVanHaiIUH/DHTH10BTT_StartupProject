@@ -203,6 +203,7 @@
             this.btnxem.TabIndex = 21;
             this.btnxem.Text = "Xem Chi Tiết HD Bán Lẻ";
             this.btnxem.UseVisualStyleBackColor = true;
+            this.btnxem.Click += new System.EventHandler(this.btnxem_Click_1);
             // 
             // btnquaylai
             // 
@@ -238,6 +239,7 @@
             this.Controls.Add(this.DGViewHDBL);
             this.Name = "FormHDBanle";
             this.Text = "HDBanle";
+            this.Load += new System.EventHandler(this.FormHDBanle_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewHDBL)).EndInit();

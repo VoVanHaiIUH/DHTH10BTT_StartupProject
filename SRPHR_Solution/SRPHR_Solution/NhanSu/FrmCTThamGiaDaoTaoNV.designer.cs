@@ -61,6 +61,7 @@
             this.dataGridViewCTDaoTao.Name = "dataGridViewCTDaoTao";
             this.dataGridViewCTDaoTao.Size = new System.Drawing.Size(692, 288);
             this.dataGridViewCTDaoTao.TabIndex = 30;
+            this.dataGridViewCTDaoTao.SelectionChanged += new System.EventHandler(this.DGViewCTDaoTao_SelectionChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -87,7 +88,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -200,6 +201,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Ẩn trạng thái";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // grpBoxCTTGDaoTaoNV
             // 
@@ -305,7 +307,7 @@
             this.treeViewDaoTao.Name = "treeViewDaoTao";
             this.treeViewDaoTao.Size = new System.Drawing.Size(204, 288);
             this.treeViewDaoTao.TabIndex = 29;
-            this.treeViewDaoTao.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewDaoTao_AfterSelect);
+            this.treeViewDaoTao.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TViewSubject_AfterSelect);
             // 
             // FrmCTThamGiaDaoTaoNV
             // 
