@@ -9,7 +9,7 @@ using Entities.BanHang;
 
 namespace BusinessLogic.BanHang
 {
-    public class CTHoaDonBanLe
+    public class CTHoaDonBanLeBLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
 
@@ -82,6 +82,11 @@ namespace BusinessLogic.BanHang
         {
             return new ChiTietHoaDonBanLe(tmp.soHoaDon, tmp.soLuong, tmp.maSP, tmp.ghiChu, tmp.donGia);
 
+        }
+
+        public object ThemCTHDBanLe(string selectedSubjectID)
+        {
+            throw new NotImplementedException();
         }
     }
 }
