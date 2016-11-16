@@ -44,9 +44,9 @@ namespace SRPHR_Solution.NhanSu
 
         void CobQLChiTietKL_Load()
         {
-            cbbHinhThucKyLuat.DataSource = CTKLBLL.GetAllCTKL();
-            cbbHinhThucKyLuat.DisplayMember = "HinhThucKL";
-            cbbHinhThucKyLuat.ValueMember = "HinhThucKL";
+            cbbMaKL.DataSource = CTKLBLL.getMaKL();
+            cbbHinhThucKyLuat.DataSource = CTKLBLL.getHT();
+            cbbMucDo.DataSource = CTKLBLL.getMucDo();
         }
 
         void TViewSubject_Load()
@@ -94,7 +94,7 @@ namespace SRPHR_Solution.NhanSu
 
 
         CTKyLuatNV tempKyLuat;
-        private void passingData()
+        private CTKyLuatNV passingData()
         {
             try
             {
@@ -108,20 +108,32 @@ namespace SRPHR_Solution.NhanSu
                 tempKyLuat.MucDoKL = cbbMucDo.Text;
                 tempKyLuat.LyDo = txtLyDo.Text;
                 tempKyLuat.GhiChu = txtGhiChu.Text;
+                return tempKyLuat;
             }
             catch { }
+            return null;
         }
 
-        private void passingData1()
+        private CTKyLuatNV passingData1()
         {
-            tempKyLuat = new CTKyLuatNV();
-            tempKyLuat.MaKyLuat = treeViewKyLuat.SelectedNode.Tag.ToString();
-            tempKyLuat.MaKyLuat = cbbMaKL.Text;
-            try
-            {
-                //tempKyLuat.Score = Int16.Parse(txtScore.Text);
-            }
-            catch { }
+            //tempKyLuat = new CTKyLuatNV();
+            //tempKyLuat.MaKyLuat = treeViewKyLuat.SelectedNode.Tag.ToString();
+            //tempKyLuat.MaKyLuat = cbbMaKL.Text;
+            //try
+            //{
+            //    tempKyLuat.MaNV = txtMaNV.Text;
+            //    tempKyLuat.MaKyLuat = cbbMaKL.Text;
+            //    tempKyLuat.HinhThucKL = cbbHinhThucKyLuat.Text;
+            //    tempKyLuat.NgayLap = dateTimePickerNgayLap.Value;
+            //    tempKyLuat.NgayThiHanh = dateTimePickerNgayThiHanh.Value;
+            //    tempKyLuat.NgayKetThuc = dateTimeNgayKetThuc.Value;
+            //    tempKyLuat.MucDoKL = cbbMucDo.Text;
+            //    tempKyLuat.LyDo = txtLyDo.Text;
+            //    tempKyLuat.GhiChu = txtGhiChu.Text;
+            //    return tempKyLuat;
+            //}
+            //catch { }
+            return null;
         }
 
         #endregion        int flag = 0; // thêm=0 sửa=1
@@ -161,7 +173,6 @@ namespace SRPHR_Solution.NhanSu
             flag = 0;
             EnabledControls(true);
             ClearTextBox();
-            CobQLChiTietKL_Load();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -183,7 +194,7 @@ namespace SRPHR_Solution.NhanSu
             if (flag == 0)//thêm
             {
                 passingData();
-                if (CTKLBLL.Add(tempKyLuat))
+                if (CTKLBLL.Add(passingData()))
                 {
                     MessageBox.Show("Thêm thành công");
                     DGViewQLChiTietKL_Load();
@@ -193,8 +204,8 @@ namespace SRPHR_Solution.NhanSu
             }
             else //sửa 
             {
-                passingData1();
-                if (CTKLBLL.UpDate(tempKyLuat))
+                //passingData1();
+                if (CTKLBLL.UpDate(passingData()))
                     MessageBox.Show("Sửa thành công");
                 else
                     MessageBox.Show("Sửa thất bại");
@@ -204,16 +215,31 @@ namespace SRPHR_Solution.NhanSu
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hướng dẫn này ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (DialogResult.Yes == r)
+            //DialogResult r = MessageBox.Show("Bạn có chắn chắn xoá hướng dẫn này ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (DialogResult.Yes == r)
+            //{
+            //    passingData();
+            //    if (CTKLBLL.Delete(tempKyLuat))
+            //        MessageBox.Show("Xoá thành công");
+            //    else
+            //        MessageBox.Show("Xoá thất bại");
+            //}
+            //FrmChiTietKyLuat_Load(sender, e);
+            int hideIndex = 0;
+            foreach (DataGridViewRow dr in dataGridViewChiTietKyLuat.Rows)
             {
-                passingData();
-                if (CTKLBLL.Delete(tempKyLuat))
-                    MessageBox.Show("Xoá thành công");
-                else
-                    MessageBox.Show("Xoá thất bại");
+                if (dr.Cells[0].Value.ToString() == txtMaNV.Text)
+                {
+                    hideIndex = dr.Index;
+                }
             }
-            FrmChiTietKyLuat_Load(sender, e);
+
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dataGridViewChiTietKyLuat.DataSource];
+            currencyManager1.SuspendBinding();
+
+            dataGridViewChiTietKyLuat.Rows[hideIndex].Visible = false;
+
+            currencyManager1.ResumeBinding();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -223,5 +249,15 @@ namespace SRPHR_Solution.NhanSu
         }
 
         #endregion
+
+        private void dataGridViewChiTietKyLuat_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dataGridViewChiTietKyLuat.DataSource];
+            //currencyManager1.SuspendBinding();
+
+            //dataGridViewChiTietKyLuat.Rows[e.RowIndex].Visible = false;
+
+            //currencyManager1.ResumeBinding();
+        }
     }
 }

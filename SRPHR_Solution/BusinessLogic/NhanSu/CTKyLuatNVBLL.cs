@@ -18,9 +18,11 @@ namespace BusinessLogic.NhanSu
         {
             try
             {
-                Tbl_CTKyLuatNV newRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == newCTKL.MaNV && record.maKyLuat == newCTKL.MaKyLuat);
+                Tbl_NhanVien tempNV = DB.Tbl_NhanViens.Single(record => record.maNV == newCTKL.MaNV);
+                Tbl_CTKyLuatNV newRecord = new Tbl_CTKyLuatNV();
                 newRecord.maNV = newCTKL.MaNV;
                 newRecord.maKyLuat = newCTKL.MaKyLuat;
+                newRecord.hinhThucKL = newCTKL.HinhThucKL;
                 newRecord.ngayLap = newCTKL.NgayLap;
                 newRecord.ngayThiHanh = newCTKL.NgayThiHanh;
                 newRecord.ngayKetThuc = newCTKL.NgayKetThuc;
@@ -62,7 +64,7 @@ namespace BusinessLogic.NhanSu
         {
             try
             {
-                Tbl_CTKyLuatNV updateRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == updateCTKL.MaNV && record.maKyLuat == updateCTKL.MaKyLuat);
+                Tbl_CTKyLuatNV updateRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == updateCTKL.MaNV);
                 updateRecord.maNV = updateCTKL.MaNV;
                 updateRecord.maKyLuat = updateCTKL.MaKyLuat;
                 updateRecord.ngayLap = updateCTKL.NgayLap;
@@ -89,6 +91,7 @@ namespace BusinessLogic.NhanSu
                 CTKyLuatNV tempCT = new CTKyLuatNV();
                 tempCT.MaNV = record.maNV;
                 tempCT.MaKyLuat = record.maKyLuat;
+                tempCT.HinhThucKL = record.hinhThucKL;
                 tempCT.NgayLap = record.ngayLap;
                 tempCT.NgayThiHanh = record.ngayThiHanh;
                 tempCT.NgayKetThuc = record.ngayKetThuc;
@@ -120,6 +123,26 @@ namespace BusinessLogic.NhanSu
                        });
             lstcd = rct.ToList();
             return lstcd;
+        }
+
+        public IEnumerable<string> getMaKL()
+        {
+            var ma = (from cv in DB.Tbl_KyLuatNVs
+                      select cv.maKyLuat);
+            return ma;
+        }
+
+        public IEnumerable<string> getHT()
+        {
+            var ma = (from cv in DB.Tbl_KyLuatNVs
+                      select cv.hinhThucKL);
+            return ma;
+        }
+        public IEnumerable<string> getMucDo()
+        {
+            var ma = (from cv in DB.Tbl_CTKyLuatNVs
+                      select cv.mucDoKL);
+            return ma;
         }
     }
 }

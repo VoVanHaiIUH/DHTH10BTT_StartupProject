@@ -48,5 +48,12 @@ namespace SRPHR_Solution.NhanSu
             frmNV.MdiParent = this;
             frmNV.Show();
         }
+
+        private void chitietkyluatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmChiTietKyLuat frmKL = new FrmChiTietKyLuat();
+            frmKL.MdiParent = this;
+            frmKL.Show();
+        }
     }
 }
