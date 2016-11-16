@@ -37,7 +37,6 @@
             this.btnthoat = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
-            this.btnquaylai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,22 +118,11 @@
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
             // 
-            // btnquaylai
-            // 
-            this.btnquaylai.Location = new System.Drawing.Point(437, 258);
-            this.btnquaylai.Name = "btnquaylai";
-            this.btnquaylai.Size = new System.Drawing.Size(78, 35);
-            this.btnquaylai.TabIndex = 33;
-            this.btnquaylai.Text = "Quay Lại ";
-            this.btnquaylai.UseVisualStyleBackColor = true;
-            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
-            // 
             // FormLoaiBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 318);
-            this.Controls.Add(this.btnquaylai);
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btnthem);
@@ -146,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormLoaiBaoCao";
             this.Text = "LoaiBaoCao";
+            this.Load += new System.EventHandler(this.FormLoaiBaoCao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,6 +152,5 @@
         private System.Windows.Forms.Button btnthoat;
         private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.Button btnxoa;
-        private System.Windows.Forms.Button btnquaylai;
     }
 }

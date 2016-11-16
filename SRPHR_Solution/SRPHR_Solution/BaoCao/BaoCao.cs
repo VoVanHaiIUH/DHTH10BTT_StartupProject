@@ -46,5 +46,29 @@ namespace SRPHR_Solution.BaoCao
         {
 
         }
+        public string PQBC;
+        private void FormBaoCao_Load(object sender, EventArgs e)
+        {
+            trangthaiPQ(PQBC);
+        }
+        private void trangthaiPQ(string pq)
+        {
+            if (pq.Substring(0, 1) == "1")
+                btnthem.Enabled = true;
+            else
+                btnthem.Enabled = false;
+
+            if (pq.Substring(1, 1) == "1")
+                btnxoa.Enabled = true;
+            else
+                btnxoa.Enabled = false;
+
+            if (pq.Substring(2, 1) == "1")
+                btnsua.Enabled = true;
+            else
+                btnsua.Enabled = false;
+
+
+        }
     }
 }

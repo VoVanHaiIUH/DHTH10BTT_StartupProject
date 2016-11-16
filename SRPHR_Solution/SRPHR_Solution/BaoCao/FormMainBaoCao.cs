@@ -26,6 +26,7 @@ namespace SRPHR_Solution.BaoCao
             //show form báo cáo
             FormBaoCao frmnew = new FormBaoCao();
             frmnew.Activate();
+            frmnew.PQBC = PQMainBC;
             frmnew.ShowDialog();
         }
 
@@ -38,9 +39,10 @@ namespace SRPHR_Solution.BaoCao
             //show form báo cáo
              FormLoaiBaoCao frmnew = new FormLoaiBaoCao();
             frmnew.Activate();
+            frmnew.PQLBC = PQMainBC;
             frmnew.ShowDialog();
         }
-
+        public string PQMainBC;
         private void FormMainBaoCao_Load(object sender, EventArgs e)
         { 
 
