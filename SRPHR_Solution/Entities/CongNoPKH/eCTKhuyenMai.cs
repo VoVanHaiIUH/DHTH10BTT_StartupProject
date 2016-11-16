@@ -20,6 +20,10 @@ namespace Entities.CongNoPKH
             this.phantramKM = phantramKM;
             this.ghiChu = ghiChu;
         }
+        public eCTKhuyenMai()
+        {
+
+        }
         public override int GetHashCode()
         {
             return msDotKM.GetHashCode();

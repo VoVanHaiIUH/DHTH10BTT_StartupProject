@@ -31,5 +31,9 @@ namespace Entities.CongNoPKH
             eKhuyenMai km = (eKhuyenMai)obj;
             return km.Equals(km.msDotKM);
         }
+        public eKhuyenMai()
+        {
+
+        }
     }
 }
