@@ -26,12 +26,12 @@ namespace Entities.CongNoPKH
         }
         public override int GetHashCode()
         {
-            return maKH.GetHashCode();
+            return maNCC.GetHashCode();
         }
         public override bool Equals(object obj)
         {
             eNhaCungCap ncc = (eNhaCungCap)obj;
-            return maKH.ToLower().Equals(ncc.maNCC);
+            return maNCC.ToLower().Equals(ncc.maNCC);
         }
     }
 }
