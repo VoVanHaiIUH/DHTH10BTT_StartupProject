@@ -1006,6 +1006,7 @@
             this.dgvkhuyenmai.Size = new System.Drawing.Size(356, 182);
             this.dgvkhuyenmai.TabIndex = 17;
             this.dgvkhuyenmai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvkhuyenmai_CellContentClick);
+            this.dgvkhuyenmai.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvkhuyenmai_RowStateChanged);
             // 
             // tabPage6
             // 

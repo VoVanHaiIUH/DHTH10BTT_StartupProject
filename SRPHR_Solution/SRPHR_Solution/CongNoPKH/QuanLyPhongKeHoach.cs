@@ -956,6 +956,24 @@ namespace SRPHR_Solution.CongNoPKH
         {
 
         }
+
+        private void dgvkhuyenmai_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+
+            if (dgvkhuyenmai.SelectedRows.Count > 0)
+            {
+
+                eKhuyenMai ekm = (eKhuyenMai)bds2.Current;
+                txtMaSoDotKhuyenMai.Text = e.Row.Cells["msDotKM"].Value.ToString();
+                cmbmsDotKm.Text = e.Row.Cells["msDotKM"].Value.ToString();
+                dtpngaybatdaukm.Text = e.Row.Cells["ngayBD"].Value.ToString();
+                dtpngayketthuckm.Text = e.Row.Cells["ngayKT"].Value.ToString();
+                txtTenDotKhuyenMai.Text = e.Row.Cells["tenDotKM"].Value.ToString();
+                txtghiChukm.Text = e.Row.Cells["ghiChu"].Value.ToString();
+
+
+            }
+        }
         }
     }
 
