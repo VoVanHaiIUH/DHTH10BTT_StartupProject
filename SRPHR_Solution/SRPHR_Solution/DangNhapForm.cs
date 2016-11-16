@@ -43,7 +43,8 @@ namespace SRPHR_Solution
                 ShowInTaskbar = false;
                 // show form Main
                 FormMain frmnew = new FormMain();
-                frmnew.Message = txtid.Text;
+                frmnew._message = txtid.Text;
+                
                 frmnew.ShowDialog();
 
             }
@@ -77,7 +78,7 @@ namespace SRPHR_Solution
                     ShowInTaskbar = false;
                     // show form Main
                     FormMain frmnew = new FormMain();
-                    frmnew.Message = txtid.Text;
+                    frmnew._message = txtid.Text;
                     frmnew.ShowDialog();
 
                 }

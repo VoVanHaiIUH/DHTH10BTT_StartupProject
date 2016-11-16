@@ -42,13 +42,16 @@ namespace SRPHR_Solution.PhanQuyen
         private void btnquaylai_Click(object sender, EventArgs e)
         {
             // thoát form QLPQ
-           Visible = false;
+            
+           //Visible = false;
             //ShowInTaskbar = false;
 
             // show form PQ
             FormMain frmnew = new FormMain();
             frmnew.Activate();
             frmnew.ShowDialog();
+            frmnew._message = "admin";
+            MessageBox.Show(frmnew._message);
         }
 
         private void FormPhanQuyen_FormClosing(object sender, FormClosingEventArgs e)
@@ -62,7 +65,7 @@ namespace SRPHR_Solution.PhanQuyen
         private void FormPhanQuyen_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = taikhoanbll.laythongtintatcataikhoan();
-            txttaikhoan.Text = "Admin";
+            txttaikhoan.Text = "admin";
         }
     }
 }

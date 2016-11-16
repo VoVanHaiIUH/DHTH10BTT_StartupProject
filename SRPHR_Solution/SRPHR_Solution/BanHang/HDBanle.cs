@@ -160,5 +160,41 @@ namespace SRPHR_Solution.BanHang
             //}
             //frmStudent_Load(sender, e);
         }
+        public string PQHDBL;
+        private void FormHDBanle_Load_1(object sender, EventArgs e)
+        {
+            trangthaiPQ(PQHDBL);
+        }
+        private void trangthaiPQ(string pq)
+        {
+            if (pq.Substring(0, 1) == "1")
+                btnthem.Enabled = true;
+            else
+                btnthem.Enabled = false;
+
+            if (pq.Substring(1, 1) == "1")
+                btnxoa.Enabled = true;
+            else
+                btnxoa.Enabled = false;
+
+            if (pq.Substring(2, 1) == "1")
+                btnsua.Enabled = true;
+            else
+                btnsua.Enabled = false;
+
+
+        }
+
+        private void btnxem_Click_1(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+
+            //show form báo cáo
+            FormChitietHDBanle frmnew = new FormChitietHDBanle();
+            frmnew.Activate();
+            frmnew.PQCTHD = PQHDBL;
+            frmnew.ShowDialog();
+        }
     }
 }

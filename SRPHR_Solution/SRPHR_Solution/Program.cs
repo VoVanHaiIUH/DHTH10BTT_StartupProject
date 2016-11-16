@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SRPHR_Solution.PhanQuyen;
+using SRPHR_Solution.BanHang;
 namespace SRPHR_Solution
 {
     static class Program
@@ -17,6 +18,7 @@ namespace SRPHR_Solution
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormDangnhap());
+            //Application.Run(new FormHDGTGT());
         }
     }
 }

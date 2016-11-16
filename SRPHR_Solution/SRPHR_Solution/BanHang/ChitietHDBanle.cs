@@ -17,7 +17,7 @@ namespace SRPHR_Solution.BanHang
     {
         List<ChiTietHoaDonBanLe> ls = new List<ChiTietHoaDonBanLe>();
         BindingSource bd = new BindingSource();
-
+        public string PQCTHD;
         public FormChitietHDBanle()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace SRPHR_Solution.BanHang
 
         private void ChitietHDBanle_Load(object sender, EventArgs e)
         {
-        
+            trangthaiPQ(PQCTHD);
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -78,5 +78,25 @@ namespace SRPHR_Solution.BanHang
             //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
             //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
+        private void trangthaiPQ(string pq)
+        {
+            if (pq.Substring(0, 1) == "1")
+                btnthem.Enabled = true;
+            else
+                btnthem.Enabled = false;
+
+            if (pq.Substring(1, 1) == "1")
+                btnxoa.Enabled = true;
+            else
+                btnxoa.Enabled = false;
+
+            if (pq.Substring(2, 1) == "1")
+                btnsua.Enabled = true;
+            else
+                btnsua.Enabled = false;
+
+
+        }
     }
+
 }

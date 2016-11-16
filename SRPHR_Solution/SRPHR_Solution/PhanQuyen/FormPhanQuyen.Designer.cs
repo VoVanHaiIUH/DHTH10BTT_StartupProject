@@ -33,7 +33,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnthoat = new System.Windows.Forms.Button();
             this.btnQuanLi = new System.Windows.Forms.Button();
-            this.btnquaylai = new System.Windows.Forms.Button();
             this.txttaikhoan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -63,7 +62,6 @@
             // 
             this.groupBox2.Controls.Add(this.btnthoat);
             this.groupBox2.Controls.Add(this.btnQuanLi);
-            this.groupBox2.Controls.Add(this.btnquaylai);
             this.groupBox2.Controls.Add(this.txttaikhoan);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
@@ -92,16 +90,6 @@
             this.btnQuanLi.Text = "Quản lí PQ";
             this.btnQuanLi.UseVisualStyleBackColor = true;
             this.btnQuanLi.Click += new System.EventHandler(this.btnQuanLi_Click);
-            // 
-            // btnquaylai
-            // 
-            this.btnquaylai.Location = new System.Drawing.Point(9, 220);
-            this.btnquaylai.Name = "btnquaylai";
-            this.btnquaylai.Size = new System.Drawing.Size(128, 23);
-            this.btnquaylai.TabIndex = 5;
-            this.btnquaylai.Text = "Quay lại";
-            this.btnquaylai.UseVisualStyleBackColor = true;
-            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
             // 
             // txttaikhoan
             // 
@@ -132,7 +120,6 @@
             this.Name = "FormPhanQuyen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPhanQuyen";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPhanQuyen_FormClosing);
             this.Load += new System.EventHandler(this.FormPhanQuyen_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -149,7 +136,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txttaikhoan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnquaylai;
         private System.Windows.Forms.Button btnQuanLi;
         private System.Windows.Forms.Button btnthoat;
 
