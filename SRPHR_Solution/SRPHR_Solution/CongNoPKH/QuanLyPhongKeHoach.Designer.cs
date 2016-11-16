@@ -82,7 +82,7 @@
             this.btnthemkm = new System.Windows.Forms.Button();
             this.dtpngayketthuckm = new System.Windows.Forms.DateTimePicker();
             this.dtpngaybatdaukm = new System.Windows.Forms.DateTimePicker();
-            this.txtGhichu = new System.Windows.Forms.TextBox();
+            this.txtghiChukm = new System.Windows.Forms.TextBox();
             this.txtTenDotKhuyenMai = new System.Windows.Forms.TextBox();
             this.txtMaSoDotKhuyenMai = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -708,7 +708,7 @@
             this.tabPage5.Controls.Add(this.btnthemkm);
             this.tabPage5.Controls.Add(this.dtpngayketthuckm);
             this.tabPage5.Controls.Add(this.dtpngaybatdaukm);
-            this.tabPage5.Controls.Add(this.txtGhichu);
+            this.tabPage5.Controls.Add(this.txtghiChukm);
             this.tabPage5.Controls.Add(this.txtTenDotKhuyenMai);
             this.tabPage5.Controls.Add(this.txtMaSoDotKhuyenMai);
             this.tabPage5.Controls.Add(this.label5);
@@ -734,6 +734,7 @@
             this.btnsuakm.TabIndex = 35;
             this.btnsuakm.Text = "Sửa";
             this.btnsuakm.UseVisualStyleBackColor = true;
+            this.btnsuakm.Click += new System.EventHandler(this.btnsuakm_Click);
             // 
             // btnthemkm
             // 
@@ -743,6 +744,7 @@
             this.btnthemkm.TabIndex = 33;
             this.btnthemkm.Text = "Thêm";
             this.btnthemkm.UseVisualStyleBackColor = true;
+            this.btnthemkm.Click += new System.EventHandler(this.btnthemkm_Click);
             // 
             // dtpngayketthuckm
             // 
@@ -758,12 +760,12 @@
             this.dtpngaybatdaukm.Size = new System.Drawing.Size(200, 22);
             this.dtpngaybatdaukm.TabIndex = 30;
             // 
-            // txtGhichu
+            // txtghiChukm
             // 
-            this.txtGhichu.Location = new System.Drawing.Point(190, 160);
-            this.txtGhichu.Name = "txtGhichu";
-            this.txtGhichu.Size = new System.Drawing.Size(200, 22);
-            this.txtGhichu.TabIndex = 27;
+            this.txtghiChukm.Location = new System.Drawing.Point(190, 160);
+            this.txtghiChukm.Name = "txtghiChukm";
+            this.txtghiChukm.Size = new System.Drawing.Size(200, 22);
+            this.txtghiChukm.TabIndex = 27;
             // 
             // txtTenDotKhuyenMai
             // 
@@ -1811,6 +1813,7 @@
             this.dgvctkhuyenmai.Name = "dgvctkhuyenmai";
             this.dgvctkhuyenmai.Size = new System.Drawing.Size(325, 182);
             this.dgvctkhuyenmai.TabIndex = 97;
+            this.dgvctkhuyenmai.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvctkhuyenmai_RowStateChanged);
             // 
             // btnsuaCTKM
             // 
@@ -1820,6 +1823,7 @@
             this.btnsuaCTKM.TabIndex = 96;
             this.btnsuaCTKM.Text = "Sửa";
             this.btnsuaCTKM.UseVisualStyleBackColor = true;
+            this.btnsuaCTKM.Click += new System.EventHandler(this.btnsuaCTKM_Click);
             // 
             // btnthemctkm
             // 
@@ -1829,6 +1833,7 @@
             this.btnthemctkm.TabIndex = 95;
             this.btnthemctkm.Text = "Thêm";
             this.btnthemctkm.UseVisualStyleBackColor = true;
+            this.btnthemctkm.Click += new System.EventHandler(this.btnthemctkm_Click);
             // 
             // txtghiChukmct
             // 
@@ -1863,7 +1868,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(520, 83);
+            this.label46.Location = new System.Drawing.Point(520, 87);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(97, 16);
             this.label46.TabIndex = 90;
@@ -1978,7 +1983,7 @@
         private System.Windows.Forms.Button btnthemkm;
         private System.Windows.Forms.DateTimePicker dtpngayketthuckm;
         private System.Windows.Forms.DateTimePicker dtpngaybatdaukm;
-        private System.Windows.Forms.TextBox txtGhichu;
+        private System.Windows.Forms.TextBox txtghiChukm;
         private System.Windows.Forms.TextBox txtTenDotKhuyenMai;
         private System.Windows.Forms.TextBox txtMaSoDotKhuyenMai;
         private System.Windows.Forms.Label label5;

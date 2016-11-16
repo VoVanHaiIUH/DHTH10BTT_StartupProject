@@ -71,21 +71,6 @@ namespace BusinessLogic.CongNoPKH
 
         }
 
-        public int themCTKM(eCTKhuyenMai ctkm)
-        {
-            var tkm = db.Tbl_CTKhuyenMais.Where(x => x.msDotKM == ctkm.msDotKM).FirstOrDefault();
-            if (tkm != null)
-                return 0;
-            Tbl_CTKhuyenMai p = new Tbl_CTKhuyenMai();
-            p.ghiChu = ctkm.ghiChu;
-            p.maSP = ctkm.maSP;
-            p.msDotKM = ctkm.msDotKM;
-            p.phantramKM = ctkm.phantramKM;
-            db.Tbl_CTKhuyenMais.InsertOnSubmit(p);
-            db.SubmitChanges();
-            return 1;
-        }
-
 
         public void UpDateKhuyenMai(string msDotKM, string tenDotKM, DateTime ngayBD, DateTime ngayKT, string ghiChu)
         {
@@ -110,6 +95,39 @@ namespace BusinessLogic.CongNoPKH
             ctkm.First().phantramKM = Convert.ToDouble(phantramKM);
             ctkm.First().ghiChu = ghiChu;
             db.SubmitChanges();
+        }
+
+        public int themCTKM(eCTKhuyenMai ctkm)
+        {
+            if (kiemtraCTKM(ctkm.msDotKM))
+            {
+                var r = from c in db.Tbl_CTKhuyenMais
+                        where c.msDotKM == ctkm.msDotKM
+                        select new { c.phantramKM };
+                int kq = Convert.ToInt32(ctkm.phantramKM);
+                foreach (var k in r)
+                {
+                    kq += Convert.ToInt32(k.phantramKM);
+                }
+                IQueryable<Tbl_CTKhuyenMai> ct1 = db.Tbl_CTKhuyenMais.Where(x => x.msDotKM.Equals(ctkm.msDotKM));
+                ct1.First().phantramKM = kq;
+                return 0;
+            }
+            Tbl_CTKhuyenMai p = new Tbl_CTKhuyenMai();
+            p.ghiChu = ctkm.ghiChu;
+            p.maSP = ctkm.maSP;
+            p.msDotKM = ctkm.msDotKM;
+            p.phantramKM = ctkm.phantramKM;
+            db.Tbl_CTKhuyenMais.InsertOnSubmit(p);
+            db.SubmitChanges();
+            return 1;
+        }
+        public bool kiemtraCTKM(string msdkm)
+        {
+            Tbl_CTKhuyenMai r = db.Tbl_CTKhuyenMais.Where(x => x.msDotKM == msdkm).FirstOrDefault();
+            if (r != null)
+                return true;
+            return false;
         }
     }
 }
