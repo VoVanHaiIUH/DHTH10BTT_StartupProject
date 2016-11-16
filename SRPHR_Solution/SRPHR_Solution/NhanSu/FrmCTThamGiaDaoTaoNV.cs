@@ -68,18 +68,16 @@ namespace SRPHR_Solution.NhanSu
         {
             txtMaKhoaDT.Enabled = status;
             cbbMaNV.Enabled = status;
+            txtKetQua.Enabled = status;
 
             frmMenu f = (frmMenu)MdiParent;
-            if (f.quyen >= 1)
-            {
-                txtMaKhoaDT.Enabled = status;
-            }
+            
 
             btnSave.Enabled = status;
             btnCancel.Enabled = status;
 
             btnAdd.Enabled = !status;
-            //btnUpdate.Enabled = !status;
+            btnUpdate.Enabled = !status;
             btnDelete.Enabled = !status;
 
             treeViewDaoTao.Enabled = !status;
@@ -113,6 +111,9 @@ namespace SRPHR_Solution.NhanSu
             tempCTDaoTao = new CTThamGiaDTNV();
             tempCTDaoTao.MaKhoaDT = treeViewDaoTao.SelectedNode.Tag.ToString();
             tempCTDaoTao.MaKhoaDT = treeViewDaoTao.Text;
+            tempCTDaoTao.KetQua = txtKetQua.Text;
+            tempCTDaoTao.NhanXet = txtNhanXet.Text;
+            tempCTDaoTao.MaNV = cbbMaNV.SelectedValue.ToString();
             try
             {
                 tempCTDaoTao.KetQua = txtKetQua.Text;
