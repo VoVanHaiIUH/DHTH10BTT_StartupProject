@@ -17,7 +17,7 @@ namespace SRPHR_Solution.BanHang
 {
     public partial class FormHDBanle : Form
     {
-  
+        
         BindingSource bd = new BindingSource();
         HoaDonBanLeBLL hdblbll;
 

@@ -83,5 +83,20 @@ namespace BusinessLogic.BanHang
         {
             return new HoaDonBanGTGT(tmp.soHoaDon, tmp.dvBanHang, tmp.dvMuaHang, tmp.diaChi, tmp.hinhthucThanhToan, tmp.soTaiKhoan, tmp.msThue, tmp.ngaylapHoaDon, tmp.thanhTien);
         }
+
+        public bool xoaclgd(HoaDonBanGTGT delid)
+        {
+            try
+            {
+                Tbl_HD_GTGT deletema = DB.Tbl_HD_GTGTs.Single(x => x.soHoaDon == delid.SoHoaDon);
+                DB.Tbl_HD_GTGTs.DeleteOnSubmit(deletema);
+                DB.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

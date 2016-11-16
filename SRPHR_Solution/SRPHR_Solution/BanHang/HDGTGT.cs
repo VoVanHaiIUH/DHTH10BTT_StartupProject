@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 using Entities.BanHang;
 using SRPHR_Solution.BanHang;
+using BusinessLogic.BanHang;
 //Nhóm chưa update BusinessLogic BanHang
 
 namespace SRPHR_Solution.BanHang
@@ -17,6 +18,7 @@ namespace SRPHR_Solution.BanHang
     public partial class FormHDGTGT : Form
     {
         public string PQHDGTGT;
+        HoaDonGTGTBLL hdgtbll;
         
         //List<ChiTietHDGTGT> ls = new List<ChiTietHDGTGT>();
         BindingSource bd = new BindingSource();
@@ -29,6 +31,7 @@ namespace SRPHR_Solution.BanHang
         {
             this.Close();
         }
+
         private void ChitietHDGTGT_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult n = MessageBox.Show("Bạn muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
@@ -50,56 +53,74 @@ namespace SRPHR_Solution.BanHang
 
         private void btnthem_Click(object sender, EventArgs e)
         {
+            HoaDonBanGTGT n = new HoaDonBanGTGT();
             //ChiTietHDGTGT n = new ChiTietHDGTGT();
-            //n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
-            //n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
-            //n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
-            //n.MaThue = Convert.ToInt32(txtmathue.Text.Trim());
-            //n.ThueGTGT = Convert.ToInt32(txtthuegtgt.Text.Trim());
-            //n.TenDVMua = txttendvmua.Text;
-            //n.DiaChi = txtdiachi.Text;
-            //n.TenSP = txttensp.Text;
-            //n.GiamGia = txtgiamgia.Text;
-            //n.KhuyenMai = txtkhuyenmai.Text;
-            //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
-            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
-            //n.TongTien = Convert.ToDecimal(txttongtien.Text.Trim());
+            n.SoHoaDon = txtsohd.Text.Trim();
+            n.DiaChi = txtdiachigt.Text.Trim();
+            n.DvBanHang = txtdvban.Text.Trim();
+            n.ThanhTien = Convert.ToDecimal( textBox1.Text.Trim());
+            n.DvMuaHang = txtdvmua.Text.Trim(); 
+            n.HinhThucThanhToan = txthinhthuc.Text.Trim();
+            n.MsThue = Convert.ToInt32( txtmasothue.Text.Trim());
+            n.NgaylapHoaDon = Convert.ToDateTime( txtngaylap.Text.Trim());
+            n.SoTaiKhoan = txtsotaikhoan.Text.Trim();
+            int kq = hdgtbll.ThemHDGTGT(n);
+            if (kq == 0)
+            {
+                MessageBox.Show("Trùng mã hóa đơn !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+            else if (kq == 1) MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            //ChiTietHDGTGT n = new ChiTietHDGTGT();
-            //n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
-            //n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
-            //n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
-            //n.MaThue = Convert.ToInt32(txtmathue.Text.Trim());
-            //n.ThueGTGT = Convert.ToInt32(txtthuegtgt.Text.Trim());
-            //n.TenDVMua = txttendvmua.Text;
-            //n.DiaChi = txtdiachi.Text;
-            //n.TenSP = txttensp.Text;
-            //n.GiamGia = txtgiamgia.Text;
-            //n.KhuyenMai = txtkhuyenmai.Text;
-            //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
-            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
-            //n.TongTien = Convert.ToDecimal(txttongtien.Text.Trim());
+            HoaDonBanGTGT n1 = new HoaDonBanGTGT();
+            n1.SoHoaDon = txtsohd.Text.Trim();
+            n1.DiaChi = txtdiachigt.Text.Trim();
+            n1.DvBanHang = txtdvban.Text.Trim();
+            n1.ThanhTien = Convert.ToDecimal(textBox1.Text.Trim());
+            n1.DvMuaHang = txtdvmua.Text.Trim();
+            n1.HinhThucThanhToan = txthinhthuc.Text.Trim();
+            n1.MsThue = Convert.ToInt32(txtmasothue.Text.Trim());
+            n1.NgaylapHoaDon = Convert.ToDateTime(txtngaylap.Text.Trim());
+            n1.SoTaiKhoan = txtsotaikhoan.Text.Trim();
+            bool kq = hdgtbll.xoaclgd(n1);
+            if (kq == false)
+            {
+                MessageBox.Show("Không có mã để xóa!", "Thông báo!");
+            }
+            else
+            {
+                MessageBox.Show("Xóa thành công!", "Thông báo!");
+                dataGridView1.DataSource = hdgtbll.GetAllHDBGTGT();
+            }
         }
+
+        
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            //ChiTietHDGTGT n = new ChiTietHDGTGT();
-            //n.MaHDGTGT = Convert.ToInt32(txtmahdgtgt.Text.Trim());
-            //n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
-            //n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
-            //n.MaThue = Convert.ToInt32(txtmathue.Text.Trim());
-            //n.ThueGTGT = Convert.ToInt32(txtthuegtgt.Text.Trim());
-            //n.TenDVMua = txttendvmua.Text;
-            //n.DiaChi = txtdiachi.Text;
-            //n.TenSP = txttensp.Text;
-            //n.GiamGia = txtgiamgia.Text;
-            //n.KhuyenMai = txtkhuyenmai.Text;
-            //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
-            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
-            //n.TongTien = Convert.ToDecimal(txttongtien.Text.Trim());
+            HoaDonBanGTGT n2 = new HoaDonBanGTGT();
+            n2.SoHoaDon = txtsohd.Text.Trim();
+            n2.DiaChi = txtdiachigt.Text.Trim();
+            n2.DvBanHang = txtdvban.Text.Trim();
+            n2.ThanhTien = Convert.ToDecimal(textBox1.Text.Trim());
+            n2.DvMuaHang = txtdvmua.Text.Trim();
+            n2.HinhThucThanhToan = txthinhthuc.Text.Trim();
+            n2.MsThue = Convert.ToInt32(txtmasothue.Text.Trim());
+            n2.NgaylapHoaDon = Convert.ToDateTime(txtngaylap.Text.Trim());
+            n2.SoTaiKhoan = txtsotaikhoan.Text.Trim();
+            bool kq = hdgtbll.Update(n2);
+            if (kq == false)
+            {
+                MessageBox.Show("Không có mã để sửa!", "Thông báo!");
+
+            }
+            else
+            {
+                MessageBox.Show("Sửa thành công!", "Thông báo!");
+                dataGridView1.DataSource = hdgtbll.GetAllHDBGTGT();
+            }
         }
         private void trangthaiPQ(string pq)
         {
@@ -118,7 +139,15 @@ namespace SRPHR_Solution.BanHang
             else
                 btnsua.Enabled = false;
 
-            
         }
+
+        private void FormHDGTGT_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult n = MessageBox.Show("Bạn muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (n == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        int flag = 0;
     }
 }
