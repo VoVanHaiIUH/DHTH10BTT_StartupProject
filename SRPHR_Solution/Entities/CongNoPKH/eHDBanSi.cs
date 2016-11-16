@@ -21,6 +21,11 @@ namespace Entities.CongNoPKH
             this.maNV = maNV;
             this.ghiChu = ghichu;
         }
+
+        public eHDBanSi()
+        {
+        }
+
         public override int GetHashCode()
         {
             return maKH.GetHashCode();
