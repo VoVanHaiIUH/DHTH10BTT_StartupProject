@@ -54,6 +54,8 @@
     <Compile Include="CongNoPKH\SanPham_BLL.cs" />
     <Compile Include="KhachHang\KhachHangBLL.cs" />
     <Compile Include="Kho\CTPQLKho_BLL.cs" />
+    <Compile Include="Kho\Kho_BLL.cs" />
+    <Compile Include="Kho\NhanDuLieuTuPKH_BLL.cs" />
     <Compile Include="Kho\PhieuNK_BLL.cs" />
     <Compile Include="Kho\PhieuQLKho_BLL.cs" />
     <Compile Include="Kho\PhieuXK_BLL.cs" />

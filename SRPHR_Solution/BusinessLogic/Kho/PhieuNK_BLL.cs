@@ -11,57 +11,53 @@ namespace BusinessLogic.Kho
     public class PhieuNK_BLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
-        public bool AddAllPhieuNK(ePhieuNK newpnk)
+        public List<ePhieuNK> laydanhsachphieuNhapKho()
         {
-            try
+            var listNK = DB.Tbl_PhieuNKs.ToList();
+            List<ePhieuNK> ls = new List<ePhieuNK>();
+            foreach (Tbl_PhieuNK newNK in listNK)
             {
-                Tbl_PhieuNK pnk = DB.Tbl_PhieuNKs.Single(x => x.maPhieuNhap == newpnk._maPhieuNhap);
-                pnk.maPhieuNhap = newpnk._maPhieuNhap;
-                pnk.ngayLapNhap = Convert.ToDateTime(newpnk._ngayLapNhap);
-                pnk.maNV = newpnk._maNV;
-                pnk.msKho = newpnk._msKho;
-                pnk.tinhTrang = newpnk._tinhTrang;
-                DB.Tbl_PhieuNKs.InsertOnSubmit(pnk);
-                DB.SubmitChanges();
-                return true;
+                ePhieuNK enk = new ePhieuNK();
+                enk._maNV = newNK.maNV;
+                enk._maPhieuNhap = newNK.maPhieuNhap;
+                enk._msKho = newNK.msKho;
+                enk._ngayLapNhap = newNK.ngayLapNhap;
+                enk._tinhTrang = newNK.tinhTrang;
+                ls.Add(enk);
             }
-            catch
-            {
-                return false;
-            }
+            return ls;
         }
-        public bool DeletePhieuNK(string delid)
+
+        public int ThemPhieuNhapKho(ePhieuNK newpnk)
         {
-            try
-            {
-                Tbl_PhieuNK deletema = DB.Tbl_PhieuNKs.Single(x => x.maPhieuNhap == delid);
-                DB.Tbl_PhieuNKs.DeleteOnSubmit(deletema);
-                DB.SubmitChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            if (Kiemtrasutontai(newpnk._maPhieuNhap))
+                return 0;
+            Tbl_PhieuNK pnkTmp = new Tbl_PhieuNK();
+            pnkTmp.maPhieuNhap = newpnk._maPhieuNhap;
+            pnkTmp.ngayLapNhap = newpnk._ngayLapNhap;
+            pnkTmp.maNV = newpnk._maNV;
+            pnkTmp.msKho = newpnk._msKho;
+            pnkTmp.tinhTrang = newpnk._tinhTrang;
+            DB.Tbl_PhieuNKs.InsertOnSubmit(pnkTmp);
+            DB.SubmitChanges();
+            return 1;
         }
-        public bool UpDatePhieuNK(ePhieuNK updatepnk)
+        public bool Kiemtrasutontai(string maphieu)
         {
-            try
-            {
-                Tbl_PhieuNK pnk = DB.Tbl_PhieuNKs.Single(x => x.maPhieuNhap == updatepnk._maPhieuNhap);
-                pnk.maPhieuNhap = updatepnk._maPhieuNhap;
-                pnk.ngayLapNhap = Convert.ToDateTime(updatepnk._ngayLapNhap);
-                pnk.maNV = updatepnk._maNV;
-                pnk.msKho = updatepnk._msKho;
-                pnk.tinhTrang = updatepnk._tinhTrang;
-                DB.SubmitChanges();
-                return true;
-            }
-            catch
-            {
+            Tbl_PhieuNK pnk = DB.Tbl_PhieuNKs.Where(x => x.maPhieuNhap == maphieu).FirstOrDefault();
+            if (pnk == null)
                 return false;
-            }
+            return true;
         }
-       
+        public void UpDatePhieuNK(string maphieu, string mskho, DateTime ngaylap, string Tinhtrang, string manv)
+        {
+            IQueryable<Tbl_PhieuNK> phieu = DB.Tbl_PhieuNKs.Where(x => x.maPhieuNhap.Equals(maphieu));
+            phieu.First().msKho = mskho;
+            phieu.First().ngayLapNhap = ngaylap;
+            phieu.First().tinhTrang = Tinhtrang;
+            phieu.First().maNV = manv;
+            DB.SubmitChanges();
+        }
+
     }
 }

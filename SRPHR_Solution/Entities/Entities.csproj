@@ -61,7 +61,7 @@
     <Compile Include="eCTPQLKho.cs" />
     <Compile Include="KhachHang\KhachHang.cs" />
     <Compile Include="KhachHang\Thethanhvien.cs" />
-    <Compile Include="Kho\eCTPhieuNK.cs" />
+    <Compile Include="Kho\eCTPhieuQlyKho.cs" />
     <Compile Include="Kho\eKho.cs" />
     <Compile Include="Kho\ePhieuNK.cs" />
     <Compile Include="Kho\ePhieuQLiKho.cs" />

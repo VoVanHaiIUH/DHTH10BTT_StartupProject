@@ -9,18 +9,27 @@ namespace Entities.Kho
     public class ePhieuXK
     {
         public string _maPhieuXuat { get; set; }
-        public string _ngayLapXuat { get; set; }
+        public DateTime _ngayLapXuat { get; set; }
         public string _maNV { get; set; }
-
         public string _tinhTrang { get; set; }
+        public string _maKho { get; set; }
 
+        public ePhieuXK()
+        {
+            this._maNV = "";
+            this._maPhieuXuat = "";
+            this._ngayLapXuat = DateTime.Now;
+            this._tinhTrang = "";
+            this._maKho = "";
+        }
 
-        public ePhieuXK(string maphieuxuat, string ngaylapxuat, string manv, string tinhtrang)
+        public ePhieuXK(string maphieuxuat, DateTime ngaylapxuat, string manv, string tinhtrang, string makho)
         {
             this._maNV = manv;
             this._maPhieuXuat = _maPhieuXuat;
             this._ngayLapXuat = ngaylapxuat;
             this._tinhTrang = tinhtrang;
+            this._maKho = makho;
         }
         #region Methods manhanvien
         public override bool Equals(Object newXK)

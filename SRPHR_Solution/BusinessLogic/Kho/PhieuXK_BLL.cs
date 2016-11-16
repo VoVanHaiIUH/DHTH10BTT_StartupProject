@@ -11,55 +11,54 @@ namespace BusinessLogic.Kho
     public class PhieuXK_BLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
-        public bool AddAllPhieuNK(ePhieuXK newpxk)
+        public List<ePhieuXK> laydanhsachphieuXuatKho()
         {
-            try
+            var listXK = DB.Tbl_PhieuXKs.ToList();
+            List<ePhieuXK> ls = new List<ePhieuXK>();
+            foreach (Tbl_PhieuXK newXK in listXK)
             {
-                Tbl_PhieuXK pxk = DB.Tbl_PhieuXKs.Single(x => x.maPhieuXuat == newpxk._maPhieuXuat);
-                pxk.maPhieuXuat = newpxk._maPhieuXuat;
-                pxk.ngayLapXuat = Convert.ToDateTime(newpxk._ngayLapXuat);
-                pxk.maNV = newpxk._maNV;
-                pxk.tinhTrang = newpxk._tinhTrang;
-                DB.Tbl_PhieuXKs.InsertOnSubmit(pxk);
-                DB.SubmitChanges();
-                return true;
+                ePhieuXK exk = new ePhieuXK();
+                exk._maNV = newXK.maNV;
+                exk._maPhieuXuat = newXK.maPhieuXuat;
+                exk._maKho = newXK.maKho;
+                exk._ngayLapXuat = newXK.ngayLapXuat.Value;
+                exk._tinhTrang = newXK.tinhTrang;
+                ls.Add(exk);
             }
-            catch
-            {
-                return false;
-            }
+            return ls;
         }
-        public bool DeletePhieuXK(string delid)
+
+        public int ThemPhieuXuatKho(ePhieuXK newpxk)
         {
-            try
-            {
-                Tbl_PhieuXK deletema = DB.Tbl_PhieuXKs.Single(x => x.maPhieuXuat == delid);
-                DB.Tbl_PhieuXKs.DeleteOnSubmit(deletema);
-                DB.SubmitChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            if (Kiemtrasutontai(newpxk._maPhieuXuat))
+                return 0;
+            Tbl_PhieuXK pxkTmp = new Tbl_PhieuXK();
+            pxkTmp.maPhieuXuat = newpxk._maPhieuXuat;
+            pxkTmp.ngayLapXuat = newpxk._ngayLapXuat;
+            pxkTmp.maNV = newpxk._maNV;
+            pxkTmp.maKho = newpxk._maKho;
+            pxkTmp.tinhTrang = newpxk._tinhTrang;
+            DB.Tbl_PhieuXKs.InsertOnSubmit(pxkTmp);
+            DB.SubmitChanges();
+            return 1;
         }
-        public bool UpDatePhieuNK(ePhieuXK updatepxk)
+        public bool Kiemtrasutontai(string maphieu)
         {
-            try
-            {
-                Tbl_PhieuXK pxk = DB.Tbl_PhieuXKs.Single(x => x.maPhieuXuat == updatepxk._maPhieuXuat);
-                pxk.maPhieuXuat = updatepxk._maPhieuXuat;
-                pxk.ngayLapXuat = Convert.ToDateTime(updatepxk._ngayLapXuat);
-                pxk.maNV = updatepxk._maNV;
-                pxk.tinhTrang = updatepxk._tinhTrang;
-                DB.SubmitChanges();
-                return true;
-            }
-            catch
-            {
+            Tbl_PhieuXK pxk = DB.Tbl_PhieuXKs.Where(x => x.maPhieuXuat == maphieu).FirstOrDefault();
+            if (pxk == null)
                 return false;
-            }
+            return true;
         }
-      
+        public void UpDatePhieuXK(string maphieu, string mskho, DateTime ngaylap, string Tinhtrang, string manv)
+        {
+            IQueryable<Tbl_PhieuXK> phieu = DB.Tbl_PhieuXKs.Where(x => x.maPhieuXuat.Equals(maphieu));
+            //      thuep.First().maPhong = maphong;
+            phieu.First().maKho = mskho;
+            phieu.First().ngayLapXuat = ngaylap;
+            phieu.First().tinhTrang = Tinhtrang;
+            phieu.First().maNV = manv;
+            DB.SubmitChanges();
+        }
+
     }
 }

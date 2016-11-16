@@ -134,17 +134,47 @@
     <Compile Include="KhachHang\FrmTheThanhVien.Designer.cs">
       <DependentUpon>FrmTheThanhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kho\CTPhieuQLKho.cs">
+    <Compile Include="Kho\ChiTietNhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kho\CTPhieuQLKho.Designer.cs">
-      <DependentUpon>CTPhieuQLKho.cs</DependentUpon>
+    <Compile Include="Kho\ChiTietNhapKho.Designer.cs">
+      <DependentUpon>ChiTietNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\ChiTietXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\ChiTietXuatKho.Designer.cs">
+      <DependentUpon>ChiTietXuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\CTPhieuQlyKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\CTPhieuQlyKho.Designer.cs">
+      <DependentUpon>CTPhieuQlyKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\NhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\NhapKho.Designer.cs">
+      <DependentUpon>NhapKho.cs</DependentUpon>
     </Compile>
     <Compile Include="Kho\PQLKho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kho\PQLKho.Designer.cs">
       <DependentUpon>PQLKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\QuanlyKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\QuanlyKho.Designer.cs">
+      <DependentUpon>QuanlyKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kho\XuatKhoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kho\XuatKhoFrm.Designer.cs">
+      <DependentUpon>XuatKhoFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\FrmChiTietKyLuat.cs">
       <SubType>Form</SubType>
@@ -259,11 +289,26 @@
     <EmbeddedResource Include="KhachHang\FrmTheThanhVien.resx">
       <DependentUpon>FrmTheThanhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kho\CTPhieuQLKho.resx">
-      <DependentUpon>CTPhieuQLKho.cs</DependentUpon>
+    <EmbeddedResource Include="Kho\ChiTietNhapKho.resx">
+      <DependentUpon>ChiTietNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\ChiTietXuatKho.resx">
+      <DependentUpon>ChiTietXuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\CTPhieuQlyKho.resx">
+      <DependentUpon>CTPhieuQlyKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\NhapKho.resx">
+      <DependentUpon>NhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kho\PQLKho.resx">
       <DependentUpon>PQLKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\QuanlyKho.resx">
+      <DependentUpon>QuanlyKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kho\XuatKhoFrm.resx">
+      <DependentUpon>XuatKhoFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\FrmChiTietKyLuat.resx">
       <DependentUpon>FrmChiTietKyLuat.cs</DependentUpon>

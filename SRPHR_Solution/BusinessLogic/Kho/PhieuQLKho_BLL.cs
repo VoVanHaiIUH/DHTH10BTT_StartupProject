@@ -19,65 +19,44 @@ namespace BusinessLogic.Kho
             {
                 ePhieuQLiKho pqlk = new ePhieuQLiKho();
                 pqlk._maPhieuQli = temppqlk.maPhieuQL;
-                pqlk._ngayLapQLi = Convert.ToString(temppqlk.ngayLapQL);
+                pqlk._ngayLapQLi = temppqlk.ngayLapQL.Value;
                 pqlk._maNV = temppqlk.maNV;
                 pqlk._maKho = temppqlk.msKho;
                 pqlk._tinhTrang = temppqlk.tinhTrang;
                 ls.Add(pqlk);
-
             }
             return ls;
         }
-        public bool AddAllPhieuQLK(ePhieuQLiKho newpqlk)
+        public int AddAllPhieuQLK(ePhieuQLiKho newpqlk)
         {
-            try
-            {
-                Tbl_PhieuQLKho pqlk = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == newpqlk._maPhieuQli);
-                pqlk.maPhieuQL = newpqlk._maPhieuQli;
-                pqlk.ngayLapQL = Convert.ToDateTime(newpqlk._ngayLapQLi);
-                pqlk.maNV = newpqlk._maNV;
-                pqlk.tinhTrang = newpqlk._tinhTrang;
-                DB.Tbl_PhieuQLKhos.InsertOnSubmit(pqlk);
-                DB.SubmitChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            if (Kiemtrasutontai(newpqlk._maPhieuQli))
+                return 0;
+            Tbl_PhieuQLKho pqlk = new Tbl_PhieuQLKho();
+            pqlk.maPhieuQL = newpqlk._maPhieuQli;
+            pqlk.ngayLapQL = newpqlk._ngayLapQLi;
+            pqlk.maNV = newpqlk._maNV;
+            pqlk.tinhTrang = newpqlk._tinhTrang;
+            pqlk.msKho = newpqlk._maKho;
+            DB.Tbl_PhieuQLKhos.InsertOnSubmit(pqlk);
+            DB.SubmitChanges();
+            return 1;
         }
-        public bool DeletePhieuQLK(ePhieuQLiKho delid)
+
+        public bool Kiemtrasutontai(string map)
         {
-            try
-            {
-                Tbl_PhieuQLKho deletema = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == delid._maPhieuQli);
-                DB.Tbl_PhieuQLKhos.DeleteOnSubmit(deletema);
-                DB.SubmitChanges();
-                return true;
-            }
-            catch
-            {
+            Tbl_PhieuQLKho qlk = DB.Tbl_PhieuQLKhos.Where(x => x.maPhieuQL == map).FirstOrDefault();
+            if (qlk == null)
                 return false;
-            }
+            return true;
         }
-        public bool UpDatePhieuQLK(ePhieuQLiKho updatepqlk)
+        public void UpDatePhieuQLK(string maphieu, string manv, string makho, string tinhtrang, DateTime ngaylap)
         {
-            try
-            {
-                Tbl_PhieuQLKho pqlk = DB.Tbl_PhieuQLKhos.Single(x => x.maPhieuQL == updatepqlk._maPhieuQli);
-                pqlk.maPhieuQL = updatepqlk._maPhieuQli;
-                pqlk.maNV = updatepqlk._maNV;
-                pqlk.ngayLapQL = Convert.ToDateTime(updatepqlk._ngayLapQLi);
-                pqlk.tinhTrang = updatepqlk._tinhTrang;
-                pqlk.msKho = updatepqlk._maKho;
-                DB.SubmitChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            IQueryable<Tbl_PhieuQLKho> phieu = DB.Tbl_PhieuQLKhos.Where(x => x.maPhieuQL.Equals(maphieu));
+            phieu.First().ngayLapQL = ngaylap;
+            phieu.First().tinhTrang = tinhtrang;
+            phieu.First().maNV = manv;
+            DB.SubmitChanges();
         }
-        
+
     }
 }
