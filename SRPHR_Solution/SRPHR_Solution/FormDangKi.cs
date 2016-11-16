@@ -34,10 +34,20 @@ namespace SRPHR_Solution
 
         private void btndangki_Click(object sender, EventArgs e)
         {
-            if(txtmatkhau.Text!=txtxacnhanmk.Text)
+
+            if (txttentaikhoan.Text.Length < 6)
+            {
+                MessageBox.Show("Tên tài khoản phải có ít nhất 6 kí tự !");
+            }
+            
+            else if(txtmatkhau.Text.Length<6)
+            {
+                MessageBox.Show("Mật khẩu phải có ít nhất 6 kí tự !");
+            }
+            else if (txtmatkhau.Text != txtxacnhanmk.Text)
             {
                 MessageBox.Show("Lỗi nhập lại mật khẩu không chính xác!");
-            }
+           }
             else
             {
                 eTaiKhoan tk = new eTaiKhoan();

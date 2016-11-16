@@ -13,7 +13,7 @@ using SRPHR_Solution.CongNoPKH;
 using SRPHR_Solution.BanHang;
 using SRPHR_Solution.BaoCao;
 using SRPHR_Solution.NhanSu;
-using SRPHR_Solution.CongNoPKH;
+
 
 
 namespace SRPHR_Solution.PhanQuyen
@@ -215,7 +215,7 @@ namespace SRPHR_Solution.PhanQuyen
             btnformbaocao.Enabled = false;
             btnformkhachhang.Enabled = false;
             btnformcongno.Enabled = false;
-            btnformNhansu.Enabled = true;
+            btnformNhansu.Enabled = false;
             btnformkho.Enabled = false;
         }
     }
