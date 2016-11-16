@@ -11,20 +11,20 @@ namespace BusinessLogic.KhachHang
     public class KhachHangBLL
     {
 
-       SRPHRDataContext DB = new SRPHRDataContext();
-        
-        public List<Entities.KhachHang.KhachHang> GetAllKhachHang()
+        SRPHRDataContext DB = new SRPHRDataContext();
+
+        public List<Entities.KhachHang.eKhachHang> GetAllKhachHang()
         {
             var dsKH = DB.Tbl_KhachHangs.ToList();
-            List<Entities.KhachHang.KhachHang> listKh = new List<Entities.KhachHang.KhachHang>();
+            List<Entities.KhachHang.eKhachHang> listKh = new List<Entities.KhachHang.eKhachHang>();
 
             foreach (Tbl_KhachHang kh_DAL in dsKH)
             {
-                Entities.KhachHang.KhachHang ekh = new Entities.KhachHang.KhachHang();
+                Entities.KhachHang.eKhachHang ekh = new Entities.KhachHang.eKhachHang();
                 ekh.Makh = kh_DAL.maKH;
                 ekh.Tenkh = kh_DAL.tenKH;
                 ekh.Diachi = kh_DAL.diachi;
-                ekh.Sodienthoai =kh_DAL.sodienthoai;
+                ekh.Sodienthoai = kh_DAL.sodienthoai;
                 ekh.Email = kh_DAL.email;
                 ekh.Ngaycapcmnd = Convert.ToDateTime(kh_DAL.ngaycapCMND);
                 ekh.Ngaysinh = Convert.ToDateTime(kh_DAL.ngaysinh);
@@ -40,117 +40,130 @@ namespace BusinessLogic.KhachHang
 
 
 
-        public bool AddKH(Entities.KhachHang.KhachHang kh)
+        public int AddKH(eKhachHang kh)
         {
-            try
+
+            var makhachhang = DB.Tbl_KhachHangs.Where(x => x.maKH == kh.Makh).FirstOrDefault();
+            if (makhachhang != null)
             {
-                Tbl_KhachHang newKHRecord =DB.Tbl_KhachHangs.Where(x=>x.maKH==kh.Makh).FirstOrDefault() ;
-                if (newKHRecord != null)
-                    //return 0;///trường hợp trùng
-
-                newKHRecord = new Tbl_KhachHang();
-                newKHRecord.maKH = kh.Makh;
-                newKHRecord.tenKH = kh.Tenkh;
-                newKHRecord.diachi = kh.Diachi;
-                newKHRecord.soCMND = kh.Socmnd;
-                newKHRecord.sodienthoai = kh.Sodienthoai;
-                newKHRecord.gioitinh = kh.Gioitinh;
-                newKHRecord.ngaycapCMND = kh.Ngaycapcmnd;
-                newKHRecord.nghenghiep = kh.Nghenghiep;
-                newKHRecord.ngaysinh = kh.Ngaysinh;
-                newKHRecord.trangthai = kh.Trangthai;
-                newKHRecord.email = kh.Email;
-                DB.SubmitChanges();
-
-                return true;
+                return 0;
             }
-            catch { return false; }
-        }
-        public void UpDatekhachhang(string makh, string tenkh, string diachi, string email, string socmnd, string sodienthoai, string nghenghiep, string gioitinh, int trangthai, DateTime ngaycapcmnd, DateTime ngaysinh)
-        {
+            Tbl_KhachHang khTmp = new Tbl_KhachHang();
+            khTmp.maKH = kh.Makh;
+            khTmp.tenKH = kh.Tenkh;
+            khTmp.diachi = kh.Diachi;
+            khTmp.soCMND = kh.Socmnd;
+            khTmp.sodienthoai = kh.Sodienthoai;
+            khTmp.gioitinh = kh.Gioitinh;
+            khTmp.ngaycapCMND = kh.Ngaycapcmnd;
+            khTmp.nghenghiep = kh.Nghenghiep;
+            khTmp.ngaysinh = kh.Ngaysinh;
+            khTmp.trangthai = kh.Trangthai;
+            khTmp.email = kh.Email;
 
-            var khachhhang = DB.Tbl_KhachHangs.Where(x => x.maKH == makh);
-            //cập nhật dữ liệu
-
-            khachhhang.First().tenKH = tenkh;
-            khachhhang.First().diachi = diachi;
-            khachhhang.First().email = email;
-            khachhhang.First().soCMND = socmnd;
-            khachhhang.First().sodienthoai = sodienthoai;
-            khachhhang.First().nghenghiep = nghenghiep;
-            khachhhang.First().gioitinh = gioitinh;
-            khachhhang.First().ngaycapCMND = Convert.ToDateTime(ngaycapcmnd);
-            khachhhang.First().ngaysinh = Convert.ToDateTime(ngaysinh);
-            khachhhang.First().trangthai = Convert.ToInt32(trangthai);
+            DB.Tbl_KhachHangs.InsertOnSubmit(khTmp);
             DB.SubmitChanges();
+            return 1;
+
+
 
         }
 
-        /*public bool Delete(string deleteID)
+
+        public bool UpDatekhachhang(eKhachHang kh)
         {
             try
             {
-                Tbl_KhachHang deleteRecord = DB.Tbl_KhachHangs.Single(record => record.maKH == deleteID);
+                Tbl_KhachHang update = DB.Tbl_KhachHangs.Single(tmp => tmp.maKH == kh.Makh);
 
-                DB.Tbl_KhachHangs.DeleteOnSubmit(deleteRecord);
+                update.maKH = kh.Makh;
+                update.tenKH = kh.Tenkh;
+                update.diachi = kh.Diachi;
+                update.email = kh.Email;
+                update.gioitinh = kh.Gioitinh;
+                update.nghenghiep = kh.Nghenghiep;
+                update.soCMND = kh.Socmnd;
+                update.sodienthoai = kh.Sodienthoai;
+                update.trangthai = kh.Trangthai;
+                update.ngaycapCMND = kh.Ngaycapcmnd;
+                update.ngaysinh = kh.Ngaysinh;
+
                 DB.SubmitChanges();
 
                 return true;
+
             }
+
             catch { return false; }
-        }*/
+        }
 
 
-        /* public bool quydoidiem(Entities.KhachHang.KhachHang kh, string maThe)
-         {
-             try
+        /*  public void UpDatekhachhang(string makh, string tenkh, string diachi, string email, string socmnd, string sodienthoai, string nghenghiep, string gioitinh, int trangthai, DateTime ngaycapcmnd, DateTime ngaysinh)
+          {
+
+              var khachhhang = DB.Tbl_KhachHangs.Where(x => x.maKH == makh);
+              //cập nhật dữ liệu
+
+              khachhhang.FirstOrDefault().tenKH = tenkh;
+              khachhhang.FirstOrDefault().diachi = diachi;
+              khachhhang.FirstOrDefault().email = email;
+              khachhhang.FirstOrDefault().soCMND = socmnd;
+              khachhhang.FirstOrDefault().sodienthoai = sodienthoai;
+              khachhhang.FirstOrDefault().nghenghiep = nghenghiep;
+              khachhhang.FirstOrDefault().gioitinh = gioitinh;
+              khachhhang.FirstOrDefault().ngaycapCMND = Convert.ToDateTime(ngaycapcmnd);
+              khachhhang.FirstOrDefault().ngaysinh = Convert.ToDateTime(ngaysinh);
+              khachhhang.FirstOrDefault().trangthai = Convert.ToInt32(trangthai);
+              DB.SubmitChanges();
+
+          }
+
+          /*   public bool quydoidiem(Entities.KhachHang.eKhachHang kh, string maThe)
              {
-
-                 Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Single(record => record.maThe == maThe);
-                 ///trường hợp chưa có thẻ thành viên
-                 if (ttv == null)
+                 try
                  {
-                     Tbl_TheThanhVien newTheTV = new Tbl_TheThanhVien();
-                     newTheTV.maThe = maThe;
-                     newTheTV.maKH = kh.Makh;
-                     newTheTV.tongTien = tinhTongTien();
 
-                     newTheTV.diemTichLuy = (int)newTheTV.tongTien / 1000;
+                     Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Single(record => record.maThe == maThe);
+                     ///trường hợp chưa có thẻ thành viên
+                     if (ttv == null)
+                     {
+                         Tbl_TheThanhVien newTheTV = new Tbl_TheThanhVien();
+                         newTheTV.maThe = maThe;
+                         newTheTV.maKH = kh.Makh;
+                         newTheTV.tongTien = tinhTongTien();
 
-                     DB.Tbl_TheThanhViens.InsertOnSubmit(newTheTV);
-                     DB.SubmitChanges();
+                         newTheTV.diemTichLuy = (int)newTheTV.tongTien / 1000;
+
+                         DB.Tbl_TheThanhViens.InsertOnSubmit(newTheTV);
+                         DB.SubmitChanges();
+                     }
+                     else
+                     {
+                         ttv.diemTichLuy += (int)tinhTongTien() / 1000;
+                         DB.SubmitChanges();
+
+                     }
+                     return true;
                  }
-                 else
+                 catch (Exception)
                  {
-                     ttv.diemTichLuy += (int)tinhTongTien() / 1000;
-                     DB.SubmitChanges();
-
+                     return false;
                  }
-                 return true;
-             }
-             catch (Exception)
-             {
-                 return false;
-             }
-         }
-         //public bool doithuong(Entities.KhachHang.Thethanhvien ttv)
-         //{
-         //    if (ttv.Diemtichluy > 200){
-         //        Tbl_CTHDBanLe giamgia=new Tbl_CTHDBanLe();
+             }*/
+        //public bool doithuong(Entities.KhachHang.Thethanhvien ttv)
+        //{
+        //    if (ttv.Diemtichluy > 200){
+        //        Tbl_CTHDBanLe giamgia=new Tbl_CTHDBanLe();
 
-         //    }
-         //    else if ()
-         //        ;
+        //    }
+        //    else if ()
+        //        ;
 
 
-         //}
-         private decimal tinhTongTien()
-         {
-             throw new NotImplementedException();
-         }
+        //}
 
 
 
-         public Entities.KhachHang.KhachHang tempKH { get; set; }*/
+
     }
 }
