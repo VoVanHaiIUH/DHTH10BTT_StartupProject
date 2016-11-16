@@ -46,18 +46,18 @@
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.cbbMucDo = new System.Windows.Forms.ComboBox();
-            this.cbbMaCV = new System.Windows.Forms.ComboBox();
             this.txtLyDo = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lblLyDo = new System.Windows.Forms.Label();
             this.lblMucDo = new System.Windows.Forms.Label();
             this.lblGhiChu = new System.Windows.Forms.Label();
             this.lblNgayLap = new System.Windows.Forms.Label();
-            this.lblMaChucVu = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblHinhThucKL = new System.Windows.Forms.Label();
             this.lblMaKL = new System.Windows.Forms.Label();
-            this.treeViewNhanVien = new System.Windows.Forms.TreeView();
+            this.treeViewKyLuat = new System.Windows.Forms.TreeView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimeNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietKyLuat)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -116,7 +116,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.grpBoxStudentInfo, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.treeViewNhanVien, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.treeViewKyLuat, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dataGridViewChiTietKyLuat, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -133,7 +133,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -244,11 +244,12 @@
             // 
             // grpBoxStudentInfo
             // 
+            this.grpBoxStudentInfo.Controls.Add(this.dateTimeNgayKetThuc);
+            this.grpBoxStudentInfo.Controls.Add(this.label1);
             this.grpBoxStudentInfo.Controls.Add(this.txtGhiChu);
             this.grpBoxStudentInfo.Controls.Add(this.dateTimePickerNgayThiHanh);
             this.grpBoxStudentInfo.Controls.Add(this.dateTimePickerNgayLap);
             this.grpBoxStudentInfo.Controls.Add(this.cbbMucDo);
-            this.grpBoxStudentInfo.Controls.Add(this.cbbMaCV);
             this.grpBoxStudentInfo.Controls.Add(this.cbbHinhThucKyLuat);
             this.grpBoxStudentInfo.Controls.Add(this.cbbMaKL);
             this.grpBoxStudentInfo.Controls.Add(this.txtLyDo);
@@ -258,7 +259,6 @@
             this.grpBoxStudentInfo.Controls.Add(this.labelNgayThiHanh);
             this.grpBoxStudentInfo.Controls.Add(this.lblGhiChu);
             this.grpBoxStudentInfo.Controls.Add(this.lblNgayLap);
-            this.grpBoxStudentInfo.Controls.Add(this.lblMaChucVu);
             this.grpBoxStudentInfo.Controls.Add(this.lblMaNV);
             this.grpBoxStudentInfo.Controls.Add(this.lblHinhThucKL);
             this.grpBoxStudentInfo.Controls.Add(this.lblMaKL);
@@ -292,18 +292,10 @@
             // cbbMucDo
             // 
             this.cbbMucDo.FormattingEnabled = true;
-            this.cbbMucDo.Location = new System.Drawing.Point(435, 75);
+            this.cbbMucDo.Location = new System.Drawing.Point(118, 106);
             this.cbbMucDo.Name = "cbbMucDo";
-            this.cbbMucDo.Size = new System.Drawing.Size(200, 23);
+            this.cbbMucDo.Size = new System.Drawing.Size(214, 23);
             this.cbbMucDo.TabIndex = 13;
-            // 
-            // cbbMaCV
-            // 
-            this.cbbMaCV.FormattingEnabled = true;
-            this.cbbMaCV.Location = new System.Drawing.Point(118, 103);
-            this.cbbMaCV.Name = "cbbMaCV";
-            this.cbbMaCV.Size = new System.Drawing.Size(214, 23);
-            this.cbbMaCV.TabIndex = 13;
             // 
             // txtLyDo
             // 
@@ -343,7 +335,7 @@
             this.lblMucDo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMucDo.AutoSize = true;
-            this.lblMucDo.Location = new System.Drawing.Point(341, 79);
+            this.lblMucDo.Location = new System.Drawing.Point(6, 106);
             this.lblMucDo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblMucDo.Name = "lblMucDo";
             this.lblMucDo.Size = new System.Drawing.Size(56, 15);
@@ -373,16 +365,6 @@
             this.lblNgayLap.Size = new System.Drawing.Size(63, 15);
             this.lblNgayLap.TabIndex = 12;
             this.lblNgayLap.Text = "Ngày Lập :";
-            // 
-            // lblMaChucVu
-            // 
-            this.lblMaChucVu.AutoSize = true;
-            this.lblMaChucVu.Location = new System.Drawing.Point(6, 106);
-            this.lblMaChucVu.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblMaChucVu.Name = "lblMaChucVu";
-            this.lblMaChucVu.Size = new System.Drawing.Size(77, 15);
-            this.lblMaChucVu.TabIndex = 8;
-            this.lblMaChucVu.Text = "Mã chức vụ :";
             // 
             // lblMaNV
             // 
@@ -414,13 +396,32 @@
             this.lblMaKL.TabIndex = 8;
             this.lblMaKL.Text = "Mã Kỷ Luật";
             // 
-            // treeViewNhanVien
+            // treeViewKyLuat
             // 
-            this.treeViewNhanVien.Location = new System.Drawing.Point(4, 137);
-            this.treeViewNhanVien.Name = "treeViewNhanVien";
-            this.treeViewNhanVien.Size = new System.Drawing.Size(204, 306);
-            this.treeViewNhanVien.TabIndex = 29;
-            this.treeViewNhanVien.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewNhanVien_AfterSelect);
+            this.treeViewKyLuat.Location = new System.Drawing.Point(4, 137);
+            this.treeViewKyLuat.Name = "treeViewKyLuat";
+            this.treeViewKyLuat.Size = new System.Drawing.Size(204, 306);
+            this.treeViewKyLuat.TabIndex = 29;
+            this.treeViewKyLuat.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewNhanVien_AfterSelect);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(341, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Ngày kết thúc :";
+            // 
+            // dateTimeNgayKetThuc
+            // 
+            this.dateTimeNgayKetThuc.Location = new System.Drawing.Point(435, 72);
+            this.dateTimeNgayKetThuc.Name = "dateTimeNgayKetThuc";
+            this.dateTimeNgayKetThuc.Size = new System.Drawing.Size(200, 23);
+            this.dateTimeNgayKetThuc.TabIndex = 17;
             // 
             // FrmChiTietKyLuat
             // 
@@ -463,14 +464,14 @@
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Label lblHinhThucKL;
         private System.Windows.Forms.Label lblMaKL;
-        private System.Windows.Forms.TreeView treeViewNhanVien;
+        private System.Windows.Forms.TreeView treeViewKyLuat;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.ComboBox cbbMucDo;
-        private System.Windows.Forms.ComboBox cbbMaCV;
         private System.Windows.Forms.Label lblLyDo;
         private System.Windows.Forms.Label lblMucDo;
         private System.Windows.Forms.Label lblGhiChu;
-        private System.Windows.Forms.Label lblMaChucVu;
         private System.Windows.Forms.TextBox txtLyDo;
+        private System.Windows.Forms.DateTimePicker dateTimeNgayKetThuc;
+        private System.Windows.Forms.Label label1;
     }
 }

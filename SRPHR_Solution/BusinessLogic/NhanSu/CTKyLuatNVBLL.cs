@@ -100,5 +100,26 @@ namespace BusinessLogic.NhanSu
 
             return ctkyluat;
         }
+        public List<CTKyLuatNV> GetNhanVien(string mals)
+        {
+            int i = mals.Length;
+            List<CTKyLuatNV> lstcd = new List<CTKyLuatNV>();
+            var rct = (from a in DB.Tbl_CTKyLuatNVs
+                       where a.maKyLuat.Substring(0, i) == mals
+                       select new CTKyLuatNV
+                       {
+                           MaKyLuat = a.maKyLuat,
+                           MaNV = a.maNV,
+                           HinhThucKL = a.hinhThucKL,
+                           NgayLap = (DateTime)a.ngayLap,
+                           NgayThiHanh = (DateTime)a.ngayThiHanh,
+                           NgayKetThuc = (DateTime)a.ngayKetThuc,
+                           MucDoKL = a.mucDoKL,
+                           LyDo = a.lyDo,
+                           GhiChu = a.ghiChu,
+                       });
+            lstcd = rct.ToList();
+            return lstcd;
+        }
     }
 }
