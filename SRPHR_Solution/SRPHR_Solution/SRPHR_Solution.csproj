@@ -86,6 +86,12 @@
     <Compile Include="BaoCao\LoaiBaoCao.Designer.cs">
       <DependentUpon>LoaiBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="CongNoPKH\FormNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongNoPKH\FormNhaCungCap.Designer.cs">
+      <DependentUpon>FormNhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="CongNoPKH\QuanLyPhongKeHoach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\LoaiBaoCao.resx">
       <DependentUpon>LoaiBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongNoPKH\FormNhaCungCap.resx">
+      <DependentUpon>FormNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CongNoPKH\QuanLyPhongKeHoach.resx">
       <DependentUpon>QuanLyPhongKeHoach.cs</DependentUpon>

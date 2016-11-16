@@ -16,14 +16,14 @@ namespace BusinessLogic.CongNoPKH
             var ncc = db.Tbl_NhaCungCaps.ToList();
             List<eNhaCungCap> kq = new List<eNhaCungCap>();
             eNhaCungCap p;
-            foreach(Tbl_NhaCungCap tmp in ncc)
+            foreach (Tbl_NhaCungCap tmp in ncc)
             {
                 p = NhaCungCap(tmp);
                 kq.Add(p);
             }
             return kq;
-        }   
-       
+        }
+
         public int themNCC(eNhaCungCap ncc)
         {
             var nccap = db.Tbl_NhaCungCaps.Where(x => x.maNCC == ncc.maNCC).FirstOrDefault();
@@ -65,18 +65,18 @@ namespace BusinessLogic.CongNoPKH
                 update.diaChi = ncc.diaChi;
                 update.sDT = ncc.sDT;
                 update.email = ncc.email;
-                
+
                 db.SubmitChanges();
 
                 return true;
             }
             catch { return false; }
         }
-         public static eNhaCungCap NhaCungCap(Tbl_NhaCungCap tmp)
+        public static eNhaCungCap NhaCungCap(Tbl_NhaCungCap tmp)
         {
-            return new eNhaCungCap(tmp.maNCC,tmp.tenNCC,tmp.diaChi,tmp.sDT, tmp.email);
-                
+            return new eNhaCungCap(tmp.maNCC, tmp.tenNCC, tmp.diaChi, tmp.sDT, tmp.email);
+
         }
-        
+
     }
 }
