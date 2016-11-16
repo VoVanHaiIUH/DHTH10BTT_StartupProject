@@ -112,7 +112,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 149);
+            this.label5.Location = new System.Drawing.Point(6, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 28;
@@ -120,14 +120,14 @@
             // 
             // DTNgayBanHDBL
             // 
-            this.DTNgayBanHDBL.Location = new System.Drawing.Point(120, 142);
+            this.DTNgayBanHDBL.Location = new System.Drawing.Point(120, 119);
             this.DTNgayBanHDBL.Name = "DTNgayBanHDBL";
             this.DTNgayBanHDBL.Size = new System.Drawing.Size(168, 20);
             this.DTNgayBanHDBL.TabIndex = 27;
             // 
             // txttongtien
             // 
-            this.txttongtien.Location = new System.Drawing.Point(120, 116);
+            this.txttongtien.Location = new System.Drawing.Point(120, 157);
             this.txttongtien.Name = "txttongtien";
             this.txttongtien.Size = new System.Drawing.Size(168, 20);
             this.txttongtien.TabIndex = 3;
@@ -135,7 +135,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 123);
+            this.label7.Location = new System.Drawing.Point(6, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 2;
@@ -165,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 90);
+            this.label3.Location = new System.Drawing.Point(6, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 0;
@@ -174,7 +174,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 62);
+            this.label2.Location = new System.Drawing.Point(6, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 0;
@@ -206,7 +206,6 @@
             this.btnxem.TabIndex = 21;
             this.btnxem.Text = "Xem Chi Tiết HD Bán Lẻ";
             this.btnxem.UseVisualStyleBackColor = true;
-            this.btnxem.Click += new System.EventHandler(this.btnxem_Click_1);
             // 
             // btnquaylai
             // 
@@ -252,7 +251,7 @@
             this.Controls.Add(this.DGViewHDBL);
             this.Name = "FormHDBanle";
             this.Text = "HDBanle";
-            this.Load += new System.EventHandler(this.FormHDBanle_Load_1);
+         
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGViewHDBL)).EndInit();

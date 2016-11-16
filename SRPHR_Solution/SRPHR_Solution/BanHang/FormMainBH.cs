@@ -48,7 +48,7 @@ namespace SRPHR_Solution.BanHang
             //show form báo cáo
             FormHDBanle frmnew = new FormHDBanle();
             frmnew.Activate();
-            frmnew.PQHDBL = PQMainBH;
+           
             frmnew.ShowDialog();
         }
         

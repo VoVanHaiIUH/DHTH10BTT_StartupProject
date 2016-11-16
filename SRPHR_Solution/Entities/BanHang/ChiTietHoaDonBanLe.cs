@@ -86,6 +86,11 @@ namespace Entities.BanHang
             this.donGia = donGia;
         }
 
+        public ChiTietHoaDonBanLe()
+        {
+            // TODO: Complete member initialization
+        }
+
         public override bool Equals(object obj)
         {
             ChiTietHoaDonBanLe cthdbl = (ChiTietHoaDonBanLe)obj;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SRPHR_Solution.PhanQuyen;
 using BusinessLogic.PhanQuyen;
+using System.Text.RegularExpressions;
 
 namespace SRPHR_Solution
 {
@@ -18,6 +19,9 @@ namespace SRPHR_Solution
         {
             InitializeComponent();
         }
+
+        
+       
   
         private void btndangki_Click(object sender, EventArgs e)
         {

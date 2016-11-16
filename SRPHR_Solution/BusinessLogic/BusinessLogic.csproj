@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BanHang\CTHoaDonBanLe.cs" />
+    <Compile Include="BanHang\CTHoaDonBanLeBLL.cs" />
     <Compile Include="BanHang\HoaDonBanLeBLL.cs" />
     <Compile Include="BanHang\HoaDonGTGTBLL.cs" />
     <Compile Include="CongNoPKH\CongNoKH_BLL.cs" />
