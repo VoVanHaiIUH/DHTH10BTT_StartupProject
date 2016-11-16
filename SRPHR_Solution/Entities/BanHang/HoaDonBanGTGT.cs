@@ -8,78 +8,152 @@ namespace Entities.BanHang
 {
       public class HoaDonBanGTGT
     {
-        private int maHDGTGT, maNV, maKH;
-
-        public int MaKH
-        {
-            get { return maKH; }
-            set { maKH = value; }
-        }
-
-        public int MaNV
-        {
-            get { return maNV; }
-            set { maNV = value; }
-        }
-
-        public int MaHDGTGT
-        {
-            get { return maHDGTGT; }
-            set { maHDGTGT = value; }
-        }
-        private DateTime ngayBan;
-
-        public DateTime NgayBan
-        {
-            get { return ngayBan; }
-            set { ngayBan = value; }
-        }
-        private string tenDVBan, tenDVMua;
-
-        public string TenDVMua
-        {
-            get { return tenDVMua; }
-            set { tenDVMua = value; }
-        }
-
-        public string TenDVBan
-        {
-            get { return tenDVBan; }
-            set { tenDVBan = value; }
-        }
+        private string soHoaDon, dvBanHang, dvMuaHang, diaChi, hinhThucThanhToan, soTaiKhoan;
+        private int msThue;
+        private DateTime ngaylapHoaDon;
         private decimal thanhTien;
+
+        public string SoHoaDon
+        {
+            get
+            {
+                return soHoaDon;
+            }
+
+            set
+            {
+                soHoaDon = value;
+            }
+        }
+
+        public string DvBanHang
+        {
+            get
+            {
+                return dvBanHang;
+            }
+
+            set
+            {
+                dvBanHang = value;
+            }
+        }
+
+        public string DvMuaHang
+        {
+            get
+            {
+                return dvMuaHang;
+            }
+
+            set
+            {
+                dvMuaHang = value;
+            }
+        }
+
+        public string DiaChi
+        {
+            get
+            {
+                return diaChi;
+            }
+
+            set
+            {
+                diaChi = value;
+            }
+        }
+
+        public string HinhThucThanhToan
+        {
+            get
+            {
+                return hinhThucThanhToan;
+            }
+
+            set
+            {
+                hinhThucThanhToan = value;
+            }
+        }
+
+        public string SoTaiKhoan
+        {
+            get
+            {
+                return soTaiKhoan;
+            }
+
+            set
+            {
+                soTaiKhoan = value;
+            }
+        }
+
+        public int MsThue
+        {
+            get
+            {
+                return msThue;
+            }
+
+            set
+            {
+                msThue = value;
+            }
+        }
+
+        public DateTime NgaylapHoaDon
+        {
+            get
+            {
+                return ngaylapHoaDon;
+            }
+
+            set
+            {
+                ngaylapHoaDon = value;
+            }
+        }
 
         public decimal ThanhTien
         {
-            get { return thanhTien; }
-            set { thanhTien = value; }
+            get
+            {
+                return thanhTien;
+            }
+
+            set
+            {
+                thanhTien = value;
+            }
         }
 
-        public HoaDonBanGTGT(int maHDGTGT, int maNV, int maKH, DateTime ngayBan, string tenDVBan, string tenDVMua, decimal thanhTien)
+        public HoaDonBanGTGT(string soHoaDon,string dvBanHang,string dvMuaHang, string diaChi, string hinhThucThanhToan, string soTaiKhoan, int msThue, DateTime ngaylapHoaDon,decimal thanhTien)
         {
-            maHDGTGT = MaHDGTGT;
-            maNV = MaNV;
-            maKH = MaKH;
-            ngayBan = NgayBan;
-            tenDVBan = TenDVBan;
-            tenDVMua = TenDVMua;
+            soHoaDon = SoHoaDon;
+            dvBanHang = DvBanHang;
+            dvMuaHang = DvMuaHang;
+            diaChi = DiaChi;
+            hinhThucThanhToan = HinhThucThanhToan;
+            soTaiKhoan = SoTaiKhoan;
+            msThue = MsThue;
+            ngaylapHoaDon = NgaylapHoaDon;
             thanhTien = ThanhTien;
         }
-
-        public override bool Equals(object newHDGTGT)
+        public HoaDonBanGTGT()
         {
-            HoaDonBanGTGT hdgtgt = (HoaDonBanGTGT)newHDGTGT;
-            return hdgtgt.Equals(hdgtgt.maHDGTGT);
-        }
 
+        }
+        public override bool Equals(object obj)
+        {
+            HoaDonBanGTGT hdgtgt = (HoaDonBanGTGT)obj;
+            return hdgtgt.Equals(hdgtgt.soHoaDon);
+        }
         public override int GetHashCode()
         {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
+            return soHoaDon.GetHashCode();
         }
     }
 }

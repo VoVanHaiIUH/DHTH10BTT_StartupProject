@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess;
+using DataAccess.NhanSu;
 using Entities.NhanSu;
 
 namespace BusinessLogic.NhanSu
@@ -11,72 +11,18 @@ namespace BusinessLogic.NhanSu
     
     public class CTKyLuatNVBLL
     {
-        // SRPHRDataContext DB = new SRPHRDataContext();
-        //public bool Add(CTKyLuatNV newCTKL)
-        // {
-        //    try
-        //    {
-        //        Tbl_CTKyLuatNV newRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == newCTKL.MaNV && record.maKyLuat == newCTKL.MaKyLuat);
-        //        newRecord.maNV = newCTKL.MaNV;
-        //        newRecord.maKyLuat = newCTKL.MaKyLuat;
-        //        newRecord.ngayLap = newCTKL.NgayLap;
-        //        newRecord.ngayThiHanh = newCTKL.NgayThiHanh;
-        //        newRecord.ngayKetThuc = newCTKL.NgayKetThuc;
-        //        newRecord.mucDoKL = newCTKL.MucDoKL;
-        //        newRecord.lyDo = newCTKL.LyDo;
-        //        newRecord.ghiChu = newCTKL.GhiChu;
-        //        DB.Tbl_CTKyLuatNVs.InsertOnSubmit(newRecord);
-        //        DB.SubmitChanges();
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        // }
-        //public bool Delete(string deleteID)
-        //{
-        //    try
-        //    {
-        //        Tbl_CTKyLuatNV deleteRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == deleteID && record.maKyLuat == deleteID);
-        //        DB.Tbl_CTKyLuatNVs.DeleteOnSubmit(deleteRecord);
-        //        DB.SubmitChanges();
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
-        //public bool UpDate(CTKyLuatNV updateCTKL)
-        //{
-        //    try
-        //    {
-        //        Tbl_CTKyLuatNV updateRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == updateCTKL.MaNV && record.maKyLuat == updateCTKL.MaKyLuat);
-        //        updateRecord.maNV = updateCTKL.MaNV;
-        //        updateRecord.maKyLuat = updateCTKL.MaKyLuat;
-        //        updateRecord.ngayLap = updateCTKL.NgayLap;
-        //        updateRecord.ngayThiHanh = updateCTKL.NgayThiHanh;
-        //        updateRecord.ngayKetThuc = updateCTKL.NgayKetThuc;
-        //        updateRecord.mucDoKL = updateCTKL.MucDoKL;
-        //        updateRecord.lyDo = updateCTKL.LyDo;
-        //        updateRecord.ghiChu = updateCTKL.GhiChu;
-        //        DB.SubmitChanges();
-        //        return true;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
-        SRPHRDataContext DB = new SRPHRDataContext();
+        
+        //SRPHRDataContext DB = new SRPHRDataContext();
+        DataClasses1DataContext DB = new DataClasses1DataContext();
         public bool Add(CTKyLuatNV newCTKL)
         {
             try
             {
-                Tbl_CTKyLuatNV newRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == newCTKL.MaNV && record.maKyLuat == newCTKL.MaKyLuat);
+                Tbl_NhanVien tempNV = DB.Tbl_NhanViens.Single(record => record.maNV == newCTKL.MaNV);
+                Tbl_CTKyLuatNV newRecord = new Tbl_CTKyLuatNV();
                 newRecord.maNV = newCTKL.MaNV;
                 newRecord.maKyLuat = newCTKL.MaKyLuat;
+                newRecord.hinhThucKL = newCTKL.HinhThucKL;
                 newRecord.ngayLap = newCTKL.NgayLap;
                 newRecord.ngayThiHanh = newCTKL.NgayThiHanh;
                 newRecord.ngayKetThuc = newCTKL.NgayKetThuc;
@@ -118,7 +64,7 @@ namespace BusinessLogic.NhanSu
         {
             try
             {
-                Tbl_CTKyLuatNV updateRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == updateCTKL.MaNV && record.maKyLuat == updateCTKL.MaKyLuat);
+                Tbl_CTKyLuatNV updateRecord = DB.Tbl_CTKyLuatNVs.Single(record => record.maNV == updateCTKL.MaNV);
                 updateRecord.maNV = updateCTKL.MaNV;
                 updateRecord.maKyLuat = updateCTKL.MaKyLuat;
                 updateRecord.ngayLap = updateCTKL.NgayLap;
@@ -145,6 +91,7 @@ namespace BusinessLogic.NhanSu
                 CTKyLuatNV tempCT = new CTKyLuatNV();
                 tempCT.MaNV = record.maNV;
                 tempCT.MaKyLuat = record.maKyLuat;
+                tempCT.HinhThucKL = record.hinhThucKL;
                 tempCT.NgayLap = record.ngayLap;
                 tempCT.NgayThiHanh = record.ngayThiHanh;
                 tempCT.NgayKetThuc = record.ngayKetThuc;
@@ -155,6 +102,47 @@ namespace BusinessLogic.NhanSu
             }
 
             return ctkyluat;
+        }
+        public List<CTKyLuatNV> GetNhanVien(string mals)
+        {
+            int i = mals.Length;
+            List<CTKyLuatNV> lstcd = new List<CTKyLuatNV>();
+            var rct = (from a in DB.Tbl_CTKyLuatNVs
+                       where a.maKyLuat.Substring(0, i) == mals
+                       select new CTKyLuatNV
+                       {
+                           MaKyLuat = a.maKyLuat,
+                           MaNV = a.maNV,
+                           HinhThucKL = a.hinhThucKL,
+                           NgayLap = (DateTime)a.ngayLap,
+                           NgayThiHanh = (DateTime)a.ngayThiHanh,
+                           NgayKetThuc = (DateTime)a.ngayKetThuc,
+                           MucDoKL = a.mucDoKL,
+                           LyDo = a.lyDo,
+                           GhiChu = a.ghiChu,
+                       });
+            lstcd = rct.ToList();
+            return lstcd;
+        }
+
+        public IEnumerable<string> getMaKL()
+        {
+            var ma = (from cv in DB.Tbl_KyLuatNVs
+                      select cv.maKyLuat);
+            return ma;
+        }
+
+        public IEnumerable<string> getHT()
+        {
+            var ma = (from cv in DB.Tbl_KyLuatNVs
+                      select cv.hinhThucKL);
+            return ma;
+        }
+        public IEnumerable<string> getMucDo()
+        {
+            var ma = (from cv in DB.Tbl_CTKyLuatNVs
+                      select cv.mucDoKL);
+            return ma;
         }
     }
 }

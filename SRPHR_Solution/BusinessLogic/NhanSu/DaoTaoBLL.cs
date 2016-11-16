@@ -3,139 +3,140 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess;
+using DataAccess.NhanSu;
 using Entities.NhanSu;
 
 namespace BusinessLogic.NhanSu
 {
-    
 
-    //public class DaoTaoBLL
-    //{
-    //    //SRPHRDataContext DB = new SRPHRDataContext();
-    //    //public List<DaoTao> GetAllNhanVien()
-    //    //{
-    //    //    List<DaoTao> daoTaos = new List<DaoTao>();
-    //    //    DaoTao tempNV;
-    //    //    foreach (Tbl_DaoTaoNV record in DB.Tbl_DaoTaoNVs)
-    //    //    {
-    //    //        tempNV = MyConvert.ToDaoTao(record);
-    //    //        daoTaos.Add(tempNV);
-    //    //    }
 
-    //    //    return daoTaos;
-    //    //}
+    public class DaoTaoBLL
+    {
+        //SRPHRDataContext DB = new SRPHRDataContext();
+        DataClasses1DataContext DB = new DataClasses1DataContext();
+        public List<DaoTao> GetAllDaoTao()
+        {
+            List<DaoTao> daoTaos = new List<DaoTao>();
+            DaoTao tempNV;
+            foreach (Tbl_DaoTaoNV record in DB.Tbl_DaoTaoNVs)
+            {
+                tempNV = MyConvert.ToDaoTao(record);
+                daoTaos.Add(tempNV);
+            }
 
-    //    //public bool Add(DaoTao newDT)
-    //    //{
-    //    //    try
-    //    //    {
-    //    //        Tbl_DaoTaoNV newRecord = MyConvert.toTbl_DaoTao(newDT);
+            return daoTaos;
+        }
 
-    //    //        DB.Tbl_DaoTaoNVs.InsertOnSubmit(newRecord);
-    //    //        DB.SubmitChanges();
+        public bool Add(DaoTao newDT)
+        {
+            try
+            {
+                Tbl_DaoTaoNV newRecord = MyConvert.ToTbl_DaoTao(newDT);
 
-    //    //        return true;
-    //    //    }
-    //    //    catch { return false; }
-    //    //}
+                DB.Tbl_DaoTaoNVs.InsertOnSubmit(newRecord);
+                DB.SubmitChanges();
 
-    //    //public bool Delete(string deleteID)
-    //    //{
-    //    //    try
-    //    //    {
-    //    //        Tbl_DaoTaoNV deleteRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == deleteID);
+                return true;
+            }
+            catch { return false; }
+        }
 
-    //    //        DB.Tbl_DaoTaoNVs.DeleteOnSubmit(deleteRecord);
-    //    //        DB.SubmitChanges();
+        public bool Delete(string deleteID)
+        {
+            try
+            {
+                Tbl_DaoTaoNV deleteRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == deleteID);
 
-    //    //        return true;
-    //    //    }
-    //    //    catch { return false; }
-    //    //}
+                DB.Tbl_DaoTaoNVs.DeleteOnSubmit(deleteRecord);
+                DB.SubmitChanges();
 
-    //    //public bool Update(DaoTao updateDT)
-    //    //{
-    //    //    try
-    //    //    {
-    //    //        Tbl_DaoTaoNV updateRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == updateDT.MaKhoaDT);
+                return true;
+            }
+            catch { return false; }
+        }
 
-    //    //        updateRecord.maKhoaDT = updateDT.MaKhoaDT;
-    //    //        updateRecord.tenKhoaDT = updateDT.TenKhoaDT;
-    //    //        updateRecord.ngayBD = updateDT.NgayBD;
-    //    //        updateRecord.ngayKT = updateDT.NgayKT;
-    //    //        updateRecord.diaDiem = updateDT.Diadiem;
-    //    //        updateRecord.hinhthucDT = updateDT.HinhThucDT;
-    //    //        updateRecord.chiPhi = updateDT.Chiphi;
+        public bool Update(DaoTao updateDT)
+        {
+            try
+            {
+                Tbl_DaoTaoNV updateRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == updateDT.MaKhoaDT);
 
-    //    //        DB.SubmitChanges();
+                updateRecord.maKhoaDT = updateDT.MaKhoaDT;
+                updateRecord.tenKhoaDT = updateDT.TenKhoaDT;
+                updateRecord.ngayBD = updateDT.NgayBD;
+                updateRecord.ngayKT = updateDT.NgayKT;
+                updateRecord.diaDiem = updateDT.Diadiem;
+                updateRecord.hinhthucDT = updateDT.HinhThucDT;
+                updateRecord.chiPhi = updateDT.Chiphi;
 
-    //    //        return true;
-    //    //    }
-    //    //    catch { return false; }
-    //    //}
+                DB.SubmitChanges();
 
-    //    SRPHRDataContext DB = new SRPHRDataContext();
-    //    public List<DaoTao> GetAllNhanVien()
-    //    {
-    //        List<DaoTao> daoTaos = new List<DaoTao>();
-    //        DaoTao tempNV;
-    //        foreach (Tbl_DaoTaoNV record in DB.Tbl_DaoTaoNVs)
-    //        {
-    //            tempNV = MyConvert.ToDaoTao(record);
-    //            daoTaos.Add(tempNV);
-    //        }
+                return true;
+            }
+            catch { return false; }
+        }
 
-    //        return daoTaos;
-    //    }
+        //SRPHRDataContext DB = new SRPHRDataContext();
+        //public List<DaoTao> GetAllNhanVien()
+        //{
+        //    List<DaoTao> daoTaos = new List<DaoTao>();
+        //    DaoTao tempNV;
+        //    foreach (Tbl_DaoTaoNV record in DB.Tbl_DaoTaoNVs)
+        //    {
+        //        tempNV = MyConvert.ToDaoTao(record);
+        //        daoTaos.Add(tempNV);
+        //    }
 
-    //    //public bool Add(DaoTao newDT)
-    //    //{
-    //    //    try
-    //    //    {
-    //    //        Tbl_DaoTaoNV newRecord = MyConvert.toTbl_DaoTao(newDT);
+        //    return daoTaos;
+        //}
 
-    //    //        DB.Tbl_DaoTaoNVs.InsertOnSubmit(newRecord);
-    //    //        DB.SubmitChanges();
+        //public bool Add(DaoTao newDT)
+        //{
+        //    try
+        //    {
+        //        Tbl_DaoTaoNV newRecord = MyConvert.ToTbl_DaoTao(newDT);
 
-    //    //        return true;
-    //    //    }
-    //    //    catch { return false; }
-    //    //}
+        //        DB.Tbl_DaoTaoNVs.InsertOnSubmit(newRecord);
+        //        DB.SubmitChanges();
 
-    //    public bool Delete(string deleteID)
-    //    {
-    //        try
-    //        {
-    //            Tbl_DaoTaoNV deleteRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == deleteID);
+        //        return true;
+        //    }
+        //    catch { return false; }
+        //}
 
-    //            DB.Tbl_DaoTaoNVs.DeleteOnSubmit(deleteRecord);
-    //            DB.SubmitChanges();
+        //public bool Delete(string deleteID)
+        //{
+        //    try
+        //    {
+        //        Tbl_DaoTaoNV deleteRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == deleteID);
 
-    //            return true;
-    //        }
-    //        catch { return false; }
-    //    }
+        //        DB.Tbl_DaoTaoNVs.DeleteOnSubmit(deleteRecord);
+        //        DB.SubmitChanges();
 
-    //    public bool Update(DaoTao updateDT)
-    //    {
-    //        try
-    //        {
-    //            Tbl_DaoTaoNV updateRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == updateDT.MaKhoaDT);
+        //        return true;
+        //    }
+        //    catch { return false; }
+        //}
 
-    //            updateRecord.maKhoaDT = updateDT.MaKhoaDT;
-    //            updateRecord.tenKhoaDT = updateDT.TenKhoaDT;
-    //            updateRecord.ngayBD = updateDT.NgayBD;
-    //            updateRecord.ngayKT = updateDT.NgayKT;
-    //            updateRecord.diaDiem = updateDT.Diadiem;
-    //            updateRecord.hinhthucDT = updateDT.HinhThucDT;
-    //            updateRecord.chiPhi = updateDT.Chiphi;
+        //public bool Update(DaoTao updateDT)
+        //{
+        //    try
+        //    {
+        //        Tbl_DaoTaoNV updateRecord = DB.Tbl_DaoTaoNVs.Single(record => record.maKhoaDT == updateDT.MaKhoaDT);
 
-    //            DB.SubmitChanges();
+        //        updateRecord.maKhoaDT = updateDT.MaKhoaDT;
+        //        updateRecord.tenKhoaDT = updateDT.TenKhoaDT;
+        //        updateRecord.ngayBD = updateDT.NgayBD;
+        //        updateRecord.ngayKT = updateDT.NgayKT;
+        //        updateRecord.diaDiem = updateDT.Diadiem;
+        //        updateRecord.hinhthucDT = updateDT.HinhThucDT;
+        //        updateRecord.chiPhi = updateDT.Chiphi;
 
-    //            return true;
-    //        }
-    //        catch { return false; }
-    //    }
-    //}
+        //        DB.SubmitChanges();
+
+        //        return true;
+        //    }
+        //    catch { return false; }
+        //}
+    }
 }

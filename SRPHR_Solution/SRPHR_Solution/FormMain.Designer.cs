@@ -32,8 +32,8 @@
             this.btnformPhanquyen = new System.Windows.Forms.Button();
             this.btnformNhansu = new System.Windows.Forms.Button();
             this.btnformkhachhang = new System.Windows.Forms.Button();
-            this.btnfromkho = new System.Windows.Forms.Button();
-            this.btnfromcongno = new System.Windows.Forms.Button();
+            this.btnformkho = new System.Windows.Forms.Button();
+            this.btnformcongno = new System.Windows.Forms.Button();
             this.btnformbaocao = new System.Windows.Forms.Button();
             this.btnFormBanHang = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,8 +61,8 @@
             this.groupBox1.Controls.Add(this.btnformPhanquyen);
             this.groupBox1.Controls.Add(this.btnformNhansu);
             this.groupBox1.Controls.Add(this.btnformkhachhang);
-            this.groupBox1.Controls.Add(this.btnfromkho);
-            this.groupBox1.Controls.Add(this.btnfromcongno);
+            this.groupBox1.Controls.Add(this.btnformkho);
+            this.groupBox1.Controls.Add(this.btnformcongno);
             this.groupBox1.Controls.Add(this.btnformbaocao);
             this.groupBox1.Controls.Add(this.btnFormBanHang);
             this.groupBox1.Location = new System.Drawing.Point(263, 12);
@@ -90,6 +90,7 @@
             this.btnformNhansu.TabIndex = 10;
             this.btnformNhansu.Text = "Nhân Sự";
             this.btnformNhansu.UseVisualStyleBackColor = true;
+            this.btnformNhansu.Click += new System.EventHandler(this.btnformNhansu_Click);
             // 
             // btnformkhachhang
             // 
@@ -100,24 +101,24 @@
             this.btnformkhachhang.Text = "Khách Hàng";
             this.btnformkhachhang.UseVisualStyleBackColor = true;
             // 
-            // btnfromkho
+            // btnformkho
             // 
-            this.btnfromkho.Location = new System.Drawing.Point(27, 155);
-            this.btnfromkho.Name = "btnfromkho";
-            this.btnfromkho.Size = new System.Drawing.Size(106, 40);
-            this.btnfromkho.TabIndex = 8;
-            this.btnfromkho.Text = "Kho";
-            this.btnfromkho.UseVisualStyleBackColor = true;
+            this.btnformkho.Location = new System.Drawing.Point(27, 155);
+            this.btnformkho.Name = "btnformkho";
+            this.btnformkho.Size = new System.Drawing.Size(106, 40);
+            this.btnformkho.TabIndex = 8;
+            this.btnformkho.Text = "Kho";
+            this.btnformkho.UseVisualStyleBackColor = true;
             // 
-            // btnfromcongno
+            // btnformcongno
             // 
-            this.btnfromcongno.Location = new System.Drawing.Point(27, 89);
-            this.btnfromcongno.Name = "btnfromcongno";
-            this.btnfromcongno.Size = new System.Drawing.Size(106, 40);
-            this.btnfromcongno.TabIndex = 7;
-            this.btnfromcongno.Text = "      Công Nợ        Phòng Kế Hoạch";
-            this.btnfromcongno.UseVisualStyleBackColor = true;
-            this.btnfromcongno.Click += new System.EventHandler(this.btnfromcongno_Click);
+            this.btnformcongno.Location = new System.Drawing.Point(27, 89);
+            this.btnformcongno.Name = "btnformcongno";
+            this.btnformcongno.Size = new System.Drawing.Size(106, 40);
+            this.btnformcongno.TabIndex = 7;
+            this.btnformcongno.Text = "      Công Nợ        Phòng Kế Hoạch";
+            this.btnformcongno.UseVisualStyleBackColor = true;
+            this.btnformcongno.Click += new System.EventHandler(this.btnfromcongno_Click);
             // 
             // btnformbaocao
             // 
@@ -308,6 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(625, 310);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -333,8 +335,8 @@
         private System.Windows.Forms.Button btnformPhanquyen;
         private System.Windows.Forms.Button btnformNhansu;
         private System.Windows.Forms.Button btnformkhachhang;
-        private System.Windows.Forms.Button btnfromkho;
-        private System.Windows.Forms.Button btnfromcongno;
+        private System.Windows.Forms.Button btnformkho;
+        private System.Windows.Forms.Button btnformcongno;
         private System.Windows.Forms.Button btnformbaocao;
         private System.Windows.Forms.Button btnFormBanHang;
         private System.Windows.Forms.GroupBox groupBox2;

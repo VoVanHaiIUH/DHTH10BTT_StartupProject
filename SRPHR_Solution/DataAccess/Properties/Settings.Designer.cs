@@ -36,7 +36,8 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC\\SQLEXPRESS;Initial Catalog=SHRPR;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-B3J8LOS\\DIENSQLSERVER;Initial Catalog=SHRPR;Integrated Securi" +
+            "ty=True")]
         public string SHRPRConnectionString1 {
             get {
                 return ((string)(this["SHRPRConnectionString1"]));
@@ -57,7 +58,8 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=SHRPR;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-DCFH0CO\\SQLEXPRESS;Initial Catalog=SHRPR;Integrated Security=" +
+            "True")]
         public string SHRPRConnectionString3 {
             get {
                 return ((string)(this["SHRPRConnectionString3"]));
@@ -71,6 +73,60 @@ namespace DataAccess.Properties {
         public string SHRPRConnectionString4 {
             get {
                 return ((string)(this["SHRPRConnectionString4"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JTAM29D\\SQLEXPRESS;Initial Catalog=SHRPR;Integrated Security=" +
+            "True")]
+        public string SHRPRConnectionString5 {
+            get {
+                return ((string)(this["SHRPRConnectionString5"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-DCFH0CO\\SQLEXPRESS;Initial Catalog=SHRPR1;Integrated Security" +
+            "=True")]
+        public string SHRPRConnectionString6 {
+            get {
+                return ((string)(this["SHRPRConnectionString6"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-DCFH0CO\\SQLEXPRESS;Initial Catalog=SHRPR;Integrated Security=" +
+            "True")]
+        public string SHRPRConnectionString7 {
+            get {
+                return ((string)(this["SHRPRConnectionString7"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=SHRPR;Integrated Security=True")]
+        public string SHRPRConnectionString8 {
+            get {
+                return ((string)(this["SHRPRConnectionString8"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KEN-PC;Initial Catalog=SHRPR;Persist Security Info=True;User ID=sa;Pa" +
+            "ssword=sapassword")]
+        public string SHRPRConnectionString9 {
+            get {
+                return ((string)(this["SHRPRConnectionString9"]));
             }
         }
     }

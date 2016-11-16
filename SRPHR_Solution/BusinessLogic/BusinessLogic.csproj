@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BanHang\CTHoaDonBanLe.cs" />
+    <Compile Include="BanHang\HoaDonBanLeBLL.cs" />
+    <Compile Include="BanHang\HoaDonGTGTBLL.cs" />
     <Compile Include="CongNoPKH\CongNoKH_BLL.cs" />
     <Compile Include="CongNoPKH\CongNoNCC_BLL.cs" />
     <Compile Include="CongNoPKH\HDBanSi_BLL.cs" />
@@ -48,6 +51,7 @@
     <Compile Include="CongNoPKH\NhaCungCap_BLL.cs" />
     <Compile Include="CongNoPKH\PhieuDNNK_BLL.cs" />
     <Compile Include="CongNoPKH\PhieuDNXK_BLL.cs" />
+    <Compile Include="CongNoPKH\SanPham_BLL.cs" />
     <Compile Include="KhachHang\Convert.cs" />
     <Compile Include="KhachHang\KhachHangBLL.cs" />
     <Compile Include="Kho\CTPQLKho_BLL.cs" />
@@ -82,7 +86,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BanHang\" />
     <Folder Include="BaoCao\" />
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@ namespace Entities.CongNoPKH
         public DateTime ngayKT { get; set; }
         public string ghiChu { get; set; }
 
-        public eKhuyenMai(string msDotKM, string maSP, double phantramKM, string ghiChu)
+        public eKhuyenMai(string msDotKM, string tenDotKM, DateTime ngayBD,DateTime ngayKT, string ghiChu)
         {
             this.msDotKM = msDotKM;
             this.tenDotKM = tenDotKM;

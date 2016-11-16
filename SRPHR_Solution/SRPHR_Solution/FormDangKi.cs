@@ -55,7 +55,7 @@ namespace SRPHR_Solution
                     this.Close();
                     
                     FormMain frmnew = new FormMain();
-                    frmnew.Message= txttentaikhoan.Text;
+                    frmnew._message= txttentaikhoan.Text;
                     frmnew.ShowDialog(); 
 
                 }

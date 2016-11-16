@@ -17,7 +17,7 @@ namespace SRPHR_Solution.BanHang
     {
         List<ChiTietHoaDonBanLe> ls = new List<ChiTietHoaDonBanLe>();
         BindingSource bd = new BindingSource();
-
+        public string PQCTHD;
         public FormChitietHDBanle()
         {
             InitializeComponent();
@@ -36,46 +36,67 @@ namespace SRPHR_Solution.BanHang
 
         private void ChitietHDBanle_Load(object sender, EventArgs e)
         {
-        
+            trangthaiPQ(PQCTHD);
         }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
-            n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
-            n.TenSP = txttensp.Text;
-            n.GiamGia = txtgiamgia.Text;
-            n.KhuyenMai = txtkhuyenmai.Text;
-            n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
-            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
+            //n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
+            //n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
+            //n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
+            //n.TenSP = txttensp.Text;
+            //n.GiamGia = txtgiamgia.Text;
+            //n.KhuyenMai = txtkhuyenmai.Text;
+            //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
+            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
-            n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
-            n.TenSP = txttensp.Text;
-            n.GiamGia = txtgiamgia.Text;
-            n.KhuyenMai = txtkhuyenmai.Text;
-            n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
-            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
+            //n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
+            //n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
+            //n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
+            //n.TenSP = txttensp.Text;
+            //n.GiamGia = txtgiamgia.Text;
+            //n.KhuyenMai = txtkhuyenmai.Text;
+            //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
+            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
         }
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
-            n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
-            n.TenSP = txttensp.Text;
-            n.GiamGia = txtgiamgia.Text;
-            n.KhuyenMai = txtkhuyenmai.Text;
-            n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
-            n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            //ChiTietHoaDonBanLe n = new ChiTietHoaDonBanLe();
+            //n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());Convert.ToInt32(txtmahdbanle.Text.Trim());
+            //n.MaSP = Convert.ToInt32
+            //n.MaSP = Convert.ToInt32(txtmasp.Text.Trim());
+            //n.SoLuong = Convert.ToInt32(txtsoluong.Text.Trim());
+            //n.TenSP = txttensp.Text;
+            //n.GiamGia = txtgiamgia.Text;
+            //n.KhuyenMai = txtkhuyenmai.Text;
+            //n.DonGia = Convert.ToDecimal(txtdongia.Text.Trim());
+            //n.ThanhTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+        }
+        private void trangthaiPQ(string pq)
+        {
+            if (pq.Substring(0, 1) == "1")
+                btnthem.Enabled = true;
+            else
+                btnthem.Enabled = false;
+
+            if (pq.Substring(1, 1) == "1")
+                btnxoa.Enabled = true;
+            else
+                btnxoa.Enabled = false;
+
+            if (pq.Substring(2, 1) == "1")
+                btnsua.Enabled = true;
+            else
+                btnsua.Enabled = false;
+
+
         }
     }
+
 }

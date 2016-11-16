@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BanHang\ChiTietHDGTGT.cs" />
     <Compile Include="BanHang\ChiTietHoaDonBanLe.cs" />
     <Compile Include="BanHang\HoaDonBanGTGT.cs" />
     <Compile Include="BanHang\HoaDonBanLe.cs" />
@@ -59,6 +58,7 @@
     <Compile Include="CongNoPKH\eNhaCungCap.cs" />
     <Compile Include="CongNoPKH\ePhieuDNNK.cs" />
     <Compile Include="CongNoPKH\ePhieuDNXK.cs" />
+    <Compile Include="CongNoPKH\eSanPham.cs" />
     <Compile Include="eCTPQLKho.cs" />
     <Compile Include="KhachHang\KhachHang.cs" />
     <Compile Include="KhachHang\Thethanhvien.cs" />

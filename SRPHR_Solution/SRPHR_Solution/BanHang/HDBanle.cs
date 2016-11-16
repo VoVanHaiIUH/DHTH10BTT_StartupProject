@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLogic;
+using BusinessLogic.BanHang;
 using Entities.BanHang;
+
+
 //Nhóm chưa update BusinessLogic BanHang
 
 namespace SRPHR_Solution.BanHang
@@ -17,19 +19,67 @@ namespace SRPHR_Solution.BanHang
     {
         List<ChiTietHoaDonBanLe> ls = new List<ChiTietHoaDonBanLe>();
         BindingSource bd = new BindingSource();
+        HoaDonBanLeBLL hdblbll;
 
         public FormHDBanle()
         {
             InitializeComponent();
+            hdblbll = new HoaDonBanLeBLL();
+        }
+
+        void DGViewHDBL_Load()
+        {
+            DGViewHDBL.DataSource = hdblbll.GetAllHDBanLe();
+            DGViewHDBL.ReadOnly = true;
         }
 
         private void btnxem_Click(object sender, EventArgs e)
         {
-           
+
             FormChitietHDBanle frmctbanle = new FormChitietHDBanle();
             frmctbanle.Activate();
             frmctbanle.Show();
         }
+
+        private void EnabledControls(bool status)
+        {
+            txtmahdbanle.Enabled = status;
+            txtmakh.Enabled = status;
+            txtmanv.Enabled = status;
+            DTNgayBanHDBL.Enabled = status;
+            txttongtien.Enabled = status;
+
+            btnluu.Enabled = status;
+            btnxoa.Enabled = status;
+
+            btnthem.Enabled = !status;
+            btnsua.Enabled = !status;
+            btnxoa.Enabled = !status;
+        }
+
+        private void ClearTextBox()
+        {
+            txtmahdbanle.Clear();
+            txtmakh.Clear();
+            txtmanv.Clear();
+            DTNgayBanHDBL.Text = "";
+            txttongtien.Clear();
+
+        }
+
+        HoaDonBanLe tempHDBanLe;
+        private void passingData()
+        {
+            tempHDBanLe = new HoaDonBanLe();
+            tempHDBanLe.SoHoaDon = txtmahdbanle.Text;
+            tempHDBanLe.MaKH = txtmakh.Text;
+            tempHDBanLe.MaNV = txtmanv.Text;
+            tempHDBanLe.TongTien = Convert.ToDecimal(txttongtien.Text);
+            tempHDBanLe.NgayBan = DTNgayBanHDBL.Value;
+
+        }
+
+        int flag = 0;
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
@@ -44,7 +94,7 @@ namespace SRPHR_Solution.BanHang
 
         private void btnquaylai_Click(object sender, EventArgs e)
         {
-         
+
             Visible = false;
 
             FormMainBH frmnew = new FormMainBH();
@@ -56,42 +106,95 @@ namespace SRPHR_Solution.BanHang
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            HoaDonBanLe n = new HoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            //n.NgayBanLe = dateTimePicker1.Text;
-            n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            flag = 1;
+            EnabledControls(true);
+            txtmahdbanle.Enabled = false;
         }
 
         private void FormHDBanle_Load(object sender, EventArgs e)
         {
-
+            DGViewHDBL_Load();
         }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            HoaDonBanLe n = new HoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            //n.NgayBanLe = dateTimePicker1.Text;
-            n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+            flag = 0;
+            Button bt = (Button)sender;
+            if (bt.Text.Equals("Thêm"))
+            {
+                EnabledControls(true);
+                btnluu.Enabled = true;
+
+                btnthem.Text = "Hủy";
+            }
+            else
+            {
+                ClearTextBox();
+                EnabledControls(false);
+            }
+
+
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            HoaDonBanLe n = new HoaDonBanLe();
-            n.MaHDBanLe = Convert.ToInt32(txtmahdbanle.Text.Trim());
-            n.MaNV = Convert.ToInt32(txtmanv.Text.Trim());
-            n.MaKH = Convert.ToInt32(txtmakh.Text.Trim());
-            //n.NgayBanLe = dateTimePicker1.Text;
-            n.TongTien = Convert.ToDecimal(txtthanhtien.Text.Trim());
+
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnluu_Click(object sender, EventArgs e)
         {
-             
+            //passingData();
+            //if (flag == 0)//thêm
+            //{
+            //    if (hdblbll.ThemHDBanLe(tempHDBanLe))
+            //        MessageBox.Show("Thêm thành công");
+            //    else
+            //        MessageBox.Show("Thêm thất bại");
+            //}
+            //else //sửa 
+            //{
+            //    if (studentBLL.Update(tempStudent))
+            //        MessageBox.Show("Sửa thành công");
+            //    else
+            //        MessageBox.Show("Sửa thất bại");
+            //}
+            //frmStudent_Load(sender, e);
+        }
+        public string PQHDBL;
+        private void FormHDBanle_Load_1(object sender, EventArgs e)
+        {
+            trangthaiPQ(PQHDBL);
+        }
+        private void trangthaiPQ(string pq)
+        {
+            if (pq.Substring(0, 1) == "1")
+                btnthem.Enabled = true;
+            else
+                btnthem.Enabled = false;
+
+            if (pq.Substring(1, 1) == "1")
+                btnxoa.Enabled = true;
+            else
+                btnxoa.Enabled = false;
+
+            if (pq.Substring(2, 1) == "1")
+                btnsua.Enabled = true;
+            else
+                btnsua.Enabled = false;
+
+
+        }
+
+        private void btnxem_Click_1(object sender, EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+
+            //show form báo cáo
+            FormChitietHDBanle frmnew = new FormChitietHDBanle();
+            frmnew.Activate();
+            frmnew.PQCTHD = PQHDBL;
+            frmnew.ShowDialog();
         }
     }
 }

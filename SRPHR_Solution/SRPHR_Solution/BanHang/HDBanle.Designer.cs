@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnluu = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
-            this.btnthoat = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtthanhtien = new System.Windows.Forms.TextBox();
+            this.DTNgayBanHDBL = new System.Windows.Forms.DateTimePicker();
+            this.txttongtien = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtmakh = new System.Windows.Forms.TextBox();
             this.txtmanv = new System.Windows.Forms.TextBox();
@@ -43,58 +43,56 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGViewHDBL = new System.Windows.Forms.DataGridView();
             this.btnxem = new System.Windows.Forms.Button();
             this.btnquaylai = new System.Windows.Forms.Button();
+            this.btnthoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGViewHDBL)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnluu
+            // 
+            this.btnluu.Location = new System.Drawing.Point(557, 277);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(75, 38);
+            this.btnluu.TabIndex = 20;
+            this.btnluu.Text = "Lưu";
+            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // btnsua
             // 
-            this.btnsua.Location = new System.Drawing.Point(500, 292);
+            this.btnsua.Location = new System.Drawing.Point(803, 277);
             this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(75, 23);
-            this.btnsua.TabIndex = 20;
+            this.btnsua.Size = new System.Drawing.Size(75, 38);
+            this.btnsua.TabIndex = 18;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
-            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
-            // 
-            // btnthoat
-            // 
-            this.btnthoat.Location = new System.Drawing.Point(758, 292);
-            this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(75, 23);
-            this.btnthoat.TabIndex = 18;
-            this.btnthoat.Text = "Thoát";
-            this.btnthoat.UseVisualStyleBackColor = true;
-            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(387, 292);
+            this.btnthem.Location = new System.Drawing.Point(444, 277);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(75, 23);
+            this.btnthem.Size = new System.Drawing.Size(75, 38);
             this.btnthem.TabIndex = 21;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
-            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(623, 292);
+            this.btnxoa.Location = new System.Drawing.Point(680, 277);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(75, 23);
+            this.btnxoa.Size = new System.Drawing.Size(75, 38);
             this.btnxoa.TabIndex = 19;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
-            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.txtthanhtien);
+            this.groupBox1.Controls.Add(this.DTNgayBanHDBL);
+            this.groupBox1.Controls.Add(this.txttongtien);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtmakh);
             this.groupBox1.Controls.Add(this.txtmanv);
@@ -118,28 +116,28 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Ngày Bán Lẻ";
             // 
-            // dateTimePicker1
+            // DTNgayBanHDBL
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 142);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(168, 20);
-            this.dateTimePicker1.TabIndex = 27;
+            this.DTNgayBanHDBL.Location = new System.Drawing.Point(120, 142);
+            this.DTNgayBanHDBL.Name = "DTNgayBanHDBL";
+            this.DTNgayBanHDBL.Size = new System.Drawing.Size(168, 20);
+            this.DTNgayBanHDBL.TabIndex = 27;
             // 
-            // txtthanhtien
+            // txttongtien
             // 
-            this.txtthanhtien.Location = new System.Drawing.Point(120, 116);
-            this.txtthanhtien.Name = "txtthanhtien";
-            this.txtthanhtien.Size = new System.Drawing.Size(168, 20);
-            this.txtthanhtien.TabIndex = 3;
+            this.txttongtien.Location = new System.Drawing.Point(120, 116);
+            this.txttongtien.Name = "txttongtien";
+            this.txttongtien.Size = new System.Drawing.Size(168, 20);
+            this.txttongtien.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 123);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Thành Tiền";
+            this.label7.Text = "Tổng Tiền";
             // 
             // txtmakh
             // 
@@ -189,14 +187,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã HD Bán Lẻ";
             // 
-            // dataGridView1
+            // DGViewHDBL
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(387, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(446, 223);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DGViewHDBL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGViewHDBL.Location = new System.Drawing.Point(387, 12);
+            this.DGViewHDBL.Name = "DGViewHDBL";
+            this.DGViewHDBL.Size = new System.Drawing.Size(661, 223);
+            this.DGViewHDBL.TabIndex = 16;
             // 
             // btnxem
             // 
@@ -206,7 +203,7 @@
             this.btnxem.TabIndex = 21;
             this.btnxem.Text = "Xem Chi Tiết HD Bán Lẻ";
             this.btnxem.UseVisualStyleBackColor = true;
-            this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
+            this.btnxem.Click += new System.EventHandler(this.btnxem_Click_1);
             // 
             // btnquaylai
             // 
@@ -216,35 +213,44 @@
             this.btnquaylai.TabIndex = 22;
             this.btnquaylai.Text = "Quay Lại ";
             this.btnquaylai.UseVisualStyleBackColor = true;
-            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
+            // 
+            // btnthoat
+            // 
+            this.btnthoat.Location = new System.Drawing.Point(929, 277);
+            this.btnthoat.Name = "btnthoat";
+            this.btnthoat.Size = new System.Drawing.Size(75, 38);
+            this.btnthoat.TabIndex = 18;
+            this.btnthoat.Text = "Thoát";
+            this.btnthoat.UseVisualStyleBackColor = true;
             // 
             // FormHDBanle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 337);
+            this.ClientSize = new System.Drawing.Size(1060, 337);
             this.Controls.Add(this.btnquaylai);
-            this.Controls.Add(this.btnsua);
+            this.Controls.Add(this.btnluu);
             this.Controls.Add(this.btnthoat);
+            this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnxem);
             this.Controls.Add(this.btnthem);
             this.Controls.Add(this.btnxoa);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGViewHDBL);
             this.Name = "FormHDBanle";
             this.Text = "HDBanle";
-            this.Load += new System.EventHandler(this.FormHDBanle_Load);
+            this.Load += new System.EventHandler(this.FormHDBanle_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGViewHDBL)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnluu;
         private System.Windows.Forms.Button btnsua;
-        private System.Windows.Forms.Button btnthoat;
         private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -254,12 +260,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGViewHDBL;
         private System.Windows.Forms.Button btnxem;
-        private System.Windows.Forms.TextBox txtthanhtien;
+        private System.Windows.Forms.TextBox txttongtien;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DTNgayBanHDBL;
         private System.Windows.Forms.Button btnquaylai;
+        private System.Windows.Forms.Button btnthoat;
     }
 }
