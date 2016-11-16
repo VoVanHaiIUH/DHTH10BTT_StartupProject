@@ -334,6 +334,7 @@
             this.Controls.Add(this.btnThem);
             this.Name = "FormKhachHang";
             this.Text = "FormKhachHang";
+            this.Load += new System.EventHandler(this.FormKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
