@@ -22,7 +22,7 @@ namespace SRPHR_Solution
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormDangnhap());
             //Application.Run(new FormHDGTGT());
-            Application.Run(new MainBaoCao());
+            Application.Run(new FormDangnhap());
         }
     }
 }
