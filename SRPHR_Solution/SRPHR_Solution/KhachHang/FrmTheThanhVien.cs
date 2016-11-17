@@ -15,6 +15,7 @@ namespace SRPHR_Solution.KhachHang
 {
     public partial class FrmTheThanhVien : Form
     {
+        //
         List<eThethanhvien> listthetv;
         TheThanhVienBLL thetvbll;
         public FrmTheThanhVien()
@@ -160,6 +161,11 @@ namespace SRPHR_Solution.KhachHang
         private void btnthemthe_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnthoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

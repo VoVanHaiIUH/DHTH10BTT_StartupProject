@@ -17,6 +17,7 @@ namespace SRPHR_Solution.KhachHang
         {
             InitializeComponent();
         }
+        //
 
         private void FrmDoiDiem_Load(object sender, EventArgs e)
         {

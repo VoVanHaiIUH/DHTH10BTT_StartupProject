@@ -10,7 +10,7 @@ namespace BusinessLogic.KhachHang
 {
     public class KhachHangBLL
     {
-
+        //
         SRPHRDataContext DB = new SRPHRDataContext();
 
         public List<Entities.KhachHang.eKhachHang> GetAllKhachHang()

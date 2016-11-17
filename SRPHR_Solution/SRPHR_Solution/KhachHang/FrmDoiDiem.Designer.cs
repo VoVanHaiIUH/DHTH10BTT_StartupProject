@@ -19,6 +19,7 @@
             }
             base.Dispose(disposing);
         }
+        //doi diem
 
         #region Windows Form Designer generated code
 
@@ -126,7 +127,7 @@
             // 
             // btndoidiem
             // 
-            this.btndoidiem.Location = new System.Drawing.Point(171, 360);
+            this.btndoidiem.Location = new System.Drawing.Point(196, 360);
             this.btndoidiem.Name = "btndoidiem";
             this.btndoidiem.Size = new System.Drawing.Size(75, 23);
             this.btndoidiem.TabIndex = 3;
@@ -136,7 +137,7 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(292, 360);
+            this.btnthoat.Location = new System.Drawing.Point(315, 360);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(75, 23);
             this.btnthoat.TabIndex = 3;

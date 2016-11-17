@@ -287,7 +287,7 @@
             // 
             // dtpngaycapcmnd
             // 
-            this.dtpngaycapcmnd.Location = new System.Drawing.Point(257, 189);
+            this.dtpngaycapcmnd.Location = new System.Drawing.Point(273, 185);
             this.dtpngaycapcmnd.Name = "dtpngaycapcmnd";
             this.dtpngaycapcmnd.Size = new System.Drawing.Size(200, 20);
             this.dtpngaycapcmnd.TabIndex = 4;
@@ -298,6 +298,7 @@
             this.dtpngaysinh.Name = "dtpngaysinh";
             this.dtpngaysinh.Size = new System.Drawing.Size(200, 20);
             this.dtpngaysinh.TabIndex = 4;
+            this.dtpngaysinh.ValueChanged += new System.EventHandler(this.dtpngaysinh_ValueChanged);
             // 
             // FormKhachHang
             // 
@@ -335,6 +336,7 @@
             this.Controls.Add(this.btnThem);
             this.Name = "FormKhachHang";
             this.Text = "FormKhachHang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormKhachHang_FormClosing);
             this.Load += new System.EventHandler(this.FormKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.ResumeLayout(false);

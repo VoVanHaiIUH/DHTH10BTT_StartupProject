@@ -202,6 +202,20 @@ namespace SRPHR_Solution.KhachHang
             frm.ShowDialog();
         }
 
+        private void dtpngaysinh_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormKhachHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn có muốn thoát ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (r==DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
         /* private void btntimbansikh_Click(object sender, EventArgs e)
          {
              string hd = txttimmahdbansikh.Text;

@@ -109,7 +109,7 @@ namespace BusinessLogic.KhachHang
             }
 
         }
-
+        //
 
         public int setDiemTL1(string ma, int diem)
         {

@@ -19,6 +19,7 @@
             }
             base.Dispose(disposing);
         }
+        //
 
         #region Windows Form Designer generated code
 
@@ -105,7 +106,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(269, 353);
+            this.btnLuu.Location = new System.Drawing.Point(281, 353);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 1;
@@ -201,12 +202,13 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(373, 353);
+            this.btnthoat.Location = new System.Drawing.Point(400, 353);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(75, 23);
             this.btnthoat.TabIndex = 1;
             this.btnthoat.Text = "thoat";
             this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // FrmTheThanhVien
             // 
