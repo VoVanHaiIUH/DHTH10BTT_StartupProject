@@ -34,13 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.btntim = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
+            this.txtMaThe = new System.Windows.Forms.TextBox();
+            this.txtDiemTichLuy = new System.Windows.Forms.TextBox();
             this.btndoidiem = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
+            this.btnDoiThuong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,42 +96,33 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Tổng tiền";
             // 
-            // textBox2
+            // txtTongTien
             // 
-            this.textBox2.Location = new System.Drawing.Point(407, 208);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtTongTien.Location = new System.Drawing.Point(407, 208);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(100, 20);
+            this.txtTongTien.TabIndex = 2;
             // 
-            // textBox3
+            // txtTenKhachHang
             // 
-            this.textBox3.Location = new System.Drawing.Point(165, 248);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtTenKhachHang.Location = new System.Drawing.Point(165, 248);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.Size = new System.Drawing.Size(100, 20);
+            this.txtTenKhachHang.TabIndex = 2;
             // 
-            // textBox4
+            // txtMaThe
             // 
-            this.textBox4.Location = new System.Drawing.Point(165, 207);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 2;
+            this.txtMaThe.Location = new System.Drawing.Point(165, 207);
+            this.txtMaThe.Name = "txtMaThe";
+            this.txtMaThe.Size = new System.Drawing.Size(100, 20);
+            this.txtMaThe.TabIndex = 2;
             // 
-            // textBox5
+            // txtDiemTichLuy
             // 
-            this.textBox5.Location = new System.Drawing.Point(165, 300);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 2;
-            // 
-            // btntim
-            // 
-            this.btntim.Location = new System.Drawing.Point(54, 360);
-            this.btntim.Name = "btntim";
-            this.btntim.Size = new System.Drawing.Size(75, 23);
-            this.btntim.TabIndex = 3;
-            this.btntim.Text = "Tìm";
-            this.btntim.UseVisualStyleBackColor = true;
+            this.txtDiemTichLuy.Location = new System.Drawing.Point(165, 300);
+            this.txtDiemTichLuy.Name = "txtDiemTichLuy";
+            this.txtDiemTichLuy.Size = new System.Drawing.Size(100, 20);
+            this.txtDiemTichLuy.TabIndex = 2;
             // 
             // btndoidiem
             // 
@@ -141,6 +132,7 @@
             this.btndoidiem.TabIndex = 3;
             this.btndoidiem.Text = "đổi điểm";
             this.btndoidiem.UseVisualStyleBackColor = true;
+            this.btndoidiem.Click += new System.EventHandler(this.btndoidiem_Click);
             // 
             // btnthoat
             // 
@@ -150,6 +142,17 @@
             this.btnthoat.TabIndex = 3;
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
+            // 
+            // btnDoiThuong
+            // 
+            this.btnDoiThuong.Location = new System.Drawing.Point(90, 360);
+            this.btnDoiThuong.Name = "btnDoiThuong";
+            this.btnDoiThuong.Size = new System.Drawing.Size(75, 23);
+            this.btnDoiThuong.TabIndex = 3;
+            this.btnDoiThuong.Text = "Doi Thuong";
+            this.btnDoiThuong.UseVisualStyleBackColor = true;
+            this.btnDoiThuong.Click += new System.EventHandler(this.btnDoiThuong_Click);
             // 
             // FrmDoiDiem
             // 
@@ -157,12 +160,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 442);
             this.Controls.Add(this.btnthoat);
+            this.Controls.Add(this.btnDoiThuong);
             this.Controls.Add(this.btndoidiem);
-            this.Controls.Add(this.btntim);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtMaThe);
+            this.Controls.Add(this.txtTenKhachHang);
+            this.Controls.Add(this.txtTongTien);
+            this.Controls.Add(this.txtDiemTichLuy);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -186,12 +189,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button btntim;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.TextBox txtTenKhachHang;
+        private System.Windows.Forms.TextBox txtMaThe;
+        private System.Windows.Forms.TextBox txtDiemTichLuy;
         private System.Windows.Forms.Button btndoidiem;
         private System.Windows.Forms.Button btnthoat;
+        private System.Windows.Forms.Button btnDoiThuong;
     }
 }

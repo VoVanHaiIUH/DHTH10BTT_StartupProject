@@ -88,7 +88,7 @@ namespace SRPHR_Solution.KhachHang
         {
             btnThem.Enabled = status;
             btnSua.Enabled = status;
-            btnluu.Enabled = !status;
+            btnLuu.Enabled = !status;
             btnDoiDiem.Enabled = status;
             btnDoiThuong.Enabled = status;
             btnExit.Enabled = status;
@@ -140,7 +140,7 @@ namespace SRPHR_Solution.KhachHang
                 dgvKhachHang.DataSource = khbll.GetAllKhachHang();
             }
             EnableButton(true);
-            btnluu.Enabled = true;
+            btnLuu.Enabled = true;
             DisableTextbox(true);
 
         }
@@ -160,14 +160,14 @@ namespace SRPHR_Solution.KhachHang
                 btnSua.Enabled = true;
                 btnSua.Text = "Bỏ qua";
                 DisableTextbox(false);
-                btnluu.Enabled = true;
+                btnLuu.Enabled = true;
                 txtMaKH.ReadOnly = true;
                 txtMaKH.Focus();
             }
             else
             {
                 EnableButton(true);
-                btnluu.Enabled = false;
+                btnLuu.Enabled = false;
                 DisableTextbox(true);
                 listKH = khbll.GetAllKhachHang();
                 LoadDataGridView(dgvKhachHang, listKH);
@@ -194,6 +194,12 @@ namespace SRPHR_Solution.KhachHang
             txtGioiTinh.Text = dgvKhachHang.CurrentRow.Cells[8].Value.ToString();
             dtpngaycapcmnd.Text = dgvKhachHang.CurrentRow.Cells[9].Value.ToString();
             txtTrangThai.Text = dgvKhachHang.CurrentRow.Cells[10].Value.ToString();
+        }
+
+        private void btnDoiDiem_Click(object sender, EventArgs e)
+        {
+            FrmDoiDiem frm = new FrmDoiDiem();
+            frm.ShowDialog();
         }
 
         /* private void btntimbansikh_Click(object sender, EventArgs e)

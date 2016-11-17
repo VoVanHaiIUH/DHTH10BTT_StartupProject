@@ -59,8 +59,8 @@
     <Compile Include="CongNoPKH\ePhieuDNXK.cs" />
     <Compile Include="CongNoPKH\eSanPham.cs" />
     <Compile Include="eCTPQLKho.cs" />
-    <Compile Include="KhachHang\KhachHang.cs" />
-    <Compile Include="KhachHang\Thethanhvien.cs" />
+    <Compile Include="KhachHang\eKhachHang.cs" />
+    <Compile Include="KhachHang\eThethanhvien.cs" />
     <Compile Include="Kho\eCTPhieuQlyKho.cs" />
     <Compile Include="Kho\eKho.cs" />
     <Compile Include="Kho\ePhieuNK.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.KhachHang
 {
-    public class KhachHang
+    public class eKhachHang
     {
 
         //record.maKH, record.tenKH, record.diachi,record.email, record.gioitinh, record.ngaycapCMND, 
@@ -162,7 +162,7 @@ namespace Entities.KhachHang
 
       
    
-        public KhachHang(string maKH, string tenKH, string diachi, DateTime ngaysinh, string email, string soCMND, string sodienthoai, int trangthai, DateTime ngaycapcmnd, string gioitinh, string nghenghiep)
+        public eKhachHang(string maKH, string tenKH, string diachi, DateTime ngaysinh, string email, string soCMND, string sodienthoai, int trangthai, DateTime ngaycapcmnd, string gioitinh, string nghenghiep)
         {
             this.Makh = makh;
             this.Tenkh = tenkh;
@@ -178,13 +178,13 @@ namespace Entities.KhachHang
 
         }
 
-        public KhachHang()
+        public eKhachHang()
         {
             // TODO: Complete member initialization
         }
         public override bool Equals(Object newKH)
         {
-            KhachHang nv = (KhachHang)newKH;
+            eKhachHang nv = (eKhachHang)newKH;
             return this.makh.ToLower().Equals(nv.makh.ToLower());
         }
         public override int GetHashCode()

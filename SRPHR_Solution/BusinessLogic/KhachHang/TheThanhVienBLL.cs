@@ -19,7 +19,7 @@ namespace BusinessLogic.KhachHang
 
             foreach (Tbl_TheThanhVien the_DAL in dsthe)
             {
-                eThethanhvien ethe = eThethanhvien();
+                eThethanhvien ethe = new eThethanhvien();
                 ethe.Mathe = the_DAL.maThe;
                 ethe.Ngayhethan = Convert.ToDateTime(the_DAL.ngayHetHan);
                 ethe.Makh = the_DAL.maKH;
@@ -32,12 +32,45 @@ namespace BusinessLogic.KhachHang
             return listThe;
         }
 
-        private eThethanhvien eThethanhvien()
+        public int setDiemTL(string ma, decimal tongTien)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Where(x => x.maThe == ma).FirstOrDefault();
+                ttv.tongTien = tongTien;
+                ttv.diemTichLuy = Convert.ToInt16(ttv.tongTien / 10000);
+
+                return ttv.diemTichLuy;
+            }
+            catch (Exception)
+            {
+
+                return -1;
+            }
+
         }
 
 
+        public int setDiemTL1(string ma, int diem)
+        {
+
+            try
+            {
+                Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Where(x => x.maThe == ma).FirstOrDefault();
+                ttv.diemTichLuy = diem;
+                //ttv.diemTichLuy = Convert.ToInt16(ttv.tongTien / 10000);
+
+                return ttv.diemTichLuy;
+            }
+            catch (Exception)
+            {
+
+                return -1;
+            }
+
+        }
+      
 
         public int AddThe(eThethanhvien the)
         {

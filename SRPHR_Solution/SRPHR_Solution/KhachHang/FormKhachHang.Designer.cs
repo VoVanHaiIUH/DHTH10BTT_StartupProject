@@ -53,7 +53,7 @@
             this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.btnSua = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDoiDiem = new System.Windows.Forms.Button();
             this.btnDoiThuong = new System.Windows.Forms.Button();
@@ -262,14 +262,14 @@
             this.btnSua.Text = "SUA";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // btnCapNhat
+            // btnLuu
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(419, 488);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
-            this.btnCapNhat.TabIndex = 0;
-            this.btnCapNhat.Text = "LUU";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnLuu.Location = new System.Drawing.Point(419, 488);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "LUU";
+            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -288,6 +288,7 @@
             this.btnDoiDiem.TabIndex = 0;
             this.btnDoiDiem.Text = "Doi Diem";
             this.btnDoiDiem.UseVisualStyleBackColor = true;
+            this.btnDoiDiem.Click += new System.EventHandler(this.btnDoiDiem_Click);
             // 
             // btnDoiThuong
             // 
@@ -329,7 +330,7 @@
             this.Controls.Add(this.btnDoiThuong);
             this.Controls.Add(this.btnDoiDiem);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnCapNhat);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Name = "FormKhachHang";
@@ -368,7 +369,7 @@
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDoiDiem;
         private System.Windows.Forms.Button btnDoiThuong;

@@ -65,7 +65,6 @@
             this.btnthemthe.Name = "btnthemthe";
             this.btnthemthe.Size = new System.Drawing.Size(75, 23);
             this.btnthemthe.TabIndex = 1;
-            this.btnthemthe.Text = "button1";
             this.btnthemthe.UseVisualStyleBackColor = true;
             // 
             // dataGridView1

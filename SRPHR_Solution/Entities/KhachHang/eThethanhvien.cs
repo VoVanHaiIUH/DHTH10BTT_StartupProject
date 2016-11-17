@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.KhachHang
 {
-    public class Thethanhvien
+    public class eThethanhvien
     {
         private string mathe, makh;
         private DateTime ngaylap, ngayhethan;
@@ -83,8 +83,8 @@ namespace Entities.KhachHang
                 tongtien = value;
             }
         }
-        public Thethanhvien() { }
-        public Thethanhvien(string makh, string mathe, int diemtichluy, float tongtien, DateTime ngaylap,DateTime ngayhethan,string ghichu)
+        public eThethanhvien() { }
+        public eThethanhvien(string makh, string mathe, int diemtichluy, float tongtien, DateTime ngaylap,DateTime ngayhethan,string ghichu)
         {
             Makh = makh;
             Mathe = mathe;
