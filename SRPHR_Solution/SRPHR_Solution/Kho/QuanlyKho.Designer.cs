@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCNKho = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPhieuQlyKho = new System.Windows.Forms.Button();
             this.btnXuatKho = new System.Windows.Forms.Button();
@@ -38,15 +37,6 @@
             this.lblTenKho = new System.Windows.Forms.Label();
             this.treeViewKho = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
-            // 
-            // btnCNKho
-            // 
-            this.btnCNKho.Location = new System.Drawing.Point(51, 312);
-            this.btnCNKho.Name = "btnCNKho";
-            this.btnCNKho.Size = new System.Drawing.Size(95, 23);
-            this.btnCNKho.TabIndex = 17;
-            this.btnCNKho.Text = "Cập nhật Kho";
-            this.btnCNKho.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -127,7 +117,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 376);
-            this.Controls.Add(this.btnCNKho);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPhieuQlyKho);
             this.Controls.Add(this.btnXuatKho);
@@ -145,8 +134,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCNKho;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPhieuQlyKho;
         private System.Windows.Forms.Button btnXuatKho;

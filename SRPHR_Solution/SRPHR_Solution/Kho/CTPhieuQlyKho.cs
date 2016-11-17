@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entities.Kho;
 using BusinessLogic.Kho;
+
 namespace SRPHR_Solution.Kho
 {
     public partial class CTPhieuQlyKho : Form
@@ -17,10 +18,8 @@ namespace SRPHR_Solution.Kho
         PhieuQLKho_BLL bllpqlk;
         List<eCTPhieuQlyKho> listCTqlykho;
         List<ePhieuQLiKho> listpqlk;
-
         public CTPhieuQlyKho()
         {
-
             InitializeComponent();
             bllCTqlkho = new CTPQLKho_BLL();
             listCTqlykho = new List<eCTPhieuQlyKho>();
@@ -56,20 +55,10 @@ namespace SRPHR_Solution.Kho
             this.cbbMaPhieuQL.DisplayMember = "_maPhieuQli";
             this.cbbMaPhieuQL.ValueMember = "_maPhieuQli";
         }
+
         private void CTPhieuQlyKho_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void cbbMaPhieuQL_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listCTqlykho = bllCTqlkho.getCTPhieuQLKhoTheoMaPhieu(cbbMaPhieuQL.Text);
-            duadulieulendgview(dgvCTPQLK, listCTqlykho);
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void dgvCTPQLK_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
@@ -83,6 +72,17 @@ namespace SRPHR_Solution.Kho
                 cbbMaSP.Text = e.Row.Cells["_maSP"].Value.ToString();
                 cbbTenSP.Text = e.Row.Cells["_tenSP"].Value.ToString();
             }
+        }
+
+        private void cbbMaPhieuQL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listCTqlykho = bllCTqlkho.getCTPhieuQLKhoTheoMaPhieu(cbbMaPhieuQL.Text);
+            duadulieulendgview(dgvCTPQLK, listCTqlykho);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnThem_Click(object sender, EventArgs e)

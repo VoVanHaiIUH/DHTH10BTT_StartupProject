@@ -38,9 +38,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvPhieuDNChuaLap = new System.Windows.Forms.DataGridView();
-            this.cbbMaKho = new System.Windows.Forms.ComboBox();
             this.cbbTinhTrang = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpNgayLapPhieu = new System.Windows.Forms.DateTimePicker();
@@ -148,35 +146,18 @@
             this.dgvPhieuDNChuaLap.TabIndex = 68;
             this.dgvPhieuDNChuaLap.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvPhieuDNChuaLap_RowStateChanged);
             // 
-            // cbbMaKho
-            // 
-            this.cbbMaKho.FormattingEnabled = true;
-            this.cbbMaKho.Location = new System.Drawing.Point(166, 137);
-            this.cbbMaKho.Name = "cbbMaKho";
-            this.cbbMaKho.Size = new System.Drawing.Size(142, 21);
-            this.cbbMaKho.TabIndex = 67;
-            // 
             // cbbTinhTrang
             // 
             this.cbbTinhTrang.FormattingEnabled = true;
-            this.cbbTinhTrang.Location = new System.Drawing.Point(166, 207);
+            this.cbbTinhTrang.Location = new System.Drawing.Point(166, 170);
             this.cbbTinhTrang.Name = "cbbTinhTrang";
             this.cbbTinhTrang.Size = new System.Drawing.Size(142, 21);
             this.cbbTinhTrang.TabIndex = 66;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(104, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 65;
-            this.label5.Text = "Mã Kho";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(89, 214);
+            this.label4.Location = new System.Drawing.Point(89, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 64;
@@ -193,7 +174,7 @@
             // 
             // dtpNgayLapPhieu
             // 
-            this.dtpNgayLapPhieu.Location = new System.Drawing.Point(166, 177);
+            this.dtpNgayLapPhieu.Location = new System.Drawing.Point(166, 140);
             this.dtpNgayLapPhieu.Name = "dtpNgayLapPhieu";
             this.dtpNgayLapPhieu.Size = new System.Drawing.Size(142, 20);
             this.dtpNgayLapPhieu.TabIndex = 62;
@@ -201,7 +182,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 181);
+            this.label2.Location = new System.Drawing.Point(42, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 61;
@@ -248,9 +229,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvPhieuDNChuaLap);
-            this.Controls.Add(this.cbbMaKho);
             this.Controls.Add(this.cbbTinhTrang);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpNgayLapPhieu);
@@ -280,9 +259,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvPhieuDNChuaLap;
-        private System.Windows.Forms.ComboBox cbbMaKho;
         private System.Windows.Forms.ComboBox cbbTinhTrang;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpNgayLapPhieu;

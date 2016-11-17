@@ -39,7 +39,7 @@ namespace BusinessLogic.Kho
                 ctpqlk.maSP = newctpqlk._maSP;
                 ctpqlk.sTT = newctpqlk._sTT;
                 ctpqlk.tenSP = newctpqlk._tenSP;
-                ctpqlk.sLuongql = newctpqlk._soLuongQly;
+                ctpqlk.sLuongql = newctpqlk._soLuongQly.ToString();
                 ctpqlk.donVi = newctpqlk._donVi;
                 DB.Tbl_CTPhieuQLKhos.InsertOnSubmit(ctpqlk);
                 DB.SubmitChanges();
@@ -57,7 +57,7 @@ namespace BusinessLogic.Kho
                 Tbl_CTPhieuQLKho ctpqlk = DB.Tbl_CTPhieuQLKhos.Single(x => x.maPhieuql == updatectpqlk._maPhieuQly && x.maSP == updatectpqlk._maSP);
                 ctpqlk.tenSP = updatectpqlk._tenSP;
                 ctpqlk.sTT = updatectpqlk._sTT;
-                ctpqlk.sLuongql = updatectpqlk._soLuongQly;
+                ctpqlk.sLuongql = updatectpqlk._soLuongQly.ToString();
                 ctpqlk.donVi = updatectpqlk._donVi;
                 DB.SubmitChanges();
                 return true;

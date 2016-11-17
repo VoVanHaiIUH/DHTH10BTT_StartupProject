@@ -17,7 +17,7 @@ namespace Entities.Kho
         public DateTime _ngayLapXuat { get; set; }
         public string _maNV { get; set; }
         public string _tinhTrang { get; set; }
-        public string _maKho { get; set; }
+        //public string _maKho { get; set; }
         public ePhieuXK()
         {
             //this._maNV = "";
@@ -29,10 +29,10 @@ namespace Entities.Kho
             this._maPhieuXuat = "";
             this._ngayLapXuat = DateTime.Now;
             this._tinhTrang = "";
-            this._maKho = "";
+            //this._maKho = "";
         }
 
-        public ePhieuXK(string maphieuxuat, DateTime ngaylapxuat, string manv, string tinhtrang, string makho)
+        public ePhieuXK(string maphieuxuat, DateTime ngaylapxuat, string manv, string tinhtrang/*, string makho*/)
         {
             //this._maNV = manv;
             //this._maPhieuXuat = _maPhieuXuat;
@@ -43,7 +43,7 @@ namespace Entities.Kho
             this._maPhieuXuat = _maPhieuXuat;
             this._ngayLapXuat = ngaylapxuat;
             this._tinhTrang = tinhtrang;
-            this._maKho = makho;
+            //this._maKho = makho;
         }
         #region Methods manhanvien
         public override bool Equals(Object newXK)

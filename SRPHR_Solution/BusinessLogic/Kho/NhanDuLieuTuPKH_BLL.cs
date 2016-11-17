@@ -23,7 +23,7 @@ namespace BusinessLogic.Kho
                 ePhieuDNNK ednnk = new ePhieuDNNK();
                 ednnk.maKho = nk.maKho;
                 ednnk.maNV = nk.maNV;
-                ednnk.ngayLapphieu = nk.ngayLapphieu;
+                ednnk.ngayLapphieu = nk.ngayLapphieu.ToString();
                 ednnk.soPDNNK = nk.soPDNNK;
                 foreach (Tbl_PhieuNK i in k)
                 {
@@ -47,7 +47,7 @@ namespace BusinessLogic.Kho
                 ePhieuDNXK ednxk = new ePhieuDNXK();
                 ednxk.maKho = xk.maKho;
                 ednxk.maNV = xk.maNV;
-                ednxk.ngayLap = xk.ngayLap;
+                ednxk.ngayLap = xk.ngayLap.ToString();
                 ednxk.soPDNXK = xk.soPDNNK;
 
                 foreach (Tbl_PhieuXK i in k)
