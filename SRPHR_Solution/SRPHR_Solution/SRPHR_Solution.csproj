@@ -75,6 +75,55 @@
     <Compile Include="BaoCao\BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\baocaochitietsanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\baocaochitietsanpham.Designer.cs" />
+    <Compile Include="BaoCao\BCHDbanle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BCHDbanle.Designer.cs" />
+    <Compile Include="BaoCao\BCHDbansi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BCHDbansi.Designer.cs" />
+    <Compile Include="BaoCao\BCkhuyenmai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BCkhuyenmai.Designer.cs" />
+    <Compile Include="BaoCao\BCNVkyluat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BCNVkyluat.Designer.cs" />
+    <Compile Include="BaoCao\BCSPbanle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BCSPbanle.Designer.cs" />
+    <Compile Include="BaoCao\BCSPbansi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BCSPbansi.Designer.cs" />
+    <Compile Include="BaoCao\BCSPtheothang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\BCSPtheothang.Designer.cs" />
+    <Compile Include="BaoCao\DataSetbaocao1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\DataSetbaocao1.Designer.cs" />
+    <Compile Include="BaoCao\DataSetbaocao11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetbaocao1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\doanhsobanle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\doanhsobanle.Designer.cs" />
+    <Compile Include="BaoCao\doanhsobansi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\doanhsobansi.Designer.cs" />
     <Compile Include="BaoCao\FormMainBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +136,10 @@
     <Compile Include="BaoCao\LoaiBaoCao.Designer.cs">
       <DependentUpon>LoaiBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\MainBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\MainBaoCao.Designer.cs" />
     <Compile Include="CongNoPKH\FormNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,12 +313,34 @@
     <EmbeddedResource Include="BaoCao\BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\baocaochitietsanpham.resx" />
+    <EmbeddedResource Include="BaoCao\baocaoKM.rdlc" />
+    <EmbeddedResource Include="BaoCao\BCHDbanle.rdlc" />
+    <EmbeddedResource Include="BaoCao\BCHDbanle.resx" />
+    <EmbeddedResource Include="BaoCao\BCHDbansi.rdlc" />
+    <EmbeddedResource Include="BaoCao\BCHDbansi.resx" />
+    <EmbeddedResource Include="BaoCao\BCkhuyenmai.resx" />
+    <EmbeddedResource Include="BaoCao\BCNVkyluat.rdlc" />
+    <EmbeddedResource Include="BaoCao\BCNVkyluat.resx" />
+    <EmbeddedResource Include="BaoCao\BCSPbanle.rdlc" />
+    <EmbeddedResource Include="BaoCao\BCSPbanle.resx" />
+    <EmbeddedResource Include="BaoCao\BCSPbansi.rdlc" />
+    <EmbeddedResource Include="BaoCao\BCSPbansi.resx" />
+    <EmbeddedResource Include="BaoCao\BCSPtheothang.rdlc" />
+    <EmbeddedResource Include="BaoCao\BCSPtheothang.resx" />
+    <EmbeddedResource Include="BaoCao\Doanhsobanle.rdlc" />
+    <EmbeddedResource Include="BaoCao\doanhsobanle.resx" />
+    <EmbeddedResource Include="BaoCao\doanhsobansi.rdlc" />
+    <EmbeddedResource Include="BaoCao\doanhsobansi.resx" />
     <EmbeddedResource Include="BaoCao\FormMainBaoCao.resx">
       <DependentUpon>FormMainBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\LoaiBaoCao.resx">
       <DependentUpon>LoaiBaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\MainBaoCao.resx" />
+    <EmbeddedResource Include="BaoCao\Report1.rdlc" />
+    <EmbeddedResource Include="BaoCao\SPBLtrongthang.rdlc" />
     <EmbeddedResource Include="CongNoPKH\FormNhaCungCap.resx">
       <DependentUpon>FormNhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +424,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="BaoCao\DataSetbaocao1.xsc">
+      <DependentUpon>DataSetbaocao1.xsd</DependentUpon>
+    </None>
+    <None Include="BaoCao\DataSetbaocao1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetbaocao11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaoCao\DataSetbaocao1.xss">
+      <DependentUpon>DataSetbaocao1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
