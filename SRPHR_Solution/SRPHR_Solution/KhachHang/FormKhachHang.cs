@@ -90,7 +90,6 @@ namespace SRPHR_Solution.KhachHang
             btnSua.Enabled = status;
             btnLuu.Enabled = !status;
             btnDoiDiem.Enabled = status;
-            btnDoiThuong.Enabled = status;
             btnExit.Enabled = status;
 
         }
@@ -210,7 +209,7 @@ namespace SRPHR_Solution.KhachHang
         private void FormKhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult r = MessageBox.Show("Bạn có muốn thoát ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-            if (r==DialogResult.No)
+                if(r==DialogResult.No)
             {
                 e.Cancel = true;
             }

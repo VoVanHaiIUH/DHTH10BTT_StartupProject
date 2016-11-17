@@ -17,14 +17,23 @@ namespace SRPHR_Solution.KhachHang
         {
             InitializeComponent();
         }
-        //
 
         private void FrmDoiDiem_Load(object sender, EventArgs e)
         {
         }
         private void btndoidiem_Click(object sender, EventArgs e)
         {
-            txtDiemTichLuy.Text = ttvBLL.setDiemTL(txtMaThe.Text, Convert.ToDecimal(txtTongTien.Text)).ToString();
+            int diemTL = ttvBLL.setDiemTL(txtMaThe.Text, Convert.ToDecimal(txtTongTien.Text));
+            if (diemTL > -1)
+            {
+
+                txtDiemTichLuy.Text = diemTL.ToString();
+                MessageBox.Show("DOI DIEM THANH CONG");
+            }
+            else
+            {
+                MessageBox.Show("KHONG DOI DIEM DUOC");
+            }
 
         }
 
@@ -35,21 +44,30 @@ namespace SRPHR_Solution.KhachHang
 
         private void btnDoiThuong_Click(object sender, EventArgs e)
         {
-            
-            if(Convert.ToInt16(txtDiemTichLuy.Text)>=200)
+
+            if (Convert.ToInt16(txtDiemTichLuy.Text) >= 200)
             {
-                DialogResult r=MessageBox.Show("ban co muon doi diem ko?","Congratulation!",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1);
+                DialogResult r = MessageBox.Show("ban co muon doi diem ko?", "Congratulation!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r == DialogResult.Yes)
                 {
                     int d = ttvBLL.setDiemTL1(txtMaThe.Text, Convert.ToInt16(txtDiemTichLuy.Text) - 200);
+                    txtDiemTichLuy.Text = d.ToString();
                     if (d == -1)
                     {
                         MessageBox.Show("Loi");
                     }
+                    else
+                    {
+                        MessageBox.Show("Đã cập nhật lại điểm tích luỹ.Phần quà của bạn đã được chuyển đi.");
+                    }
                 }
-                else
-                    MessageBox.Show("Đã cập nhật lại điểm tích luỹ.Phần quà của bạn đã được chuyển đi.");
+
+                else {
+                    MessageBox.Show("diem tich luy nho hon 200");
+                }
+
             }
         }
+        
     }
 }

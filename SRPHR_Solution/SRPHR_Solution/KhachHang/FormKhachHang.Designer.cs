@@ -54,7 +54,6 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDoiDiem = new System.Windows.Forms.Button();
-            this.btnDoiThuong = new System.Windows.Forms.Button();
             this.dtpngaycapcmnd = new System.Windows.Forms.DateTimePicker();
             this.dtpngaysinh = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -276,15 +275,6 @@
             this.btnDoiDiem.UseVisualStyleBackColor = true;
             this.btnDoiDiem.Click += new System.EventHandler(this.btnDoiDiem_Click);
             // 
-            // btnDoiThuong
-            // 
-            this.btnDoiThuong.Location = new System.Drawing.Point(662, 488);
-            this.btnDoiThuong.Name = "btnDoiThuong";
-            this.btnDoiThuong.Size = new System.Drawing.Size(75, 23);
-            this.btnDoiThuong.TabIndex = 0;
-            this.btnDoiThuong.Text = "Doi Thuong";
-            this.btnDoiThuong.UseVisualStyleBackColor = true;
-            // 
             // dtpngaycapcmnd
             // 
             this.dtpngaycapcmnd.Location = new System.Drawing.Point(273, 185);
@@ -328,7 +318,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvKhachHang);
-            this.Controls.Add(this.btnDoiThuong);
             this.Controls.Add(this.btnDoiDiem);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLuu);
@@ -372,7 +361,6 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDoiDiem;
-        private System.Windows.Forms.Button btnDoiThuong;
         private System.Windows.Forms.DateTimePicker dtpngaycapcmnd;
         private System.Windows.Forms.DateTimePicker dtpngaysinh;
     }
