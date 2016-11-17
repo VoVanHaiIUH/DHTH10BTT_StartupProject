@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnthemthe = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvthethanhvien = new System.Windows.Forms.DataGridView();
             this.txtmathe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.dateTimePickerngayhethan = new System.Windows.Forms.DateTimePicker();
             this.btnsua = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvthethanhvien)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,16 +65,17 @@
             this.btnthemthe.Name = "btnthemthe";
             this.btnthemthe.Size = new System.Drawing.Size(75, 23);
             this.btnthemthe.TabIndex = 1;
+            this.btnthemthe.Text = "THEM";
             this.btnthemthe.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvthethanhvien
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(666, 190);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvthethanhvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvthethanhvien.Location = new System.Drawing.Point(3, 2);
+            this.dgvthethanhvien.Name = "dgvthethanhvien";
+            this.dgvthethanhvien.Size = new System.Drawing.Size(666, 190);
+            this.dgvthethanhvien.TabIndex = 2;
+            this.dgvthethanhvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtmathe
             // 
@@ -107,7 +108,7 @@
             this.btnluu.Name = "btnluu";
             this.btnluu.Size = new System.Drawing.Size(75, 23);
             this.btnluu.TabIndex = 1;
-            this.btnluu.Text = "button1";
+            this.btnluu.Text = "luu";
             this.btnluu.UseVisualStyleBackColor = true;
             // 
             // txtmakh
@@ -194,7 +195,7 @@
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(75, 23);
             this.btnsua.TabIndex = 1;
-            this.btnsua.Text = "button1";
+            this.btnsua.Text = "Sua";
             this.btnsua.UseVisualStyleBackColor = true;
             // 
             // btnthoat
@@ -203,7 +204,7 @@
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(75, 23);
             this.btnthoat.TabIndex = 1;
-            this.btnthoat.Text = "btnthoat";
+            this.btnthoat.Text = "thoat";
             this.btnthoat.UseVisualStyleBackColor = true;
             // 
             // FrmTheThanhVien
@@ -222,7 +223,7 @@
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnluu);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvthethanhvien);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnthemthe);
             this.Controls.Add(this.label7);
@@ -232,7 +233,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmTheThanhVien";
             this.Text = "FrmTheThanhVien";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmTheThanhVien_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvthethanhvien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,7 +244,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnthemthe;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvthethanhvien;
         private System.Windows.Forms.TextBox txtmathe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

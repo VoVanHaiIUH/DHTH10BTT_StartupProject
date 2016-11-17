@@ -32,45 +32,12 @@ namespace BusinessLogic.KhachHang
             return listThe;
         }
 
-        public int setDiemTL(string ma, decimal tongTien)
-        {
-
-            try
-            {
-                Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Where(x => x.maThe == ma).FirstOrDefault();
-                ttv.tongTien = tongTien;
-                ttv.diemTichLuy = Convert.ToInt16(ttv.tongTien / 10000);
-
-                return ttv.diemTichLuy;
-            }
-            catch (Exception)
-            {
-
-                return -1;
-            }
-
-        }
+        /* private eThethanhvien eThethanhvien()
+         {
+             throw new NotImplementedException();
+         }*/
 
 
-        public int setDiemTL1(string ma, int diem)
-        {
-
-            try
-            {
-                Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Where(x => x.maThe == ma).FirstOrDefault();
-                ttv.diemTichLuy = diem;
-                //ttv.diemTichLuy = Convert.ToInt16(ttv.tongTien / 10000);
-
-                return ttv.diemTichLuy;
-            }
-            catch (Exception)
-            {
-
-                return -1;
-            }
-
-        }
-      
 
         public int AddThe(eThethanhvien the)
         {
@@ -106,14 +73,14 @@ namespace BusinessLogic.KhachHang
             catch { return false; }
         }*/
 
-        public bool UpdateThe(Entities.KhachHang.eThethanhvien updateThe)
+        public bool UpdateThe(eThethanhvien updateThe)
         {
             try
             {
                 Tbl_TheThanhVien updateRecord = DB.Tbl_TheThanhViens.Single(record => record.maThe == updateThe.Mathe);
 
                 updateRecord.maKH = updateThe.Makh;
-                updateRecord.diemTichLuy = updateThe.Diemtichluy;
+                updateRecord.diemTichLuy = Convert.ToInt32(updateThe.Diemtichluy);
                 updateRecord.ngayLap = updateThe.Ngaylap;
                 updateRecord.ngayHetHan = updateThe.Ngayhethan;
                 updateRecord.ghiChu = updateThe.Ghichu;

@@ -53,6 +53,7 @@
     <Compile Include="CongNoPKH\PhieuDNXK_BLL.cs" />
     <Compile Include="CongNoPKH\SanPham_BLL.cs" />
     <Compile Include="KhachHang\KhachHangBLL.cs" />
+    <Compile Include="KhachHang\TheThanhVienBLL.cs" />
     <Compile Include="Kho\CTPQLKho_BLL.cs" />
     <Compile Include="Kho\Kho_BLL.cs" />
     <Compile Include="Kho\NhanDuLieuTuPKH_BLL.cs" />

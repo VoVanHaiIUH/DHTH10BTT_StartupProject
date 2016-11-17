@@ -196,12 +196,6 @@ namespace SRPHR_Solution.KhachHang
             txtTrangThai.Text = dgvKhachHang.CurrentRow.Cells[10].Value.ToString();
         }
 
-        private void btnDoiDiem_Click(object sender, EventArgs e)
-        {
-            FrmDoiDiem frm = new FrmDoiDiem();
-            frm.ShowDialog();
-        }
-
         /* private void btntimbansikh_Click(object sender, EventArgs e)
          {
              string hd = txttimmahdbansikh.Text;
