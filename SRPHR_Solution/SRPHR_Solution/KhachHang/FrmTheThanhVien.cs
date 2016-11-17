@@ -156,5 +156,10 @@ namespace SRPHR_Solution.KhachHang
             txtdiemtichluy.Text = dgvthethanhvien.CurrentRow.Cells[5].Value.ToString();
             txttongtien.Text = dgvthethanhvien.CurrentRow.Cells[6].Value.ToString();
         }
+
+        private void btnthemthe_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

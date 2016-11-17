@@ -91,37 +91,44 @@ namespace BusinessLogic.KhachHang
             }
             catch { return false; }
         }
-        /* public bool quydoidiem(Entities.KhachHang.eKhachHang kh, string maThe)
-         {
-             try
-             {
+        public int setDiemTL(string ma, decimal tongTien)
+        {
 
-                 Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Single(record => record.maThe == maThe);
-                 ///tru?ng h?p chua có th? thành viên
-                 if (ttv == null)
-                 {
-                     Tbl_TheThanhVien newTheTV = new Tbl_TheThanhVien();
-                     newTheTV.maThe = maThe;
-                     newTheTV.maKH = kh.Makh;
-                     newTheTV.tongTien = tinhTongTien();
+            try
+            {
+                Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Where(x => x.maThe == ma).FirstOrDefault();
+                ttv.tongTien = tongTien;
+                ttv.diemTichLuy = Convert.ToInt16(ttv.tongTien / 10000);
 
-                     newTheTV.diemTichLuy = (int)newTheTV.tongTien / 1000;
+                return ttv.diemTichLuy;
+            }
+            catch (Exception)
+            {
 
-                     DB.Tbl_TheThanhViens.InsertOnSubmit(newTheTV);
-                     DB.SubmitChanges();
-                 }
-                 else
-                 {
-                     ttv.diemTichLuy += (int)tinhTongTien() / 1000;
-                     DB.SubmitChanges();
-                   
-                 }
-                 return true;
-             }
-             catch (Exception)
-             {
-                 return false;
-             }
-         }*/
+                return -1;
+            }
+
+        }
+
+
+        public int setDiemTL1(string ma, int diem)
+        {
+
+            try
+            {
+                Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Where(x => x.maThe == ma).FirstOrDefault();
+                ttv.diemTichLuy = diem;
+                //ttv.diemTichLuy = Convert.ToInt16(ttv.tongTien / 10000);
+
+                return ttv.diemTichLuy;
+            }
+            catch (Exception)
+            {
+
+                return -1;
+            }
+
+        }
+
     }
 }

@@ -34,7 +34,7 @@
             this.txtmathe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnluu = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.txtmakh = new System.Windows.Forms.TextBox();
             this.txtdiemtichluy = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtghichu = new System.Windows.Forms.TextBox();
-            this.dateTimePickerngaylap = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerngayhethan = new System.Windows.Forms.DateTimePicker();
+            this.dtpngaylap = new System.Windows.Forms.DateTimePicker();
+            this.dtpngayhethan = new System.Windows.Forms.DateTimePicker();
             this.btnsua = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvthethanhvien)).BeginInit();
@@ -67,6 +67,7 @@
             this.btnthemthe.TabIndex = 1;
             this.btnthemthe.Text = "THEM";
             this.btnthemthe.UseVisualStyleBackColor = true;
+            this.btnthemthe.Click += new System.EventHandler(this.btnthemthe_Click_1);
             // 
             // dgvthethanhvien
             // 
@@ -102,14 +103,14 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Điểm tích luỹ";
             // 
-            // btnluu
+            // btnLuu
             // 
-            this.btnluu.Location = new System.Drawing.Point(269, 353);
-            this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(75, 23);
-            this.btnluu.TabIndex = 1;
-            this.btnluu.Text = "luu";
-            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnLuu.Location = new System.Drawing.Point(269, 353);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.TabIndex = 1;
+            this.btnLuu.Text = "luu";
+            this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // txtmakh
             // 
@@ -175,19 +176,19 @@
             this.txtghichu.Size = new System.Drawing.Size(100, 20);
             this.txtghichu.TabIndex = 3;
             // 
-            // dateTimePickerngaylap
+            // dtpngaylap
             // 
-            this.dateTimePickerngaylap.Location = new System.Drawing.Point(481, 237);
-            this.dateTimePickerngaylap.Name = "dateTimePickerngaylap";
-            this.dateTimePickerngaylap.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerngaylap.TabIndex = 4;
+            this.dtpngaylap.Location = new System.Drawing.Point(481, 237);
+            this.dtpngaylap.Name = "dtpngaylap";
+            this.dtpngaylap.Size = new System.Drawing.Size(200, 20);
+            this.dtpngaylap.TabIndex = 4;
             // 
-            // dateTimePickerngayhethan
+            // dtpngayhethan
             // 
-            this.dateTimePickerngayhethan.Location = new System.Drawing.Point(481, 283);
-            this.dateTimePickerngayhethan.Name = "dateTimePickerngayhethan";
-            this.dateTimePickerngayhethan.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerngayhethan.TabIndex = 4;
+            this.dtpngayhethan.Location = new System.Drawing.Point(481, 283);
+            this.dtpngayhethan.Name = "dtpngayhethan";
+            this.dtpngayhethan.Size = new System.Drawing.Size(200, 20);
+            this.dtpngayhethan.TabIndex = 4;
             // 
             // btnsua
             // 
@@ -212,8 +213,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 388);
-            this.Controls.Add(this.dateTimePickerngayhethan);
-            this.Controls.Add(this.dateTimePickerngaylap);
+            this.Controls.Add(this.dtpngayhethan);
+            this.Controls.Add(this.dtpngaylap);
             this.Controls.Add(this.txtghichu);
             this.Controls.Add(this.txttongtien);
             this.Controls.Add(this.txtdiemtichluy);
@@ -221,7 +222,7 @@
             this.Controls.Add(this.txtmathe);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btnsua);
-            this.Controls.Add(this.btnluu);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvthethanhvien);
             this.Controls.Add(this.label4);
@@ -248,7 +249,7 @@
         private System.Windows.Forms.TextBox txtmathe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnluu;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.TextBox txtmakh;
         private System.Windows.Forms.TextBox txtdiemtichluy;
         private System.Windows.Forms.Label label4;
@@ -257,8 +258,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtghichu;
-        private System.Windows.Forms.DateTimePicker dateTimePickerngaylap;
-        private System.Windows.Forms.DateTimePicker dateTimePickerngayhethan;
+        private System.Windows.Forms.DateTimePicker dtpngaylap;
+        private System.Windows.Forms.DateTimePicker dtpngayhethan;
         private System.Windows.Forms.Button btnsua;
         private System.Windows.Forms.Button btnthoat;
     }

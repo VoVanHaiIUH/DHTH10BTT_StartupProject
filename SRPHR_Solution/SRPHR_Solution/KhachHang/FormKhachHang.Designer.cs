@@ -45,8 +45,6 @@
             this.txtTenKH = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
-            this.txtNgaycap = new System.Windows.Forms.TextBox();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNgheNghiep = new System.Windows.Forms.TextBox();
             this.txtTrangThai = new System.Windows.Forms.TextBox();
@@ -57,6 +55,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDoiDiem = new System.Windows.Forms.Button();
             this.btnDoiThuong = new System.Windows.Forms.Button();
+            this.dtpngaycapcmnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpngaysinh = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +72,7 @@
             // dgvKhachHang
             // 
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhachHang.Location = new System.Drawing.Point(151, 261);
+            this.dgvKhachHang.Location = new System.Drawing.Point(155, 249);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(591, 208);
             this.dgvKhachHang.TabIndex = 1;
@@ -204,20 +204,6 @@
             this.txtCMND.Size = new System.Drawing.Size(100, 20);
             this.txtCMND.TabIndex = 3;
             // 
-            // txtNgaycap
-            // 
-            this.txtNgaycap.Location = new System.Drawing.Point(273, 185);
-            this.txtNgaycap.Name = "txtNgaycap";
-            this.txtNgaycap.Size = new System.Drawing.Size(100, 20);
-            this.txtNgaycap.TabIndex = 3;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(596, 34);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(100, 20);
-            this.txtNgaySinh.TabIndex = 3;
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(596, 71);
@@ -299,20 +285,34 @@
             this.btnDoiThuong.Text = "Doi Thuong";
             this.btnDoiThuong.UseVisualStyleBackColor = true;
             // 
+            // dtpngaycapcmnd
+            // 
+            this.dtpngaycapcmnd.Location = new System.Drawing.Point(257, 189);
+            this.dtpngaycapcmnd.Name = "dtpngaycapcmnd";
+            this.dtpngaycapcmnd.Size = new System.Drawing.Size(200, 20);
+            this.dtpngaycapcmnd.TabIndex = 4;
+            // 
+            // dtpngaysinh
+            // 
+            this.dtpngaysinh.Location = new System.Drawing.Point(581, 26);
+            this.dtpngaysinh.Name = "dtpngaysinh";
+            this.dtpngaysinh.Size = new System.Drawing.Size(200, 20);
+            this.dtpngaysinh.TabIndex = 4;
+            // 
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 538);
+            this.Controls.Add(this.dtpngaysinh);
+            this.Controls.Add(this.dtpngaycapcmnd);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtGioiTinh);
-            this.Controls.Add(this.txtNgaycap);
             this.Controls.Add(this.txtTrangThai);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.txtNgheNghiep);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.txtTenKH);
             this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.label3);
@@ -361,8 +361,6 @@
         private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtCMND;
-        private System.Windows.Forms.TextBox txtNgaycap;
-        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNgheNghiep;
         private System.Windows.Forms.TextBox txtTrangThai;
@@ -373,5 +371,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDoiDiem;
         private System.Windows.Forms.Button btnDoiThuong;
+        private System.Windows.Forms.DateTimePicker dtpngaycapcmnd;
+        private System.Windows.Forms.DateTimePicker dtpngaysinh;
     }
 }
