@@ -130,7 +130,7 @@ namespace SRPHR_Solution.CongNoPKH
 
         public void loaddatagridviewkm(List<eKhuyenMai> km, DataGridView dtgv) //km
         {
-            dtgv.DataSource = km;
+            //dtgv.DataSource = km;
         }
         public void laydulieuvaogridview(DataGridView tv, List<eHDBanSi> ls)
         {
