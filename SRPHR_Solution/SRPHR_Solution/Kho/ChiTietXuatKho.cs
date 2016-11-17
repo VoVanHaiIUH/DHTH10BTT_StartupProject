@@ -15,11 +15,22 @@ namespace SRPHR_Solution.Kho
 {
     public partial class ChiTietXuatKho : Form
     {
+        //NhanDuLieuTuPKH_BLL bllNhanDL;
+        //PhieuXK_BLL bllXK;
+        //List<eCTPhieuDNXK> listCTPXK;
         NhanDuLieuTuPKH_BLL bllNhanDL;
         PhieuXK_BLL bllXK;
         List<eCTPhieuDNXK> listCTPXK;
         public ChiTietXuatKho()
         {
+            //InitializeComponent();
+            //bllXK = new PhieuXK_BLL();
+            //bllNhanDL = new NhanDuLieuTuPKH_BLL();
+            //listCTPXK = new List<eCTPhieuDNXK>();
+            //duadulieulencbb(cbbmaphieu);
+            //string map = cbbmaphieu.Text;
+            //listCTPXK = bllNhanDL.laydanhsachCTPhieuDNXKtheoMaphieu(map);
+            //Laydulieulendatatreeview(dgvCT, listCTPXK);
             InitializeComponent();
             bllXK = new PhieuXK_BLL();
             bllNhanDL = new NhanDuLieuTuPKH_BLL();
@@ -31,12 +42,16 @@ namespace SRPHR_Solution.Kho
         }
         public void duadulieulencbb(ComboBox cb)
         {
+            //this.cbbmaphieu.DataSource = bllXK.laydanhsachphieuXuatKho();
+            //this.cbbmaphieu.DisplayMember = "_maPhieuXuat";
+            //this.cbbmaphieu.ValueMember = "_maPhieuXuat";
             this.cbbmaphieu.DataSource = bllXK.laydanhsachphieuXuatKho();
             this.cbbmaphieu.DisplayMember = "_maPhieuXuat";
             this.cbbmaphieu.ValueMember = "_maPhieuXuat";
         }
         public void Laydulieulendatatreeview(DataGridView dgv, List<eCTPhieuDNXK> ls)
         {
+            //dgv.DataSource = ls;
             dgv.DataSource = ls;
         }
         private void ChiTietXuatKho_Load(object sender, EventArgs e)
@@ -46,6 +61,9 @@ namespace SRPHR_Solution.Kho
 
         private void cbbmaphieu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //string map = cbbmaphieu.Text;
+            //listCTPXK = bllNhanDL.laydanhsachCTPhieuDNXKtheoMaphieu(map);
+            //Laydulieulendatatreeview(dgvCT, listCTPXK);
             string map = cbbmaphieu.Text;
             listCTPXK = bllNhanDL.laydanhsachCTPhieuDNXKtheoMaphieu(map);
             Laydulieulendatatreeview(dgvCT, listCTPXK);
