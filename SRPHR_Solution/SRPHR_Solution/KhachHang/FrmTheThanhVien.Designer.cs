@@ -66,7 +66,7 @@
             this.btnthemthe.Name = "btnthemthe";
             this.btnthemthe.Size = new System.Drawing.Size(75, 23);
             this.btnthemthe.TabIndex = 1;
-            this.btnthemthe.Text = "THEM";
+            this.btnthemthe.Text = "Them";
             this.btnthemthe.UseVisualStyleBackColor = true;
             this.btnthemthe.Click += new System.EventHandler(this.btnthemthe_Click_1);
             // 
@@ -112,6 +112,7 @@
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "luu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // txtmakh
             // 
@@ -199,6 +200,7 @@
             this.btnsua.TabIndex = 1;
             this.btnsua.Text = "Sua";
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnthoat
             // 

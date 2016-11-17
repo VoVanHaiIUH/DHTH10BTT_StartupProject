@@ -197,7 +197,7 @@ namespace SRPHR_Solution.KhachHang
 
         private void btnDoiDiem_Click(object sender, EventArgs e)
         {
-            FrmTheThanhVien frm = new FrmTheThanhVien();
+            FrmDoiDiem frm = new FrmDoiDiem();
             frm.ShowDialog();
         }
 
@@ -213,6 +213,17 @@ namespace SRPHR_Solution.KhachHang
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnthemthe_Click(object sender, EventArgs e)
+        {
+            FrmTheThanhVien frm1 = new FrmTheThanhVien();
+            frm1.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         /* private void btntimbansikh_Click(object sender, EventArgs e)

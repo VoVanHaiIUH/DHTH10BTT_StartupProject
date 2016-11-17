@@ -56,17 +56,19 @@
             this.btnDoiDiem = new System.Windows.Forms.Button();
             this.dtpngaycapcmnd = new System.Windows.Forms.DateTimePicker();
             this.dtpngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.btnthemthe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(257, 488);
+            this.btnThem.Location = new System.Drawing.Point(193, 488);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.Size = new System.Drawing.Size(109, 23);
             this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "THEM";
+            this.btnThem.Text = "Them Khach hang";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dgvKhachHang
             // 
@@ -240,12 +242,13 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(338, 488);
+            this.btnSua.Location = new System.Drawing.Point(318, 488);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "SUA";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -255,6 +258,7 @@
             this.btnLuu.TabIndex = 0;
             this.btnLuu.Text = "LUU";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // btnExit
             // 
@@ -264,6 +268,7 @@
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnDoiDiem
             // 
@@ -289,6 +294,16 @@
             this.dtpngaysinh.Size = new System.Drawing.Size(200, 20);
             this.dtpngaysinh.TabIndex = 4;
             this.dtpngaysinh.ValueChanged += new System.EventHandler(this.dtpngaysinh_ValueChanged);
+            // 
+            // btnthemthe
+            // 
+            this.btnthemthe.Location = new System.Drawing.Point(112, 488);
+            this.btnthemthe.Name = "btnthemthe";
+            this.btnthemthe.Size = new System.Drawing.Size(75, 23);
+            this.btnthemthe.TabIndex = 0;
+            this.btnthemthe.Text = "Them The";
+            this.btnthemthe.UseVisualStyleBackColor = true;
+            this.btnthemthe.Click += new System.EventHandler(this.btnthemthe_Click);
             // 
             // FormKhachHang
             // 
@@ -321,6 +336,7 @@
             this.Controls.Add(this.btnDoiDiem);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnthemthe);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Name = "FormKhachHang";
@@ -363,5 +379,6 @@
         private System.Windows.Forms.Button btnDoiDiem;
         private System.Windows.Forms.DateTimePicker dtpngaycapcmnd;
         private System.Windows.Forms.DateTimePicker dtpngaysinh;
+        private System.Windows.Forms.Button btnthemthe;
     }
 }
