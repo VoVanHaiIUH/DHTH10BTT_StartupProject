@@ -8,7 +8,7 @@ using DataAccess;
 
 namespace BusinessLogic.KhachHang
 {
-    class TheThanhVienBLL
+    public class TheThanhVienBLL
     {
         SRPHRDataContext DB = new SRPHRDataContext();
 
@@ -47,9 +47,14 @@ namespace BusinessLogic.KhachHang
                 return 0;
             }
             Tbl_TheThanhVien khTmp = new Tbl_TheThanhVien();
-            khTmp.maThe = the.Mathe
+            khTmp.maThe = the.Mathe;
+            khTmp.maKH = the.Makh;
+            khTmp.tongTien = Convert.ToDecimal(the.Tongtien);
+            khTmp.ngayHetHan = the.Ngayhethan;
+            khTmp.ngayLap = the.Ngaylap;
+            khTmp.ghiChu = the.Ghichu;
 
-            DB.Tbl_KhachHangs.InsertOnSubmit(khTmp);
+            DB.Tbl_TheThanhViens.InsertOnSubmit(khTmp);
             DB.SubmitChanges();
             return 1;
         }
