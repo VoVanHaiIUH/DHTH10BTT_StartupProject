@@ -39,6 +39,7 @@ namespace BusinessLogic.Kho
         }
         public List<eKho> LayDanhSachKho()
         {
+            capnhatkho();
             var listKho = db.Tbl_Khos.ToList();
             List<eKho> ls = new List<eKho>();
             foreach (Tbl_Kho k in listKho)
