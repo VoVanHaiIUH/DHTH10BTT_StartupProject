@@ -26,7 +26,7 @@ namespace BusinessLogic.KhachHang
                 ethe.Ghichu = the_DAL.ghiChu;
                 ethe.Ngaylap = Convert.ToDateTime(the_DAL.ngayLap);
                 ethe.Tongtien = (float)the_DAL.tongTien;
-
+                ethe.Diemtichluy = Convert.ToInt32(the_DAL.diemTichLuy);
                 listThe.Add(ethe);
             }
             return listThe;
@@ -41,37 +41,29 @@ namespace BusinessLogic.KhachHang
 
         public int AddThe(eThethanhvien the)
         {
+
+
+
+
             var mathe = DB.Tbl_TheThanhViens.Where(x => x.maThe == the.Makh).FirstOrDefault();
             if (mathe != null)
             {
                 return 0;
             }
+
             Tbl_TheThanhVien khTmp = new Tbl_TheThanhVien();
+
             khTmp.maThe = the.Mathe;
             khTmp.maKH = the.Makh;
             khTmp.tongTien = Convert.ToDecimal(the.Tongtien);
             khTmp.ngayHetHan = the.Ngayhethan;
-            khTmp.ngayLap = the.Ngaylap;
+            // khTmp.ngayLap = the.Ngaylap;
             khTmp.ghiChu = the.Ghichu;
-
+            khTmp.diemTichLuy = the.Diemtichluy;
             DB.Tbl_TheThanhViens.InsertOnSubmit(khTmp);
             DB.SubmitChanges();
             return 1;
         }
-
-        /*public bool Delete(string deleteID)
-        {
-            try
-            {
-                Tbl_KhachHang deleteRecord = DB.Tbl_KhachHangs.Single(record => record.maKH == deleteID);
-
-                DB.Tbl_KhachHangs.DeleteOnSubmit(deleteRecord);
-                DB.SubmitChanges();
-
-                return true;
-            }
-            catch { return false; }
-        }*/
 
         public bool UpdateThe(eThethanhvien updateThe)
         {
@@ -91,25 +83,26 @@ namespace BusinessLogic.KhachHang
             }
             catch { return false; }
         }
-        public int setDiemTL(string ma, decimal tongTien)
+        public int setDiemTL(string ma, decimal tongTien) // đm, hàm set mà return giá trị thì nó mang ý nghĩa mẹ gì @@
         {
 
             try
             {
                 Tbl_TheThanhVien ttv = DB.Tbl_TheThanhViens.Where(x => x.maThe == ma).FirstOrDefault();
                 ttv.tongTien = tongTien;
-                ttv.diemTichLuy = Convert.ToInt16(ttv.tongTien / 10000);
+                ttv.diemTichLuy += Convert.ToInt16(ttv.tongTien / 10000);
 
                 return ttv.diemTichLuy;
             }
             catch (Exception)
             {
 
-                return -1;
+                return 0;
             }
 
+
         }
-        //
+
 
         public int setDiemTL1(string ma, int diem)
         {

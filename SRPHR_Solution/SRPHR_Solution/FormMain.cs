@@ -218,5 +218,10 @@ namespace SRPHR_Solution.PhanQuyen
             btnformNhansu.Enabled = false;
             btnformkho.Enabled = false;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

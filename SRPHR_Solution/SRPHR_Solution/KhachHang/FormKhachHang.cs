@@ -13,6 +13,7 @@ using System.Data.Linq;
 
 namespace SRPHR_Solution.KhachHang
 {
+
     public partial class FormKhachHang : Form
     {
         List<eKhachHang> listKH;
@@ -40,6 +41,7 @@ namespace SRPHR_Solution.KhachHang
         private void btnThem_Click(object sender, EventArgs e)
         {
             string makh = txtMaKH.Text;
+
 
 
             eKhachHang k = new eKhachHang();
@@ -89,7 +91,7 @@ namespace SRPHR_Solution.KhachHang
             btnThem.Enabled = status;
             btnSua.Enabled = status;
             btnLuu.Enabled = !status;
-            btnDoiDiem.Enabled = status;
+            //btnDoiDiem.Enabled = status;
             btnExit.Enabled = status;
 
         }
@@ -182,24 +184,10 @@ namespace SRPHR_Solution.KhachHang
 
         private void dgvKhachHang_SelectionChanged(object sender, EventArgs e)
         {
-            txtMaKH.Text = dgvKhachHang.CurrentRow.Cells[0].Value.ToString();
-            txtTenKH.Text = dgvKhachHang.CurrentRow.Cells[1].Value.ToString();
-            txtDiaChi.Text = dgvKhachHang.CurrentRow.Cells[2].Value.ToString();
-            dtpngaysinh.Text = dgvKhachHang.CurrentRow.Cells[3].Value.ToString();
-            txtEmail.Text = dgvKhachHang.CurrentRow.Cells[4].Value.ToString();
-            txtCMND.Text = dgvKhachHang.CurrentRow.Cells[5].Value.ToString();
-            txtSDT.Text = dgvKhachHang.CurrentRow.Cells[6].Value.ToString();
-            txtNgheNghiep.Text = dgvKhachHang.CurrentRow.Cells[7].Value.ToString();
-            txtGioiTinh.Text = dgvKhachHang.CurrentRow.Cells[8].Value.ToString();
-            dtpngaycapcmnd.Text = dgvKhachHang.CurrentRow.Cells[9].Value.ToString();
-            txtTrangThai.Text = dgvKhachHang.CurrentRow.Cells[10].Value.ToString();
+
         }
 
-        private void btnDoiDiem_Click(object sender, EventArgs e)
-        {
-            FrmDoiDiem frm = new FrmDoiDiem();
-            frm.ShowDialog();
-        }
+
 
         private void dtpngaysinh_ValueChanged(object sender, EventArgs e)
         {
@@ -209,7 +197,7 @@ namespace SRPHR_Solution.KhachHang
         private void FormKhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult r = MessageBox.Show("Bạn có muốn thoát ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                if(r==DialogResult.No)
+            if (r == DialogResult.No)
             {
                 e.Cancel = true;
             }
@@ -224,6 +212,24 @@ namespace SRPHR_Solution.KhachHang
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvKhachHang_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dgvKhachHang.SelectedRows.Count > 0)
+            {
+                txtMaKH.Text = e.Row.Cells["Makh"].Value.ToString();
+                txtTenKH.Text = e.Row.Cells["Tenkh"].Value.ToString();
+                txtDiaChi.Text = e.Row.Cells["Diachi"].Value.ToString();
+                dtpngaysinh.Text = e.Row.Cells["Ngaysinh"].Value.ToString();
+                txtEmail.Text = e.Row.Cells["Email"].Value.ToString();
+                txtCMND.Text = e.Row.Cells["Socmnd"].Value.ToString();
+                txtSDT.Text = e.Row.Cells["Sodienthoai"].Value.ToString();
+                txtNgheNghiep.Text = e.Row.Cells["Nghenghiep"].Value.ToString();
+                txtGioiTinh.Text = e.Row.Cells["Gioitinh"].Value.ToString();
+                dtpngaycapcmnd.Text = e.Row.Cells["Ngaycapcmnd"].Value.ToString();
+                txtTrangThai.Text = e.Row.Cells["Trangthai"].Value.ToString();
+            }
         }
 
         /* private void btntimbansikh_Click(object sender, EventArgs e)

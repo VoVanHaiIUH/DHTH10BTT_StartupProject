@@ -48,6 +48,7 @@
             this.dtpngayhethan = new System.Windows.Forms.DateTimePicker();
             this.btnsua = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
+            this.btnDoiThuong = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvthethanhvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,13 +63,12 @@
             // 
             // btnthemthe
             // 
-            this.btnthemthe.Location = new System.Drawing.Point(52, 353);
+            this.btnthemthe.Location = new System.Drawing.Point(157, 353);
             this.btnthemthe.Name = "btnthemthe";
             this.btnthemthe.Size = new System.Drawing.Size(75, 23);
             this.btnthemthe.TabIndex = 1;
             this.btnthemthe.Text = "Them";
             this.btnthemthe.UseVisualStyleBackColor = true;
-            this.btnthemthe.Click += new System.EventHandler(this.btnthemthe_Click_1);
             // 
             // dgvthethanhvien
             // 
@@ -77,7 +77,6 @@
             this.dgvthethanhvien.Name = "dgvthethanhvien";
             this.dgvthethanhvien.Size = new System.Drawing.Size(666, 190);
             this.dgvthethanhvien.TabIndex = 2;
-            this.dgvthethanhvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtmathe
             // 
@@ -106,7 +105,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(281, 353);
+            this.btnLuu.Location = new System.Drawing.Point(319, 353);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 1;
@@ -194,7 +193,7 @@
             // 
             // btnsua
             // 
-            this.btnsua.Location = new System.Drawing.Point(172, 353);
+            this.btnsua.Location = new System.Drawing.Point(238, 353);
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(75, 23);
             this.btnsua.TabIndex = 1;
@@ -204,13 +203,23 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(400, 353);
+            this.btnthoat.Location = new System.Drawing.Point(481, 353);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(75, 23);
             this.btnthoat.TabIndex = 1;
             this.btnthoat.Text = "thoat";
             this.btnthoat.UseVisualStyleBackColor = true;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
+            // 
+            // btnDoiThuong
+            // 
+            this.btnDoiThuong.Location = new System.Drawing.Point(400, 353);
+            this.btnDoiThuong.Name = "btnDoiThuong";
+            this.btnDoiThuong.Size = new System.Drawing.Size(75, 23);
+            this.btnDoiThuong.TabIndex = 1;
+            this.btnDoiThuong.Text = "Đổi Thưởng";
+            this.btnDoiThuong.UseVisualStyleBackColor = true;
+            this.btnDoiThuong.Click += new System.EventHandler(this.btnDoiThuong_Click);
             // 
             // FrmTheThanhVien
             // 
@@ -224,6 +233,7 @@
             this.Controls.Add(this.txtdiemtichluy);
             this.Controls.Add(this.txtmakh);
             this.Controls.Add(this.txtmathe);
+            this.Controls.Add(this.btnDoiThuong);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnLuu);
@@ -266,5 +276,6 @@
         private System.Windows.Forms.DateTimePicker dtpngayhethan;
         private System.Windows.Forms.Button btnsua;
         private System.Windows.Forms.Button btnthoat;
+        private System.Windows.Forms.Button btnDoiThuong;
     }
 }

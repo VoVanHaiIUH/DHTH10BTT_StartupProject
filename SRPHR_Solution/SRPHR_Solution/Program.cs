@@ -8,6 +8,7 @@ using SRPHR_Solution.BanHang;
 using SRPHR_Solution.NhanSu;
 using SRPHR_Solution.CongNoPKH;
 using SRPHR_Solution.BaoCao;
+
 namespace SRPHR_Solution
 {
     static class Program

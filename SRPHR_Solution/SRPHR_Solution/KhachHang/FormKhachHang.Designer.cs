@@ -53,7 +53,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnDoiDiem = new System.Windows.Forms.Button();
             this.dtpngaycapcmnd = new System.Windows.Forms.DateTimePicker();
             this.dtpngaysinh = new System.Windows.Forms.DateTimePicker();
             this.btnthemthe = new System.Windows.Forms.Button();
@@ -62,7 +61,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(193, 488);
+            this.btnThem.Location = new System.Drawing.Point(394, 478);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(109, 23);
             this.btnThem.TabIndex = 0;
@@ -242,7 +241,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(318, 488);
+            this.btnSua.Location = new System.Drawing.Point(509, 478);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 0;
@@ -252,7 +251,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(419, 488);
+            this.btnLuu.Location = new System.Drawing.Point(590, 478);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 0;
@@ -262,23 +261,13 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(500, 488);
+            this.btnExit.Location = new System.Drawing.Point(671, 478);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnDoiDiem
-            // 
-            this.btnDoiDiem.Location = new System.Drawing.Point(581, 488);
-            this.btnDoiDiem.Name = "btnDoiDiem";
-            this.btnDoiDiem.Size = new System.Drawing.Size(75, 23);
-            this.btnDoiDiem.TabIndex = 0;
-            this.btnDoiDiem.Text = "Doi Diem";
-            this.btnDoiDiem.UseVisualStyleBackColor = true;
-            this.btnDoiDiem.Click += new System.EventHandler(this.btnDoiDiem_Click);
             // 
             // dtpngaycapcmnd
             // 
@@ -297,7 +286,7 @@
             // 
             // btnthemthe
             // 
-            this.btnthemthe.Location = new System.Drawing.Point(112, 488);
+            this.btnthemthe.Location = new System.Drawing.Point(313, 478);
             this.btnthemthe.Name = "btnthemthe";
             this.btnthemthe.Size = new System.Drawing.Size(75, 23);
             this.btnthemthe.TabIndex = 0;
@@ -333,7 +322,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvKhachHang);
-            this.Controls.Add(this.btnDoiDiem);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnthemthe);
@@ -376,7 +364,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnDoiDiem;
         private System.Windows.Forms.DateTimePicker dtpngaycapcmnd;
         private System.Windows.Forms.DateTimePicker dtpngaysinh;
         private System.Windows.Forms.Button btnthemthe;
