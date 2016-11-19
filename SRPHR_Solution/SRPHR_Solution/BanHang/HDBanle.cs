@@ -17,20 +17,25 @@ namespace SRPHR_Solution.BanHang
 {
     public partial class FormHDBanle : Form
     {
-        
+
         BindingSource bd = new BindingSource();
-        HoaDonBanLeBLL hdblbll;
+        HoaDonBanLeBLL hdblbll = new HoaDonBanLeBLL();
+        List<HoaDonBanLe> lhdbl = new List<HoaDonBanLe>();
 
         public FormHDBanle()
         {
             InitializeComponent();
-            hdblbll = new HoaDonBanLeBLL();
+            lhdbl = hdblbll.GetAllHDBanLe();
+            loaddatagridview(lhdbl, DGViewHDBL);
         }
-
+        private void loaddatagridview(List<HoaDonBanLe> lhdbl, DataGridView dtgv)
+        {
+            dtgv.DataSource = lhdbl;
+        }
         void DGViewHDBL_Load()
         {
-            DGViewHDBL.DataSource = hdblbll.GetAllHDBanLe();
-            DGViewHDBL.ReadOnly = true;
+
+
         }
 
         private void btnxem_Click(object sender, EventArgs e)
@@ -173,7 +178,7 @@ namespace SRPHR_Solution.BanHang
             }
             else if (kq == 1) MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
         }
-       
+
         private void DGViewHDBL_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             CurrencyManager currencyManager = (CurrencyManager)BindingContext[DGViewHDBL.DataSource];
@@ -184,10 +189,20 @@ namespace SRPHR_Solution.BanHang
             currencyManager.ResumeBinding();
         }
 
-       
+        private void DGViewHDBL_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-       
+        }
 
-      
+        private void FormHDBanle_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
     }
 }

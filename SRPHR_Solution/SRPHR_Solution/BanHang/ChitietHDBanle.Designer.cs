@@ -183,7 +183,6 @@
             this.btnsua.TabIndex = 18;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
-            this.btnsua.Click += new System.EventHandler(this.btnsua_Click_1);
             // 
             // btnxoa
             // 
@@ -212,6 +211,7 @@
             this.btnthem.TabIndex = 21;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
+         
             // 
             // btnthoat
             // 

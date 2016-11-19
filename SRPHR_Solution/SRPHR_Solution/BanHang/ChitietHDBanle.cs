@@ -20,7 +20,7 @@ namespace SRPHR_Solution.BanHang
         HoaDonBanLeBLL hdblBLL;
         CTHoaDonBanLeBLL cthdblBLL;
         BindingSource bd = new BindingSource();
-        
+
         public FormChitietHDBanle()
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace SRPHR_Solution.BanHang
             treeViewCTHDBL.ExpandAll();
         }
 
-        
+
         void DGViewCTHDBL_Load()
         {
             DGVCTHDBL.DataSource = cthdblBLL.GetAllCTHDBanLe();
@@ -55,7 +55,7 @@ namespace SRPHR_Solution.BanHang
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
         private void ChitietHDBanLe_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -101,14 +101,14 @@ namespace SRPHR_Solution.BanHang
                 tempCTHDBanLe.SoLuong = Convert.ToDouble(txtsoluong.Text);
                 tempCTHDBanLe.GhiChu = txtghichu.Text;
                 tempCTHDBanLe.DonGia = Convert.ToDecimal(txtghichu.Text);
-                
+
                 return tempCTHDBanLe;
             }
             catch { }
             return null;
         }
 
-        
+
 
         int flag = 0;
         private void ChitietHDBanle_Load(object sender, EventArgs e)
@@ -162,10 +162,10 @@ namespace SRPHR_Solution.BanHang
             txtmahdbanle.Enabled = false;
             txtmasp.Enabled = false;
         }
-       
 
-     
-        
+
+
+
 
         private void FormChitietHDBanle_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -185,11 +185,11 @@ namespace SRPHR_Solution.BanHang
 
         private void DGVCTHDBL_SelectionChanged(object sender, EventArgs e)
         {
-            txtmahdbanle.Text = DGVCTHDBL.CurrentRow.Cells[4].Value.ToString();
-            txtmasp.Text = DGVCTHDBL.CurrentRow.Cells[3].Value.ToString();
-            txtsoluong.Text = DGVCTHDBL.CurrentRow.Cells[2].Value.ToString();
-            txtdongia.Text= DGVCTHDBL.CurrentRow.Cells[1].Value.ToString();
-            txtghichu.Text = DGVCTHDBL.CurrentRow.Cells[0].Value.ToString();
+            txtmahdbanle.Text = DGVCTHDBL.CurrentRow.Cells[1].Value.ToString();
+            txtmasp.Text = DGVCTHDBL.CurrentRow.Cells[0].Value.ToString();
+            txtsoluong.Text = DGVCTHDBL.CurrentRow.Cells[3].Value.ToString();
+            txtdongia.Text = DGVCTHDBL.CurrentRow.Cells[4].Value.ToString();
+            txtghichu.Text = DGVCTHDBL.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void btnluu_Click(object sender, EventArgs e)
@@ -202,7 +202,7 @@ namespace SRPHR_Solution.BanHang
             cthdbl.SoLuong = Convert.ToDouble(txtsoluong.Text);
             cthdbl.GhiChu = txtghichu.Text;
             cthdbl.DonGia = Convert.ToDecimal(txtdongia.Text);
-           
+
 
             int kq = cthdblBLL.ThemCTHDBanLe(cthdbl);
             if (kq == 0)
@@ -212,14 +212,13 @@ namespace SRPHR_Solution.BanHang
             else if (kq == 1) MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
         }
 
-        private void btnsua_Click_1(object sender, EventArgs e)
-        {
+     
 
-        }
+     
 
-       
 
-        
+
+
     }
 
 }

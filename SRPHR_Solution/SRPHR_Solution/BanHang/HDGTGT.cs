@@ -19,12 +19,17 @@ namespace SRPHR_Solution.BanHang
     {
         public string PQHDGTGT;
         HoaDonGTGTBLL hdgtbll;
-        
+        List<HoaDonBanGTGT> lhdgtgt;
         //List<ChiTietHDGTGT> ls = new List<ChiTietHDGTGT>();
         BindingSource bd = new BindingSource();
         public FormHDGTGT()
         {
             InitializeComponent();
+            hdgtbll = new HoaDonGTGTBLL();
+            lhdgtgt = new List<HoaDonBanGTGT>();
+
+
+            loaddatagridview(lhdgtgt, dataGridView1);
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
@@ -41,7 +46,7 @@ namespace SRPHR_Solution.BanHang
 
         private void ChitietHDGTGT_Load(object sender, EventArgs e)
         {
-            
+
             trangthaiPQ(PQHDGTGT);
 
         }
@@ -58,11 +63,11 @@ namespace SRPHR_Solution.BanHang
             n.SoHoaDon = txtsohd.Text.Trim();
             n.DiaChi = txtdiachigt.Text.Trim();
             n.DvBanHang = txtdvban.Text.Trim();
-            n.ThanhTien = Convert.ToDecimal( textBox1.Text.Trim());
-            n.DvMuaHang = txtdvmua.Text.Trim(); 
+            n.ThanhTien = Convert.ToDecimal(textBox1.Text.Trim());
+            n.DvMuaHang = txtdvmua.Text.Trim();
             n.HinhThucThanhToan = txthinhthuc.Text.Trim();
-            n.MsThue = Convert.ToInt32( txtmasothue.Text.Trim());
-            n.NgaylapHoaDon = Convert.ToDateTime( txtngaylap.Text.Trim());
+            n.MsThue = Convert.ToInt32(txtmasothue.Text.Trim());
+            n.NgaylapHoaDon = Convert.ToDateTime(txtngaylap.Text.Trim());
             n.SoTaiKhoan = txtsotaikhoan.Text.Trim();
             int kq = hdgtbll.ThemHDGTGT(n);
             if (kq == 0)
@@ -70,6 +75,7 @@ namespace SRPHR_Solution.BanHang
                 MessageBox.Show("Trùng mã hóa đơn !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
             else if (kq == 1) MessageBox.Show("Thêm thành công !", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            dataGridView1.DataSource = hdgtbll.GetAllHDBGTGT();
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
@@ -96,7 +102,7 @@ namespace SRPHR_Solution.BanHang
             }
         }
 
-        
+
 
         private void btnsua_Click(object sender, EventArgs e)
         {
@@ -124,7 +130,7 @@ namespace SRPHR_Solution.BanHang
         }
         private void trangthaiPQ(string pq)
         {
-            if (pq.Substring(0, 1) == "1")
+            /*if (pq.Substring(0, 1) == "1")
                 btnthem.Enabled = true;
             else
                 btnthem.Enabled = false;
@@ -137,7 +143,7 @@ namespace SRPHR_Solution.BanHang
             if (pq.Substring(2, 1) == "1")
                 btnsua.Enabled = true;
             else
-                btnsua.Enabled = false;
+                btnsua.Enabled = false;*/
 
         }
 
@@ -149,5 +155,15 @@ namespace SRPHR_Solution.BanHang
         }
 
         int flag = 0;
+        private void loaddatagridview(List<HoaDonBanGTGT> lhdgtgt, DataGridView dtgv)
+        {
+            lhdgtgt = hdgtbll.GetAllHDBGTGT();
+            bd.DataSource = lhdgtgt;
+            dataGridView1.DataSource = bd;
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
