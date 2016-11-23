@@ -50,7 +50,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSoDT = new System.Windows.Forms.TextBox();
             this.txtGioitinh = new System.Windows.Forms.TextBox();
-            this.txtNgayCapCMND = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -61,6 +60,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DGViewNhanVien = new System.Windows.Forms.DataGridView();
+            this.dateTimePickerNgayCap = new System.Windows.Forms.DateTimePicker();
             this.grpBoxNhanVien.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -79,6 +79,7 @@
             // 
             // grpBoxNhanVien
             // 
+            this.grpBoxNhanVien.Controls.Add(this.dateTimePickerNgayCap);
             this.grpBoxNhanVien.Controls.Add(this.dateTimePickerNgayVaoLam);
             this.grpBoxNhanVien.Controls.Add(this.dateTimePickerNgaySinh);
             this.grpBoxNhanVien.Controls.Add(this.txtSoCMND);
@@ -99,7 +100,6 @@
             this.grpBoxNhanVien.Controls.Add(this.txtSoDT);
             this.grpBoxNhanVien.Controls.Add(this.lblHoTen);
             this.grpBoxNhanVien.Controls.Add(this.txtGioitinh);
-            this.grpBoxNhanVien.Controls.Add(this.txtNgayCapCMND);
             this.grpBoxNhanVien.Controls.Add(this.txtHoTen);
             this.grpBoxNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpBoxNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -164,7 +164,7 @@
             this.lbTrangThai.Location = new System.Drawing.Point(720, 78);
             this.lbTrangThai.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(69, 15);
+            this.lbTrangThai.Size = new System.Drawing.Size(68, 15);
             this.lbTrangThai.TabIndex = 8;
             this.lbTrangThai.Text = "Trạng thái :";
             // 
@@ -298,16 +298,6 @@
             this.txtGioitinh.Size = new System.Drawing.Size(234, 25);
             this.txtGioitinh.TabIndex = 1;
             // 
-            // txtNgayCapCMND
-            // 
-            this.txtNgayCapCMND.Enabled = false;
-            this.txtNgayCapCMND.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayCapCMND.Location = new System.Drawing.Point(475, 46);
-            this.txtNgayCapCMND.Margin = new System.Windows.Forms.Padding(1);
-            this.txtNgayCapCMND.Name = "txtNgayCapCMND";
-            this.txtNgayCapCMND.Size = new System.Drawing.Size(234, 25);
-            this.txtNgayCapCMND.TabIndex = 1;
-            // 
             // txtHoTen
             // 
             this.txtHoTen.Enabled = false;
@@ -323,7 +313,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnExit, 1, 2);
@@ -471,6 +461,13 @@
             this.DGViewNhanVien.TabIndex = 0;
             this.DGViewNhanVien.SelectionChanged += new System.EventHandler(this.DGViewNhanVien_SelectionChanged);
             // 
+            // dateTimePickerNgayCap
+            // 
+            this.dateTimePickerNgayCap.Location = new System.Drawing.Point(475, 48);
+            this.dateTimePickerNgayCap.Name = "dateTimePickerNgayCap";
+            this.dateTimePickerNgayCap.Size = new System.Drawing.Size(234, 23);
+            this.dateTimePickerNgayCap.TabIndex = 10;
+            // 
             // FrmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,7 +511,6 @@
         private System.Windows.Forms.Label lblNgayCapCMND;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtGioitinh;
-        private System.Windows.Forms.TextBox txtNgayCapCMND;
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.Label lblĐiaChi;
         private System.Windows.Forms.Label lblSoDT;
@@ -524,5 +520,6 @@
         private System.Windows.Forms.DataGridView DGViewNhanVien;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayVaoLam;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgaySinh;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayCap;
     }
 }

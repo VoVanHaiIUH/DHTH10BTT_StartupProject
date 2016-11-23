@@ -35,7 +35,6 @@ namespace SRPHR_Solution.NhanSu
             txtMaNV.Enabled = status;
             txtHoTen.Enabled = status;
             txtSoCMND.Enabled = status;
-            txtNgayCapCMND.Enabled = status;
             txtEmail.Enabled = status;
             txtGioitinh.Enabled = status;
             txtSoDT.Enabled = status;
@@ -56,7 +55,6 @@ namespace SRPHR_Solution.NhanSu
             txtMaNV.Clear();
             txtHoTen.Clear();
             txtSoCMND.Clear();
-            txtNgayCapCMND.Clear();
             txtEmail.Clear();
             txtGioitinh.Clear();
             txtSoDT.Clear();
@@ -72,7 +70,7 @@ namespace SRPHR_Solution.NhanSu
             tempNhanVien.MaNV = txtMaNV.Text;
             tempNhanVien.HoTen = txtHoTen.Text;
             tempNhanVien.SoCMND = txtSoCMND.Text;
-            tempNhanVien.NgayCapCMND = Convert.ToDateTime(txtNgayCapCMND.Text);
+            tempNhanVien.NgayCapCMND = Convert.ToDateTime(dateTimePickerNgayCap.Text);
             tempNhanVien.GioiTinh = txtGioitinh.Text;
             tempNhanVien.Email = txtEmail.Text;
             tempNhanVien.NgaySinh = Convert.ToDateTime(dateTimePickerNgaySinh.Value);
@@ -93,7 +91,7 @@ namespace SRPHR_Solution.NhanSu
             dateTimePickerNgaySinh.Text = DGViewNhanVien.CurrentRow.Cells[2].Value.ToString();
             dateTimePickerNgayVaoLam.Text = DGViewNhanVien.CurrentRow.Cells[3].Value.ToString();
             txtSoCMND.Text = DGViewNhanVien.CurrentRow.Cells[4].Value.ToString();
-            txtNgayCapCMND.Text = DGViewNhanVien.CurrentRow.Cells[5].Value.ToString();
+            dateTimePickerNgayCap.Text = DGViewNhanVien.CurrentRow.Cells[5].Value.ToString();
             txtGioitinh.Text = DGViewNhanVien.CurrentRow.Cells[6].Value.ToString();
             txtEmail.Text = DGViewNhanVien.CurrentRow.Cells[7].Value.ToString();
             //txtSoDT.Text = DGViewNhanVien.CurrentRow.Cells[8].Value.ToString();

@@ -56,8 +56,7 @@ namespace BusinessLogic.NhanSu
             try
             {
                 //Tbl_CTThamGiaDTNV updateRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == updateCTDTNV.MaNV && record.maKhoaDT == updateCTDTNV.MaKhoaDT);
-                Tbl_NhanVien tempnhanvien = DB.Tbl_NhanViens.Single(record => record.maNV == updateCTDTNV.MaNV);
-                Tbl_CTThamGiaDTNV updateRecord = new Tbl_CTThamGiaDTNV();
+                Tbl_CTThamGiaDTNV updateRecord = DB.Tbl_CTThamGiaDTNVs.Single(record => record.maNV == updateCTDTNV.MaNV);
                 updateRecord.maNV = updateCTDTNV.MaNV;
                 updateRecord.maKhoaDT = updateCTDTNV.MaKhoaDT;
                 updateRecord.nhanXet = updateCTDTNV.NhanXet;
